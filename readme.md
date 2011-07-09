@@ -1,9 +1,11 @@
-== First Commit ==
+First Commit
+-------------
 
 July 9 2011
 A very basic idea of how this would look like. Lame filters and colors. 
 
-= To do =
+To do
+------
 1. Make this list a JSON?
 2. Get used by stats from caniuse.com
 3. Fix the filters to work simultaneously.
