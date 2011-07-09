@@ -28,3 +28,8 @@ To do
 3. Fix the filters to work simultaneously.
 4. Add more info for each "feature" (e.g. selectors should list all selectors, possibly accessed with a "view more" or smthing).
 5. Link to Paul Irish's post on responsible polyfilling.
+6. Link each recommendation to a "more details" page in the wiki (thnx @necolas). 
+
+Context
+------
+Started at: http://oksoclap.com/gfs
