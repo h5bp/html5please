@@ -1,0 +1,188 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Graded Feature Support</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='http://fonts.googleapis.com/css?family=Muli|Open+Sans:800&v2' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/libs/modernizr-2.0.min.js"></script>
+  <script src="js/libs/respond.min.js"></script>
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+      <h1>Graded Feature Support</h1>
+      <h2>You can use new and shiny now. But use it responsibly. Here is how.</h2>
+      <section>
+        <article><p>Show me what I can use if I do not support: <label><input name="ie" type="radio" value="ie6" /> IE6</label> <label><input name="ie" type="radio" value="ie7" /> IE7</label> <label><input name="ie" type="radio" value="ie8" /> IE8</label></p></article>
+        <article><p>Show me only: <label><input name="cat" type="radio" value="css"/> CSS</label> <label><input name="cat" type="radio" value="js"/> JS & APIs</label> <label><input name="cat" type="radio" value="html" /> HTML</label> features</p></article>
+        <article><p>Features to <label><input name="rec" type="radio" value="good" /> use now</label> <label><input name="rec" type="radio" value="bad" /> use with caution</label> <label><input name="rec" type="radio" value="ugly"/> avoid</label> </p></article>
+        <article><p><a href="#">How do I use prefixes?</a> <a href="#">Tools for Feature Support</a></p></article>
+      </section>            
+    </header>
+    <div id="main" role="main">
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Used by</th>
+              <th>Prefix</th>
+              <th>Polyfill</th>
+              <th>Recommendation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="title">
+              <th colspan="5">Form Elements</th>
+            </tr>
+            <tr class="title">
+              <th colspan="5">Input Types</th>
+            </tr>
+            <tr class="bad ie6 html">
+              <td>range</td>
+              <td>20%</td>
+              <td>No</td>
+              <td><a href="#">freqdec</a> | <a href="#">frankyan</a></td>
+              <td>Good to use with polyfill.</td>
+            </tr>
+            <tr class="ugly html">
+              <td>color</td>
+              <td>1%</td>
+              <td>No</td>
+              <td>-</td>
+              <td>Experimental use only</td>              
+            </tr>
+            <tr class="title">
+              <th colspan="5">Canvas & Canvas-based APIs</th>
+            </tr>
+            <tr class="good js ie6">
+              <td>canvas</td>
+              <td>60%</td>
+              <td>No</td>
+              <td><a href='#'>flashcanvas</a></td>
+              <td>Use it. now. Polyfill only necessary for IE6</td>
+            </tr>
+            <tr class="bad js">
+              <td>webGL</td>
+              <td>40%</td>
+              <td>No</td>
+              <td><a href="">three.js</a></td>
+              <td>Experimental use only. High performance hit.</td>
+            </tr>
+            <tr class="title">
+              <th colspan="5">CSS</th>
+            </tr>
+            <tr class="good css ie6">
+              <td>selectors</td>
+              <td>90%</td>
+              <td>No</td>
+              <td><a href="#">selectivizr</a></td>
+              <td>Use without a polyfill. Make sure it gracefully degrades.</td>
+            </tr>
+            <tr class="ugly css">
+              <td>border-image</td>
+              <td>60%</td>
+              <td>Yes</td>
+              <td><a href="#">borderingaimage.com</a></td>
+              <td>Don't use it. It works with so few use cases.</td>
+            </tr>
+            <tr class="ugly css">
+              <td>keyframed animation</td>
+              <td>20%</td>
+              <td>Yes</td>
+              <td><a href="#">scripty2</a> | <a href="#">yui</a></td>
+              <td>Experimental, and performance impact needs to be evaluated. If you do use it, dont use a polyfill.</td>              
+            </tr>
+            <tr class="good css">
+              <td>text-shadow</td>
+              <td>80%</td>
+              <td>No</td>
+              <td>-</td>
+              <td>Use it as much as you like! Modernizr maybe needed for some special cases.</td>
+            </tr>
+            <tr class="ugly css">
+              <td>box-reflections</td>
+              <td>1%</td>
+              <td>Yes</td>
+              <td>-</td>
+              <td>Avoid.</td>
+            </tr>
+            <tr class="bad css">
+              <td>background-clip</td>
+              <td>50%</td>
+              <td>No</td>
+              <td>-</td>
+              <td>Avoid. Current implementations don't match the spec.</td>
+            </tr>
+            <tr class="title">
+              <th colspan="5">HTML</th>
+            </tr>
+            <tr class="good html">
+              <td>data attributes</td>
+              <td>40%</td>
+              <td>No</td>
+              <td>-</td>
+              <td>Use it!</td>
+            </tr>
+            <tr class="good html">
+              <td>video</td>
+              <td>80%</td>
+              <td>No</td>
+              <td><a href="#">mediaelement.js</a></td>
+              <td>Use <a href="#">videoforeverybody</a> if you do not want a polyfill.</td>
+            </tr>
+            <tr class="good html">
+              <td>Audio</td>
+              <td>80%</td>
+              <td>No</td>
+              <td><a href="#">mediaelement.js</a></td>
+              <td>Use.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <footer>
+
+    </footer>
+  </div> <!--! end of #container -->
+
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+
+  <!-- scripts concatenated and minified via ant build script-->
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <!-- end scripts-->
+
+	
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview'],['_trackPageLoadTime']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+  <![endif]-->  
+</body>
+</html>
