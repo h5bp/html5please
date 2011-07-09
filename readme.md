@@ -5,6 +5,7 @@ July 9 2011
 A very basic idea of how this would look like. Lame filters and colors. See: http://dl.dropbox.com/u/952/gfs/index.html
 
 "How do I use prefixes" would link to:
+
 1. Where all prefixes occur (css properties, values, DOM interfaces). 
 2. How to use modernizr's prefix-returning function for use in your script.
 3. A reduced snippet from there?
@@ -13,6 +14,7 @@ A very basic idea of how this would look like. Lame filters and colors. See: htt
 
 
 "Tools for Feature Support":
+
 1. Css3please.com
 2. modernizr polyfill wiki
 3. modernizr
