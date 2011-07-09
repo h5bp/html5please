@@ -2,7 +2,7 @@ First Commit
 -------------
 
 July 9 2011
-A very basic idea of how this would look like. Lame filters and colors. 
+A very basic idea of how this would look like. Lame filters and colors. See: http://dl.dropbox.com/u/952/gfs/index.html
 
 To do
 ------
