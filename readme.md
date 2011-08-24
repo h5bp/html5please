@@ -30,6 +30,13 @@ To do
 5. Link to Paul Irish's post on responsible polyfilling.
 6. Link each recommendation to a "more details" page in the wiki (thnx @necolas). 
 
+Design
+1. Better design the live filter (it is invisible)
+2. Footer: what/ if
+3. Different color states for badges "use this/ dont / etc"
+4. Some bling transitions
+5. Proper prefixes/fallbacks
+
 
 Context
 ------
