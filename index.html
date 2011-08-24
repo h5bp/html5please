@@ -24,27 +24,81 @@
       <h3><b>As recommended by</b> <a href=#>Paul Irish</a> <a href=#>Divya Manian</a> <a href=#>John Dalton</a> <a href=#>Remy Sharp</a> <a href=#>Nicolas Gallagher</a> <a href=#>Alexis Deveria</a> <a href=#>Alex Russell</a></h3>
       <input type="search" name="livesearch" value="" placeholder="type to filter">
     </header>
+    
+    
     <div id="main" role="main">
       <section>
+        
         <article>
           <h2>SVG <b>90%</b></h2>
           <h3><b>Ok!</b></h3>
           <p>All modern browsers support SVG. For legacy browsers, you can use <a href=#>svgweb</a> as a flash-based polyfill, or develop with <a href=#>Raphaél</a> which has a VML renderer for <abbr title="Internet Explorer 6-8. Prounced 'oldie'">oldIE</abbr>.</p>                    
-        </article>        
+        </article>
+                
         <article>
           <h2>Canvas <b>90%</b></h2>
           <h3 class=fallback><b>Ok! <i>fallback</i></b></h3>
           <p><a href=#>FlashCanvas</a> or <a href=#>excanvas</a> are your polyfills of choice if you absolutely need it. </p>
         </article>
+        
+        <article>
+          <h2>HTML5 video/audoi <b>90%</b></h2>
+          <h3 class=fallback><b>Ok! <i>fallback</i></b></h3>
+          <p>Use mediaelement.js as polyfill for API (flash fallback w/ consistent visual design too).. Video for everyone base setup if no polyfill desired.</p>
+        </article>
+        
+        
+        <article>
+          <h2>CSS3 Selectors <b>90%</b></h2>
+          <h3 class=fallback><b>Depends</b></h3>
+          <p>depends if you should use selectivizr based on what selectors you want and your browser support needs! </p>
+        </article>
+        
+        
+        <article>
+          <h2>Flexbox <b>90%</b></h2>
+          <h3 class=fallback><b>Not yet</b></h3>
+          <p> dont use, spec is changing. webkit and moz have incompatibilities that wont't be fixed. if you dive in, enjoy the bumpy waves</p>
+        </article>
+        
+        
+        <article>
+          <h2><code>data-*</code> attributes <b>90%</b></h2>
+          <h3 class=fallback><b>Ok!</b></h3>
+          <p> GROOVY everywhere obv. old browsers ignore unknown attributes, you can always use <code>getAttribute</code> or you can use the dataset polyfill for IE8+.</p>
+        </article>
+        
+        
         <article>
           <h2>Web Storage <b>50%</b></h2>
           <h3 class=fallback><b>Ok! <i>fallback</i></b></h3>
         </article>
-        <article>
-          <h2><code>&lt;input type="range"></code><b>11%</b></h2>
-          <h3 class=polyfill><b>Ok!<i>polyfill</i></b></h3>
-          <p>We recommend you use blah blah, and use <a href=#>frank yan's polyfill</a> or <a href=#>freqdec</a>'s.</p>                    
-        </article>
+      
+       <article>
+         <h2><code>&lt;input type="range"></code><b>11%</b></h2>
+         <h3 class=polyfill><b>Ok!<i>polyfill</i></b></h3>
+         <p>We recommend you use blah blah, and use <a href=#>frank yan's polyfill</a> or <a href=#>freqdec</a>'s.</p>                    
+       </article>
+       
+       <article>
+         <h2><code>&lt;input type="color"></code><b>11%</b></h2>
+         <h3 class=polyfill><b>Not yet</b></h3>
+         <p>  experimental use only, too early to use the markup or polyfill in production</p>                    
+       </article>
+       
+       <article>
+         <h2>date <code>&lt;input>s</code><b>11%</b></h2>
+         <h3 class=polyfill><b>Not yet</b></h3>
+         <p>  experimental use only, too early to use the markup or polyfill in production</p>                  
+       </article>
+       
+       <article>
+         <h2>HTML5 input validation <b>11%</b></h2>
+         <h3 class=polyfill><b>Not yet???</b></h3>
+         <p>  uhhhh h5f or webshim or ... i dont know.</p>                  
+       </article>
+       
+       
       </section>
     </div>
     <footer>
