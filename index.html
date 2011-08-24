@@ -21,7 +21,14 @@
     <header>
       <h1><b>Graded</b>Feature Support</h1>
       <h2>You can use new and shiny now. But use it responsibly. Here is how.</h2>
+      
+      
+      
       <h3><b>As recommended by</b> <a href=#>Paul Irish</a> <a href=#>Divya Manian</a> <a href=#>John Dalton</a> <a href=#>Remy Sharp</a> <a href=#>Nicolas Gallagher</a> <a href=#>Alexis Deveria</a> <a href=#>Alex Russell</a></h3>
+      <!--     nyman, heillman, malarkey? -->
+      
+      
+      
       <input type="search" name="livesearch" value="" placeholder="type to filter">
     </header>
     
@@ -70,6 +77,62 @@
         
         
         <article>
+          <h2>CSS transitions <b>90%</b></h2>
+          <h3 class=fallback><b>Ok! </b></h3>
+          <p> shim layer recomendded to get hwaccel with js fallback (isotope, yui transition, scripty2) ...  or let it degrade </p>
+        </article>
+        
+        
+        <article>
+          <h2>CSS Animations <b>90%</b></h2>
+          <h3 class=fallback><b>No</b></h3>
+          <p> experiemental u fuck </p>
+        </article>
+        
+        
+        <article>
+          <h2>border-image <b>90%</b></h2>
+          <h3 class=fallback><b>Ok! <i>fallback</i></b></h3>
+          <p> use borderingaimage.com .. no support: use modernizr to detect and apply backgroundimage.. or add extra elements. ALSO WHO CARES border-image is dumb. </p>
+        </article>
+        
+        
+        <article>
+          <h2>text-shadow <b>90%</b></h2>
+          <h3 class=fallback><b>Ok! <i>fallback</i></b></h3>
+          <p>mostly can degrade to nothing. sometimes modernizr needed. </p>
+        </article>
+        
+        
+        <article>
+          <h2>box-shadow <b>90%</b></h2>
+          <h3 class=fallback><b>Ok! <i>fallback</i></b></h3>
+          <p> </p>
+        </article>
+        
+        
+        <article>
+          <h2>box-reflections <b>90%</b></h2>
+          <h3 class=fallback><b>no</b></h3>
+          <p>avoid </p>
+        </article>
+        
+        
+        <article>
+          <h2>background-clip <b>90%</b></h2>
+          <h3 class=fallback><b>Ok! <i>fallback</i></b></h3>
+          <p> dont use webkit specific value (text) without feature detection, other values groovy. see mdc for compat</p>
+        </article>
+        
+        
+        <article>
+          <h2>@font-face <b>90%</b></h2>
+          <h3 class=fallback><b>Ok! <i>fallback</i></b></h3>
+          <p>don't use cufon. use google webfonts or fontsquirrel generator </p>
+        </article>
+        
+        
+        <article>
           <h2>Web Storage <b>50%</b></h2>
           <h3 class=fallback><b>Ok! <i>fallback</i></b></h3>
         </article>
@@ -97,7 +160,29 @@
          <h3 class=polyfill><b>Not yet???</b></h3>
          <p>  uhhhh h5f or webshim or ... i dont know.</p>                  
        </article>
-       
+        
+        
+        <hr>
+        browser death features
+        
+        <hr>
+        es5 methods.
+        
+        <hr>
+        
+        univ ie6  stylesheet?
+        
+        <hr>
+        
+        <!-- 
+        <article>
+          <h2> <b>90%</b></h2>
+          <h3 class=fallback><b>Ok! <i>fallback</i></b></h3>
+          <p> </p>
+        </article>
+         
+       -->
+        
        
       </section>
     </div>
