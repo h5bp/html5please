@@ -203,8 +203,18 @@ header h3::after { border-width: 1.5em 1.5em 1.5em 0; border-color: hsl( 0, 0%, 
 header h3 a { color: hsl(0, 64%, 68%);}
 header h3 a + a::before { content: "  /  "; color: white; }
 
-article h3 { margin: 0; }
-article { overflow: hidden; min-height: 5em; margin: 2em 0; }
+
+article h2 b { background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), hsl( 42, 29%, 62%) 98%); background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) -30px, hsl( 42, 79%, 72%) 98%); font-weight: normal; font-size: 70%; display: inline-block; padding: 0 0.5em; margin-left: 1em; border-radius: 0 3px 3px 0; position: relative; }
+
+article h2 b:hover::before { content: "Supported in "; text-transform: none;  }
+article h2 b::after {width: 0;
+height: 0;
+border-top: 4px solid transparent;
+border-left: 8px solid hsl( 42, 79%, 72%);
+border-bottom: 4px solid transparent; content: ""; position: absolute; right: -5px; top: 50%; margin-top: -4px; }
+article h3 { margin: 0 1em 0 0; }
+article { overflow: hidden; min-height: 5em; padding: 2em 0; position: relative; background-image: -webkit-radial-gradient(50% 180%, ellipse, hsl(53, 86%, 49%), hsla(53, 86%, 79%, 0) 40%);}
+article::after { content: ""; height: 1px; background: -webkit-linear-gradient(left, hsla(159, 15%, 59%, 0), hsla(159, 15%, 59%, 0.5) 40%, hsla(159, 15%, 59%, 0.5) 60%, hsla(159, 15%, 59%, 0)); display: block; position: absolute; bottom: 0; left: 0; width: 100%; }
 article h3 { float: left; width: 5em; height: 5em; color: white; display: table; line-height: 1; text-align: center; text-shadow: 2px 2px 1px hsl(77, 31%, 17%);     border-spacing: 0; padding: 4px; }
 
 .fallback b { background: hsl(60, 31%, 40%); } 
