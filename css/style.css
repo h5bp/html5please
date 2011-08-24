@@ -204,7 +204,8 @@ header h3 a { color: hsl(0, 64%, 68%);}
 header h3 a + a::before { content: "  /  "; color: white; }
 
 
-article h2 b { background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), hsl( 42, 29%, 62%) 98%); background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) -30px, hsl( 42, 79%, 72%) 98%); font-weight: normal; font-size: 70%; display: inline-block; padding: 0 0.5em; margin-left: 1em; border-radius: 0 3px 3px 0; position: relative; }
+article h2 { color: indianred; text-shadow: 2px 2px 1px hsl(53, 82%, 54%);  }
+article h2 b { background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0), hsl( 42, 29%, 62%) 98%); background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) -30px, hsl( 42, 79%, 72%) 98%); font-weight: normal; font-size: 70%; display: inline-block; padding: 0 0.5em; margin-left: 1em; border-radius: 0 3px 3px 0; position: relative; color: #000; }
 
 article h2 b:hover::before { content: "Supported in "; text-transform: none;  }
 article h2 b::after {width: 0;
