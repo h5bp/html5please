@@ -146,11 +146,13 @@ table { border-collapse: collapse; border-spacing: 0; }
    Primary styles
    Author: Divya Manian
    ========================================================================== */
+html {   box-shadow: 0 0 5em hsl(53, 86%, 79%) inset; min-height: 100%; }
+ 
 body {
   max-width: 70%;
   margin: 5em auto;
   min-width: 60%;
-  font: 18px/1.5 'Muli', sans-serif;
+  font: 16px/1.5 'Open Sans', sans-serif;
 }
 
 header {
@@ -158,11 +160,22 @@ header {
   margin-bottom: 5em;
 }
 
-h1, h2, h3 { font-family: 'Open Sans', sans-serif; text-transform: uppercase; }
+h2 { text-transform: uppercase; }
+
+header h1{ font-size: 5em; color: indianred; text-shadow: 2px 2px 1px hsl(53, 82%, 54%); }
+header h1 b { font-size: 50%; color: hsla(200, 14%, 58%, 0.9);  }
 
 header h1 { line-height: 1.2em; margin: 0; }
-header h1 + h2 { font-size: 1em; text-transform: lowercase; margin-bottom: 2em; }
+header h1 + h2 { font-size: 1em; text-transform: lowercase; margin: 3em 0; }
+header h1, article h3 { font-family: 'Montez', cursive; }
 
+
+header h1 b, header h3, article h3 b i { font-family: 'Open Sans', sans-serif; text-transform: uppercase; display: block; line-height: 1;  }
+
+header h3 { font-size: 1em; text-align: left; font-style: italic; }
+header h3 b { word-spacing: 0.15em; text-transform: uppercase; font-style: normal; padding: 0 1em; }
+header h3, article h3 b i { font-style: normal; font-weight: normal; }
+header h2, header h3 { font-weight: normal; text-transform: none; }
 table { width: 100%; }
 thead th { white-space: nowrap; }
 table td,
@@ -181,14 +194,23 @@ table tr.ugly td { background: indianred; }
 .hide { display: none; }
 
 
+header h3 { background: url(../dark_mosaic.png) hsl( 0, 0%, 7%); color: white; position: relative; line-height: 3em; height: 3em; box-shadow: 0.05em 0.05em 0.4em 0.15em hsl(42, 29%, 63%); }
+header h3::before, 
+header h3::after { content: ""; width: 0; height: 0; border: 5em solid hsl(32, 46%, 25%); border-width: 1.5em 0 1.5em 1.5em; border-color: hsl( 0, 0%, 7%) transparent hsl( 0, 0%, 7%); position: absolute; left: -1.5em; top: 0; bottom: 0; }
 
+header h3::after { border-width: 1.5em 1.5em 1.5em 0; border-color: hsl( 0, 0%, 7%) transparent hsl( 0, 0%, 7%); left: auto; right: -1.5em; }
 
+header h3 a { color: hsl(0, 64%, 68%);}
+header h3 a + a::before { content: "  /  "; color: white; }
 
+article h3 { margin: 0; }
+article { overflow: hidden; min-height: 5em; margin: 2em 0; }
+article h3 { float: left; width: 5em; height: 5em; color: white; display: table; line-height: 1; text-align: center; text-shadow: 2px 2px 1px hsl(77, 31%, 17%);     border-spacing: 0; padding: 4px; }
 
-
-
-
-
+.fallback b { background: hsl(60, 31%, 40%); } 
+.polyfill  b { background: hsl(40, 61%, 40%); }
+article h3 b { display: table-cell; vertical-align: middle; border: 2px dotted white;  background: hsl(77, 31%, 37%); border-radius: 10em;  }
+article h3 b i { font-size: 70%; color: hsl(50, 100%, 80%); }
 
 /* =============================================================================
    Non-semantic helper classes

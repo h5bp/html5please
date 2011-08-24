@@ -10,7 +10,7 @@
   <meta name="author" content="">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='http://fonts.googleapis.com/css?family=Muli|Open+Sans:800&v2' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montez|Open+Sans:400italic,400,800' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
 
   <script src="js/libs/modernizr-2.0.min.js"></script>
@@ -18,145 +18,41 @@
 </head>
 
 <body>
-
-  <div id="container">
     <header>
-      <h1>Graded Feature Support</h1>
+      <h1><b>Graded</b>Feature Support</h1>
       <h2>You can use new and shiny now. But use it responsibly. Here is how.</h2>
-      <section>
-        <article><p>Show me what I can use if I do not support: <label><input name="ie" type="radio" value="ie6" /> IE6</label> <label><input name="ie" type="radio" value="ie7" /> IE7</label> <label><input name="ie" type="radio" value="ie8" /> IE8</label></p></article>
-        <article><p>Show me only: <label><input name="cat" type="radio" value="css"/> CSS</label> <label><input name="cat" type="radio" value="js"/> JS & APIs</label> <label><input name="cat" type="radio" value="html" /> HTML</label> features</p></article>
-        <article><p>Features to <label><input name="rec" type="radio" value="good" /> use now</label> <label><input name="rec" type="radio" value="bad" /> use with caution</label> <label><input name="rec" type="radio" value="ugly"/> avoid</label> </p></article>
-        <article><p><a href="#">How do I use prefixes?</a> <a href="#">Tools for Feature Support</a></p></article>
-      </section>            
+      <h3><b>As recommended by</b> <a href=#>Paul Irish</a> <a href=#>Divya Manian</a> <a href=#>John Dalton</a> <a href=#>Remy Sharp</a> <a href=#>Nicolas Gallagher</a> <a href=#>Alexis Deveria</a> <a href=#>Alex Russell</a></h3>
+      <input type="search" name="livesearch" value="" placeholder="type to filter">
     </header>
     <div id="main" role="main">
       <section>
-        <table>
-          <thead>
-            <tr>
-              <th>Feature</th>
-              <th>Used by</th>
-              <th>Prefix</th>
-              <th>Polyfill</th>
-              <th>Recommendation</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="title">
-              <th colspan="5">Form Elements</th>
-            </tr>
-            <tr class="title">
-              <th colspan="5">Input Types</th>
-            </tr>
-            <tr class="bad ie6 html">
-              <td>range</td>
-              <td>20%</td>
-              <td>No</td>
-              <td><a href="#">freqdec</a> | <a href="#">frankyan</a></td>
-              <td>Good to use with polyfill.</td>
-            </tr>
-            <tr class="ugly html">
-              <td>color</td>
-              <td>1%</td>
-              <td>No</td>
-              <td>-</td>
-              <td>Experimental use only</td>              
-            </tr>
-            <tr class="title">
-              <th colspan="5">Canvas & Canvas-based APIs</th>
-            </tr>
-            <tr class="good js ie6">
-              <td>canvas</td>
-              <td>60%</td>
-              <td>No</td>
-              <td><a href='#'>flashcanvas</a></td>
-              <td>Use it. now. Polyfill only necessary for IE6</td>
-            </tr>
-            <tr class="bad js">
-              <td>webGL</td>
-              <td>40%</td>
-              <td>No</td>
-              <td><a href="">three.js</a></td>
-              <td>Experimental use only. High performance hit.</td>
-            </tr>
-            <tr class="title">
-              <th colspan="5">CSS</th>
-            </tr>
-            <tr class="good css ie6">
-              <td>selectors</td>
-              <td>90%</td>
-              <td>No</td>
-              <td><a href="#">selectivizr</a></td>
-              <td>Use without a polyfill. Make sure it gracefully degrades.</td>
-            </tr>
-            <tr class="ugly css">
-              <td>border-image</td>
-              <td>60%</td>
-              <td>Yes</td>
-              <td><a href="#">borderingaimage.com</a></td>
-              <td>Don't use it. It works with so few use cases.</td>
-            </tr>
-            <tr class="ugly css">
-              <td>keyframed animation</td>
-              <td>20%</td>
-              <td>Yes</td>
-              <td><a href="#">scripty2</a> | <a href="#">yui</a></td>
-              <td>Experimental, and performance impact needs to be evaluated. If you do use it, dont use a polyfill.</td>              
-            </tr>
-            <tr class="good css">
-              <td>text-shadow</td>
-              <td>80%</td>
-              <td>No</td>
-              <td>-</td>
-              <td>Use it as much as you like! Modernizr maybe needed for some special cases.</td>
-            </tr>
-            <tr class="ugly css">
-              <td>box-reflections</td>
-              <td>1%</td>
-              <td>Yes</td>
-              <td>-</td>
-              <td>Avoid.</td>
-            </tr>
-            <tr class="bad css">
-              <td>background-clip</td>
-              <td>50%</td>
-              <td>No</td>
-              <td>-</td>
-              <td>Avoid. Current implementations don't match the spec.</td>
-            </tr>
-            <tr class="title">
-              <th colspan="5">HTML</th>
-            </tr>
-            <tr class="good html">
-              <td>data attributes</td>
-              <td>40%</td>
-              <td>No</td>
-              <td>-</td>
-              <td>Use it!</td>
-            </tr>
-            <tr class="good html">
-              <td>video</td>
-              <td>80%</td>
-              <td>No</td>
-              <td><a href="#">mediaelement.js</a></td>
-              <td>Use <a href="#">videoforeverybody</a> if you do not want a polyfill.</td>
-            </tr>
-            <tr class="good html">
-              <td>Audio</td>
-              <td>80%</td>
-              <td>No</td>
-              <td><a href="#">mediaelement.js</a></td>
-              <td>Use.</td>
-            </tr>
-          </tbody>
-        </table>
+        <article>
+          <h2>SVG</h2>
+          <h4>90%</h4>          
+          <h3><b>Ok!</b></h3>
+          <p>All modern browsers support SVG. You can use <a href=#>svgweb</a> or <a href=#>Raphaél</a> to fallback for browsers that do not support SVG.</p>                    
+        </article>        
+        <article>
+          <h2>Canvas</h2>
+          <h4>90%</h4>          
+          <h3 class=fallback><b>Ok! <i>fallback</i></b></h3>
+          <p><a href=#>FlashCanvas</a> or <a href=#>excanvas</a> would be your fallbacks of choice if you absolutely need it. </p>
+        </article>
+        <article>
+          <h2>Web Storage</h2>
+          <h3 class=fallback><b>Ok! <i>fallback</i></b></h3>
+        </article>
+        <article>
+          <h2><code>&lt;input type="range"></code></h2>
+          <h4>11%</h4>          
+          <h3 class=polyfill><b>Ok!<i>polyfill</i></b></h3>
+          <p>We recommend you use blah blah, and use <a href=#>frank yan's polyfill</a> or <a href=#>freqdec</a>'s.</p>                    
+        </article>
       </section>
     </div>
     <footer>
 
     </footer>
-  </div> <!--! end of #container -->
 
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
