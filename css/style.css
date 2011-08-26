@@ -173,7 +173,7 @@ header h1, article h3 { font-family: 'Montez', cursive; }
 header h1 b, header h3, article h3 b i { font-family: 'Open Sans', sans-serif; text-transform: uppercase; display: block; line-height: 1;  }
 
 
-header h3 { background: url(../dark_mosaic.png) hsl( 0, 0%, 7%); color: white; position: relative; box-shadow: 0.05em 0.05em 0.4em 0.15em hsl(42, 29%, 33%); padding: 1em; font-size: 1em; line-height: 1.5; text-align: left; }
+header h3 { background: url(../dark_mosaic.png) hsl( 0, 0%, 7%); color: white; position: relative; box-shadow: 0.05em 0.05em 0.4em 0.15em hsl(42, 29%, 33%); padding: 1em; font-size: 1em; line-height: 1.5; text-align: left; margin: 0; }
 
 header h3::before, 
 header h3::after { content: ""; width: 0; height: 0; border: 5em solid hsl(32, 46%, 25%); border-width: 20px 0 20px 20px; border-color: hsl( 0, 0%, 7%) transparent hsl( 0, 0%, 7%); position: absolute; left: -20px; top: 50%; margin-top: -20px; z-index: -1; }
@@ -188,7 +188,8 @@ header h3 b { word-spacing: 0.15em; text-transform: uppercase; }
 header h3, header h2,
 article h3 b i { font-weight: normal; text-transform: none; font-style: normal; }
 
-
+header h4 { background: khaki; padding: 1em; margin: 0; box-shadow: 0 0 1px hsl(42, 29%, 33%); }
+header input[type="search"] { width: 50%; }
 
 article h2 { color: indianred; text-shadow: 2px 2px 1px hsl(53, 82%, 54%);  }
 article h2 b { background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) -30px, hsl( 42, 79%, 72%) 98%); background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) -30px, hsl( 42, 79%, 72%) 98%); font-weight: normal; font-size: 70%; display: inline-block; padding: 0 0.5em; border-radius: 0 3px 3px 0; position: relative; color: #000; -webkit-transition: 1s width linear; width: 1.8em; text-align: right; white-space: nowrap; }
