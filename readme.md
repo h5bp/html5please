@@ -24,15 +24,13 @@ A very basic idea of how this would look like. Lame filters and colors. See: htt
 To do
 ------
 1. Make this list a JSON. So, we can link directly to MDN and the Github wiki.
-2. Get used by stats from caniuse.com
-3. Fix the filters to work simultaneously.
-4. Add more info for each "feature" (e.g. selectors should list all selectors, possibly accessed with a "view more" or smthing) and link to MDN.
+3. Fix the filters
 5. Link to Paul Irish's post on responsible polyfilling.
 6. Link each recommendation to a "more details" page in the wiki (thnx @necolas). 
 
 Design
-1. Better design the live filter (it is invisible)
-2. Footer: what/ if
+------
+2. Footer: what/if
 3. Different color states for badges "use this/ dont / etc"
 4. Some bling transitions
 5. Proper prefixes/fallbacks
