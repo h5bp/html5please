@@ -167,7 +167,7 @@ header h1 b { font-size: 50%; color: hsla(200, 14%, 58%, 0.9);  }
 
 header h1 { line-height: 1.2em; margin: 0; }
 header h1 + h2 { font-size: 1em; text-transform: lowercase; margin: 3em 0; }
-header h1, article h3 { font-family: 'Montez', cursive; }
+header h1 { font-family: 'Montez', cursive; }
 
 
 header h1 b, header h3, article h3 b i { font-family: 'Open Sans', sans-serif; text-transform: uppercase; display: block; line-height: 1;  }
