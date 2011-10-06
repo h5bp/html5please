@@ -7,8 +7,8 @@
     %meta{:content => "", :name => "description"}/
     %meta{:content => "", :name => "author"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %link{:href => "http://fonts.googleapis.com/css?family=Montez|Open+Sans:400italic,400,800", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "css/style.css", :rel => "stylesheet"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Montez|Open+Sans:400italic,400,800", :rel => "stylesheet"}/
+    %link{:href => "stylesheets/style.css", :rel => "stylesheet"}/
     %script{:src => "js/libs/modernizr-2.0.min.js"}
     %script{:src => "js/libs/respond.min.js"}
   %body
@@ -25,6 +25,7 @@
         %input{:name => "livesearch", :placeholder => "type to filter", :type => "search", :value => ""}/
     #main{:role => "main"}
       %section
+
         %article
           %h2
             SVG
@@ -39,6 +40,7 @@
             which has a VML renderer for
             = succeed "." do
               %abbr{:title => "Internet Explorer 6-8. Prounced 'oldie'"} oldIE
+
         %article
           %h2
             Canvas
@@ -52,6 +54,7 @@
             or
             %a{:href => "#"} excanvas
             are your polyfills of choice if you absolutely need it.
+
         %article
           %h2
             HTML5 video/audio
@@ -61,6 +64,7 @@
               Ok!
               %i fallback
           %p Use mediaelement.js as polyfill for API (flash fallback w/ consistent visual design too).. Video for everyone base setup if no polyfill desired.
+
         %article
           %h2
             CSS3 Selectors
@@ -68,6 +72,7 @@
           %h3.fallback
             %b Depends
           %p depends if you should use selectivizr based on what selectors you want and your browser support needs!
+
         %article
           %h2
             Flexbox
@@ -75,6 +80,7 @@
           %h3.fallback
             %b Not yet
           %p dont use, spec is changing. webkit and moz have incompatibilities that wont't be fixed. if you dive in, enjoy the bumpy waves
+
         %article
           %h2
             %code data-*
@@ -86,6 +92,7 @@
             GROOVY everywhere obv. old browsers ignore unknown attributes, you can always use
             %code getAttribute
             or you can use the dataset polyfill for IE8+.
+
         %article
           %h2
             CSS transitions
@@ -93,6 +100,7 @@
           %h3.fallback
             %b Ok!
           %p shim layer recomendded to get hwaccel with js fallback (isotope, yui transition, scripty2) ...  or let it degrade
+
         %article
           %h2
             CSS Animations
@@ -100,6 +108,7 @@
           %h3.fallback
             %b No
           %p experiemental u fuck
+
         %article
           %h2
             border-image
@@ -109,6 +118,7 @@
               Ok!
               %i fallback
           %p use borderingaimage.com .. no support: use modernizr to detect and apply backgroundimage.. or add extra elements. ALSO WHO CARES border-image is dumb.
+
         %article
           %h2
             text-shadow
@@ -118,6 +128,7 @@
               Ok!
               %i fallback
           %p mostly can degrade to nothing. sometimes modernizr needed.
+
         %article
           %h2
             box-shadow
@@ -126,13 +137,15 @@
             %b
               Ok!
               %i fallback
-          %p         %article
+          %p 
+        %article
           %h2
             box-reflections
             %b 90%
           %h3.fallback
             %b no
           %p avoid
+
         %article
           %h2
             background-clip
@@ -142,6 +155,7 @@
               Ok!
               %i fallback
           %p dont use webkit specific value (text) without feature detection, other values groovy. see mdc for compat
+
         %article
           %h2
             @font-face
@@ -151,6 +165,7 @@
               Ok!
               %i fallback
           %p don't use cufon. use google webfonts or fontsquirrel generator
+
         %article
           %h2
             Web Storage
@@ -159,6 +174,7 @@
             %b
               Ok!
               %i fallback
+
         %article
           %h2
             %code &lt;input type="range">
@@ -173,6 +189,7 @@
             or
             = succeed "'s." do
               %a{:href => "#"} freqdec
+
         %article
           %h2
             %code &lt;input type="color">
@@ -180,6 +197,7 @@
           %h3.polyfill
             %b Not yet
           %p experimental use only, too early to use the markup or polyfill in production
+
         %article
           %h2
             date
@@ -188,6 +206,7 @@
           %h3.polyfill
             %b Not yet
           %p experimental use only, too early to use the markup or polyfill in production
+
         %article
           %h2
             HTML5 input validation
@@ -195,8 +214,13 @@
           %h3.polyfill
             %b Not yet???
           %p uhhhh h5f or webshim or ... i dont know.
+
+
         %h1 browser death features
+
         So for IE6:
+        
+
         %article
           %h2
             position: fixed
@@ -205,6 +229,74 @@
           %h3.polyfill
             %b Not yet???
           %p uhhhh h5f or webshim or ... i dont know.
+
+
+        #article
+          %h2 
+            :plain 
+              position: fixed 
+            %b 11% 
+            / IE7+
+          %h3( class="polyfill" )
+            %b Not yet???
+          %p  uhhhh h5f or webshim or ... i dont know.
+
+
+        #article
+          %h2 
+            :plain 
+              .
+            %b 11%
+          %h3( class="polyfill" )
+            %b Not yet???
+          %p  .
+
+
+        #article
+          %h2 
+            :plain 
+              PNG Images
+            %b 11%
+            / IE7+
+          %h3( class="polyfill" )
+            %b Not yet???
+          %p 32-bit pngs need a pngfix. DD_belatedPNG is the best of them, by far. However, 8-bit PNGs still have alpha transparency but fall back to index transparency in IE6, which in many cases is perfectly fine. Use 8-bit PNGs, and avoid 32-bit PNG as much as possible.
+
+
+        #article
+          %h2 
+            :plain 
+              hover psuedo-class selector
+            %b 11%
+          %h3( class="polyfill" )
+            %b Not yet???
+          %p  
+
+
+        / 
+          PNG support!
+          position: fixed
+          div:hover
+          selectors: div:first-child, h2 + p, img[data-fullsize], and ul.main > li
+          background-attachment: fixed
+          min-width, max-height, etc
+          IE7
+          postMessage
+          cross-domain XHR
+          native JSON
+          data URI
+          `:before, :after, :focus`
+          localStorage and sessionStorage
+          getters and setters on DOM elements
+          querySelector(), querySelectorAll()
+          box-sizing!
+          display: table-cell, table, etc.
+          ff2.0
+          inline-block arrived with 2.0 dying
+          the &shy;
+
+        #k sup
+          
         es5 methods.
         
         
