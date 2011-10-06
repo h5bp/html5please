@@ -209,6 +209,69 @@ article h3 b i { font-size: 70%; color: hsl(50, 100%, 80%); }
 
 
 
+
+div#main, h1, header h2, h3, h4 { 
+  -webkit-transition: all 0.6s cubic-bezier(.83,1   ,.63,.9);  
+     -moz-transition: all 0.6s cubic-bezier(.83,1.47,.63,.9);  
+      -ms-transition: all 0.6s cubic-bezier(.83,1.47,.63,.9);  
+       -o-transition: all 0.6s cubic-bezier(.83,1.47,.63,.9);  
+          transition: all 0.6s cubic-bezier(.83,1.47,.63,.9);  
+
+         -webkit-transform: translateZ(0);   
+}
+
+h1, h2, h3, h4 { 
+      -webkit-transition-duration: 0.3s;
+      -moz-transition-duration: 0.3s; }
+
+.searching div#main {
+  
+  -webkit-transform: translate(0, -480px) translateZ(0);  
+     -moz-transform: translate(0, -480px);  
+      -ms-transform: translate(0, -200px);  
+       -o-transform: translate(0, -200px);  
+          transform: translate(0, -200px);  
+
+      -webkit-transition-duration: 0.8s;
+         -moz-transition-duration: 0.8s; 
+}
+
+.searching h1 {
+  
+  -webkit-transform: translate(-1200px, 0px) translateZ(0);  
+     -moz-transform: translate(-1200px, 0px);  
+      -ms-transform: translate(-100px, -300px);  
+       -o-transform: translate(-100px, -300px);  
+          transform: translate(-100px, -300px);  
+}
+
+.searching header h2 {
+  
+  -webkit-transform: translate(1200px, 0px) translateZ(0);  
+     -moz-transform: translate(1200px, 0px);  
+      -ms-transform: translate(-100px, -300px);  
+       -o-transform: translate(-100px, -300px);  
+          transform: translate(-100px, -300px);  
+}
+.searching header h3 {  opacity: 0;   }
+
+.searching header h4 {  
+  -webkit-transform: translate(0px, -393px) translateZ(0); 
+  -moz-transform: translate(0px, -393px) translateZ(0); 
+
+  border-radius: 0 0 20px 20px;
+}
+
+.test div#main {
+  
+  -webkit-transform: translate(0, -2480px) translateZ(0);  
+     -moz-transform: translate(0, -2480px);  
+      -ms-transform: translate(0, -200px);  
+       -o-transform: translate(0, -200px);  
+          transform: translate(0, -200px);  
+}
+
+
 /* =============================================================================
    Non-semantic helper classes
    Please define your styles before this section.
