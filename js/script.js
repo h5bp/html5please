@@ -27,8 +27,12 @@ document.querySelector('input[type="search"]').addEventListener('input', functio
 
   if (e.target.value == '')
     document.body.classList.remove('searching');
-  else
+  else{
     document.body.classList.add('searching');
+  }
+
+  if (e.target.value.length == 1)
+    window.scrollTo(0,0);
 
   if (e.target.value == 'test')
     document.body.classList.add('test');
