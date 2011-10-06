@@ -39,3 +39,12 @@ Design
 Context
 ------
 Started at: http://oksoclap.com/gfs
+
+
+How to develop
+--------------
+
+   compass watch .
+   ruby haml_watch.rb .
+
+boom boom.
