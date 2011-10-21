@@ -9,6 +9,7 @@
   -ms-transition: $arg;
   transition: $arg;
 }
+
 /*
  * HTML5 ✰ Boilerplate
  *
@@ -164,13 +165,13 @@ table { border-collapse: collapse; border-spacing: 0; }
    $contrast: #E16734;
    $code: hsla(193, 23%, 36%, 0.5);
    $hotpink: #fe57a1;
-   $fallback: hsl(60, 31%, 40%);
-   $polyfill: hsl(40, 61%, 40%);
+   $fallback: saturate(lighten($light, 20%), 10%);
+   $polyfill: saturate(darken($contrast, 10%), 10%);
    $no: #CD5C5C;
-   $yes: #808000;
+   $yes: saturate($light, 10%);
 
    
-html {  box-shadow: 0 0 5em $lightest inset; min-height: 100%; }
+html {  box-shadow: 0 0 5em $lightest inset; min-height: 100%; max-width: 100%; }
  
 body {
   max-width: 70%;
@@ -182,6 +183,8 @@ body {
 header {
   text-align: center;
   margin-bottom: 5em;
+  overflow: hidden;
+  width: 100%;
 }
 
 h2 { text-transform: uppercase; }
@@ -216,28 +219,24 @@ header h4 { background: khaki; padding: 1em; margin: 0; box-shadow: 0 0 1px $dar
 header input[type="search"] { width: 50%; }
 
 article h2 { color: darken($contrast, 30%); text-shadow: 2px 2px 1px $contrast;  }
-article h2 b { 
-  @include background(linear-gradient(top left, rgba(255, 255, 255, 0) -30px, hsl( 42, 79%, 72%) 98%));  
-  font-weight: normal; 
-  font-size: 70%; 
-  display: inline-block; 
-  text-shadow: 1px 1px 1px $contrast;   
-  padding: 0 0.5em; 
-  border-radius: 0 3px 3px 0; 
-  position: relative; 
-  color: #000; width: 1.8em; 
-  @include our-transition(1s opacity linear);
-  text-align: right; white-space: nowrap; }
-  
-article h2 b::before { width: 0; height: 0; border-top: 4px solid transparent; border-left: 8px solid hsl( 42, 79%, 72%); border-bottom: 4px solid transparent; content: ""; position: absolute; right: -5px; top: 50%; margin-top: -4px; }
-
-article h2 b::after { content: "Global usage"; position: absolute; left: 4em; top: 0; opacity: 0; text-shadow: none; }
-article h2 b:hover::after { opacity: 1; }
 
 article { 
   overflow: hidden; min-height: 5em; padding: 2em 0; position: relative; 
-  @include background(radial-gradient(50% 180%, ellipse, hsl(53, 86%, 49%), hsla(53, 86%, 79%, 0) 40%));
-  }
+  @include background(radial-gradient(50% 200%, ellipse, hsl(53, 86%, 49%), hsla(53, 86%, 79%, 0) 40%));
+}
+
+article.fallback {
+  @include background(radial-gradient(50% 200%, ellipse, $fallback, scale-color($fallback, $alpha: -100%) 40%));  
+}
+
+article.polyfill {
+  @include background(radial-gradient(50% 200%, ellipse, $polyfill, scale-color($polyfill, $alpha: -100%) 40%));    
+}
+
+article.no {
+  @include background(radial-gradient(50% 200%, ellipse, $no, scale-color($no, $alpha: -100%) 40%));      
+}
+
   
 article::after { content: ""; height: 1px; 
   @include background(linear-gradient(left, hsla(159, 15%, 59%, 0), hsla(159, 15%, 59%, 0.5) 40%, hsla(159, 15%, 59%, 0.5) 60%, hsla(159, 15%, 59%, 0)));
@@ -249,17 +248,6 @@ article h3 b { display: table-cell; vertical-align: middle; border: 2px dotted w
 article h3 b i { font-size: 70%; color: hsl(50, 100%, 80%); }
 
 
-article.fallback {
-  @include background(radial-gradient(50% 180%, ellipse, $fallback, scale-color($fallback, $alpha: -100%) 40%));  
-}
-
-article.polyfill {
-  @include background(radial-gradient(50% 180%, ellipse, $polyfill, scale-color($polyfill, $alpha: -100%) 40%));    
-}
-
-article.no {
-  @include background(radial-gradient(50% 180%, ellipse, $no, scale-color($no, $alpha: -100%) 40%));      
-}
 .fallback h3 b { background: $fallback; } 
 .polyfill  h3 b { background: $polyfill; }
 .no h3 b { background: $no; }
@@ -278,7 +266,7 @@ h1, h2, h3, h4 {
 }
 
 .searching div#main {
-  @include transform(translate(0, -480px));
+  @include transform(translate(0, -480px));  
   @include transition-duration(0.8s);
 }
 

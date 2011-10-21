@@ -15,7 +15,7 @@
   %body
     %header
       %h1
-        %b> HTML5
+        %b HTML5
         Please
       %h2 
         %b Use the new and shiny responsibly. 
@@ -32,7 +32,6 @@
         %article.ok
           %h2
             SVG
-            %b 90%
           %h3
             %b Ok!
           %p
@@ -47,7 +46,6 @@
         %article.fallback
           %h2
             Canvas
-            %b 90%
           %h3
             %b
               Ok!
@@ -61,25 +59,24 @@
         %article.fallback
           %h2
             HTML5 video/audio
-            %b 90%
           %h3
             %b
               Ok!
               %i fallback
-          %p Use mediaelement.js as polyfill for API (flash fallback w/ consistent visual design too).. Video for everyone base setup if no polyfill desired.
+          %p Use mediaelement.js as polyfill for API (flash fallback w/ consistent visual design too).. Video for everyone base setup if No polyfill desired.
 
-        %article.fallback
+        %article.polyfill
           %h2
             CSS3 Selectors
-            %b 90%
           %h3
-            %b Depends
+            %b 
+              Ok!
+              %i polyfill
           %p depends if you should use selectivizr based on what selectors you want and your browser support needs are!
 
         %article.no
           %h2
             Flexbox
-            %b 90%
           %h3
             %b No
           %p dont use, spec is changing. webkit and moz have incompatibilities that wont't be fixed. if you dive in, enjoy the bumpy waves
@@ -88,7 +85,6 @@
           %h2
             %code data-*
             attributes
-            %b 90%
           %h3
             %b Ok!
           %p
@@ -99,7 +95,6 @@
         %article.ok
           %h2
             CSS transitions
-            %b 90%
           %h3
             %b Ok!
           %p shim layer recomendded to get hwaccel with js fallback (isotope, yui transition, scripty2) ...  or let it degrade
@@ -107,7 +102,6 @@
         %article.no
           %h2
             CSS Animations
-            %b 90%
           %h3
             %b No
           %p experiemental u fuck
@@ -115,27 +109,24 @@
         %article.fallback
           %h2
             border-image
-            %b 90%
           %h3
             %b
               Ok!
               %i fallback
-          %p use borderingaimage.com .. no support: use modernizr to detect and apply backgroundimage.. or add extra elements. ALSO WHO CARES border-image is dumb.
+          %p use borderingaimage.com .. No support: use modernizr to detect and apply backgroundimage.. or add extra elements. ALSO WHO CARES border-image is dumb.
 
         %article.fallback
           %h2
             text-shadow
-            %b 90%
           %h3
             %b
               Ok!
               %i fallback
-          %p mostly can degrade to nothing. sometimes modernizr needed.
+          %p mostly can degrade to Nothing. sometimes modernizr needed.
 
         %article.fallback
           %h2
             box-shadow
-            %b 90%
           %h3
             %b
               Ok!
@@ -144,15 +135,13 @@
         %article.no
           %h2
             box-reflections
-            %b 90%
           %h3
-            %b no
+            %b No
           %p avoid
 
         %article.fallback
           %h2
             background-clip
-            %b 90%
           %h3
             %b
               Ok!
@@ -162,7 +151,6 @@
         %article.fallback
           %h2
             @font-face
-            %b 90%
           %h3
             %b
               Ok!
@@ -172,7 +160,6 @@
         %article.fallback
           %h2
             Web Storage
-            %b 50%
           %h3
             %b
               Ok!
@@ -181,7 +168,6 @@
         %article.polyfill
           %h2
             %code &lt;input type="range">
-            %b 11%
           %h3
             %b
               Ok!
@@ -196,7 +182,6 @@
         %article.no
           %h2
             %code &lt;input type="color">
-            %b 11%
           %h3
             %b No
           %p experimental use only, too early to use the markup or polyfill in production
@@ -205,7 +190,6 @@
           %h2
             date
             %code &lt;input>s
-            %b 11%
           %h3
             %b No
           %p experimental use only, too early to use the markup or polyfill in production
@@ -213,7 +197,6 @@
         %article.no
           %h2
             HTML5 input validation
-            %b 11%
           %h3
             %b No
           %p uhhhh h5f or webshim or ... i dont know.
@@ -221,59 +204,65 @@
         %article.yes
           %h2
             position: fixed
-            %b 11%
-            %i IE7+
           %h3
-            %b Ok!
+            %b 
+              Ok!
+              %i IE7+
+          
           %p uhhhh h5f or webshim or ... i dont know.
 
 
         %article.yes
           %h2 
             position: fixed 
-            %b 11% 
-            %i IE7+
           %h3
-            %b Ok!
+            %b
+              Ok!
+              %i IE7+
+          
           %p  uhhhh h5f or webshim or ... i dont know.
 
 
         %article.yes
           %h2 
             PNG Images
-            %b 11%
-            %i IE7+
           %h3
-            %b Ok!
+            %b
+              Ok!
+              %i IE7+
+          
           %p 32-bit pngs need a pngfix. DD_belatedPNG is the best of them, by far. However, 8-bit PNGs still have alpha transparency but fall back to index transparency in IE6, which in many cases is perfectly fine. Use 8-bit PNGs, and avoid 32-bit PNG as much as possible.
 
 
         %article.yes
           %h2 
             *:hover
-            %b 11%
-            %i IE7+
           %h3
-            %b Ok!
+            %b
+              Ok!
+              %i IE7+
+          
           %p
           
         %article.yes
           %h2
             background-attachment: fixed
-            %b 11%
-            %i IE7+
           %h3
-            %b Ok!
+            %b
+              Ok!
+              %i IE7+
+          
           %p 
 
 
         %article.yes
           %h2
             min/max-width
-            %b 11%
-            %i IE7+
           %h3
-            %b Ok!
+            %b
+              Ok!
+              %i IE7+
+          
           %p
 
 
@@ -281,108 +270,130 @@
           %h2
             postMessage
             %b
-            %i IE8+
           %h3
-            %b Ok!
+            %b
+              Ok!
+              %i IE8+
+          
           %p
           
         %article.yes
           %h2
             Cross-Domain XHR
             %b
-            %i IE8+
           %h3
-            %b Ok!
+            %b
+              Ok!
+              %i IE8+
+          
           %p
             
         %article.fallback
           %h2
             Native JSON
             %b
-            %i IE8+
+               
           %h3
-            %b fallback
+            %b
+              Ok!
+              %i IE8+            
           %p
           
         %article.fallback
           %h2
             Data URI
             %b
-            %i IE8+
           %h3
-            %b fallback
+            %b
+              Ok!
+              %i IE8+              
           %p
 
         %article.yes
           %h2
             Pseudo-elements :before, :after, :focus
           %b
-          %i IE8+
           %h3
-            %b Ok!
+            %b
+              Ok!
+              %i IE8+
+          
           %p
           
         %article.yes
           %h2
             localStorage & sessionStorage
             %b
-            %i IE8+
           %h3
-            %b Ok!
+            %b
+              Ok!
+              %i IE8+
+          
           %p
           
         %article.yes
           %h2
             DOM getters and setters
             %b
-            %i IE8+
           %h3
-            %b Ok!
+            %b
+              Ok!
+              %i IE8+
+          
           %p          
           
         %article.yes
           %h2
             querySelector & querySelectorAll()
             %b
-            %i IE8+
           %h3
-            %b Ok!
+            %b
+              Ok!
+              %i IE8+
+          
           %p          
           
         %article.yes
           %h2
             box-sizing
             %b
-            %i IE8+
           %h3
-            %b Ok!
+            %b
+              Ok!
+              %i IE8+
+          
           %p          
           
         %article.yes
           %h2
             display: table-cell, display: table
             %b
-            %i IE8+
           %h3
-            %b Ok!
+            %b
+              Ok!
+              %i IE8+
+          
           %p          
           
         %article.yes
           %h2
             inline-block
             %b
-            %i IE8+
           %h3
-            %b Ok!
+            %b
+              Ok!
+              %i IE8+
+          
           %p          
           
         %article.yes
           %h2
             &amp;shy;
             %b
-            %i ??
           %h3
-            %b Ok!
+            %b
+              Ok!
+              %i ??
           %p          
 
 
