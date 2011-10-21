@@ -3,7 +3,7 @@
   %head
     %meta{:charset => "utf-8"}/
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
-    %title Graded Feature Support
+    %title HTML5 Please
     %meta{:content => "", :name => "description"}/
     %meta{:content => "", :name => "author"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
@@ -15,9 +15,11 @@
   %body
     %header
       %h1
-        %b> Graded
-        Feature Support
-      %h2 You can use new and shiny now. But use it responsibly. Here is how.
+        %b> HTML5
+        Please
+      %h2 
+        %b Use the new and shiny responsibly. 
+        Look up properties and see if it is ready for use, and if so how you should use it with a polyfill,a fallback value or as it is. 
       %h3
         %b As recommended by
         %a{:href => "#"} Paul Irish
@@ -27,7 +29,7 @@
     #main{:role => "main"}
       %section
 
-        %article
+        %article.ok
           %h2
             SVG
             %b 90%
@@ -42,11 +44,11 @@
             = succeed "." do
               %abbr{:title => "Internet Explorer 6-8. Prounced 'oldie'"} oldIE
 
-        %article
+        %article.fallback
           %h2
             Canvas
             %b 90%
-          %h3.fallback
+          %h3
             %b
               Ok!
               %i fallback
@@ -56,131 +58,131 @@
             %a{:href => "#"} excanvas
             are your polyfills of choice if you absolutely need it.
 
-        %article
+        %article.fallback
           %h2
             HTML5 video/audio
             %b 90%
-          %h3.fallback
+          %h3
             %b
               Ok!
               %i fallback
           %p Use mediaelement.js as polyfill for API (flash fallback w/ consistent visual design too).. Video for everyone base setup if no polyfill desired.
 
-        %article
+        %article.fallback
           %h2
             CSS3 Selectors
             %b 90%
-          %h3.fallback
+          %h3
             %b Depends
-          %p depends if you should use selectivizr based on what selectors you want and your browser support needs!
+          %p depends if you should use selectivizr based on what selectors you want and your browser support needs are!
 
-        %article
+        %article.no
           %h2
             Flexbox
             %b 90%
-          %h3.fallback
-            %b Not yet
+          %h3
+            %b No
           %p dont use, spec is changing. webkit and moz have incompatibilities that wont't be fixed. if you dive in, enjoy the bumpy waves
 
-        %article
+        %article.ok
           %h2
             %code data-*
             attributes
             %b 90%
-          %h3.fallback
+          %h3
             %b Ok!
           %p
             GROOVY everywhere obv. old browsers ignore unknown attributes, you can always use
             %code getAttribute
             or you can use the dataset polyfill for IE8+.
 
-        %article
+        %article.ok
           %h2
             CSS transitions
             %b 90%
-          %h3.fallback
+          %h3
             %b Ok!
           %p shim layer recomendded to get hwaccel with js fallback (isotope, yui transition, scripty2) ...  or let it degrade
 
-        %article
+        %article.no
           %h2
             CSS Animations
             %b 90%
-          %h3.fallback
+          %h3
             %b No
           %p experiemental u fuck
 
-        %article
+        %article.fallback
           %h2
             border-image
             %b 90%
-          %h3.fallback
+          %h3
             %b
               Ok!
               %i fallback
           %p use borderingaimage.com .. no support: use modernizr to detect and apply backgroundimage.. or add extra elements. ALSO WHO CARES border-image is dumb.
 
-        %article
+        %article.fallback
           %h2
             text-shadow
             %b 90%
-          %h3.fallback
+          %h3
             %b
               Ok!
               %i fallback
           %p mostly can degrade to nothing. sometimes modernizr needed.
 
-        %article
+        %article.fallback
           %h2
             box-shadow
             %b 90%
-          %h3.fallback
+          %h3
             %b
               Ok!
               %i fallback
           %p 
-        %article
+        %article.no
           %h2
             box-reflections
             %b 90%
-          %h3.fallback
+          %h3
             %b no
           %p avoid
 
-        %article
+        %article.fallback
           %h2
             background-clip
             %b 90%
-          %h3.fallback
+          %h3
             %b
               Ok!
               %i fallback
           %p dont use webkit specific value (text) without feature detection, other values groovy. see mdc for compat
 
-        %article
+        %article.fallback
           %h2
             @font-face
             %b 90%
-          %h3.fallback
+          %h3
             %b
               Ok!
               %i fallback
           %p don't use cufon. use google webfonts or fontsquirrel generator
 
-        %article
+        %article.fallback
           %h2
             Web Storage
             %b 50%
-          %h3.fallback
+          %h3
             %b
               Ok!
               %i fallback
 
-        %article
+        %article.polyfill
           %h2
             %code &lt;input type="range">
             %b 11%
-          %h3.polyfill
+          %h3
             %b
               Ok!
               %i polyfill
@@ -191,29 +193,29 @@
             = succeed "'s." do
               %a{:href => "#"} freqdec
 
-        %article
+        %article.no
           %h2
             %code &lt;input type="color">
             %b 11%
-          %h3.polyfill
-            %b Not yet
+          %h3
+            %b No
           %p experimental use only, too early to use the markup or polyfill in production
 
-        %article
+        %article.no
           %h2
             date
             %code &lt;input>s
             %b 11%
-          %h3.polyfill
-            %b Not yet
+          %h3
+            %b No
           %p experimental use only, too early to use the markup or polyfill in production
 
-        %article
+        %article.no
           %h2
             HTML5 input validation
             %b 11%
-          %h3.polyfill
-            %b Not yet???
+          %h3
+            %b No
           %p uhhhh h5f or webshim or ... i dont know.
 
 
@@ -222,13 +224,13 @@
         So for IE6:
         
 
-        %article
+        %article.polyfill
           %h2
             position: fixed
             %b 11%
           / ie7+
-          %h3.polyfill
-            %b Not yet???
+          %h3
+            %b Not yet
           %p uhhhh h5f or webshim or ... i dont know.
 
 

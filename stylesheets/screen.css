@@ -8,12 +8,10 @@
 /* =============================================================================
    HTML5 element display
    ========================================================================== */
-/* line 14, ../sass/screen.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
   display: block;
 }
 
-/* line 15, ../sass/screen.scss */
 audio[controls], canvas, video {
   display: inline-block;
   *display: inline;
@@ -23,7 +21,6 @@ audio[controls], canvas, video {
 /* =============================================================================
    Base
    ========================================================================== */
-/* line 22, ../sass/screen.scss */
 html {
   font-size: 100%;
   overflow-y: scroll;
@@ -32,27 +29,23 @@ html {
   -ms-text-size-adjust: 100%;
 }
 
-/* line 24, ../sass/screen.scss */
 body {
   margin: 0;
   font-size: 13px;
   line-height: 1.231;
 }
 
-/* line 26, ../sass/screen.scss */
 body, button, input, select, textarea {
   font-family: sans-serif;
   color: #222;
 }
 
-/* line 28, ../sass/screen.scss */
 ::-moz-selection {
   background: #fe57a1;
   color: #fff;
   text-shadow: none;
 }
 
-/* line 29, ../sass/screen.scss */
 ::selection {
   background: #fe57a1;
   color: #fff;
@@ -62,24 +55,20 @@ body, button, input, select, textarea {
 /* =============================================================================
    Links
    ========================================================================== */
-/* line 36, ../sass/screen.scss */
 a {
   color: midnightblue;
   text-decoration: none;
 }
 
-/* line 37, ../sass/screen.scss */
 a:visited {
   color: #551a8b;
 }
 
-/* line 38, ../sass/screen.scss */
 a:focus {
   outline: thin dotted;
 }
 
 /* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
-/* line 41, ../sass/screen.scss */
 a:hover, a:active {
   outline: 0;
   text-decoration: dotted;
@@ -88,27 +77,22 @@ a:hover, a:active {
 /* =============================================================================
    Typography
    ========================================================================== */
-/* line 48, ../sass/screen.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 50, ../sass/screen.scss */
 b, strong {
   font-weight: bold;
 }
 
-/* line 52, ../sass/screen.scss */
 blockquote {
   margin: 1em 40px;
 }
 
-/* line 54, ../sass/screen.scss */
 dfn {
   font-style: italic;
 }
 
-/* line 56, ../sass/screen.scss */
 hr {
   display: block;
   height: 1px;
@@ -118,14 +102,12 @@ hr {
   padding: 0;
 }
 
-/* line 58, ../sass/screen.scss */
 ins {
   background: #ff9;
   color: #000;
   text-decoration: none;
 }
 
-/* line 60, ../sass/screen.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -133,37 +115,31 @@ mark {
   font-weight: bold;
 }
 
-/* line 62, ../sass/screen.scss */
 pre, code, kbd, samp {
   font-family: monospace, monospace;
   _font-family: 'courier new', monospace;
   font-size: 1em;
 }
 
-/* line 64, ../sass/screen.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
-/* line 66, ../sass/screen.scss */
 q {
   quotes: none;
 }
 
-/* line 67, ../sass/screen.scss */
 q:before, q:after {
   content: "";
   content: none;
 }
 
-/* line 69, ../sass/screen.scss */
 small {
   font-size: 85%;
 }
 
-/* line 71, ../sass/screen.scss */
 sub, sup {
   font-size: 75%;
   line-height: 0;
@@ -171,12 +147,10 @@ sub, sup {
   vertical-align: baseline;
 }
 
-/* line 72, ../sass/screen.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 73, ../sass/screen.scss */
 sub {
   bottom: -0.25em;
 }
@@ -184,18 +158,15 @@ sub {
 /* =============================================================================
    Lists
    ========================================================================== */
-/* line 80, ../sass/screen.scss */
 ul, ol {
   margin: 1em 0;
   padding: 0 0 0 40px;
 }
 
-/* line 81, ../sass/screen.scss */
 dd {
   margin: 0 0 0 40px;
 }
 
-/* line 82, ../sass/screen.scss */
 nav ul, nav ol {
   list-style: none;
   margin: 0;
@@ -209,7 +180,6 @@ nav ul, nav ol {
  * 1. Improve image quality when scaled in IE7 http://h5bp.com/d
  * 2. Remove the gap between images and borders on image containers http://h5bp.com/e 
  */
-/* line 94, ../sass/screen.scss */
 img {
   border: 0;
   -ms-interpolation-mode: bicubic;
@@ -219,7 +189,6 @@ img {
 /*
  * Correct overflow displayed oddly in IE9 
  */
-/* line 100, ../sass/screen.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -227,7 +196,6 @@ svg:not(:root) {
 /* =============================================================================
    Figures
    ========================================================================== */
-/* line 107, ../sass/screen.scss */
 figure {
   margin: 0;
 }
@@ -235,31 +203,26 @@ figure {
 /* =============================================================================
    Forms
    ========================================================================== */
-/* line 114, ../sass/screen.scss */
 form {
   margin: 0;
 }
 
-/* line 115, ../sass/screen.scss */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
-/* line 117, ../sass/screen.scss */
 legend {
   border: 0;
   *margin-left: -7px;
   padding: 0;
 }
 
-/* line 119, ../sass/screen.scss */
 label {
   cursor: pointer;
 }
 
-/* line 121, ../sass/screen.scss */
 button, input, select, textarea {
   font-size: 100%;
   margin: 0;
@@ -267,43 +230,36 @@ button, input, select, textarea {
   *vertical-align: middle;
 }
 
-/* line 123, ../sass/screen.scss */
 button, input {
   line-height: normal;
   *overflow: visible;
 }
 
-/* line 125, ../sass/screen.scss */
 button, input[type="button"], input[type="reset"], input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
 }
 
-/* line 127, ../sass/screen.scss */
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
 }
 
-/* line 128, ../sass/screen.scss */
 input[type="search"] {
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
-/* line 130, ../sass/screen.scss */
 button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 132, ../sass/screen.scss */
 textarea {
   overflow: auto;
   vertical-align: top;
 }
 
-/* line 135, ../sass/screen.scss */
 input:invalid, textarea:invalid {
   background-color: #f0dddd;
 }
@@ -311,7 +267,6 @@ input:invalid, textarea:invalid {
 /* =============================================================================
    Tables
    ========================================================================== */
-/* line 142, ../sass/screen.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -321,13 +276,11 @@ table {
    Primary styles
    Author: Divya Manian
    ========================================================================== */
-/* line 149, ../sass/screen.scss */
 html {
   box-shadow: 0 0 5em #f8ed9b inset;
   min-height: 100%;
 }
 
-/* line 151, ../sass/screen.scss */
 body {
   max-width: 70%;
   margin: 5em auto;
@@ -335,49 +288,41 @@ body {
   font: 16px/1.5 "Open Sans", sans-serif;
 }
 
-/* line 158, ../sass/screen.scss */
 header {
   text-align: center;
   margin-bottom: 5em;
 }
 
-/* line 163, ../sass/screen.scss */
 h2 {
   text-transform: uppercase;
 }
 
-/* line 165, ../sass/screen.scss */
 header h1 {
   font-size: 5em;
   color: indianred;
   text-shadow: 2px 2px 1px #ead32a;
 }
 
-/* line 166, ../sass/screen.scss */
 header h1 b {
   font-size: 50%;
   color: rgba(133, 153, 163, 0.9);
 }
 
-/* line 168, ../sass/screen.scss */
 header h1 {
   line-height: 1.2em;
   margin: 0;
 }
 
-/* line 169, ../sass/screen.scss */
 header h1 + h2 {
   font-size: 1em;
   text-transform: lowercase;
   margin: 3em 0;
 }
 
-/* line 170, ../sass/screen.scss */
 header h1 {
   font-family: 'Montez', cursive;
 }
 
-/* line 173, ../sass/screen.scss */
 header h1 b, header h3, article h3 b i {
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
@@ -385,7 +330,6 @@ header h1 b, header h3, article h3 b i {
   line-height: 1;
 }
 
-/* line 176, ../sass/screen.scss */
 header h3 {
   background: url(../dark_mosaic.png) #121212;
   color: white;
@@ -398,7 +342,6 @@ header h3 {
   margin: 0;
 }
 
-/* line 179, ../sass/screen.scss */
 header h3::before,
 header h3::after {
   content: "";
@@ -414,7 +357,6 @@ header h3::after {
   z-index: -1;
 }
 
-/* line 181, ../sass/screen.scss */
 header h3::after {
   border-width: 20px 20px 20px 0;
   border-color: #121212 transparent #121212;
@@ -422,24 +364,20 @@ header h3::after {
   right: -20px;
 }
 
-/* line 183, ../sass/screen.scss */
 header h3 a {
   color: #e27979;
 }
 
-/* line 184, ../sass/screen.scss */
 header h3 a + a::before {
   content: "  /  ";
   color: white;
 }
 
-/* line 186, ../sass/screen.scss */
 header h3 b {
   word-spacing: 0.15em;
   text-transform: uppercase;
 }
 
-/* line 189, ../sass/screen.scss */
 header h3, header h2,
 article h3 b i {
   font-weight: normal;
@@ -447,7 +385,6 @@ article h3 b i {
   font-style: normal;
 }
 
-/* line 191, ../sass/screen.scss */
 header h4 {
   background: khaki;
   padding: 1em;
@@ -455,18 +392,15 @@ header h4 {
   box-shadow: 0 0 1px #6d5e3c;
 }
 
-/* line 192, ../sass/screen.scss */
 header input[type="search"] {
   width: 50%;
 }
 
-/* line 194, ../sass/screen.scss */
 article h2 {
   color: indianred;
   text-shadow: 2px 2px 1px #ead32a;
 }
 
-/* line 195, ../sass/screen.scss */
 article h2 b {
   background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) -30px, #f0ce7f 98%);
   background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) -30px, #f0ce7f 98%);
@@ -483,7 +417,6 @@ article h2 b {
   white-space: nowrap;
 }
 
-/* line 196, ../sass/screen.scss */
 article h2 b::after {
   width: 0;
   height: 0;
@@ -497,17 +430,14 @@ article h2 b::after {
   margin-top: -4px;
 }
 
-/* line 197, ../sass/screen.scss */
 article h2 b:hover {
   min-width: 10em;
 }
 
-/* line 198, ../sass/screen.scss */
 article h2 b:hover::before {
   content: "Global usage: ";
 }
 
-/* line 200, ../sass/screen.scss */
 article {
   overflow: hidden;
   min-height: 5em;
@@ -516,7 +446,6 @@ article {
   background-image: -webkit-radial-gradient(50% 180%, ellipse, #e8cf11, rgba(248, 237, 155, 0) 40%);
 }
 
-/* line 201, ../sass/screen.scss */
 article::after {
   content: "";
   height: 1px;
@@ -528,7 +457,6 @@ article::after {
   width: 100%;
 }
 
-/* line 204, ../sass/screen.scss */
 article h3 {
   float: left;
   width: 5em;
@@ -543,7 +471,6 @@ article h3 {
   padding: 4px;
 }
 
-/* line 205, ../sass/screen.scss */
 article h3 b {
   display: table-cell;
   vertical-align: middle;
@@ -552,23 +479,19 @@ article h3 b {
   border-radius: 10em;
 }
 
-/* line 206, ../sass/screen.scss */
 article h3 b i {
   font-size: 70%;
   color: #ffee99;
 }
 
-/* line 207, ../sass/screen.scss */
 .fallback b {
   background: #868646;
 }
 
-/* line 208, ../sass/screen.scss */
 .polyfill b {
   background: #a47b28;
 }
 
-/* line 217, ../sass/screen.scss */
 div#main, h1, header h2, h3, h4 {
   -moz-transition-property: all;
   -webkit-transition-property: all;
@@ -587,7 +510,6 @@ div#main, h1, header h2, h3, h4 {
   -webkit-transform: translateZ(0);
 }
 
-/* line 225, ../sass/screen.scss */
 h1, h2, h3, h4 {
   -moz-transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
@@ -595,7 +517,6 @@ h1, h2, h3, h4 {
   transition-duration: 0.3s;
 }
 
-/* line 229, ../sass/screen.scss */
 .searching div#main {
   -moz-transform: translate(0, -480px translateZ(0));
   -webkit-transform: translate(0, -480px translateZ(0));
@@ -608,7 +529,6 @@ h1, h2, h3, h4 {
   transition-duration: 0.8s;
 }
 
-/* line 234, ../sass/screen.scss */
 .searching h1 {
   -moz-transform: translate(-1200px, 0px) translateZ(0);
   -webkit-transform: translate(-1200px, 0px) translateZ(0);
@@ -617,7 +537,6 @@ h1, h2, h3, h4 {
   transform: translate(-1200px, 0px) translateZ(0);
 }
 
-/* line 238, ../sass/screen.scss */
 .searching header h2 {
   -moz-transform: translate(1200px, 0px) translateZ(0);
   -webkit-transform: translate(1200px, 0px) translateZ(0);
@@ -626,12 +545,10 @@ h1, h2, h3, h4 {
   transform: translate(1200px, 0px) translateZ(0);
 }
 
-/* line 242, ../sass/screen.scss */
 .searching header h3 {
   opacity: 0;
 }
 
-/* line 244, ../sass/screen.scss */
 .searching header h4 {
   -moz-transform: translate(0px, -393px) translateZ(0);
   -webkit-transform: translate(0px, -393px) translateZ(0);
@@ -641,7 +558,6 @@ h1, h2, h3, h4 {
   border-radius: 0 0 20px 20px;
 }
 
-/* line 250, ../sass/screen.scss */
 .test div#main {
   -moz-transform: translate(0, -2480px) translateZ(0);
   -webkit-transform: translate(0, -2480px) translateZ(0);
@@ -654,7 +570,6 @@ h1, h2, h3, h4 {
    Non-semantic helper classes
    Please define your styles before this section.
    ========================================================================== */
-/* line 261, ../sass/screen.scss */
 .ir {
   display: block;
   text-indent: -999em;
@@ -664,18 +579,15 @@ h1, h2, h3, h4 {
   direction: ltr;
 }
 
-/* line 262, ../sass/screen.scss */
 .ir br {
   display: none;
 }
 
-/* line 264, ../sass/screen.scss */
 .hidden {
   display: none;
   visibility: hidden;
 }
 
-/* line 266, ../sass/screen.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -687,7 +599,6 @@ h1, h2, h3, h4 {
   width: 1px;
 }
 
-/* line 268, ../sass/screen.scss */
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
@@ -697,23 +608,19 @@ h1, h2, h3, h4 {
   width: auto;
 }
 
-/* line 270, ../sass/screen.scss */
 .invisible {
   visibility: hidden;
 }
 
-/* line 272, ../sass/screen.scss */
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
 
-/* line 273, ../sass/screen.scss */
 .clearfix:after {
   clear: both;
 }
 
-/* line 274, ../sass/screen.scss */
 .clearfix {
   zoom: 1;
 }
@@ -725,7 +632,6 @@ h1, h2, h3, h4 {
   /* Style adjustments for viewports 768px and over go here */
 }
 @media print {
-  /* line 291, ../sass/screen.scss */
   * {
     background: transparent !important;
     color: black !important;
@@ -735,45 +641,37 @@ h1, h2, h3, h4 {
   }
 
   /* Black prints faster: sanbeiji.com/archives/953 */
-  /* line 292, ../sass/screen.scss */
   a, a:visited {
     text-decoration: underline;
   }
 
-  /* line 293, ../sass/screen.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 294, ../sass/screen.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
 
-  /* line 295, ../sass/screen.scss */
   .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
     content: "";
   }
 
   /* Don't show links for images, or javascript/internal links */
-  /* line 296, ../sass/screen.scss */
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 297, ../sass/screen.scss */
   thead {
     display: table-header-group;
   }
 
   /* css-discuss.incutio.com/wiki/Printing_Tables */
-  /* line 298, ../sass/screen.scss */
   tr, img {
     page-break-inside: avoid;
   }
 
-  /* line 299, ../sass/screen.scss */
   img {
     max-width: 100% !important;
   }
@@ -782,13 +680,11 @@ h1, h2, h3, h4 {
     margin: 0.5cm;
 }
 
-  /* line 301, ../sass/screen.scss */
   p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
 
-  /* line 302, ../sass/screen.scss */
   h2, h3 {
     page-break-after: avoid;
   }
