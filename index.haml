@@ -218,94 +218,174 @@
             %b No
           %p uhhhh h5f or webshim or ... i dont know.
 
-
-        %h1 browser death features
-
-        So for IE6:
-        
-
-        %article.polyfill
+        %article.yes
           %h2
             position: fixed
             %b 11%
-          / ie7+
+            %i IE7+
           %h3
-            %b Not yet
+            %b Ok!
           %p uhhhh h5f or webshim or ... i dont know.
 
 
-        #article
+        %article.yes
           %h2 
-            :plain 
-              position: fixed 
+            position: fixed 
             %b 11% 
-            / IE7+
-          %h3( class="polyfill" )
-            %b Not yet???
+            %i IE7+
+          %h3
+            %b Ok!
           %p  uhhhh h5f or webshim or ... i dont know.
 
 
-        #article
+        %article.yes
           %h2 
-            :plain 
-              .
+            PNG Images
             %b 11%
-          %h3( class="polyfill" )
-            %b Not yet???
-          %p  .
-
-
-        #article
-          %h2 
-            :plain 
-              PNG Images
-            %b 11%
-            / IE7+
-          %h3( class="polyfill" )
-            %b Not yet???
+            %i IE7+
+          %h3
+            %b Ok!
           %p 32-bit pngs need a pngfix. DD_belatedPNG is the best of them, by far. However, 8-bit PNGs still have alpha transparency but fall back to index transparency in IE6, which in many cases is perfectly fine. Use 8-bit PNGs, and avoid 32-bit PNG as much as possible.
 
 
-        #article
+        %article.yes
           %h2 
-            :plain 
-              hover psuedo-class selector
+            *:hover
             %b 11%
-          %h3( class="polyfill" )
-            %b Not yet???
-          %p  
-
-
-        / 
-          PNG support!
-          position: fixed
-          div:hover
-          selectors: div:first-child, h2 + p, img[data-fullsize], and ul.main > li
-          background-attachment: fixed
-          min-width, max-height, etc
-          IE7
-          postMessage
-          cross-domain XHR
-          native JSON
-          data URI
-          `:before, :after, :focus`
-          localStorage and sessionStorage
-          getters and setters on DOM elements
-          querySelector(), querySelectorAll()
-          box-sizing!
-          display: table-cell, table, etc.
-          ff2.0
-          inline-block arrived with 2.0 dying
-          the &shy;
-
-        #k sup
+            %i IE7+
+          %h3
+            %b Ok!
+          %p
           
-        es5 methods.
-        
-        
-        univ ie6  stylesheet?
-        
-        psuedo elements
+        %article.yes
+          %h2
+            background-attachment: fixed
+            %b 11%
+            %i IE7+
+          %h3
+            %b Ok!
+          %p 
+
+
+        %article.yes
+          %h2
+            min/max-width
+            %b 11%
+            %i IE7+
+          %h3
+            %b Ok!
+          %p
+
+
+        %article.yes
+          %h2
+            postMessage
+            %b
+            %i IE8+
+          %h3
+            %b Ok!
+          %p
+          
+        %article.yes
+          %h2
+            Cross-Domain XHR
+            %b
+            %i IE8+
+          %h3
+            %b Ok!
+          %p
+            
+        %article.fallback
+          %h2
+            Native JSON
+            %b
+            %i IE8+
+          %h3
+            %b fallback
+          %p
+          
+        %article.fallback
+          %h2
+            Data URI
+            %b
+            %i IE8+
+          %h3
+            %b fallback
+          %p
+
+        %article.yes
+          %h2
+            Pseudo-elements :before, :after, :focus
+          %b
+          %i IE8+
+          %h3
+            %b Ok!
+          %p
+          
+        %article.yes
+          %h2
+            localStorage & sessionStorage
+            %b
+            %i IE8+
+          %h3
+            %b Ok!
+          %p
+          
+        %article.yes
+          %h2
+            DOM getters and setters
+            %b
+            %i IE8+
+          %h3
+            %b Ok!
+          %p          
+          
+        %article.yes
+          %h2
+            querySelector & querySelectorAll()
+            %b
+            %i IE8+
+          %h3
+            %b Ok!
+          %p          
+          
+        %article.yes
+          %h2
+            box-sizing
+            %b
+            %i IE8+
+          %h3
+            %b Ok!
+          %p          
+          
+        %article.yes
+          %h2
+            display: table-cell, display: table
+            %b
+            %i IE8+
+          %h3
+            %b Ok!
+          %p          
+          
+        %article.yes
+          %h2
+            inline-block
+            %b
+            %i IE8+
+          %h3
+            %b Ok!
+          %p          
+          
+        %article.yes
+          %h2
+            &amp;shy;
+            %b
+            %i ??
+          %h3
+            %b Ok!
+          %p          
+
+
         /
           <article>
           <h2> <b>90%</b></h2>
