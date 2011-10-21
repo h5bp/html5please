@@ -193,7 +193,7 @@ header h1 img { vertical-align: -10%; }
 
 header h1 { line-height: 1.2em; margin: 0; }
 header h1 + h2 { font-size: 1em; text-transform: lowercase; margin: 3em 0; }
-header h1, header h2 b { font-family: 'Francois One', cursive; }
+header h1, header h2 b { font-family: 'Francois One', sans-serif; }
 header h2 b { font-size: 2em; display: block; color: lighten($contrast, 10%); }
 
 header h1 b, header h3, article h3 b i { font-family: 'Open Sans', sans-serif; text-transform: uppercase; display: block; line-height: 1;  }
