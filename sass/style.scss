@@ -2,6 +2,19 @@
 @import "compass/css3/transform";
 @import "compass/css3/transition";
 
+$dark: #232927;
+$lightest: #e3d7bf;
+$light: #476871;
+$darkest: #1e2322;
+$contrast: #E16734;
+$code: hsla(193, 23%, 36%, 0.5);
+$hotpink: #fe57a1;
+$fallback: saturate(lighten($light, 20%), 10%);
+$polyfill: desaturate(lighten($contrast, 10%), 10%);
+$no: saturate(darken($contrast, 10%), 20%);
+$yes: saturate($light, 10%);
+
+
 @mixin our-transition($arg) {
   -webkit-transition: $arg;
   -o-transition: $arg;
@@ -45,8 +58,8 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
    Links
    ========================================================================== */
 
-a { color: midnightblue; text-decoration: none; }
-a:visited { color: #551a8b; }
+a { color: $contrast; text-decoration: none; }
+a:visited { color: darken($contrast, 30%); }
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
@@ -158,17 +171,6 @@ table { border-collapse: collapse; border-spacing: 0; }
    Primary styles
    Author: Divya Manian
    ========================================================================== */
-   $dark: #232927;
-   $lightest: #e3d7bf;
-   $light: #476871;
-   $darkest: #1e2322;
-   $contrast: #E16734;
-   $code: hsla(193, 23%, 36%, 0.5);
-   $hotpink: #fe57a1;
-   $fallback: saturate(lighten($light, 20%), 10%);
-   $polyfill: desaturate(lighten($contrast, 10%), 10%);
-   $no: saturate(darken($contrast, 10%), 20%);
-   $yes: saturate($light, 10%);
 
    
 html {  box-shadow: 0 0 5em $lightest inset; min-height: 100%; max-width: 100%; }
@@ -182,14 +184,12 @@ body {
 
 header {
   text-align: center;
-  margin-bottom: 5em;
-  width: 100%;
 }
 
 h2 { text-transform: uppercase; }
 
-header h1{ font-size: 5em; text-transform:  uppercase; color: $dark; text-shadow: 1px 1px 1px lighten($contrast, 30%), 2px 2px 1px lighten($contrast, 30%);}
-header h1 img { vertical-align: baseline; }
+header h1{ font-size: 5em; text-transform:  uppercase; color: $dark; text-shadow: 1px 1px 1px lighten($contrast, 10%), 2px 2px 1px lighten($contrast, 10%), 3px 3px 1px lighten($contrast, 10%);}
+header h1 img { vertical-align: -10%; }
 
 header h1 { line-height: 1.2em; margin: 0; }
 header h1 + h2 { font-size: 1em; text-transform: lowercase; margin: 3em 0; }
@@ -199,7 +199,7 @@ header h2 b { font-size: 2em; display: block; color: lighten($contrast, 10%); }
 header h1 b, header h3, article h3 b i { font-family: 'Open Sans', sans-serif; text-transform: uppercase; display: block; line-height: 1;  }
 
 
-header h3 { background: url(../dark_mosaic.png) $dark; color: white; position: relative; box-shadow: 0.05em 0.05em 0.4em 0.15em $darkest; padding: 1em; font-size: 1em; line-height: 1.5; text-align: left; margin: 0 30px; }
+header h3 { background: url(../dark_mosaic.png) $dark; color: white; position: relative; box-shadow: 0.05em 0.05em 0.4em 0.15em $darkest; padding: 1em; font-size: 1em; line-height: 1.5; }
 
 header h3::before, 
 header h3::after { content: ""; width: 0; height: 0; border: 5em solid $dark; border-width: 20px 0 20px 20px; border-color: $darkest transparent $darkest; position: absolute; left: -20px; top: 50%; margin-top: -20px; z-index: -1; }
@@ -214,10 +214,12 @@ header h3 b { word-spacing: 0.15em; text-transform: uppercase; }
 header h3, header h2,
 article h3 b i { font-weight: normal; text-transform: none; font-style: normal; }
 
-header h4 { background: khaki; padding: 1em; margin: 0 30px; box-shadow: 0 0 1px $dark; }
+header h4 { background: $lightest; padding: 1em; box-shadow: 0 0 1px $dark; }
 header input[type="search"] { width: 50%; }
 
-article h2 { color: darken($contrast, 30%); text-shadow: 2px 2px 1px lighten($contrast, 30%);  }
+header h3, header h4 { margin: 0; }
+
+article h2 { color: $dark; text-shadow: 2px 2px 1px lighten($contrast, 30%);  }
 
 article { 
   overflow: hidden; min-height: 5em; padding: 2em 0; position: relative; 
@@ -242,10 +244,12 @@ article::after { content: ""; height: 1px;
  display: block; position: absolute; bottom: 0; left: 0; width: 100%; }
 
 
-article h3 { float: left; width: 5em; height: 5em; color: white; display: table; line-height: 1; text-align: center; text-shadow: 2px 2px 1px hsl(77, 31%, 17%); margin: -1em 1em 0 0; border-spacing: 0; padding: 4px; }
+article h3 { float: left; width: 5em; height: 5em; color: white; display: table; line-height: 1; text-align: center; text-shadow: 2px 2px 1px hsl(77, 31%, 17%); margin: 0 1em 0 0; border-spacing: 0; padding: 4px; }
 article h3 b { display: table-cell; vertical-align: middle; border: 2px dotted white;  background: $yes; border-radius: 10em;  }
 article h3 b i { font-size: 70%; color: hsl(50, 100%, 80%); }
 
+article div h2 { margin: 0; }
+article div h2 + p { margin-top: 0; }
 
 .fallback h3 b { background: $fallback; } 
 .polyfill  h3 b { background: $polyfill; }
@@ -254,7 +258,7 @@ article h3 b i { font-size: 70%; color: hsl(50, 100%, 80%); }
 
 
 
-div#main, h1, header h2, h3, h4 { 
+div#main, h1, header h2, header h3, header h4 { 
   @include our-transition(all 0.6s cubic-bezier(.83,1.47,.63,.9));
   -webkit-transition: all 0.6s cubic-bezier(0.83, 1, 0.63, 0.9);
  -webkit-transform: translateZ(0);   
@@ -265,7 +269,7 @@ h1, h2, h3, h4 {
 }
 
 .searching div#main {
-  @include transform(translate(0, -480px));  
+  @include transform(translate(0, -400px));  
   @include transition-duration(0.8s);
 }
 

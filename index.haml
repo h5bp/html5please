@@ -31,40 +31,44 @@
       %section
 
         %article.ok
-          %h2
-            SVG
           %h3
             %b Ok!
-          %p
-            All modern browsers support SVG. For legacy browsers, you can use
-            %a{:href => "#"} svgweb
-            as a flash-based polyfill, or develop with
-            %a{:href => "#"} Raphaél
-            which has a VML renderer for
-            = succeed "." do
-              %abbr{:title => "Internet Explorer 6-8. Prounced 'oldie'"} oldIE
+          %div
+            %h2
+              SVG          
+            %p
+              All modern browsers support SVG. For legacy browsers, you can use
+              %a{:href => "#"} svgweb
+              as a flash-based polyfill, or develop with
+              %a{:href => "#"} Raphaél
+              which has a VML renderer for
+              = succeed "." do
+                %abbr{:title => "Internet Explorer 6-8. Prounced 'oldie'"} oldIE
 
         %article.fallback
-          %h2
-            Canvas
           %h3
             %b
               Ok!
               %i fallback
-          %p
-            %a{:href => "#"} FlashCanvas
-            or
-            %a{:href => "#"} excanvas
-            are your polyfills of choice if you absolutely need it.
+          %div
+            %h2
+              Canvas          
+            %p
+              %a{:href => "#"} FlashCanvas
+              or
+              %a{:href => "#"} excanvas
+              are your polyfills of choice if you absolutely need it.
 
         %article.fallback
-          %h2
-            HTML5 video/audio
           %h3
             %b
               Ok!
               %i fallback
-          %p Use mediaelement.js as polyfill for API (flash fallback w/ consistent visual design too).. Video for everyone base setup if No polyfill desired.
+          %div
+            %h2
+              HTML5 video/audio
+          
+            %p Use mediaelement.js as polyfill for API (flash fallback w/ consistent visual design too).. Video for everyone base setup if No polyfill desired.
 
         %article.polyfill
           %h2
