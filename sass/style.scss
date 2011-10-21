@@ -268,7 +268,8 @@ article.no {
 
 
 div#main, h1, header h2, h3, h4 { 
-  @include our-transition(all 0.6s cubic-bezier(.83,1,.63,.9));
+  @include our-transition(all 0.6s cubic-bezier(.83,1.47,.63,.9));
+  -webkit-transition: all 0.6s cubic-bezier(0.83, 1, 0.63, 0.9);
  -webkit-transform: translateZ(0);   
 }
 
