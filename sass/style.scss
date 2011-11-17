@@ -191,15 +191,15 @@ h2 { text-transform: uppercase; }
 header h1{ font-size: 5em; text-transform:  uppercase; color: $dark; text-shadow: 1px 1px 1px lighten($contrast, 10%), 2px 2px 1px lighten($contrast, 10%), 3px 3px 1px lighten($contrast, 10%);}
 header h1 img { vertical-align: -10%; }
 
-header h1 { line-height: 1.2em; margin: 0; }
-header h1 + h2 { font-size: 1em; text-transform: lowercase; margin: 3em 0; }
+header h1 { line-height: 1.5em; margin: 0; }
+header h1 + h2 { font-size: 1.2em; text-transform: lowercase; margin: 3em 0; }
 header h1, header h2 b { font-family: 'Francois One', sans-serif; }
 header h2 b { font-size: 2em; display: block; color: lighten($contrast, 10%); }
 
 header h1 b, header h3, article h3 b i { font-family: 'Open Sans', sans-serif; text-transform: uppercase; display: block; line-height: 1;  }
 
 
-header h3 { background: url(../dark_mosaic.png) $dark; color: white; position: relative; box-shadow: 0.05em 0.05em 0.4em 0.15em $darkest; padding: 1em; font-size: 1em; line-height: 1.5; }
+header h3 { background: url(../dark_mosaic.png) $dark; color: white; position: relative; box-shadow: 0 0 5px 2px $darkest; padding: 1em; font-size: 1em; line-height: 1.5; }
 
 header h3::before, 
 header h3::after { content: ""; width: 0; height: 0; border: 5em solid $dark; border-width: 20px 0 20px 20px; border-color: $darkest transparent $darkest; position: absolute; left: -20px; top: 50%; margin-top: -20px; z-index: -1; }
@@ -215,7 +215,7 @@ header h3, header h2,
 article h3 b i { font-weight: normal; text-transform: none; font-style: normal; }
 
 header h4 { background: $lightest; padding: 1em; box-shadow: 0 0 1px $dark; }
-header input[type="search"] { width: 50%; }
+header input[type="search"] { width: 50%; padding: 0.25em 0; }
 
 header h3, header h4 { margin: 0; }
 
