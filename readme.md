@@ -12,6 +12,8 @@ To compile the CSS, use (in another terminal window):
 
 
 TODO:
+---
+
 1. Use a better templating library. Underscore is ugly
 2. Hook up list.js for filtering
 3. Need to not use JSON because of validating-hell-thanks-to-missing-comma. YAML has no good node parser, so what else?
