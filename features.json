@@ -1,3 +1,87 @@
 [
- { "feature": "border-radius", "tags": ["IE6", "Not-okay"] }
+ { 
+   "feature": "border-radius", 
+   "tags": "gtie6 no-polyfill"
+ },
+ 
+ { 
+   "feature": "SVG", 
+   "recco": "All modern browsers support SVG. For legacy browsers, you can use <a href='#'>svgweb</a> as a flash-based polyfill, or develop with <a href='#'>Raphaél</a> which has a VML renderer for <abbr title='Internet Explorer 6-8.'>oldIE</abbr>.",
+   "tags": "gtie6 gtie7 gtie8 polyfill"
+  },
+  {
+    "feature": "Canvas",
+    "tags": "gtie8 polyfill",
+    "recco": "<a href='#'>FlashCanvas</a> or <a href='#'>excanvas</a> are your polyfills of choice if you absolutely need it."
+  },
+  {
+    "feature": "Video/Audio",
+    "tags": "gtie8 polyfill" ,   
+    "recco": "Use mediaelement.js as polyfill for API (flash fallback w/ consistent visual design too).. Video for everyone base setup if No polyfill desired."
+  },
+  {
+    "feature": "CSS3 Selectors",
+    "tags": "gtie6 no-polyfill",
+    "recco": ""    
+  },
+  {
+    "feature": "<code>data-*</code> attributes",
+    "tags": "",
+    "recco": "GROOVY everywhere obv. old browsers ignore unknown attributes, you can always use <code>getAttribute</code> or you can use the dataset polyfill for IE8+."
+  },
+  {
+    "feature": "CSS3 Transitions",
+    "tags": "gtie8 no-polyfill",
+    "recco": "shim layer recomendded to get hwaccel with js fallback (isotope, yui transition, scripty2) ...  or let it degrade"
+  },
+  {
+    "feature": "CSS3 Animations",
+    "tags": "gtie8 dont-use",
+    "recco": ""    
+  },
+  {
+    "feature": "border-image",
+    "tags": "gtie8",
+    "recco": ""
+  },
+  {
+    "feature": "box-shadow",
+    "tags": "gtie8",
+    "recco": ""
+  },
+  {
+    "feature": "box-reflection",
+    "tags": "dont-use",
+    "recco": "Webkit only. Dont use."
+  },
+  {
+    "feature": "font face",
+    "tags": "fallback",
+    "recco": "don't use cufon. use google webfonts or fontsquirrel generator"
+  },
+  {
+    "feature": "<code>&lt;input type=range></code>",
+    "tags": "form input polyfill",
+    "recco": "We recommend you use blah blah, and use <a href='#'>frank yan's polyfill</a> or <a href='#'>freqdec</a>'s."
+  },
+  {
+    "feature": "<code>&lt;input type=color></code>",
+    "tags": "form input dont-use",
+    "recco": "experimental use only"
+  }, 
+  {
+    "feature": "HTML5 Form Input Validation",
+    "tags": "form polyfill",
+    "recco": ""
+  },
+  {
+    "feature": "background-attachment",
+    "tags": "gtie7",
+    "recco": ""
+  },
+  {
+    "feature": "postMessage",
+    "tags": "gtie8",
+    "recco": ""
+  }
 ]

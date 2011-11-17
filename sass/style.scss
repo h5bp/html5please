@@ -1,0 +1,342 @@
+@import "compass/css3/gradient";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+
+$dark: #232927;
+$lightest: #e3d7bf;
+$light: #476871;
+$darkest: #1e2322;
+$contrast: #E16734;
+$code: hsla(193, 23%, 36%, 0.5);
+$hotpink: #fe57a1;
+$fallback: saturate(lighten($light, 20%), 10%);
+$polyfill: desaturate(lighten($contrast, 10%), 10%);
+$no: saturate(darken($contrast, 10%), 20%);
+$yes: saturate($light, 10%);
+
+
+@mixin our-transition($arg) {
+  -webkit-transition: $arg;
+  -o-transition: $arg;
+  -moz-transition: $arg;
+  -ms-transition: $arg;
+  transition: $arg;
+}
+
+/*
+ * HTML5 ✰ Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling. 
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* =============================================================================
+   HTML5 element display
+   ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+html { font-size: 100%; overflow-y: scroll; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a { color: $contrast; text-decoration: none; }
+a:visited { color: darken($contrast, 30%); }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active { outline: 0; text-decoration: dotted; }
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7 http://h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers http://h5bp.com/e 
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+/*
+ * Correct overflow displayed oddly in IE9 
+ */
+
+svg:not(:root) { overflow: hidden; }
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+legend { border: 0; *margin-left: -7px; padding: 0; }
+
+label { cursor: pointer; }
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+button, input { line-height: normal; *overflow: visible; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+textarea { overflow: auto; vertical-align: top; }
+
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+/* =============================================================================
+   Primary styles
+   Author: Divya Manian
+   ========================================================================== */
+
+   
+html {  box-shadow: 0 0 5em $lightest inset; min-height: 100%; max-width: 100%; }
+ 
+body {
+  max-width: 70%;
+  margin: 3em auto;
+  min-width: 60%;
+  font: 16px/1.5 'Open Sans', sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+h2 { text-transform: uppercase; }
+
+header h1{ font-size: 5em; text-transform:  uppercase; color: $dark; text-shadow: 1px 1px 1px lighten($contrast, 10%), 2px 2px 1px lighten($contrast, 10%), 3px 3px 1px lighten($contrast, 10%);}
+header h1 img { vertical-align: -10%; }
+
+header h1 { line-height: 1.2em; margin: 0; }
+header h1 + h2 { font-size: 1em; text-transform: lowercase; margin: 3em 0; }
+header h1, header h2 b { font-family: 'Francois One', sans-serif; }
+header h2 b { font-size: 2em; display: block; color: lighten($contrast, 10%); }
+
+header h1 b, header h3, article h3 b i { font-family: 'Open Sans', sans-serif; text-transform: uppercase; display: block; line-height: 1;  }
+
+
+header h3 { background: url(../dark_mosaic.png) $dark; color: white; position: relative; box-shadow: 0.05em 0.05em 0.4em 0.15em $darkest; padding: 1em; font-size: 1em; line-height: 1.5; }
+
+header h3::before, 
+header h3::after { content: ""; width: 0; height: 0; border: 5em solid $dark; border-width: 20px 0 20px 20px; border-color: $darkest transparent $darkest; position: absolute; left: -20px; top: 50%; margin-top: -20px; z-index: -1; }
+
+header h3::after { border-width: 20px 20px 20px 0; border-color: $darkest transparent $darkest; left: auto; right: -20px; }
+
+header h3 a { color: lighten($contrast, 10%); }
+header h3 a + a::before { content: "  /  "; color: white; }
+
+header h3 b { word-spacing: 0.15em; text-transform: uppercase; }
+
+header h3, header h2,
+article h3 b i { font-weight: normal; text-transform: none; font-style: normal; }
+
+header h4 { background: $lightest; padding: 1em; box-shadow: 0 0 1px $dark; }
+header input[type="search"] { width: 50%; }
+
+header h3, header h4 { margin: 0; }
+
+article h2 { color: $dark; text-shadow: 2px 2px 1px lighten($contrast, 30%);  }
+
+article { 
+  overflow: hidden; min-height: 5em; padding: 2em 0; position: relative; 
+  @include background(radial-gradient(50% 200%, ellipse, hsl(53, 86%, 49%), hsla(53, 86%, 79%, 0) 40%));
+}
+
+article.fallback {
+  @include background(radial-gradient(50% 200%, ellipse, $fallback, scale-color($fallback, $alpha: -100%) 40%));  
+}
+
+article.polyfill {
+  @include background(radial-gradient(50% 200%, ellipse, $polyfill, scale-color($polyfill, $alpha: -100%) 40%));    
+}
+
+article.no {
+  @include background(radial-gradient(50% 200%, ellipse, $no, scale-color($no, $alpha: -100%) 40%));      
+}
+
+  
+article::after { content: ""; height: 1px; 
+  @include background(linear-gradient(left, hsla(159, 15%, 59%, 0), hsla(159, 15%, 59%, 0.5) 40%, hsla(159, 15%, 59%, 0.5) 60%, hsla(159, 15%, 59%, 0)));
+ display: block; position: absolute; bottom: 0; left: 0; width: 100%; }
+
+
+article h3 { float: left; width: 5em; height: 5em; color: white; display: table; line-height: 1; text-align: center; text-shadow: 2px 2px 1px hsl(77, 31%, 17%); margin: 0 1em 0 0; border-spacing: 0; padding: 4px; }
+article h3 b { display: table-cell; vertical-align: middle; border: 2px dotted white;  background: $yes; border-radius: 10em;  }
+article h3 b i { font-size: 70%; color: hsl(50, 100%, 80%); }
+
+article div h2 { margin: 0; }
+article div h2 + p { margin-top: 0; }
+
+.fallback h3 b { background: $fallback; } 
+.polyfill  h3 b { background: $polyfill; }
+.no h3 b { background: $no; }
+
+
+
+
+div#main, h1, header h2, header h3, header h4 { 
+  @include our-transition(all 0.6s cubic-bezier(.83,1.47,.63,.9));
+  -webkit-transition: all 0.6s cubic-bezier(0.83, 1, 0.63, 0.9);
+ -webkit-transform: translateZ(0);   
+}
+
+h1, h2, h3, h4 { 
+  @include transition-duration(0.3s);
+}
+
+.searching div#main {
+  @include transform(translate(0, -400px));  
+  @include transition-duration(0.8s);
+}
+
+.searching h1 {  @include transform(translate(-1200px, 0px)); }
+
+.searching header h2 {
+  @include transform(translate(1200px, 0px));
+}
+
+.searching header h3 {  opacity: 0;   }
+
+.searching header h4 {  
+  @include transform(translate(0px, -393px));
+  border-radius: 0 0 20px 20px;
+}
+
+.test div#main {
+  @include transform(translate(0, -2480px));
+}
+
+
+/* =============================================================================
+   Non-semantic helper classes
+   Please define your styles before this section.
+   ========================================================================== */
+
+
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+.hidden { display: none; visibility: hidden; }
+
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+.invisible { visibility: hidden; }
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */
+
+}
+
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over go here */
+
+}
+
+
+
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
