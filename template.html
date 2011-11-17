@@ -1,0 +1,5 @@
+<ul>
+<% _.each(features.models, function(feature) { %>
+ <li class="<%= feature.flatTags() %>"><%= feature.escape("feature") %></li>
+<% }); %>
+</ul>
