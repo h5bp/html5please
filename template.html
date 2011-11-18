@@ -29,13 +29,13 @@
     </header>
     <div id='main' role='main'>
       <section>
-        <% _.each(features.models, function(feature) { %>
-          <article class="<%= feature.escape("tags") %>">
-            <h2><%= feature.get("feature") %></h2>
+        {{#features}}
+          <article class="{{tags}}">
+            <h2>{{{feature}}}</h2>
             <h3><b><i></i></b></h3>
-            <p><%= feature.get("recco") %></p>
+            <p>{{{recco}}}</p>
           </article>          
-        <% }); %>        
+        {{/features}}    
       </section>
     </div>
     <footer></footer>
