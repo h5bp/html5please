@@ -11,7 +11,7 @@
     <link href='css/style.css' rel='stylesheet' />
     <script src='js/libs/modernizr-2.0.min.js'></script>
   </head>
-  <body>
+  <body id="gfs">
     <header>
       <h1>HTML5 <img src='img/HTML5-logo.png'> Please</h1>
       <h2>
@@ -24,16 +24,16 @@
         <a href='#'>Divya Manian</a>
       </h3>
       <h4>
-        <input name='livesearch' placeholder='type to filter' type='search' value='' />
+        <input id='livesearch' class='search' name='livesearch' placeholder='type to filter' type='search' value='' />
       </h4>
     </header>
     <div id='main' role='main'>
-      <section>
+      <section class="features">
         {{#features}}
           <article class="{{tags}}">
-            <h2>{{{feature}}}</h2>
+            <h2 class='feature-name'>{{{feature}}}</h2>
             <h3><b><i></i></b></h3>
-            <p>{{{recco}}}</p>
+            <p class='feature-recco'>{{{recco}}}</p>
           </article>          
         {{/features}}    
       </section>
