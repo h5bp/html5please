@@ -1,13 +1,6 @@
-[
- { 
-   "feature": "border-radius",
-   "status": "use",
-   "tags": "gtie6 no-polyfill"
- },
- 
- { 
+[{ 
    "feature": "SVG",
-   "status": "use",
+   "status": "se",
    "recco": "All modern browsers support SVG. For legacy browsers, you can use <a href='#'>svgweb</a> as a flash-based polyfill, or develop with <a href='#'>Raphaél</a> which has a VML renderer for <abbr title='Internet Explorer 6-8.'>oldIE</abbr>.",
    "tags": "gtie6 gtie7 gtie8 polyfill"
   },
@@ -73,7 +66,7 @@
   },
   {
     "feature": "<code>&lt;input type=range></code>",
-    "status": "use"
+    "status": "use",
     "tags": "form input polyfill",
     "recco": "We recommend you use blah blah, and use <a href='#'>frank yan's polyfill</a> or <a href='#'>freqdec</a>'s."
   },
@@ -100,5 +93,4 @@
     "status": "caution",
     "tags": "gtie8",
     "recco": ""
-  }
-]
+  }]

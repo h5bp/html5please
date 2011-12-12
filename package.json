@@ -10,13 +10,14 @@
     "url": "git://github.com/nimbupani/GFS.git"
   },
   "engines": {
-    "node": "~v0.4.11"
+    "node": "~v0.6"
   },
   "dependencies": {
     "backbone": "0.5.3",
     "underscore": "1.2.2",
-    "handlebars": "*"
-    
+    "handlebars": "*",
+    "robotskirt": "*",
+    "node-markdown": "*"    
   },
   "devDependencies": {}
 }
