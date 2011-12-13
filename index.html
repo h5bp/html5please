@@ -30,22 +30,30 @@
     <div id='main' role='main'>
       <section class="features">
         
-          <article class="">
-            <h2 class='feature-name'></h2>
-            <h3><b><i></i></b></h3>
-            <p class='feature-recco'></p>
+          <article class=" gtie8">
+            <h2 class='name'> box-shadow</h2>
+            <h3 class=" use"><b><i></i></b></h3>
+            <div class='recco'><p>All modern browsers support SVG. For legacy browsers, you can use <a href="http://svgweb.org">svgweb</a> as a flash-based polyfill, or develop with <a href="http://raphaeljs.com">Raphaél</a> which has a VML renderer for oldIE.</p></div>
+            <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="#">isotope</a>, <a href="#">yui transition</a>, <a href="#">scripty2</a></p></div>
+          </article>          
+        
+          <article class=" gtie9 no-polyfill">
+            <h2 class='name'> CSS3 Transitions</h2>
+            <h3 class=" use"><b><i></i></b></h3>
+            <div class='recco'><p>shim layer recomendded to get hwaccel with js fallback (isotope, yui transition, scripty2) or let it degrade</p></div>
+            <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="#">isotope</a>, <a href="#">yui transitio</a>, <a href="#">scripty2</a></p></div>
+          </article>          
+        
+          <article class=" nopolyfill">
+            <h2 class='name'> text-shadow</h2>
+            <h3 class=" use"><b><i></i></b></h3>
+            <div class='recco'></div>
+            <div class='polyfills'><b>Recommended Polyfills: </b></div>
           </article>          
             
       </section>
     </div>
     <footer></footer>
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
-    <script type='text/javascript'>
-      //<![CDATA[
-        window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')
-      //]]>
-    </script>
     <!-- scripts concatenated and minified via ant build script -->
     <script src='js/libs/list.min.js'></script>
     <script src='js/script.js'></script>

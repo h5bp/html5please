@@ -31,21 +31,15 @@
       <section class="features">
         {{#features}}
           <article class="{{tags}}">
-            <h2 class='feature-name'>{{{feature}}}</h2>
-            <h3><b><i></i></b></h3>
-            <p class='feature-recco'>{{{recco}}}</p>
+            <h2 class='name'>{{{feature}}}</h2>
+            <h3 class="{{status}}"><b><i></i></b></h3>
+            <div class='recco'>{{{contents}}}</div>
+            <div class='polyfills'><b>Recommended Polyfills: </b>{{{polyfillurls}}}</div>
           </article>          
         {{/features}}    
       </section>
     </div>
     <footer></footer>
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js'></script>
-    <script type='text/javascript'>
-      //<![CDATA[
-        window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')
-      //]]>
-    </script>
     <!-- scripts concatenated and minified via ant build script -->
     <script src='js/libs/list.min.js'></script>
     <script src='js/script.js'></script>

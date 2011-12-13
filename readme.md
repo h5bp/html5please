@@ -1,3 +1,13 @@
+Dec 12 2011
+
+- No more JSON!
+- Now we create each 'feature' with a markdown file that has YAML-like front matter. To make this easy, there is a `new_feature.sh` script that you can run to automate the creation of the file for each feature that needs to be written about. e.g. you would do `./new_feature.sh` and then enter "text-shadow" if you want to create a markdown file for the text-shadow feature. There is a `test.md` if you want to refer to (but really the shell script should do all the prompting for you to get set up). It even starts your default editor for you with the newly created file if you have the $EDITOR set up in your PATH.
+- `features.json` is retired, only to be used for reference at best (as if its any useful).
+- Plan is to port content directly from the modernizr wiki for now, link to caniuse data for more info. 
+- Likely, the templates might change in the meanwhile, I welcome your feedback on this setup. If you have better ideas, lemme know!
+
+So new workflow for adding content here would be to run `./new_feature.sh`. But everything else remains the same. 
+
 Nov 7 2011
 
 This branch uses node. 
