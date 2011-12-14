@@ -30,9 +30,9 @@
     <div id='main' role='main'>
       <section class="features">
         {{#features}}
-          <article class="{{tags}}">
-            <h2 class='name'>{{{feature}}}</h2>
-            <h3 class="{{status}}"><b><i></i></b></h3>
+          <article class="{{tags}}{{kind}}">
+            <h2 class='name'><a href="http://caniuse.com/{{{feature}}}">{{{feature}}}</a></h2>
+            <h3 class="{{status}}"></h3>
             <div class='recco'>{{{contents}}}</div>
             <div class='polyfills'><b>Recommended Polyfills: </b>{{{polyfillurls}}}</div>
           </article>          
