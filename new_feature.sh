@@ -10,6 +10,7 @@ promptValue() {
 feature=
 status=
 tags=
+kind=
 
 while [ -z "$feature" ]
 do
@@ -34,12 +35,22 @@ do
       while [ $# -gt 0 ]
       do
           case "$1" in
-            gtie6|gtie7|gtie8|nopolyfill|pollyfill|fallback)  shift ;;
+            gtie6|gtie7|gtie8|nopolyfill|polyfill|fallback)  shift ;;
             *)              echo "Unknown Tag: $1" 1>&2; tags= ; break ;;
           esac
       done
     fi
 done
+
+while [ -z "$kind" ]
+do
+    kind=$(promptValue "Enter Type (css,html,js,dom or svg)")
+    case $kind in
+        css|html|dom|svg) : ;;
+        *)                 kind= ;;
+    esac
+done
+
 
 # Creating markdown file in posts folder
 POSTS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/posts"
@@ -50,6 +61,7 @@ cat > $POSTS_DIR/$feature.md <<EOF
 feature: $feature
 status: $status
 tags: $tags
+kind: $kind
 polyfillurls:
 
 …
