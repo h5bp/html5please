@@ -1,5 +1,5 @@
 feature: datalist
-status: use
+status: caution
 tags: polyfill
 kind: html
 polyfillurls: [jQuery Datalist Plugin](http://miketaylr.com/code/datalist.html), [Relevant Dropdowns Polyfill](http://css-tricks.com/15346-relevant-dropdowns-polyfill-for-datalist/)

@@ -289,7 +289,7 @@ body {
   font: 16px/1.5 "Open Sans", sans-serif;
 }
 
-header {
+header.index {
   text-align: center;
 }
 
@@ -297,46 +297,46 @@ h2 {
   text-transform: uppercase;
 }
 
-header h1 {
+header.index h1 {
   font-size: 5em;
   text-transform: uppercase;
   color: #232927;
   text-shadow: 1px 1px 1px #e88860, 2px 2px 1px #e88860, 3px 3px 1px #e88860;
 }
 
-header h1 img {
+header.index h1 img {
   vertical-align: -10%;
 }
 
-header h1 {
+header.index h1 {
   line-height: 1.2em;
   margin: 0;
 }
 
-header h1 + h2 {
+header.index h1 + h2 {
   font-size: 1em;
   text-transform: lowercase;
   margin: 3em 0;
 }
 
-header h1, header h2 b {
+header.index h1, header.index h2 b {
   font-family: 'Francois One', sans-serif;
 }
 
-header h2 b {
+header.index h2 b {
   font-size: 2em;
   display: block;
   color: #e88860;
 }
 
-header h1 b, header h3, article h3 b i {
+header.index h1 b, header.index h3, article h3 b i {
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   display: block;
   line-height: 1;
 }
 
-header h3 {
+header.index h3 {
   background: url(../dark_mosaic.png) #232927;
   color: white;
   position: relative;
@@ -346,8 +346,8 @@ header h3 {
   line-height: 1.5;
 }
 
-header h3::before,
-header h3::after {
+header.index h3::before,
+header.index h3::after {
   content: "";
   width: 0;
   height: 0;
@@ -361,45 +361,45 @@ header h3::after {
   z-index: -1;
 }
 
-header h3::after {
+header.index h3::after {
   border-width: 20px 20px 20px 0;
   border-color: #1e2322 transparent #1e2322;
   left: auto;
   right: -20px;
 }
 
-header h3 a {
+header.index h3 a {
   color: #e88860;
 }
 
-header h3 a + a::before {
+header.index h3 a + a::before {
   content: "  /  ";
   color: white;
 }
 
-header h3 b {
+header.index h3 b {
   word-spacing: 0.15em;
   text-transform: uppercase;
 }
 
-header h3, header h2,
+header.index h3, header.index h2,
 article h3 b i {
   font-weight: normal;
   text-transform: none;
   font-style: normal;
 }
 
-header h4 {
+header.index h4 {
   background: #e3d7bf;
   padding: 1em;
   box-shadow: 0 0 1px #232927;
 }
 
-header input[type="search"] {
+header.index input[type="search"] {
   width: 50%;
 }
 
-header h3, header h4 {
+header.index h3, header.index h4 {
   margin: 0;
 }
 
@@ -410,8 +410,8 @@ article h2 {
 
 article {
   overflow: hidden;
-  min-height: 5em;
-  padding: 2em 0;
+  min-height: 2em;
+  padding: 1em 0;
   position: relative;
   background: -webkit-gradient(radial, 50% 200%, 0, 50% 200%, 40, color-stop(0%, #e8cf11), color-stop(40%, rgba(248, 237, 155, 0)));
   background: -webkit-radial-gradient(50% 200%, ellipse, #e8cf11, rgba(248, 237, 155, 0) 40%);
@@ -421,102 +421,133 @@ article {
   background: radial-gradient(50% 200%, ellipse, #e8cf11, rgba(248, 237, 155, 0) 40%);
 }
 
-article.fallback {
-  background: -webkit-gradient(radial, 50% 200%, 0, 50% 200%, 40, color-stop(0%, #6aa4b4), color-stop(40%, rgba(106, 164, 180, 0)));
-  background: -webkit-radial-gradient(50% 200%, ellipse, #6aa4b4, rgba(106, 164, 180, 0) 40%);
-  background: -moz-radial-gradient(50% 200%, ellipse, #6aa4b4, rgba(106, 164, 180, 0) 40%);
-  background: -o-radial-gradient(50% 200%, ellipse, #6aa4b4, rgba(106, 164, 180, 0) 40%);
-  background: -ms-radial-gradient(50% 200%, ellipse, #6aa4b4, rgba(106, 164, 180, 0) 40%);
-  background: radial-gradient(50% 200%, ellipse, #6aa4b4, rgba(106, 164, 180, 0) 40%);
+article > header {
+  background: #e3d7bf;
+  border-radius: 0 0.5em 0.5em 0;
 }
-
-article.polyfill {
-  background: -webkit-gradient(radial, 50% 200%, 0, 50% 200%, 40, color-stop(0%, #de8c6a), color-stop(40%, rgba(222, 140, 106, 0)));
-  background: -webkit-radial-gradient(50% 200%, ellipse, #de8c6a, rgba(222, 140, 106, 0) 40%);
-  background: -moz-radial-gradient(50% 200%, ellipse, #de8c6a, rgba(222, 140, 106, 0) 40%);
-  background: -o-radial-gradient(50% 200%, ellipse, #de8c6a, rgba(222, 140, 106, 0) 40%);
-  background: -ms-radial-gradient(50% 200%, ellipse, #de8c6a, rgba(222, 140, 106, 0) 40%);
-  background: radial-gradient(50% 200%, ellipse, #de8c6a, rgba(222, 140, 106, 0) 40%);
-}
-
-article.no {
-  background: -webkit-gradient(radial, 50% 200%, 0, 50% 200%, 40, color-stop(0%, #dc4506), color-stop(40%, rgba(220, 69, 6, 0)));
-  background: -webkit-radial-gradient(50% 200%, ellipse, #dc4506, rgba(220, 69, 6, 0) 40%);
-  background: -moz-radial-gradient(50% 200%, ellipse, #dc4506, rgba(220, 69, 6, 0) 40%);
-  background: -o-radial-gradient(50% 200%, ellipse, #dc4506, rgba(220, 69, 6, 0) 40%);
-  background: -ms-radial-gradient(50% 200%, ellipse, #dc4506, rgba(220, 69, 6, 0) 40%);
-  background: radial-gradient(50% 200%, ellipse, #dc4506, rgba(220, 69, 6, 0) 40%);
-}
-
-article::after {
-  content: "";
-  height: 1px;
-  background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(135, 166, 155, 0)), color-stop(40%, rgba(135, 166, 155, 0.5)), color-stop(60%, rgba(135, 166, 155, 0.5)), color-stop(100%, rgba(135, 166, 155, 0)));
-  background: -webkit-linear-gradient(left, rgba(135, 166, 155, 0), rgba(135, 166, 155, 0.5) 40%, rgba(135, 166, 155, 0.5) 60%, rgba(135, 166, 155, 0));
-  background: -moz-linear-gradient(left, rgba(135, 166, 155, 0), rgba(135, 166, 155, 0.5) 40%, rgba(135, 166, 155, 0.5) 60%, rgba(135, 166, 155, 0));
-  background: -o-linear-gradient(left, rgba(135, 166, 155, 0), rgba(135, 166, 155, 0.5) 40%, rgba(135, 166, 155, 0.5) 60%, rgba(135, 166, 155, 0));
-  background: -ms-linear-gradient(left, rgba(135, 166, 155, 0), rgba(135, 166, 155, 0.5) 40%, rgba(135, 166, 155, 0.5) 60%, rgba(135, 166, 155, 0));
-  background: linear-gradient(left, rgba(135, 166, 155, 0), rgba(135, 166, 155, 0.5) 40%, rgba(135, 166, 155, 0.5) 60%, rgba(135, 166, 155, 0));
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-article h3 {
-  float: left;
-  width: 5em;
-  height: 5em;
-  color: white;
-  display: table;
-  line-height: 1;
-  text-align: center;
-  text-shadow: 2px 2px 1px #31391e;
-  margin: 0 1em 0 0;
-  border-spacing: 0;
-  padding: 4px;
-}
-
-article h3 b {
-  display: table-cell;
+article > header h4, article > header h2, article > header h3, article > header a {
+  display: inline-block;
   vertical-align: middle;
-  border: 2px dotted white;
-  background: #3e6d7a;
-  border-radius: 10em;
-}
-
-article h3 b i {
-  font-size: 70%;
-  color: #ffee99;
-}
-
-article div h2 {
   margin: 0;
 }
-
-article div h2 + p {
-  margin-top: 0;
+article > header a {
+  float: right;
+}
+article > header i {
+  font-style: normal;
+}
+article > header h4, article > header b, article > header h3 {
+  font-weight: normal;
+}
+article > header h4 {
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+article > header h3 {
+  background: indianred;
+  border-radius: 0.2rem 0 0 0.2rem;
+  padding: 0.5rem 0 0.5rem 1rem;
+  margin-right: 1em;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+}
+article > header h3:before, article > header h3:after {
+  content: "";
+  height: 50%;
+  width: 1em;
+  position: absolute;
+  right: -1em;
+  background: -webkit-gradient(linear, 45deg, 45deg, color-stop(50%, #cd5c5c), color-stop(50%, rgba(205, 92, 92, 0)));
+  background: -webkit-linear-gradient(45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
+  background: -moz-linear-gradient(45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
+  background: -o-linear-gradient(45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
+  background: -ms-linear-gradient(45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
+  background: linear-gradient(45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
+}
+article > header h3:before {
+  top: 0;
+}
+article > header h3:after {
+  bottom: 0;
+  background: -webkit-gradient(linear, -45deg, -45deg, color-stop(50%, #cd5c5c), color-stop(50%, rgba(205, 92, 92, 0)));
+  background: -webkit-linear-gradient(-45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
+  background: -moz-linear-gradient(-45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
+  background: -o-linear-gradient(-45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
+  background: -ms-linear-gradient(-45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
+  background: linear-gradient(-45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
+}
+article > header h3 i {
+  font-size: 0.3em;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  font-weight: normal;
+}
+article > header h3 i b {
+  font-size: 1.5em;
+  display: block;
+}
+article > header h3.use {
+  background: olive;
+}
+article > header h3.use:before {
+  background: -webkit-gradient(linear, 45deg, 45deg, color-stop(50%, #808000), color-stop(50%, rgba(128, 128, 0, 0)));
+  background: -webkit-linear-gradient(45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
+  background: -moz-linear-gradient(45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
+  background: -o-linear-gradient(45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
+  background: -ms-linear-gradient(45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
+  background: linear-gradient(45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
+}
+article > header h3.use:after {
+  background: -webkit-gradient(linear, -45deg, -45deg, color-stop(50%, #808000), color-stop(50%, rgba(128, 128, 0, 0)));
+  background: -webkit-linear-gradient(-45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
+  background: -moz-linear-gradient(-45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
+  background: -o-linear-gradient(-45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
+  background: -ms-linear-gradient(-45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
+  background: linear-gradient(-45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
+}
+article > header h3.caution {
+  background: orange;
+}
+article > header h3.caution:before {
+  background: -webkit-gradient(linear, 45deg, 45deg, color-stop(50%, #ffa500), color-stop(50%, rgba(128, 128, 0, 0)));
+  background: -webkit-linear-gradient(45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
+  background: -moz-linear-gradient(45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
+  background: -o-linear-gradient(45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
+  background: -ms-linear-gradient(45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
+  background: linear-gradient(45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
+}
+article > header h3.caution:after {
+  background: -webkit-gradient(linear, -45deg, -45deg, color-stop(50%, #ffa500), color-stop(50%, rgba(128, 128, 0, 0)));
+  background: -webkit-linear-gradient(-45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
+  background: -moz-linear-gradient(-45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
+  background: -o-linear-gradient(-45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
+  background: -ms-linear-gradient(-45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
+  background: linear-gradient(-45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
 }
 
-.fallback h3 b {
-  background: #6aa4b4;
+article div.more {
+  max-height: 0em;
+  overflow: hidden;
+  -webkit-transition: max-height 1s linear;
+  -o-transition: max-height 1s linear;
+  -moz-transition: max-height 1s linear;
+  -ms-transition: max-height 1s linear;
 }
 
-.polyfill h3 b {
-  background: #de8c6a;
+article:hover div.more {
+  max-height: 10em;
 }
 
-.no h3 b {
-  background: #dc4506;
-}
-
-div#main, h1, header h2, header h3, header h4 {
+div#main, h1, header.index h2, header.index h3, header.index h4 {
   -webkit-transition: all 0.6s cubic-bezier(0.83, 1.47, 0.63, 0.9);
   -o-transition: all 0.6s cubic-bezier(0.83, 1.47, 0.63, 0.9);
   -moz-transition: all 0.6s cubic-bezier(0.83, 1.47, 0.63, 0.9);
   -ms-transition: all 0.6s cubic-bezier(0.83, 1.47, 0.63, 0.9);
-  transition: all 0.6s cubic-bezier(0.83, 1.47, 0.63, 0.9);
   -webkit-transition: all 0.6s cubic-bezier(0.83, 1, 0.63, 0.9);
   -webkit-transform: translateZ(0);
 }

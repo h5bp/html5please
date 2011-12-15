@@ -12,17 +12,12 @@
     <script src='js/libs/modernizr-2.0.min.js'></script>
   </head>
   <body id="gfs">
-    <header>
+    <header class=index>
       <h1>HTML5 <img src='img/HTML5-logo.png'> Please</h1>
       <h2>
         <b>Use the new and shiny responsibly.</b>
         Look up properties and see if it is ready for use, and if so how you should use it with a polyfill, a fallback value or as it is.
       </h2>
-      <h3>
-        <b>As recommended by</b>
-        <a href='#'>Paul Irish</a>
-        <a href='#'>Divya Manian</a>
-      </h3>
       <h4>
         <input id='livesearch' class='search' name='livesearch' placeholder='type to filter' type='search' value='' />
       </h4>
@@ -30,109 +25,199 @@
     <div id='main' role='main'>
       <section class="features">
         
-          <article class=" polyfill">
-            <h2 class='name'> audio</h2>
-            <h3 class=" use"><b><i></i></b></h3>
-            <div class='recco'><p>As with video, you need to provide your audio file in multiple formats for these to work. jPlayer also has a jQuery dependency. Sound Manager has extensive API for further customization. </p></div>
-            <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/happyworm/jPlayer">jPlayer</a>, <a href="http://kolber.github.com/audiojs/">audio.js</a>, <a href="http://www.schillmania.com/projects/soundmanager2/">Sound Manager 2</a></p></div>
+          <article class="">
+            <header>
+              <h4 class=" html"> html</h4>
+              <h3 class=" avoid"> avoid <i></i> </h3>
+              <h2 class='name'><a href="http://caniuse.com/ audio"> audio</a></h2>
+              <a href="#">[Open]</a>              
+            </header>
+            <div class="more">
+              <div class='recco'><p>As with video, you need to provide your audio file in multiple formats for these to work. jPlayer also has a jQuery dependency. Sound Manager has extensive API for further customization. </p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/happyworm/jPlayer">jPlayer</a>, <a href="http://kolber.github.com/audiojs/">audio.js</a>, <a href="http://www.schillmania.com/projects/soundmanager2/">Sound Manager 2</a></p></div>              
+            </div>
           </article>          
         
           <article class=" gtie8 polyfill">
-            <h2 class='name'> canvas</h2>
-            <h3 class=" use"><b><i></i></b></h3>
-            <div class='recco'><p>Canvas is definitely good to go for modern browsers. But if you are looking to use it in IE 8 and below, use FlashCanvas. </p></div>
-            <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://flashcanvas.net/">FlashCanvas</a></p></div>
+            <header>
+              <h4 class=" html"> html</h4>
+              <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
+              <h2 class='name'><a href="http://caniuse.com/ canvas"> canvas</a></h2>
+              <a href="#">[Open]</a>              
+            </header>
+            <div class="more">
+              <div class='recco'><p>Canvas is definitely good to go for modern browsers. But if you are looking to use it in IE 8 and below, use FlashCanvas. </p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://flashcanvas.net/">FlashCanvas</a></p></div>              
+            </div>
           </article>          
         
           <article class=" polyfill">
-            <h2 class='name'> datalist</h2>
-            <h3 class=" use"><b><i></i></b></h3>
-            <div class='recco'><p>Jeremy Keith has a <a href="http://adactio.com/journal/4272/">graceful fallback solution</a> that does not use a script.</p></div>
-            <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://miketaylr.com/code/datalist.html">jQuery Datalist Plugin</a>, <a href="http://css-tricks.com/15346-relevant-dropdowns-polyfill-for-datalist/">Relevant Dropdowns Polyfill</a></p></div>
+            <header>
+              <h4 class=" html"> html</h4>
+              <h3 class=" caution"> caution <i>with <b>polyfill</b></i> </h3>
+              <h2 class='name'><a href="http://caniuse.com/ datalist"> datalist</a></h2>
+              <a href="#">[Open]</a>              
+            </header>
+            <div class="more">
+              <div class='recco'><p>Jeremy Keith has a <a href="http://adactio.com/journal/4272/">graceful fallback solution</a> that does not use a script.</p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://miketaylr.com/code/datalist.html">jQuery Datalist Plugin</a>, <a href="http://css-tricks.com/15346-relevant-dropdowns-polyfill-for-datalist/">Relevant Dropdowns Polyfill</a></p></div>              
+            </div>
           </article>          
         
           <article class=" polyfill">
-            <h2 class='name'> dataset</h2>
-            <h3 class=" use"><b><i></i></b></h3>
-            <div class='recco'><p><a href="http://dev.opera.com/articles/view/an-introduction-to-datasets/">More info about dataset</a></p></div>
-            <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://eligrey.com/blog/post/html-5-dataset-support">HTML5 dataset support</a></p></div>
+            <header>
+              <h4 class=" html"> html</h4>
+              <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
+              <h2 class='name'><a href="http://caniuse.com/ dataset"> dataset</a></h2>
+              <a href="#">[Open]</a>              
+            </header>
+            <div class="more">
+              <div class='recco'><p><a href="http://dev.opera.com/articles/view/an-introduction-to-datasets/">More info about dataset</a></p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://eligrey.com/blog/post/html-5-dataset-support">HTML5 dataset support</a></p></div>              
+            </div>
           </article>          
         
           <article class=" polyfill">
-            <h2 class='name'> details</h2>
-            <h3 class=" use"><b><i></i></b></h3>
-            <div class='recco'><p>Use detail element if you intent to show a summary which when clicked reveals detailed information. </p></div>
-            <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://mathiasbynens.be/notes/html5-details-jquery">Details</a></p></div>
+            <header>
+              <h4 class=" html"> html</h4>
+              <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
+              <h2 class='name'><a href="http://caniuse.com/ details"> details</a></h2>
+              <a href="#">[Open]</a>              
+            </header>
+            <div class="more">
+              <div class='recco'><p>Use detail element if you intent to show a summary which when clicked reveals detailed information. </p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://mathiasbynens.be/notes/html5-details-jquery">Details</a></p></div>              
+            </div>
           </article>          
         
           <article class=" fallback">
-            <h2 class='name'> Eventsource</h2>
-            <h3 class=" use"><b><i></i></b></h3>
-            <div class='recco'><p>EventSource.js provides base fallback and is not dependent on jQuery.</p></div>
-            <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/remy/polyfills/blob/master/EventSource.js">EventSource.js</a>, <a href="https://github.com/rwldrn/jquery.eventsource">jQuery.eventsource</a></p></div>
+            <header>
+              <h4 class=" html"> html</h4>
+              <h3 class=" use"> use <i>with <b>fallback</b></i> </h3>
+              <h2 class='name'><a href="http://caniuse.com/ Eventsource"> Eventsource</a></h2>
+              <a href="#">[Open]</a>              
+            </header>
+            <div class="more">
+              <div class='recco'><p>EventSource.js provides base fallback and is not dependent on jQuery.</p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/remy/polyfills/blob/master/EventSource.js">EventSource.js</a>, <a href="https://github.com/rwldrn/jquery.eventsource">jQuery.eventsource</a></p></div>              
+            </div>
           </article>          
         
           <article class=" polyfill">
-            <h2 class='name'> geo-location</h2>
-            <h3 class=" use"><b><i></i></b></h3>
-            <div class='recco'><p>The Geolocation shim requires jQuery to work, but if you are looking for a mobile specific script, you are better off using the geo-location-javascript.</p></div>
-            <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/366184">Geolocation Shim</a>, <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a></p></div>
+            <header>
+              <h4 class=" html"> html</h4>
+              <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
+              <h2 class='name'><a href="http://caniuse.com/ geo-location"> geo-location</a></h2>
+              <a href="#">[Open]</a>              
+            </header>
+            <div class="more">
+              <div class='recco'><p>The Geolocation shim requires jQuery to work, but if you are looking for a mobile specific script, you are better off using the geo-location-javascript.</p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/366184">Geolocation Shim</a>, <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a></p></div>              
+            </div>
           </article>          
         
           <article class=" fallback">
-            <h2 class='name'> history</h2>
-            <h3 class=" use"><b><i></i></b></h3>
-            <div class='recco'><p>History.js has cross-compatibility between HTML5 browser implementations and optional hashchange fallback for HTML4 browsers. PJax (pushState + ajax = pjax) is what is used by Github for their fallback solution.</p></div>
-            <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/balupton/history.js">History.js</a>, <a href="http://pjax.heroku.com/">pjax</a></p></div>
+            <header>
+              <h4 class=" dom"> dom</h4>
+              <h3 class=" use"> use <i>with <b>fallback</b></i> </h3>
+              <h2 class='name'><a href="http://caniuse.com/ history"> history</a></h2>
+              <a href="#">[Open]</a>              
+            </header>
+            <div class="more">
+              <div class='recco'><p>History.js has cross-compatibility between HTML5 browser implementations and optional hashchange fallback for HTML4 browsers. PJax (pushState + ajax = pjax) is what is used by Github for their fallback solution.</p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/balupton/history.js">History.js</a>, <a href="http://pjax.heroku.com/">pjax</a></p></div>              
+            </div>
           </article>          
         
           <article class=" polyfill">
-            <h2 class='name'> menu</h2>
-            <h3 class=" use"><b><i></i></b></h3>
-            <div class='recco'><p>Do note that this polyfill requires a jQuery dependency.</p></div>
-            <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/medialize/jQuery-contextMenu">contextMenu</a></p></div>
+            <header>
+              <h4 class=" html"> html</h4>
+              <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
+              <h2 class='name'><a href="http://caniuse.com/ menu"> menu</a></h2>
+              <a href="#">[Open]</a>              
+            </header>
+            <div class="more">
+              <div class='recco'><p>Do note that this polyfill requires a jQuery dependency.</p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/medialize/jQuery-contextMenu">contextMenu</a></p></div>              
+            </div>
           </article>          
         
           <article class=" polyfill">
-            <h2 class='name'> meter</h2>
-            <h3 class=" use"><b><i></i></b></h3>
-            <div class='recco'></div>
-            <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/667320">meter-polyfill</a>, <a href="https://github.com/xjamundx/HTML5-Meter-Shim">jQuery shim</a></p></div>
+            <header>
+              <h4 class=" html"> html</h4>
+              <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
+              <h2 class='name'><a href="http://caniuse.com/ meter"> meter</a></h2>
+              <a href="#">[Open]</a>              
+            </header>
+            <div class="more">
+              <div class='recco'></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/667320">meter-polyfill</a>, <a href="https://github.com/xjamundx/HTML5-Meter-Shim">jQuery shim</a></p></div>              
+            </div>
           </article>          
         
           <article class=" polyfill">
-            <h2 class='name'> progress</h2>
-            <h3 class=" use"><b><i></i></b></h3>
-            <div class='recco'></div>
-            <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/LeaVerou/HTML5-Progress-polyfill">HTML5 Progress Polyfill</a></p></div>
+            <header>
+              <h4 class=" html"> html</h4>
+              <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
+              <h2 class='name'><a href="http://caniuse.com/ progress"> progress</a></h2>
+              <a href="#">[Open]</a>              
+            </header>
+            <div class="more">
+              <div class='recco'></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/LeaVerou/HTML5-Progress-polyfill">HTML5 Progress Polyfill</a></p></div>              
+            </div>
           </article>          
         
           <article class=" fallback">
-            <h2 class='name'> ruby</h2>
-            <h3 class=" use"><b><i></i></b></h3>
-            <div class='recco'><p>If you are using Ruby element you dont need a script-based fallback but you can provide a CSS based set of good defaults. </p></div>
-            <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://www.useragentman.com/blog/2010/10/29/cross-browser-html5-ruby-annotations-using-css/">Cross-browser Ruby</a>, <a href="http://sideshowbarker.net/2009/11/13/html5-ruby/#comment-3388">basic fallback</a></p></div>
+            <header>
+              <h4 class=" html"> html</h4>
+              <h3 class=" use"> use <i>with <b>fallback</b></i> </h3>
+              <h2 class='name'><a href="http://caniuse.com/ ruby"> ruby</a></h2>
+              <a href="#">[Open]</a>              
+            </header>
+            <div class="more">
+              <div class='recco'><p>If you are using Ruby element you dont need a script-based fallback but you can provide a CSS based set of good defaults. </p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://www.useragentman.com/blog/2010/10/29/cross-browser-html5-ruby-annotations-using-css/">Cross-browser Ruby</a>, <a href="http://sideshowbarker.net/2009/11/13/html5-ruby/#comment-3388">basic fallback</a></p></div>              
+            </div>
           </article>          
         
           <article class=" gtie8 polyfill">
-            <h2 class='name'> svg</h2>
-            <h3 class=" use"><b><i></i></b></h3>
-            <div class='recco'><p>SVG has good support for several years in most browsers except IE. IE9 brings support, which means you can use a polyfill library like SVGWeb or Canvg or create SVG dynamically via RaphaelJS.</p></div>
-            <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://code.google.com/p/svgweb/">svgweb</a>, <a href="http://raphaeljs.com/">raphaeljs</a>, <a href="http://code.google.com/p/canvg/">canvg</a></p></div>
+            <header>
+              <h4 class=" svg"> svg</h4>
+              <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
+              <h2 class='name'><a href="http://caniuse.com/ svg"> svg</a></h2>
+              <a href="#">[Open]</a>              
+            </header>
+            <div class="more">
+              <div class='recco'><p>SVG has good support for several years in most browsers except IE. IE9 brings support, which means you can use a polyfill library like SVGWeb or Canvg or create SVG dynamically via RaphaelJS.</p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://code.google.com/p/svgweb/">svgweb</a>, <a href="http://raphaeljs.com/">raphaeljs</a>, <a href="http://code.google.com/p/canvg/">canvg</a></p></div>              
+            </div>
           </article>          
         
           <article class=" polyfill">
-            <h2 class='name'> text-shadow</h2>
-            <h3 class=" use"><b><i></i></b></h3>
-            <div class='recco'></div>
-            <div class='polyfills'><b>Recommended Polyfills: </b><p>[]</p></div>
+            <header>
+              <h4 class=""></h4>
+              <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
+              <h2 class='name'><a href="http://caniuse.com/ text-shadow"> text-shadow</a></h2>
+              <a href="#">[Open]</a>              
+            </header>
+            <div class="more">
+              <div class='recco'></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p>[]</p></div>              
+            </div>
           </article>          
         
           <article class=" polyfill">
-            <h2 class='name'> video</h2>
-            <h3 class=" use"><b><i></i></b></h3>
-            <div class='recco'><p>Do note you need to supply your video in various formats to cater to all browsers and fallbacks. There is also a way to do this without any scripting as explained by Kroc Camen in his article <a href="http://camendesign.com/code/video_for_everybody">Video for Everybody</a>.</p></div>
-            <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://mediaelementjs.com/">mediaelementjs</a>, <a href="http://videojs.com/">videojs</a></p></div>
+            <header>
+              <h4 class=" html"> html</h4>
+              <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
+              <h2 class='name'><a href="http://caniuse.com/ video"> video</a></h2>
+              <a href="#">[Open]</a>              
+            </header>
+            <div class="more">
+              <div class='recco'><p>Do note you need to supply your video in various formats to cater to all browsers and fallbacks. There is also a way to do this without any scripting as explained by Kroc Camen in his article <a href="http://camendesign.com/code/video_for_everybody">Video for Everybody</a>.</p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://mediaelementjs.com/">mediaelementjs</a>, <a href="http://videojs.com/">videojs</a></p></div>              
+            </div>
           </article>          
             
       </section>

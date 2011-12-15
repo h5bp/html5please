@@ -12,17 +12,12 @@
     <script src='js/libs/modernizr-2.0.min.js'></script>
   </head>
   <body id="gfs">
-    <header>
+    <header class=index>
       <h1>HTML5 <img src='img/HTML5-logo.png'> Please</h1>
       <h2>
         <b>Use the new and shiny responsibly.</b>
         Look up properties and see if it is ready for use, and if so how you should use it with a polyfill, a fallback value or as it is.
       </h2>
-      <h3>
-        <b>As recommended by</b>
-        <a href='#'>Paul Irish</a>
-        <a href='#'>Divya Manian</a>
-      </h3>
       <h4>
         <input id='livesearch' class='search' name='livesearch' placeholder='type to filter' type='search' value='' />
       </h4>
@@ -30,11 +25,17 @@
     <div id='main' role='main'>
       <section class="features">
         {{#features}}
-          <article class="{{tags}}{{kind}}">
-            <h2 class='name'><a href="http://caniuse.com/{{{feature}}}">{{{feature}}}</a></h2>
-            <h3 class="{{status}}"></h3>
-            <div class='recco'>{{{contents}}}</div>
-            <div class='polyfills'><b>Recommended Polyfills: </b>{{{polyfillurls}}}</div>
+          <article class="{{tags}}">
+            <header>
+              <h4 class="{{kind}}">{{kind}}</h4>
+              <h3 class="{{status}}">{{status}} <i>{{{polyfillaction tags}}}</i> </h3>
+              <h2 class='name'><a href="http://caniuse.com/{{{feature}}}">{{{feature}}}</a></h2>
+              <a href="#">[Open]</a>              
+            </header>
+            <div class="more">
+              <div class='recco'>{{{contents}}}</div>
+              <div class='polyfills'><b>Recommended Polyfills: </b>{{{polyfillurls}}}</div>              
+            </div>
           </article>          
         {{/features}}    
       </section>
