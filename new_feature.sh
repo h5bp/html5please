@@ -19,7 +19,7 @@ done
 
 while [ -z "$status" ]
 do
-    status=$(promptValue "Enter Status (use,avoid or caution)")
+    status=$(promptValue "Enter Status (use,avoid, or caution)")
     case $status in
         use|avoid|caution) : ;;
         *)                 status= ;;
@@ -28,7 +28,7 @@ done
 
 while [ -z "$tags" ]
 do
-    tags=$(promptValue "Enter Tags (one or more of: gtie6 gtie7 gtie8 nopolyfill polyfill fallback)")
+    tags=$(promptValue "Enter Tags (one or more of: gtie6,gtie7,gtie8,nopolyfill,polyfill, or fallback)")
     if [ -n "$tags" ]
     then
       set $(echo $tags)
