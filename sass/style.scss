@@ -290,10 +290,11 @@ article > header {
     margin: 0;
   }
   
-  > a { 
+  > a {
     position: absolute;
-    margin-top: 1em;    
+    margin-top: 1em;
     right: 1em;
+    cursor: pointer;
     width: 2em;
     height: 2em;
     &:before {

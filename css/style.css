@@ -280,8 +280,8 @@ table {
 html {
   background-color: #232927;
   color: #e3d7bf;
-  background: -o-radial-gradient(20% 20%, circle cover, rgba(32, 124, 202, 0.1) 10%, transparent 10%), -o-radial-gradient(30% 30%, circle cover, rgba(205, 92, 92, 0.2) 5%, transparent 5%), -o-radial-gradient(60% 40%, circle cover, rgba(255, 255, 255, 0.1) 15%, transparent 15%), -o-radial-gradient(80% 60%, circle cover, rgba(128, 128, 0, 0.2) 8%, transparent 8%), -o-radial-gradient(40% 60%, circle cover, rgba(32, 124, 202, 0.2) 5%, transparent 5%), -o-radial-gradient(40% 50%, circle cover, rgba(0, 0, 0, 0.2) 5%, transparent 5%), url('../img/denim.png?1323991851');
-  background: -webkit-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, transparent 10em), -webkit-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, transparent 5em), -webkit-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, transparent 15em), -webkit-radial-gradient(80em 60em, circle cover, rgba(128, 128, 0, 0.2) 8em, transparent 8em), -webkit-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, transparent 5em), -webkit-radial-gradient(40em 50em, circle cover, rgba(0, 0, 0, 0.2) 5em, transparent 5em), url('../img/denim.png?1323991851');
+  background: -o-radial-gradient(20% 20%, circle cover, rgba(32, 124, 202, 0.1) 10%, transparent 10%), -o-radial-gradient(30% 30%, circle cover, rgba(205, 92, 92, 0.2) 5%, transparent 5%), -o-radial-gradient(60% 40%, circle cover, rgba(255, 255, 255, 0.1) 15%, transparent 15%), -o-radial-gradient(80% 60%, circle cover, rgba(128, 128, 0, 0.2) 8%, transparent 8%), -o-radial-gradient(40% 60%, circle cover, rgba(32, 124, 202, 0.2) 5%, transparent 5%), -o-radial-gradient(40% 50%, circle cover, rgba(0, 0, 0, 0.2) 5%, transparent 5%), url('../img/denim.png?1324015420');
+  background: -webkit-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, transparent 10em), -webkit-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, transparent 5em), -webkit-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, transparent 15em), -webkit-radial-gradient(80em 60em, circle cover, rgba(128, 128, 0, 0.2) 8em, transparent 8em), -webkit-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, transparent 5em), -webkit-radial-gradient(40em 50em, circle cover, rgba(0, 0, 0, 0.2) 5em, transparent 5em), url('../img/denim.png?1324015420');
   min-height: 100%;
   max-width: 100%;
 }
@@ -394,6 +394,7 @@ article > header > a {
   position: absolute;
   margin-top: 1em;
   right: 1em;
+  cursor: pointer;
   width: 2em;
   height: 2em;
 }
