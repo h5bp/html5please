@@ -18,9 +18,9 @@
         <b>Use the new and shiny responsibly.</b>
         Look up properties and see if it is ready for use, and if so how you should use it with a polyfill, a fallback value or as it is.
       </h2>
-      <h4>
-        <input id='livesearch' class='search' name='livesearch' placeholder='type to filter' type='search' value='' />
-      </h4>
+      <div>
+        <input id='livesearch' class='search' name='livesearch' placeholder='type to filter' type='search' value='' />        
+      </div>
     </header>
     <div id='main' role='main'>
       <section class="features">
@@ -30,7 +30,7 @@
               <h4 class="{{kind}}">{{kind}}</h4>
               <h3 class="{{status}}">{{status}} <i>{{{polyfillaction tags}}}</i> </h3>
               <h2 class='name'><a href="http://caniuse.com/{{{feature}}}">{{{feature}}}</a></h2>
-              <a href="#">[Open]</a>              
+              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'>{{{contents}}}</div>

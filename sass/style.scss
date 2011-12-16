@@ -47,7 +47,7 @@ html { font-size: 100%; overflow-y: scroll; -webkit-tap-highlight-color: rgba(0,
 
 body { margin: 0; font-size: 13px; line-height: 1.231; }
 
-body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+body, button, input, select, textarea { font-family: sans-serif; color: $lightest; }
 
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
@@ -57,8 +57,8 @@ body, button, input, select, textarea { font-family: sans-serif; color: #222; }
    Links
    ========================================================================== */
 
-a { color: $contrast; text-decoration: none; }
-a:visited { color: darken($contrast, 30%); }
+a { color: #149CD7; text-decoration: none; }
+a:visited { color: darken(#149CD7, 30%); }
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
@@ -148,8 +148,7 @@ button, input { line-height: normal; *overflow: visible; }
 
 button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
 
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
-input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; -webkit-appearance: normal; }
 
 button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 
@@ -170,9 +169,32 @@ table { border-collapse: collapse; border-spacing: 0; }
    Primary styles
    Author: Divya Manian
    ========================================================================== */
-
+* { box-sizing: border-box; }
    
-html {  box-shadow: 0 0 5em $lightest inset; min-height: 100%; max-width: 100%; }
+html {  
+  background-color:  $dark; 
+  color: $lightest; 
+  background: -o-radial-gradient(20% 20%, circle cover, transparentize(#207cca, 0.9) 10%, transparent 10%), 
+              -o-radial-gradient(30% 30%, circle cover, transparentize(#cd5c5c, 0.8) 5%, transparent 5%),   
+              -o-radial-gradient(60% 40%, circle cover, transparentize(white, 0.9) 15%, transparent 15%),                               
+              -o-radial-gradient(80% 60%, circle cover, transparentize(olive, 0.8) 8%, transparent 8%),                 
+              -o-radial-gradient(40% 60%, circle cover, transparentize(#207cca, 0.8) 5%, transparent 5%),                               
+              -o-radial-gradient(40% 50%, circle cover, transparentize(black, 0.8) 5%, transparent 5%),                                             
+              image-url('denim.png'); 
+  background: -webkit-radial-gradient(20em 20em, circle cover, transparentize(#207cca, 0.9) 10em, transparent 10em), 
+              -webkit-radial-gradient(30em 30em, circle cover, transparentize(#cd5c5c, 0.8) 5em, transparent 5em),   
+              -webkit-radial-gradient(60em 40em, circle cover, transparentize(white, 0.9) 15em, transparent 15em),                               
+              -webkit-radial-gradient(80em 60em, circle cover, transparentize(olive, 0.8) 8em, transparent 8em),                 
+              -webkit-radial-gradient(40em 60em, circle cover, transparentize(#207cca, 0.8) 5em, transparent 5em),                               
+              -webkit-radial-gradient(40em 50em, circle cover, transparentize(black, 0.8) 5em, transparent 5em),                                             
+              image-url('denim.png');              
+
+//  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+
+//  background-attachment: scroll, fixed, fixed, scroll, scroll, fixed, scroll;
+  min-height: 100%; 
+  max-width: 100%; 
+}
  
 body {
   max-width: 70%;
@@ -187,67 +209,130 @@ header.index {
 
 h2 { text-transform: uppercase; }
 
-header.index h1{ font-size: 5em; text-transform:  uppercase; color: $dark; text-shadow: 1px 1px 1px lighten($contrast, 10%), 2px 2px 1px lighten($contrast, 10%), 3px 3px 1px lighten($contrast, 10%);}
+header.index h1{ 
+  font-size: 5em; 
+  text-transform:  uppercase; 
+  text-shadow: 1px 1px 1px lighten($contrast, 10%), 
+              2px 2px 1px lighten($contrast, 10%), 
+              3px 3px 1px lighten($contrast, 10%),
+              4px 4px 1px darken($dark, 10%),
+              5px 5px 3px darken($dark, 10%);                                         
+  line-height: 1.2em; 
+  margin: 0.8em 0 0.5em 0; 
+}
+
 header.index h1 img { vertical-align: -10%; }
 
-header.index h1 { line-height: 1.2em; margin: 0; }
-header.index h1 + h2 { font-size: 1em; text-transform: lowercase; margin: 3em 0; }
+header.index h1 + h2 { 
+  font-size: 1em; 
+  text-transform: lowercase; 
+  margin: 0 auto; 
+  max-width: 60%; 
+  text-shadow: 1px 1px 1px darken($dark, 10%);
+}
 header.index h1, header.index h2 b { font-family: 'Francois One', sans-serif; }
 header.index h2 b { font-size: 2em; display: block; color: lighten($contrast, 10%); }
 
-header.index h1 b, header.index h3, article h3 b i { font-family: 'Open Sans', sans-serif; text-transform: uppercase; display: block; line-height: 1;  }
+header.index h1 b, 
+header.index h3, 
+article h3 b i { 
+  font-family: 'Open Sans', sans-serif; 
+  text-transform: uppercase; 
+  display: block; 
+  line-height: 1;  
+}
 
 
-header.index h3 { background: url(../dark_mosaic.png) $dark; color: white; position: relative; box-shadow: 0.05em 0.05em 0.4em 0.15em $darkest; padding: 1em; font-size: 1em; line-height: 1.5; }
 
-header.index h3::before, 
-header.index h3::after { content: ""; width: 0; height: 0; border: 5em solid $dark; border-width: 20px 0 20px 20px; border-color: $darkest transparent $darkest; position: absolute; left: -20px; top: 50%; margin-top: -20px; z-index: -1; }
+header.index h3, 
+header.index h2 { 
+  font-weight: normal; 
+  text-transform: none; 
+  font-style: normal; 
+}
 
-header.index h3::after { border-width: 20px 20px 20px 0; border-color: $darkest transparent $darkest; left: auto; right: -20px; }
+header.index > div { padding: 1em 0 4em 0; }
 
-header.index h3 a { color: lighten($contrast, 10%); }
-header.index h3 a + a::before { content: "  /  "; color: white; }
+header.index input[type="search"] { 
+  width: 50%; 
+  padding: 0.5em 1em; 
+  background: white;
+  border-radius: 10em;
+  border: 0;
+  color: darken($dark, 20%);
+}
 
-header.index h3 b { word-spacing: 0.15em; text-transform: uppercase; }
+header.index h3 { margin: 0; }
 
-header.index h3, header.index h2,
-article h3 b i { font-weight: normal; text-transform: none; font-style: normal; }
-
-header.index h4 { background: $lightest; padding: 1em; box-shadow: 0 0 1px $dark; }
-header.index input[type="search"] { width: 50%; }
-
-header.index h3, header.index h4 { margin: 0; }
-
-article h2 { color: $dark; text-shadow: 2px 2px 1px lighten($contrast, 30%);  }
+article h2 { 
+  color: $dark; 
+  text-shadow: 1px 1px 1px darken(#149CD7, 20%);  
+  letter-spacing: 1px;
+}
 
 article { 
-  overflow: hidden; min-height: 2em; padding: 1em 0; position: relative; 
-  @include background(radial-gradient(50% 200%, ellipse, hsl(53, 86%, 49%), hsla(53, 86%, 79%, 0) 40%));
+  min-height: 2em; 
+  background: white;
+  color: $dark;
+  margin-bottom: 2em; 
+  border-radius: 0.3rem; 
+  box-shadow: 0 0 7px darken($dark, 10%); 
 }
 
 article > header {
   background: $lightest;
-  border-radius: 0 0.5em 0.5em 0;
-
+  border-radius: 0.3rem;
+  box-shadow: 0 0 7px darken($lightest, 10%) inset;  
+  position: relative;
   h4, h2, h3, a {
     display: inline-block;
     vertical-align: middle;
     margin: 0;
   }
   
-  a { float: right; }
+  > a { 
+    position: absolute;
+    margin-top: 1em;    
+    right: 1em;
+    width: 2em;
+    height: 2em;
+    &:before {
+      content: "+";
+      font-size: 2rem;
+      line-height: 1.7rem;
+      text-align: center;
+      font-family: sans-serif;
+      color: white;
+      text-shadow: 1px 1px 1px darken($lightest, 40%);
+      box-shadow: 0 0 7px darken($lightest, 30%) inset;
+      width: 1em;
+      display: block;
+      height: 1em;
+      border-radius: 1em;
+      background: darken($lightest, 20%);      
+    }
+  }  
   
   i { font-style: normal; }
   h4, b, h3 { font-weight: normal; }
   h4 {
     font-size: 0.8em;
-    text-transform: uppercase;
+    text-transform: uppercase; 
+    position: absolute;
+    left: -5em;
+    text-align: right;
+    margin-top: 1.5em;
+    display: block;
+    width: 4.5em;
+    z-index: 1;
+    color: $lightest;
+    text-shadow: 1px 1px 1px $dark;
   }
   
   h3 {
     background: indianred;
     border-radius: 0.2rem 0 0 0.2rem;
-    padding: 0.5rem 0 0.5rem 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
     margin-right: 1em;
     color: white;
     text-shadow: 1px 1px black;
@@ -255,14 +340,15 @@ article > header {
     text-transform: uppercase;
     font-weight: bold;
     position: relative;
+    box-shadow: 4px 0px 6px darken(#CD5C5C, 12%) inset;
     &:before, 
     &:after {
       content: "";
       height: 50%;
-      width: 1em;
+      width: 0.8em;
       position: absolute;
-      right: -1em;
-      @include background(linear-gradient(45deg, #CD5C5C 50%,  transparentize(#CD5C5C, 1) 50%));    
+      right: -0.8em; 
+      @include background(linear-gradient(34deg, #CD5C5C 50%,  darken(#CD5C5C, 10%) 53%, transparentize(#CD5C5C, 1) 56%));    
     }
     
     &:before {
@@ -271,7 +357,7 @@ article > header {
     
     &:after {
       bottom: 0;
-      @include background(linear-gradient(-45deg, #CD5C5C 50%, transparentize(#CD5C5C, 1) 50%));          
+      @include background(linear-gradient(-34deg, #CD5C5C 50%, darken(#CD5C5C, 10%) 53%, transparentize(#CD5C5C, 1) 56%));          
     }
     
     i {
@@ -288,23 +374,25 @@ article > header {
     
     &.use { 
       background: olive; 
+      box-shadow: 4px 0px 6px darken(olive, 12%) inset;
       &:before{
-        @include background(linear-gradient(45deg, olive 50%,  transparentize(olive, 1) 50%));            
+        @include background(linear-gradient(34deg, olive 50%,  darken(olive, 5%) 53%, transparentize(olive, 1) 56%));                    
       }
       
       &:after {
-        @include background(linear-gradient(-45deg, olive 50%, transparentize(olive, 1) 50%));                  
+        @include background(linear-gradient(-34deg, olive 50%, darken(olive, 5%) 53%, transparentize(olive, 1) 56%));                  
       }
     }
     
     &.caution { 
       background: orange; 
+      box-shadow: 4px 0 6px darken(#ffa500, 12%) inset;
       &:before{
-        @include background(linear-gradient(45deg, #FFA500 50%,  transparentize(olive, 1) 50%));            
+        @include background(linear-gradient(34deg, #FFA500 50%, darken(#ffa500, 5%) 53%, transparentize(#ffa500, 1) 56%));            
       }
       
       &:after {
-        @include background(linear-gradient(-45deg, #FFA500 50%, transparentize(olive, 1) 50%));                  
+        @include background(linear-gradient(-34deg, #FFA500 50%, darken(#ffa500, 5%) 53%, transparentize(#ffa500, 1) 56%));                  
       }
     }  
   }
@@ -313,52 +401,31 @@ article > header {
   
 }
 
-article div.more { 
-  max-height: 0em; 
-  overflow: hidden; 
-  @include our-transition("max-height 1s linear");
+article div.more {   
+  max-height: 0em;     
+  overflow: hidden;
+  box-shadow: 0 -1px 7px $dark;
+  @include our-transition("max-height 0.3s ease-in");  
+  
+  .recco { margin: 0.5em 1em; }
+  .polyfills { margin: 0.5em 1em 1.5em; }
+  .polyfills b { font-weight: bold; }
+  
+  .polyfills p { display: inline; }
 }
 
-article:hover div.more {
-  max-height: 10em;
+article.expanded {
+  > header {
+    border-bottom: 1px solid lighten($dark, 45%);
+    box-shadow: 0 0 7px darken($lightest, 10%) inset, 0 1px 7px lighten($dark, 35%);      
+  }
+  > header > a:before {
+      content: "-";    
+  }
+  
+  div.more { max-height: 10em; }
+  
 }
-
-
-
-
-div#main, h1, header.index h2, header.index h3, header.index h4 { 
-  @include our-transition(all 0.6s cubic-bezier(.83,1.47,.63,.9));
-  -webkit-transition: all 0.6s cubic-bezier(0.83, 1, 0.63, 0.9);
- -webkit-transform: translateZ(0);   
-}
-
-h1, h2, h3, h4 { 
-  @include transition-duration(0.3s);
-}
-
-.searching div#main {
-  @include transform(translate(0, -400px));  
-  @include transition-duration(0.8s);
-}
-
-.searching h1 {  @include transform(translate(-1200px, 0px)); }
-
-.searching header h2 {
-  @include transform(translate(1200px, 0px));
-}
-
-.searching header h3 {  opacity: 0;   }
-
-.searching header h4 {  
-  @include transform(translate(0px, -393px));
-  border-radius: 0 0 20px 20px;
-}
-
-.test div#main {
-  @include transform(translate(0, -2480px));
-}
-
-
 /* =============================================================================
    Non-semantic helper classes
    Please define your styles before this section.

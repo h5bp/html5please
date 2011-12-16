@@ -37,7 +37,7 @@ body {
 
 body, button, input, select, textarea {
   font-family: sans-serif;
-  color: #222;
+  color: #e3d7bf;
 }
 
 ::-moz-selection {
@@ -56,12 +56,12 @@ body, button, input, select, textarea {
    Links
    ========================================================================== */
 a {
-  color: #e16734;
+  color: #149CD7;
   text-decoration: none;
 }
 
 a:visited {
-  color: #6c2b10;
+  color: #07364b;
 }
 
 a:focus {
@@ -240,14 +240,11 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
 }
 
-input[type="checkbox"], input[type="radio"] {
-  box-sizing: border-box;
-}
-
 input[type="search"] {
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
+  -webkit-appearance: normal;
 }
 
 button::-moz-focus-inner, input::-moz-focus-inner {
@@ -276,8 +273,15 @@ table {
    Primary styles
    Author: Divya Manian
    ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
 html {
-  box-shadow: 0 0 5em #e3d7bf inset;
+  background-color: #232927;
+  color: #e3d7bf;
+  background: -o-radial-gradient(20% 20%, circle cover, rgba(32, 124, 202, 0.1) 10%, transparent 10%), -o-radial-gradient(30% 30%, circle cover, rgba(205, 92, 92, 0.2) 5%, transparent 5%), -o-radial-gradient(60% 40%, circle cover, rgba(255, 255, 255, 0.1) 15%, transparent 15%), -o-radial-gradient(80% 60%, circle cover, rgba(128, 128, 0, 0.2) 8%, transparent 8%), -o-radial-gradient(40% 60%, circle cover, rgba(32, 124, 202, 0.2) 5%, transparent 5%), -o-radial-gradient(40% 50%, circle cover, rgba(0, 0, 0, 0.2) 5%, transparent 5%), url('../img/denim.png?1323991851');
+  background: -webkit-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, transparent 10em), -webkit-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, transparent 5em), -webkit-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, transparent 15em), -webkit-radial-gradient(80em 60em, circle cover, rgba(128, 128, 0, 0.2) 8em, transparent 8em), -webkit-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, transparent 5em), -webkit-radial-gradient(40em 50em, circle cover, rgba(0, 0, 0, 0.2) 5em, transparent 5em), url('../img/denim.png?1323991851');
   min-height: 100%;
   max-width: 100%;
 }
@@ -300,23 +304,21 @@ h2 {
 header.index h1 {
   font-size: 5em;
   text-transform: uppercase;
-  color: #232927;
-  text-shadow: 1px 1px 1px #e88860, 2px 2px 1px #e88860, 3px 3px 1px #e88860;
+  text-shadow: 1px 1px 1px #e88860, 2px 2px 1px #e88860, 3px 3px 1px #e88860, 4px 4px 1px #0c0d0d, 5px 5px 3px #0c0d0d;
+  line-height: 1.2em;
+  margin: 0.8em 0 0.5em 0;
 }
 
 header.index h1 img {
   vertical-align: -10%;
 }
 
-header.index h1 {
-  line-height: 1.2em;
-  margin: 0;
-}
-
 header.index h1 + h2 {
   font-size: 1em;
   text-transform: lowercase;
-  margin: 3em 0;
+  margin: 0 auto;
+  max-width: 60%;
+  text-shadow: 1px 1px 1px #0c0d0d;
 }
 
 header.index h1, header.index h2 b {
@@ -329,109 +331,86 @@ header.index h2 b {
   color: #e88860;
 }
 
-header.index h1 b, header.index h3, article h3 b i {
+header.index h1 b,
+header.index h3,
+article h3 b i {
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   display: block;
   line-height: 1;
 }
 
-header.index h3 {
-  background: url(../dark_mosaic.png) #232927;
-  color: white;
-  position: relative;
-  box-shadow: 0.05em 0.05em 0.4em 0.15em #1e2322;
-  padding: 1em;
-  font-size: 1em;
-  line-height: 1.5;
-}
-
-header.index h3::before,
-header.index h3::after {
-  content: "";
-  width: 0;
-  height: 0;
-  border: 5em solid #232927;
-  border-width: 20px 0 20px 20px;
-  border-color: #1e2322 transparent #1e2322;
-  position: absolute;
-  left: -20px;
-  top: 50%;
-  margin-top: -20px;
-  z-index: -1;
-}
-
-header.index h3::after {
-  border-width: 20px 20px 20px 0;
-  border-color: #1e2322 transparent #1e2322;
-  left: auto;
-  right: -20px;
-}
-
-header.index h3 a {
-  color: #e88860;
-}
-
-header.index h3 a + a::before {
-  content: "  /  ";
-  color: white;
-}
-
-header.index h3 b {
-  word-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-header.index h3, header.index h2,
-article h3 b i {
+header.index h3,
+header.index h2 {
   font-weight: normal;
   text-transform: none;
   font-style: normal;
 }
 
-header.index h4 {
-  background: #e3d7bf;
-  padding: 1em;
-  box-shadow: 0 0 1px #232927;
+header.index > div {
+  padding: 1em 0 4em 0;
 }
 
 header.index input[type="search"] {
   width: 50%;
+  padding: 0.5em 1em;
+  background: white;
+  border-radius: 10em;
+  border: 0;
+  color: black;
 }
 
-header.index h3, header.index h4 {
+header.index h3 {
   margin: 0;
 }
 
 article h2 {
   color: #232927;
-  text-shadow: 2px 2px 1px #f5cbb9;
+  text-shadow: 1px 1px 1px #0b587a;
+  letter-spacing: 1px;
 }
 
 article {
-  overflow: hidden;
   min-height: 2em;
-  padding: 1em 0;
-  position: relative;
-  background: -webkit-gradient(radial, 50% 200%, 0, 50% 200%, 40, color-stop(0%, #e8cf11), color-stop(40%, rgba(248, 237, 155, 0)));
-  background: -webkit-radial-gradient(50% 200%, ellipse, #e8cf11, rgba(248, 237, 155, 0) 40%);
-  background: -moz-radial-gradient(50% 200%, ellipse, #e8cf11, rgba(248, 237, 155, 0) 40%);
-  background: -o-radial-gradient(50% 200%, ellipse, #e8cf11, rgba(248, 237, 155, 0) 40%);
-  background: -ms-radial-gradient(50% 200%, ellipse, #e8cf11, rgba(248, 237, 155, 0) 40%);
-  background: radial-gradient(50% 200%, ellipse, #e8cf11, rgba(248, 237, 155, 0) 40%);
+  background: white;
+  color: #232927;
+  margin-bottom: 2em;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 7px #0c0d0d;
 }
 
 article > header {
   background: #e3d7bf;
-  border-radius: 0 0.5em 0.5em 0;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 7px #d3c19c inset;
+  position: relative;
 }
 article > header h4, article > header h2, article > header h3, article > header a {
   display: inline-block;
   vertical-align: middle;
   margin: 0;
 }
-article > header a {
-  float: right;
+article > header > a {
+  position: absolute;
+  margin-top: 1em;
+  right: 1em;
+  width: 2em;
+  height: 2em;
+}
+article > header > a:before {
+  content: "+";
+  font-size: 2rem;
+  line-height: 1.7rem;
+  text-align: center;
+  font-family: sans-serif;
+  color: white;
+  text-shadow: 1px 1px 1px #957941;
+  box-shadow: 0 0 7px #b49455 inset;
+  width: 1em;
+  display: block;
+  height: 1em;
+  border-radius: 1em;
+  background: #c4ab78;
 }
 article > header i {
   font-style: normal;
@@ -442,11 +421,20 @@ article > header h4, article > header b, article > header h3 {
 article > header h4 {
   font-size: 0.8em;
   text-transform: uppercase;
+  position: absolute;
+  left: -5em;
+  text-align: right;
+  margin-top: 1.5em;
+  display: block;
+  width: 4.5em;
+  z-index: 1;
+  color: #e3d7bf;
+  text-shadow: 1px 1px 1px #232927;
 }
 article > header h3 {
   background: indianred;
   border-radius: 0.2rem 0 0 0.2rem;
-  padding: 0.5rem 0 0.5rem 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
   margin-right: 1em;
   color: white;
   text-shadow: 1px 1px black;
@@ -454,31 +442,32 @@ article > header h3 {
   text-transform: uppercase;
   font-weight: bold;
   position: relative;
+  box-shadow: 4px 0px 6px #b43737 inset;
 }
 article > header h3:before, article > header h3:after {
   content: "";
   height: 50%;
-  width: 1em;
+  width: 0.8em;
   position: absolute;
-  right: -1em;
-  background: -webkit-gradient(linear, 45deg, 45deg, color-stop(50%, #cd5c5c), color-stop(50%, rgba(205, 92, 92, 0)));
-  background: -webkit-linear-gradient(45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
-  background: -moz-linear-gradient(45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
-  background: -o-linear-gradient(45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
-  background: -ms-linear-gradient(45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
-  background: linear-gradient(45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
+  right: -0.8em;
+  background: -webkit-gradient(linear, 34deg, 34deg, color-stop(50%, #cd5c5c), color-stop(53%, #bc3a3a), color-stop(56%, rgba(205, 92, 92, 0)));
+  background: -webkit-linear-gradient(34deg, #cd5c5c 50%, #bc3a3a 53%, rgba(205, 92, 92, 0) 56%);
+  background: -moz-linear-gradient(34deg, #cd5c5c 50%, #bc3a3a 53%, rgba(205, 92, 92, 0) 56%);
+  background: -o-linear-gradient(34deg, #cd5c5c 50%, #bc3a3a 53%, rgba(205, 92, 92, 0) 56%);
+  background: -ms-linear-gradient(34deg, #cd5c5c 50%, #bc3a3a 53%, rgba(205, 92, 92, 0) 56%);
+  background: linear-gradient(34deg, #cd5c5c 50%, #bc3a3a 53%, rgba(205, 92, 92, 0) 56%);
 }
 article > header h3:before {
   top: 0;
 }
 article > header h3:after {
   bottom: 0;
-  background: -webkit-gradient(linear, -45deg, -45deg, color-stop(50%, #cd5c5c), color-stop(50%, rgba(205, 92, 92, 0)));
-  background: -webkit-linear-gradient(-45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
-  background: -moz-linear-gradient(-45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
-  background: -o-linear-gradient(-45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
-  background: -ms-linear-gradient(-45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
-  background: linear-gradient(-45deg, #cd5c5c 50%, rgba(205, 92, 92, 0) 50%);
+  background: -webkit-gradient(linear, -34deg, -34deg, color-stop(50%, #cd5c5c), color-stop(53%, #bc3a3a), color-stop(56%, rgba(205, 92, 92, 0)));
+  background: -webkit-linear-gradient(-34deg, #cd5c5c 50%, #bc3a3a 53%, rgba(205, 92, 92, 0) 56%);
+  background: -moz-linear-gradient(-34deg, #cd5c5c 50%, #bc3a3a 53%, rgba(205, 92, 92, 0) 56%);
+  background: -o-linear-gradient(-34deg, #cd5c5c 50%, #bc3a3a 53%, rgba(205, 92, 92, 0) 56%);
+  background: -ms-linear-gradient(-34deg, #cd5c5c 50%, #bc3a3a 53%, rgba(205, 92, 92, 0) 56%);
+  background: linear-gradient(-34deg, #cd5c5c 50%, #bc3a3a 53%, rgba(205, 92, 92, 0) 56%);
 }
 article > header h3 i {
   font-size: 0.3em;
@@ -493,119 +482,76 @@ article > header h3 i b {
 }
 article > header h3.use {
   background: olive;
+  box-shadow: 4px 0px 6px #434300 inset;
 }
 article > header h3.use:before {
-  background: -webkit-gradient(linear, 45deg, 45deg, color-stop(50%, #808000), color-stop(50%, rgba(128, 128, 0, 0)));
-  background: -webkit-linear-gradient(45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
-  background: -moz-linear-gradient(45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
-  background: -o-linear-gradient(45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
-  background: -ms-linear-gradient(45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
-  background: linear-gradient(45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
+  background: -webkit-gradient(linear, 34deg, 34deg, color-stop(50%, #808000), color-stop(53%, #666700), color-stop(56%, rgba(128, 128, 0, 0)));
+  background: -webkit-linear-gradient(34deg, #808000 50%, #666700 53%, rgba(128, 128, 0, 0) 56%);
+  background: -moz-linear-gradient(34deg, #808000 50%, #666700 53%, rgba(128, 128, 0, 0) 56%);
+  background: -o-linear-gradient(34deg, #808000 50%, #666700 53%, rgba(128, 128, 0, 0) 56%);
+  background: -ms-linear-gradient(34deg, #808000 50%, #666700 53%, rgba(128, 128, 0, 0) 56%);
+  background: linear-gradient(34deg, #808000 50%, #666700 53%, rgba(128, 128, 0, 0) 56%);
 }
 article > header h3.use:after {
-  background: -webkit-gradient(linear, -45deg, -45deg, color-stop(50%, #808000), color-stop(50%, rgba(128, 128, 0, 0)));
-  background: -webkit-linear-gradient(-45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
-  background: -moz-linear-gradient(-45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
-  background: -o-linear-gradient(-45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
-  background: -ms-linear-gradient(-45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
-  background: linear-gradient(-45deg, #808000 50%, rgba(128, 128, 0, 0) 50%);
+  background: -webkit-gradient(linear, -34deg, -34deg, color-stop(50%, #808000), color-stop(53%, #666700), color-stop(56%, rgba(128, 128, 0, 0)));
+  background: -webkit-linear-gradient(-34deg, #808000 50%, #666700 53%, rgba(128, 128, 0, 0) 56%);
+  background: -moz-linear-gradient(-34deg, #808000 50%, #666700 53%, rgba(128, 128, 0, 0) 56%);
+  background: -o-linear-gradient(-34deg, #808000 50%, #666700 53%, rgba(128, 128, 0, 0) 56%);
+  background: -ms-linear-gradient(-34deg, #808000 50%, #666700 53%, rgba(128, 128, 0, 0) 56%);
+  background: linear-gradient(-34deg, #808000 50%, #666700 53%, rgba(128, 128, 0, 0) 56%);
 }
 article > header h3.caution {
   background: orange;
+  box-shadow: 4px 0 6px #c27d00 inset;
 }
 article > header h3.caution:before {
-  background: -webkit-gradient(linear, 45deg, 45deg, color-stop(50%, #ffa500), color-stop(50%, rgba(128, 128, 0, 0)));
-  background: -webkit-linear-gradient(45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
-  background: -moz-linear-gradient(45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
-  background: -o-linear-gradient(45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
-  background: -ms-linear-gradient(45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
-  background: linear-gradient(45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
+  background: -webkit-gradient(linear, 34deg, 34deg, color-stop(50%, #ffa500), color-stop(53%, #e69500), color-stop(56%, rgba(255, 165, 0, 0)));
+  background: -webkit-linear-gradient(34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
+  background: -moz-linear-gradient(34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
+  background: -o-linear-gradient(34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
+  background: -ms-linear-gradient(34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
+  background: linear-gradient(34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
 }
 article > header h3.caution:after {
-  background: -webkit-gradient(linear, -45deg, -45deg, color-stop(50%, #ffa500), color-stop(50%, rgba(128, 128, 0, 0)));
-  background: -webkit-linear-gradient(-45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
-  background: -moz-linear-gradient(-45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
-  background: -o-linear-gradient(-45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
-  background: -ms-linear-gradient(-45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
-  background: linear-gradient(-45deg, #ffa500 50%, rgba(128, 128, 0, 0) 50%);
+  background: -webkit-gradient(linear, -34deg, -34deg, color-stop(50%, #ffa500), color-stop(53%, #e69500), color-stop(56%, rgba(255, 165, 0, 0)));
+  background: -webkit-linear-gradient(-34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
+  background: -moz-linear-gradient(-34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
+  background: -o-linear-gradient(-34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
+  background: -ms-linear-gradient(-34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
+  background: linear-gradient(-34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
 }
 
 article div.more {
   max-height: 0em;
   overflow: hidden;
-  -webkit-transition: max-height 1s linear;
-  -o-transition: max-height 1s linear;
-  -moz-transition: max-height 1s linear;
-  -ms-transition: max-height 1s linear;
+  box-shadow: 0 -1px 7px #232927;
+  -webkit-transition: max-height 0.3s ease-in;
+  -o-transition: max-height 0.3s ease-in;
+  -moz-transition: max-height 0.3s ease-in;
+  -ms-transition: max-height 0.3s ease-in;
+}
+article div.more .recco {
+  margin: 0.5em 1em;
+}
+article div.more .polyfills {
+  margin: 0.5em 1em 1.5em;
+}
+article div.more .polyfills b {
+  font-weight: bold;
+}
+article div.more .polyfills p {
+  display: inline;
 }
 
-article:hover div.more {
+article.expanded > header {
+  border-bottom: 1px solid #91a19b;
+  box-shadow: 0 0 7px #d3c19c inset, 0 1px 7px #758983;
+}
+article.expanded > header > a:before {
+  content: "-";
+}
+article.expanded div.more {
   max-height: 10em;
-}
-
-div#main, h1, header.index h2, header.index h3, header.index h4 {
-  -webkit-transition: all 0.6s cubic-bezier(0.83, 1.47, 0.63, 0.9);
-  -o-transition: all 0.6s cubic-bezier(0.83, 1.47, 0.63, 0.9);
-  -moz-transition: all 0.6s cubic-bezier(0.83, 1.47, 0.63, 0.9);
-  -ms-transition: all 0.6s cubic-bezier(0.83, 1.47, 0.63, 0.9);
-  -webkit-transition: all 0.6s cubic-bezier(0.83, 1, 0.63, 0.9);
-  -webkit-transform: translateZ(0);
-}
-
-h1, h2, h3, h4 {
-  -moz-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-
-.searching div#main {
-  -moz-transform: translate(0, -400px);
-  -webkit-transform: translate(0, -400px);
-  -o-transform: translate(0, -400px);
-  -ms-transform: translate(0, -400px);
-  transform: translate(0, -400px);
-  -moz-transition-duration: 0.8s;
-  -webkit-transition-duration: 0.8s;
-  -o-transition-duration: 0.8s;
-  transition-duration: 0.8s;
-}
-
-.searching h1 {
-  -moz-transform: translate(-1200px, 0px);
-  -webkit-transform: translate(-1200px, 0px);
-  -o-transform: translate(-1200px, 0px);
-  -ms-transform: translate(-1200px, 0px);
-  transform: translate(-1200px, 0px);
-}
-
-.searching header h2 {
-  -moz-transform: translate(1200px, 0px);
-  -webkit-transform: translate(1200px, 0px);
-  -o-transform: translate(1200px, 0px);
-  -ms-transform: translate(1200px, 0px);
-  transform: translate(1200px, 0px);
-}
-
-.searching header h3 {
-  opacity: 0;
-}
-
-.searching header h4 {
-  -moz-transform: translate(0px, -393px);
-  -webkit-transform: translate(0px, -393px);
-  -o-transform: translate(0px, -393px);
-  -ms-transform: translate(0px, -393px);
-  transform: translate(0px, -393px);
-  border-radius: 0 0 20px 20px;
-}
-
-.test div#main {
-  -moz-transform: translate(0, -2480px);
-  -webkit-transform: translate(0, -2480px);
-  -o-transform: translate(0, -2480px);
-  -ms-transform: translate(0, -2480px);
-  transform: translate(0, -2480px);
 }
 
 /* =============================================================================

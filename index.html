@@ -18,9 +18,9 @@
         <b>Use the new and shiny responsibly.</b>
         Look up properties and see if it is ready for use, and if so how you should use it with a polyfill, a fallback value or as it is.
       </h2>
-      <h4>
-        <input id='livesearch' class='search' name='livesearch' placeholder='type to filter' type='search' value='' />
-      </h4>
+      <div>
+        <input id='livesearch' class='search' name='livesearch' placeholder='type to filter' type='search' value='' />        
+      </div>
     </header>
     <div id='main' role='main'>
       <section class="features">
@@ -30,7 +30,7 @@
               <h4 class=" html"> html</h4>
               <h3 class=" avoid"> avoid <i></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/ audio"> audio</a></h2>
-              <a href="#">[Open]</a>              
+              <a href=# class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>As with video, you need to provide your audio file in multiple formats for these to work. jPlayer also has a jQuery dependency. Sound Manager has extensive API for further customization. </p></div>
@@ -43,7 +43,7 @@
               <h4 class=" html"> html</h4>
               <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/ canvas"> canvas</a></h2>
-              <a href="#">[Open]</a>              
+              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Canvas is definitely good to go for modern browsers. But if you are looking to use it in IE 8 and below, use FlashCanvas. </p></div>
@@ -56,7 +56,7 @@
               <h4 class=" html"> html</h4>
               <h3 class=" caution"> caution <i>with <b>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/ datalist"> datalist</a></h2>
-              <a href="#">[Open]</a>              
+              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Jeremy Keith has a <a href="http://adactio.com/journal/4272/">graceful fallback solution</a> that does not use a script.</p></div>
@@ -69,7 +69,7 @@
               <h4 class=" html"> html</h4>
               <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/ dataset"> dataset</a></h2>
-              <a href="#">[Open]</a>              
+              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p><a href="http://dev.opera.com/articles/view/an-introduction-to-datasets/">More info about dataset</a></p></div>
@@ -82,7 +82,7 @@
               <h4 class=" html"> html</h4>
               <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/ details"> details</a></h2>
-              <a href="#">[Open]</a>              
+              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Use detail element if you intent to show a summary which when clicked reveals detailed information. </p></div>
@@ -95,7 +95,7 @@
               <h4 class=" html"> html</h4>
               <h3 class=" use"> use <i>with <b>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/ Eventsource"> Eventsource</a></h2>
-              <a href="#">[Open]</a>              
+              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>EventSource.js provides base fallback and is not dependent on jQuery.</p></div>
@@ -108,7 +108,7 @@
               <h4 class=" html"> html</h4>
               <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/ geo-location"> geo-location</a></h2>
-              <a href="#">[Open]</a>              
+              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>The Geolocation shim requires jQuery to work, but if you are looking for a mobile specific script, you are better off using the geo-location-javascript.</p></div>
@@ -121,7 +121,7 @@
               <h4 class=" dom"> dom</h4>
               <h3 class=" use"> use <i>with <b>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/ history"> history</a></h2>
-              <a href="#">[Open]</a>              
+              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>History.js has cross-compatibility between HTML5 browser implementations and optional hashchange fallback for HTML4 browsers. PJax (pushState + ajax = pjax) is what is used by Github for their fallback solution.</p></div>
@@ -134,7 +134,7 @@
               <h4 class=" html"> html</h4>
               <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/ menu"> menu</a></h2>
-              <a href="#">[Open]</a>              
+              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Do note that this polyfill requires a jQuery dependency.</p></div>
@@ -147,7 +147,7 @@
               <h4 class=" html"> html</h4>
               <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/ meter"> meter</a></h2>
-              <a href="#">[Open]</a>              
+              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'></div>
@@ -160,7 +160,7 @@
               <h4 class=" html"> html</h4>
               <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/ progress"> progress</a></h2>
-              <a href="#">[Open]</a>              
+              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'></div>
@@ -173,7 +173,7 @@
               <h4 class=" html"> html</h4>
               <h3 class=" use"> use <i>with <b>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/ ruby"> ruby</a></h2>
-              <a href="#">[Open]</a>              
+              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>If you are using Ruby element you dont need a script-based fallback but you can provide a CSS based set of good defaults. </p></div>
@@ -186,7 +186,7 @@
               <h4 class=" svg"> svg</h4>
               <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/ svg"> svg</a></h2>
-              <a href="#">[Open]</a>              
+              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>SVG has good support for several years in most browsers except IE. IE9 brings support, which means you can use a polyfill library like SVGWeb or Canvg or create SVG dynamically via RaphaelJS.</p></div>
@@ -199,7 +199,7 @@
               <h4 class=""></h4>
               <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/ text-shadow"> text-shadow</a></h2>
-              <a href="#">[Open]</a>              
+              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'></div>
@@ -212,7 +212,7 @@
               <h4 class=" html"> html</h4>
               <h3 class=" use"> use <i>with <b>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/ video"> video</a></h2>
-              <a href="#">[Open]</a>              
+              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Do note you need to supply your video in various formats to cater to all browsers and fallbacks. There is also a way to do this without any scripting as explained by Kroc Camen in his article <a href="http://camendesign.com/code/video_for_everybody">Video for Everybody</a>.</p></div>
