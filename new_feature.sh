@@ -46,7 +46,7 @@ while [ -z "$kind" ]
 do
     kind=$(promptValue "Enter Type (css,html,js,dom or svg)")
     case $kind in
-        css|html|dom|svg) : ;;
+        css|html|js|dom|svg) : ;;
         *)                 kind= ;;
     esac
 done
