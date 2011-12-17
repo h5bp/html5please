@@ -1,13 +1,6 @@
 /*
  * HTML5 ✰ Boilerplate
  */
-/* What follows is the result of much research on cross-browser styling. 
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-/* =============================================================================
-   HTML5 element display
-   ========================================================================== */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
   display: block;
 }
@@ -18,9 +11,6 @@ audio[controls], canvas, video {
   *zoom: 1;
 }
 
-/* =============================================================================
-   Base
-   ========================================================================== */
 html {
   font-size: 100%;
   overflow-y: scroll;
@@ -52,11 +42,8 @@ body, button, input, select, textarea {
   text-shadow: none;
 }
 
-/* =============================================================================
-   Links
-   ========================================================================== */
 a {
-  color: #149CD7;
+  color: #149cd7;
   text-decoration: none;
 }
 
@@ -68,15 +55,11 @@ a:focus {
   outline: thin dotted;
 }
 
-/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active {
   outline: 0;
   text-decoration: dotted;
 }
 
-/* =============================================================================
-   Typography
-   ========================================================================== */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -280,8 +263,8 @@ table {
 html {
   background-color: #232927;
   color: #e3d7bf;
-  background: -o-radial-gradient(20% 20%, circle cover, rgba(32, 124, 202, 0.1) 10%, transparent 10%), -o-radial-gradient(30% 30%, circle cover, rgba(205, 92, 92, 0.2) 5%, transparent 5%), -o-radial-gradient(60% 40%, circle cover, rgba(255, 255, 255, 0.1) 15%, transparent 15%), -o-radial-gradient(80% 60%, circle cover, rgba(128, 128, 0, 0.2) 8%, transparent 8%), -o-radial-gradient(40% 60%, circle cover, rgba(32, 124, 202, 0.2) 5%, transparent 5%), -o-radial-gradient(40% 50%, circle cover, rgba(0, 0, 0, 0.2) 5%, transparent 5%), url('../img/denim.png?1324015420');
-  background: -webkit-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, transparent 10em), -webkit-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, transparent 5em), -webkit-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, transparent 15em), -webkit-radial-gradient(80em 60em, circle cover, rgba(128, 128, 0, 0.2) 8em, transparent 8em), -webkit-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, transparent 5em), -webkit-radial-gradient(40em 50em, circle cover, rgba(0, 0, 0, 0.2) 5em, transparent 5em), url('../img/denim.png?1324015420');
+  background: -o-radial-gradient(20% 20%, circle cover, rgba(32, 124, 202, 0.1) 10%, transparent 10%), -o-radial-gradient(30% 30%, circle cover, rgba(205, 92, 92, 0.2) 5%, transparent 5%), -o-radial-gradient(60% 40%, circle cover, rgba(255, 255, 255, 0.1) 15%, transparent 15%), -o-radial-gradient(80% 60%, circle cover, rgba(128, 128, 0, 0.2) 8%, transparent 8%), -o-radial-gradient(40% 60%, circle cover, rgba(32, 124, 202, 0.2) 5%, transparent 5%), -o-radial-gradient(40% 50%, circle cover, rgba(0, 0, 0, 0.2) 5%, transparent 5%), url('../img/denim.png?1324008221');
+  background: -webkit-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, transparent 10em), -webkit-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, transparent 5em), -webkit-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, transparent 15em), -webkit-radial-gradient(80em 60em, circle cover, rgba(128, 128, 0, 0.2) 8em, transparent 8em), -webkit-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, transparent 5em), -webkit-radial-gradient(40em 50em, circle cover, rgba(0, 0, 0, 0.2) 5em, transparent 5em), url('../img/denim.png?1324008221');
   min-height: 100%;
   max-width: 100%;
 }
@@ -371,12 +354,8 @@ article h2 {
 }
 
 article {
-  min-height: 2em;
-  background: white;
   color: #232927;
   margin-bottom: 2em;
-  border-radius: 0.3rem;
-  box-shadow: 0 0 7px #0c0d0d;
 }
 
 article > header {
@@ -384,6 +363,7 @@ article > header {
   border-radius: 0.3rem;
   box-shadow: 0 0 7px #d3c19c inset;
   position: relative;
+  z-index: 1;
 }
 article > header h4, article > header h2, article > header h3, article > header a {
   display: inline-block;
@@ -392,25 +372,27 @@ article > header h4, article > header h2, article > header h3, article > header 
 }
 article > header > a {
   position: absolute;
-  margin-top: 1em;
-  right: 1em;
+  right: 1rem;
+  top: 1rem;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
-  width: 2em;
-  height: 2em;
 }
 article > header > a:before {
   content: "+";
+  position: absolute;
+  top: 0;
+  left: 0;
   font-size: 2rem;
-  line-height: 1.7rem;
+  line-height: 2rem;
   text-align: center;
-  font-family: sans-serif;
   color: white;
   text-shadow: 1px 1px 1px #957941;
   box-shadow: 0 0 7px #b49455 inset;
-  width: 1em;
+  width: 2rem;
   display: block;
-  height: 1em;
-  border-radius: 1em;
+  height: 2rem;
+  border-radius: 2rem;
   background: #c4ab78;
 }
 article > header i {
@@ -523,19 +505,19 @@ article > header h3.caution:after {
 }
 
 article div.more {
-  max-height: 0em;
-  overflow: hidden;
-  box-shadow: 0 -1px 7px #232927;
-  -webkit-transition: max-height 0.3s ease-in;
-  -o-transition: max-height 0.3s ease-in;
-  -moz-transition: max-height 0.3s ease-in;
-  -ms-transition: max-height 0.3s ease-in;
-}
-article div.more .recco {
-  margin: 0.5em 1em;
-}
-article div.more .polyfills {
-  margin: 0.5em 1em 1.5em;
+  display: none;
+  padding: 0.5em 1em 1.5em 1em;
+  opacity: 0;
+  background: white;
+  border-radius: 0 0 0.3rem 0.3rem;
+  margin-top: -0.3rem;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 0 7px #0c0d0d;
+  -webkit-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -ms-transition: opacity 1s ease-in;
 }
 article div.more .polyfills b {
   font-weight: bold;
@@ -550,9 +532,11 @@ article.expanded > header {
 }
 article.expanded > header > a:before {
   content: "-";
+  line-height: 1.7rem;
 }
 article.expanded div.more {
-  max-height: 10em;
+  display: block;
+  opacity: 1;
 }
 
 /* =============================================================================
