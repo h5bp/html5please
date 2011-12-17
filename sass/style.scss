@@ -13,7 +13,7 @@ $fallback: saturate(lighten($light, 20%), 10%);
 $polyfill: desaturate(lighten($contrast, 10%), 10%);
 $no: saturate(darken($contrast, 10%), 20%);
 $yes: saturate($light, 10%);
-
+$link-color: #149CD7;
 
 @mixin our-transition($arg) {
   -webkit-transition: unquote($arg);
@@ -25,23 +25,18 @@ $yes: saturate($light, 10%);
 /*
  * HTML5 ✰ Boilerplate
  */
-/* What follows is the result of much research on cross-browser styling. 
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
 
-
-/* =============================================================================
-   HTML5 element display
-   ========================================================================== */
+// =============================================================================
+//   HTML5 element display
+//   ========================================================================== 
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 
 
-/* =============================================================================
-   Base
-   ========================================================================== */
+// =============================================================================
+//   Base
+//   ========================================================================== 
 
 html { font-size: 100%; overflow-y: scroll; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
@@ -53,21 +48,19 @@ body, button, input, select, textarea { font-family: sans-serif; color: $lightes
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 
 
-/* =============================================================================
-   Links
-   ========================================================================== */
+// =============================================================================
+//   Links
+//   ==========================================================================
 
-a { color: #149CD7; text-decoration: none; }
-a:visited { color: darken(#149CD7, 30%); }
+a { color: $link-color; text-decoration: none; }
+a:visited { color: darken($link-color, 30%); }
 a:focus { outline: thin dotted; }
-
-/* Improve readability when focused and hovered in all browsers: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active { outline: 0; text-decoration: dotted; }
 
 
-/* =============================================================================
-   Typography
-   ========================================================================== */
+// =============================================================================
+//   Typography
+//   ========================================================================== 
 
 abbr[title] { border-bottom: 1px dotted; }
 
@@ -271,19 +264,16 @@ article h2 {
 }
 
 article { 
-  min-height: 2em; 
-  background: white;
   color: $dark;
   margin-bottom: 2em; 
-  border-radius: 0.3rem; 
-  box-shadow: 0 0 7px darken($dark, 10%); 
 }
 
 article > header {
   background: $lightest;
   border-radius: 0.3rem;
-  box-shadow: 0 0 7px darken($lightest, 10%) inset;  
+  box-shadow: 0 0 7px darken($lightest, 10%) inset;    
   position: relative;
+  z-index: 1;
   h4, h2, h3, a {
     display: inline-block;
     vertical-align: middle;
@@ -291,24 +281,24 @@ article > header {
   }
   
   > a { 
-    position: absolute;
-    margin-top: 1em;    
-    right: 1em;
-    width: 2em;
-    height: 2em;
+    position: absolute; 
+    right: 1rem; top: 1rem;
+    width: 2rem;
+    height: 2rem;
     &:before {
       content: "+";
+      position: absolute;
+      top: 0; left: 0;
       font-size: 2rem;
-      line-height: 1.7rem;
+      line-height: 2rem;
       text-align: center;
-      font-family: sans-serif;
       color: white;
       text-shadow: 1px 1px 1px darken($lightest, 40%);
       box-shadow: 0 0 7px darken($lightest, 30%) inset;
-      width: 1em;
+      width: 2rem;
       display: block;
-      height: 1em;
-      border-radius: 1em;
+      height: 2rem;
+      border-radius: 2rem;
       background: darken($lightest, 20%);      
     }
   }  
@@ -402,13 +392,19 @@ article > header {
 }
 
 article div.more {   
-  max-height: 0em;     
-  overflow: hidden;
-  box-shadow: 0 -1px 7px $dark;
-  @include our-transition("max-height 0.3s ease-in");  
+  display: none;
+  padding: 0.5em 1em 1.5em 1em;
+  opacity: 0;
+  background: white;  
+  border-radius: 0 0 0.3rem 0.3rem; 
+  margin-top: -0.3rem;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 0 7px darken($dark, 10%); 
   
-  .recco { margin: 0.5em 1em; }
-  .polyfills { margin: 0.5em 1em 1.5em; }
+  @include our-transition("opacity 1s ease-in");  
+  
+
   .polyfills b { font-weight: bold; }
   
   .polyfills p { display: inline; }
@@ -420,10 +416,11 @@ article.expanded {
     box-shadow: 0 0 7px darken($lightest, 10%) inset, 0 1px 7px lighten($dark, 35%);      
   }
   > header > a:before {
-      content: "-";    
+      content: "-"; 
+      line-height: 1.7rem;   
   }
   
-  div.more { max-height: 10em; }
+  div.more { display: block; opacity: 1; }
   
 }
 /* =============================================================================
