@@ -7,27 +7,25 @@ var listOptions = {
 		listClass: 'features',
 		valueNames: ['kind', 'status', 'name']
 	},
-	featureList = new List('gfs', listOptions);
-	
-	var search = document.getElementById('livesearch'),
-	    searchresults = document.querySelectorAll('.features article'),
-	    searchurl = document.getElementById('searchurl');	
-	
-	search.addEventListener('keyup', updatesearch);
+	featureList = new List('gfs', listOptions),
+	search = document.getElementById('livesearch'),
+    searchresults = document.querySelectorAll('.features article'),
+    searchurl = document.getElementById('searchurl');	
 
+search.onkeyup = updatesearch;
 
 function updatesearch() {
-  if(search.value != '') {
+  if (search.value != '') {
     searchurl.href='/#' + search.value;
-    searchurl.style.opacity = 1;    
-    Array.prototype.forEach.call(searchresults, function(result) {
-        result.classList.add('expanded');
-    });	    	    
+    searchurl.style.opacity = 1;
+    for (var i = 0, len = searchresults.length; i < len; i++) {
+        classList(searchresults[i]).add('expanded');
+    }
   } else {
     searchurl.style.opacity = 0;
-    Array.prototype.forEach.call(searchresults, function(result) {
-        result.classList.remove('expanded');
-    });	    	    	    
+    for (var i = 0, len = searchresults.length; i < len; i++) {
+        classList(searchresults[i]).remove('expanded');
+    }
   }
 }
 
@@ -35,17 +33,11 @@ var expandfeatures = document.querySelectorAll('a.expand'),
     count = expandfeatures.length;
     
 for(var i = 0; i < count; i++) {
-  expandfeatures[i].onclick = (function(e, i) {    
-    return function(e) {
-      var parent = e.target.parentNode.parentNode;
-      if(!parent.classList.contains('expanded')) {
-        parent.classList.add('expanded');
-      } else {
-        parent.classList.remove('expanded');
-      }      
-      e.preventDefault();
-    };
-  })(i);
+  expandfeatures[i].onclick = function(e) {
+      e = e || window.event;
+      var parent = (e.target || e.srcElement).parentNode.parentNode;
+      classList(parent).toggle('expanded');
+  };
 }    
 
 if(window.location.hash) {

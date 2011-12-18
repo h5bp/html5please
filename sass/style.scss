@@ -176,6 +176,7 @@ table { border-collapse: collapse; border-spacing: 0; }
    
 html {  
   background-color:  $dark; 
+  background-image: image-url('denim.png');
   color: $lightest; 
   @include background(
             radial-gradient(20em 20em, circle cover, transparentize(#207cca, 0.9) 10em,  transparentize(#207cca, 1) 10em),
