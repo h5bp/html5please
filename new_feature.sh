@@ -17,9 +17,18 @@ do
     feature=$(promptValue "Enter Feature Name")
 done
 
+# Make feature name slug friendly
+feature=$(
+  echo $feature   | 
+  # Use sed to replace spaces with hyphens
+  sed -e "s/ /-/" | 
+  # BSD sed doesn't accept \L, so use tr instead for case conversion
+  tr "[A-Z]" "[a-z]"
+)
+
 while [ -z "$status" ]
 do
-    status=$(promptValue "Enter Status (use,avoid or caution)")
+    status=$(promptValue "Enter Status (use,avoid, or caution)")
     case $status in
         use|avoid|caution) : ;;
         *)                 status= ;;
@@ -28,7 +37,7 @@ done
 
 while [ -z "$tags" ]
 do
-    tags=$(promptValue "Enter Tags (one or more of: gtie6 gtie7 gtie8 nopolyfill polyfill fallback)")
+    tags=$(promptValue "Enter Tags (one or more of: gtie6,gtie7,gtie8,nopolyfill,polyfill, or fallback)")
     if [ -n "$tags" ]
     then
       set $(echo $tags)
@@ -46,7 +55,7 @@ while [ -z "$kind" ]
 do
     kind=$(promptValue "Enter Type (css,html,js,dom or svg)")
     case $kind in
-        css|html|dom|svg) : ;;
+        css|html|js|dom|svg) : ;;
         *)                 kind= ;;
     esac
 done
