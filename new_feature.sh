@@ -17,6 +17,15 @@ do
     feature=$(promptValue "Enter Feature Name")
 done
 
+# Make feature name slug friendly
+feature=$(
+  echo $feature   | 
+  # Use sed to replace spaces with hyphens
+  sed -e "s/ /-/" | 
+  # BSD sed doesn't accept \L, so use tr instead for case conversion
+  tr "[A-Z]" "[a-z]"
+)
+
 while [ -z "$status" ]
 do
     status=$(promptValue "Enter Status (use,avoid, or caution)")
