@@ -41,10 +41,6 @@ a {
   text-decoration: none;
 }
 
-a:visited {
-  color: #07364b;
-}
-
 a:focus {
   outline: thin dotted;
 }
@@ -249,13 +245,13 @@ table {
 
 .text-uppercase, article h2, header.index h1, header.index h1 b,
 header.index h3,
-article h3 b i, article > header h4, article > header h3, article.expanded .updateurl {
+article h3 b i, #searchurl, article > header h4, article > header h3, article.expanded .updateurl, body > footer p:first-child {
   text-transform: uppercase;
 }
 
 .display-block, header.index h2 b, header.index h1 b,
 header.index h3,
-article h3 b i, article > header > a:before, article > header h4, article > header h3 i b, article.expanded div.more {
+article h3 b i, #searchurl, article > header > a:before, article > header h4, article > header h3 i b, article.expanded div.more {
   display: block;
 }
 
@@ -338,6 +334,14 @@ header.index input[type="search"] {
   border-radius: 10em;
   border: 0;
   color: black;
+}
+
+#searchurl {
+  -webkit-transition: opacity 1s linear;
+  -o-transition: opacity 1s linear;
+  -moz-transition: opacity 1s linear;
+  -ms-transition: opacity 1s linear;
+  font-size: 0.8em;
 }
 
 article h2 {
@@ -517,6 +521,28 @@ article.expanded .updateurl {
   position: absolute;
   bottom: 0.5em;
   right: 1em;
+}
+
+body > footer {
+  text-align: center;
+  padding: 3em 0;
+  font-size: 0.8em;
+  text-shadow: 1px 1px 1px #232927;
+}
+body > footer .builders a {
+  display: inline-block;
+  margin-right: 1.2em;
+  text-align: left;
+  width: 10em;
+}
+body > footer .builders img {
+  float: left;
+  margin-right: 1em;
+  border-radius: 0.2rem;
+}
+body > footer .builders b {
+  font-weight: normal;
+  display: block;
 }
 
 /* =============================================================================

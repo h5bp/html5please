@@ -11,7 +11,7 @@
     <link href='css/style.css' rel='stylesheet' />
     <script src='js/libs/modernizr-2.0.min.js'></script>
   </head>
-  <body id="gfs">
+  <body id=gfs>
     <header class=index>
       <h1>HTML5 <img src='img/HTML5-logo.png'> Please</h1>
       <h2>
@@ -19,11 +19,12 @@
         Look up properties and see if it is ready for use, and if so how you should use it with a polyfill, a fallback value or as it is.
       </h2>
       <div>
-        <input id='livesearch' class='search' name='livesearch' placeholder='type to filter' type='search' value='' />        
+        <input id=livesearch class=search name=livesearch placeholder='type to filter' type='search' value='' />        
+        <a href="/" id=searchurl>link to this search</a>
       </div>
     </header>
-    <div id='main' role='main'>
-      <section class="features">
+    <div id=main role=main>
+      <section class=features>
         {{#features}}
           <article class="{{tags}}">
             <header>
@@ -41,7 +42,11 @@
         {{/features}}    
       </section>
     </div>
-    <footer></footer>
+    <footer>
+      <p>with love &amp; tears from</p>
+      <p class=builders><a href="http://twitter.com/divya"><img src="http://api.twitter.com/1/users/profile_image/divya?size=normal"><b>Divya</b> Manian</a> <a href="http://twitter.com/paul_irish"><img src="http://api.twitter.com/1/users/profile_image/paul_irish?size=normal"><b>Paul</b> Irish</a> <a href="http://twitter.com/tbranyen"><img src="http://api.twitter.com/1/users/profile_image/tbranyen?size=normal"><b>Tim</b> Branyen</a> <a href="http://twitter.com/vyom"><img src="http://api.twitter.com/1/users/profile_image/vyom?size=normal"><b>Deepak</b> Jois</a><a href="http://twitter.com/brianblakely"><img src="http://api.twitter.com/1/users/profile_image/brianblakely?size=normal"><b>Brian</b> Blakely</a> <a href='https://github.com/h5bp/html5please/contributors'>&amp; more</a>
+        </p>
+    </footer>
     <!-- scripts concatenated and minified via ant build script -->
     <script src='js/libs/list.min.js'></script>
     <script src='js/script.js'></script>

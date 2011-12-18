@@ -62,7 +62,6 @@ body, button, input, select, textarea { font-family: sans-serif; color: $lightes
 //   ==========================================================================
 
 a { color: $link-color; text-decoration: none; }
-a:visited { color: darken($link-color, 30%); }
 a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; text-decoration: dotted; }
 
@@ -255,6 +254,14 @@ header.index input[type="search"] {
   color: darken($dark, 20%);
 }
 
+#searchurl { 
+  @include our-transition('opacity 1s linear'); 
+  @extend .display-block;
+  @extend .text-uppercase;  
+  font-size: 0.8em;
+  
+}
+
 header.index h3 { @extend .reset-margin; }
 
 article h2 { 
@@ -429,6 +436,35 @@ article.expanded {
     bottom: 0.5em;
     right: 1em;    
   }  
+}
+
+body > footer {
+  text-align: center;  
+  padding: 3em 0;
+  font-size: 0.8em;   
+  text-shadow: 1px 1px 1px $dark;     
+    
+  p:first-child { 
+    @extend .text-uppercase; 
+  }
+  
+  .builders a { 
+    display: inline-block;
+    margin-right: 1.2em;
+    text-align: left;
+    width: 10em;
+  }
+  
+  .builders img {
+    float: left;
+    margin-right: 1em;
+    border-radius: 0.2rem;
+  }
+  
+  .builders b {
+    font-weight: normal;
+    display: block;
+  }
 }
 /* =============================================================================
    Non-semantic helper classes
