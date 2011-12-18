@@ -382,6 +382,7 @@ article > header > a:before {
   line-height: 2rem;
   border-radius: 2rem;
   height: 2rem;
+  width: 2rem;
   text-align: center;
   color: white;
   text-shadow: 1px 1px 1px #957941;
