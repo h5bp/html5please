@@ -16,7 +16,7 @@
       <h1>HTML5 <img src='img/HTML5-logo.png'> Please</h1>
       <h2>
         <b>Use the new and shiny responsibly.</b>
-        Look up a property and see if it is ready for use, and if so how you should use it with a polyfill, a fallback value or as it is.
+        Look up properties and see if it is ready for use, and if so how you should use it with a polyfill, a fallback value or as it is.
       </h2>
       <div>
         <input id=livesearch class=search name=livesearch placeholder='type to filter' type='search' value='' />        
@@ -222,16 +222,16 @@
             </div>
           </article>          
         
-          <article class="polyfill">
+          <article class="fallback">
             <header>
-              <h4 class="kind "></h4>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
+              <h4 class="kind css">css</h4>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/text-shadow">text-shadow</a></h2>
               <a class=expand title="open"></a>              
             </header>
             <div class="more">
-              <div class='recco'></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p>[]</p></div> 
+              <div class='recco'><p>Let text-shadow render only when supported.</p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/text-shadow.md>Edit info on text-shadow</a>              
             </div>
           </article>          
@@ -259,7 +259,7 @@
     </footer>
     <!-- scripts concatenated and minified via ant build script -->
     <script src='js/libs/list.min.js'></script>
-    <script src='js/libs/classList.js'></script>
+    <script src='js/libs/classList.js'></script>    
     <script src='js/script.js'></script>
     <!-- end scripts -->
     <script type='text/javascript'>
