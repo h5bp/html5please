@@ -1,25 +1,34 @@
 @import "compass/css3/gradient";
-@import "compass/css3/transform";
-@import "compass/css3/transition";
-
-$dark: #232927;
-$lightest: #e3d7bf;
-$light: #476871;
-$darkest: #1e2322;
-$contrast: #E16734;
-$code: hsla(193, 23%, 36%, 0.5);
-$hotpink: #fe57a1;
-$fallback: saturate(lighten($light, 20%), 10%);
-$polyfill: desaturate(lighten($contrast, 10%), 10%);
-$no: saturate(darken($contrast, 10%), 20%);
-$yes: saturate($light, 10%);
-$link-color: #149CD7;
+@import "vars";
 
 @mixin our-transition($arg) {
   -webkit-transition: unquote($arg);
   -o-transition: unquote($arg);
   -moz-transition: unquote($arg);
   -ms-transition: unquote($arg);
+}
+
+@mixin text-shadows($arg) {
+  $count: 0;
+  $textshadow: '';
+  @each $value in $arg {
+    $textshadow: $textshadow + $count + 'px ' + $count + 'px ';
+  }
+}
+
+@function solid-text-shadows($color,$width) {
+  $i: 1;
+  $text-shadow: "";
+  @while $i < ($width + 1) {
+    $text-shadow: $text-shadow + $i + "px " + $i + "px " + "1px " + $color;
+    
+    @if($i != $width ) {
+      $text-shadow: $text-shadow + ", ";
+    }  
+    $i: $i + 1;
+  }
+  
+  @return unquote($text-shadow);
 }
 
 /*
@@ -40,7 +49,7 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
 
 html { font-size: 100%; overflow-y: scroll; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body { margin: 0; font-size: 13px; line-height: 1.231; }
+body { @extend .reset-margin; }
 
 body, button, input, select, textarea { font-family: sans-serif; color: $lightest; }
 
@@ -96,7 +105,7 @@ sub { bottom: -0.25em; }
 
 ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
 dd { margin: 0 0 0 40px; }
-nav ul, nav ol { list-style: none; margin: 0; padding: 0; }
+nav ul, nav ol { list-style: none; @extend .reset-margin; padding: 0; }
 
 
 /* =============================================================================
@@ -121,21 +130,21 @@ svg:not(:root) { overflow: hidden; }
    Figures
    ========================================================================== */
 
-figure { margin: 0; }
+figure { @extend .reset-margin; }
 
 
 /* =============================================================================
    Forms
    ========================================================================== */
 
-form { margin: 0; }
-fieldset { border: 0; margin: 0; padding: 0; }
+form { @extend .reset-margin; }
+fieldset { border: 0; @extend .reset-margin; padding: 0; }
 
 legend { border: 0; *margin-left: -7px; padding: 0; }
 
 label { cursor: pointer; }
 
-button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input, select, textarea { font-size: 100%; @extend .reset-margin; vertical-align: baseline; *vertical-align: middle; }
 
 button, input { line-height: normal; *overflow: visible; }
 
@@ -163,28 +172,21 @@ table { border-collapse: collapse; border-spacing: 0; }
    Author: Divya Manian
    ========================================================================== */
 * { box-sizing: border-box; }
+
+@import "extends";
    
 html {  
   background-color:  $dark; 
   color: $lightest; 
-  background: -o-radial-gradient(20% 20%, circle cover, transparentize(#207cca, 0.9) 10%, transparent 10%), 
-              -o-radial-gradient(30% 30%, circle cover, transparentize(#cd5c5c, 0.8) 5%, transparent 5%),   
-              -o-radial-gradient(60% 40%, circle cover, transparentize(white, 0.9) 15%, transparent 15%),                               
-              -o-radial-gradient(80% 60%, circle cover, transparentize(olive, 0.8) 8%, transparent 8%),                 
-              -o-radial-gradient(40% 60%, circle cover, transparentize(#207cca, 0.8) 5%, transparent 5%),                               
-              -o-radial-gradient(40% 50%, circle cover, transparentize(black, 0.8) 5%, transparent 5%),                                             
-              image-url('denim.png'); 
-  background: -webkit-radial-gradient(20em 20em, circle cover, transparentize(#207cca, 0.9) 10em, transparent 10em), 
-              -webkit-radial-gradient(30em 30em, circle cover, transparentize(#cd5c5c, 0.8) 5em, transparent 5em),   
-              -webkit-radial-gradient(60em 40em, circle cover, transparentize(white, 0.9) 15em, transparent 15em),                               
-              -webkit-radial-gradient(80em 60em, circle cover, transparentize(olive, 0.8) 8em, transparent 8em),                 
-              -webkit-radial-gradient(40em 60em, circle cover, transparentize(#207cca, 0.8) 5em, transparent 5em),                               
-              -webkit-radial-gradient(40em 50em, circle cover, transparentize(black, 0.8) 5em, transparent 5em),                                             
-              image-url('denim.png');              
-
-//  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
-
-//  background-attachment: scroll, fixed, fixed, scroll, scroll, fixed, scroll;
+  @include background(
+            radial-gradient(20em 20em, circle cover, transparentize(#207cca, 0.9) 10em,  transparentize(#207cca, 1) 10em),
+            radial-gradient(30em 30em, circle cover, transparentize(#cd5c5c, 0.8) 5em,  transparentize(#cd5c5c, 1) 5em),
+            radial-gradient(60em 40em, circle cover, transparentize(white, 0.9) 15em, transparentize(white, 1) 15em),
+            radial-gradient(80em 60em, circle cover, transparentize(olive, 0.8) 8em, transparentize(olive, 1) 8em),
+            radial-gradient(40em 60em, circle cover, transparentize(#207cca, 0.8) 5em, transparentize(#207cca, 1) 5em),
+            radial-gradient(40em 50em, circle cover, transparentize(black, 0.8) 5em, transparentize(black, 1) 5em),
+            image-url('denim.png')            
+          );
   min-height: 100%; 
   max-width: 100%; 
 }
@@ -196,42 +198,40 @@ body {
   font: 16px/1.5 'Open Sans', sans-serif;
 }
 
-header.index {
-  text-align: center;
-}
+header.index { @extend .text-center; }
 
-h2 { text-transform: uppercase; }
+article h2 { @extend .text-uppercase; }
 
 header.index h1{ 
+  @extend .text-uppercase;
   font-size: 5em; 
-  text-transform:  uppercase; 
-  text-shadow: 1px 1px 1px lighten($contrast, 10%), 
-              2px 2px 1px lighten($contrast, 10%), 
-              3px 3px 1px lighten($contrast, 10%),
-              4px 4px 1px darken($dark, 10%),
-              5px 5px 3px darken($dark, 10%);                                         
-  line-height: 1.2em; 
+  line-height: 1.2em;   
+  text-shadow: solid-text-shadows(lighten($contrast, 10%), 3), 3px 3px 1px darken($dark, 10%), 4px 4px 3px darken($dark, 10%);
   margin: 0.8em 0 0.5em 0; 
 }
 
 header.index h1 img { vertical-align: -10%; }
 
 header.index h1 + h2 { 
-  font-size: 1em; 
-  text-transform: lowercase; 
+  font-size: 1em;  
   margin: 0 auto; 
   max-width: 60%; 
   text-shadow: 1px 1px 1px darken($dark, 10%);
 }
 header.index h1, header.index h2 b { font-family: 'Francois One', sans-serif; }
-header.index h2 b { font-size: 2em; display: block; color: lighten($contrast, 10%); }
+
+header.index h2 b {
+  @extend .display-block;   
+  font-size: 2em; 
+  color: lighten($contrast, 10%); 
+}
 
 header.index h1 b, 
 header.index h3, 
 article h3 b i { 
-  font-family: 'Open Sans', sans-serif; 
-  text-transform: uppercase; 
-  display: block; 
+  @extend .display-block;
+  @extend .text-uppercase;  
+  font-family: 'Open Sans', sans-serif;  
   line-height: 1;  
 }
 
@@ -255,7 +255,7 @@ header.index input[type="search"] {
   color: darken($dark, 20%);
 }
 
-header.index h3 { margin: 0; }
+header.index h3 { @extend .reset-margin; }
 
 article h2 { 
   color: $dark; 
@@ -274,64 +274,62 @@ article > header {
   box-shadow: 0 0 7px darken($lightest, 10%) inset;    
   position: relative;
   z-index: 1;
+  
   h4, h2, h3, a {
+    @extend .reset-margin;
     display: inline-block;
-    vertical-align: middle;
-    margin: 0;
+    vertical-align: middle;    
   }
 
   > a { 
     position: absolute; 
     right: 1rem; top: 1rem;
-    width: 2rem;
-    height: 2rem;
-    cursor: pointer;
+    width: 2rem; height: 2rem;
     &:before {
+      @extend .display-block;
       content: "+";
-      position: absolute;
-      top: 0; left: 0;
       font-size: 2rem;
       line-height: 2rem;
+      border-radius: 2rem;   
+      height: 2rem;   
       text-align: center;
       color: white;
       text-shadow: 1px 1px 1px darken($lightest, 40%);
       box-shadow: 0 0 7px darken($lightest, 30%) inset;
-      width: 2rem;
-      display: block;
-      height: 2rem;
-      border-radius: 2rem;
       background: darken($lightest, 20%);      
     }
   }  
   
   i { font-style: normal; }
-  h4, b, h3 { font-weight: normal; }
+  h4, b { font-weight: normal; }
+  
   h4 {
+    @extend .text-uppercase;    
+    @extend .display-block;
     font-size: 0.8em;
-    text-transform: uppercase; 
+    color: $lightest;    
     position: absolute;
     left: -5em;
     text-align: right;
     margin-top: 1.5em;
-    display: block;
     width: 4.5em;
     z-index: 1;
-    color: $lightest;
     text-shadow: 1px 1px 1px $dark;
   }
   
   h3 {
+    @extend .text-uppercase;
     background: indianred;
+    font-size: 2em;    
     border-radius: 0.2rem 0 0 0.2rem;
     padding: 0.5rem 0.5rem 0.5rem 1rem;
     margin-right: 1em;
     color: white;
     text-shadow: 1px 1px black;
-    font-size: 2em;
-    text-transform: uppercase;
-    font-weight: bold;
     position: relative;
     box-shadow: 4px 0px 6px darken(#CD5C5C, 12%) inset;
+    
+    //Arrow like figures on the right
     &:before, 
     &:after {
       content: "";
@@ -342,9 +340,7 @@ article > header {
       @include background(linear-gradient(34deg, #CD5C5C 50%,  darken(#CD5C5C, 10%) 53%, transparentize(#CD5C5C, 1) 56%));    
     }
     
-    &:before {
-      top: 0;      
-    }
+    &:before { top: 0; }
     
     &:after {
       bottom: 0;
@@ -358,8 +354,8 @@ article > header {
       text-transform: none; 
       font-weight: normal;
       b {
+        @extend .display-block;
         font-size: 1.5em;
-        display: block;
       }
     }
     
@@ -394,10 +390,10 @@ article > header {
 
 article div.more {   
   display: none;
-  padding: 0.5em 1em 1.5em 1em;
   opacity: 0;
   background: white;  
   border-radius: 0 0 0.3rem 0.3rem; 
+  padding: 0.5em 1em 1.5em 1em;  
   margin-top: -0.3rem;
   position: relative;
   z-index: 0;
@@ -421,8 +417,18 @@ article.expanded {
       line-height: 1.7rem;   
   }
   
-  div.more { display: block; opacity: 1; }
-  
+  div.more { 
+    @extend .display-block;
+    opacity: 1; 
+  }
+
+  .updateurl {
+    @extend .text-uppercase;
+    font-size: 0.8em;
+    position: absolute;
+    bottom: 0.5em;
+    right: 1em;    
+  }  
 }
 /* =============================================================================
    Non-semantic helper classes
@@ -437,7 +443,7 @@ article.expanded {
 
 .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
 
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; @extend .reset-margin; overflow: visible; position: static; width: auto; }
 
 .invisible { visibility: hidden; }
 

@@ -19,12 +19,6 @@ html {
   -ms-text-size-adjust: 100%;
 }
 
-body {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.231;
-}
-
 body, button, input, select, textarea {
   font-family: sans-serif;
   color: #e3d7bf;
@@ -152,7 +146,6 @@ dd {
 
 nav ul, nav ol {
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
@@ -179,20 +172,11 @@ svg:not(:root) {
 /* =============================================================================
    Figures
    ========================================================================== */
-figure {
-  margin: 0;
-}
-
 /* =============================================================================
    Forms
    ========================================================================== */
-form {
-  margin: 0;
-}
-
 fieldset {
   border: 0;
-  margin: 0;
   padding: 0;
 }
 
@@ -208,7 +192,6 @@ label {
 
 button, input, select, textarea {
   font-size: 100%;
-  margin: 0;
   vertical-align: baseline;
   *vertical-align: middle;
 }
@@ -260,11 +243,38 @@ table {
   box-sizing: border-box;
 }
 
+.text-center, header.index {
+  text-align: center;
+}
+
+.text-uppercase, article h2, header.index h1, header.index h1 b,
+header.index h3,
+article h3 b i, article > header h4, article > header h3, article.expanded .updateurl {
+  text-transform: uppercase;
+}
+
+.display-block, header.index h2 b, header.index h1 b,
+header.index h3,
+article h3 b i, article > header > a:before, article > header h4, article > header h3 i b, article.expanded div.more {
+  display: block;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.reset-margin, body, nav ul, nav ol, figure, form, fieldset, button, input, select, textarea, header.index h3, article > header h4, article > header h2, article > header h3, article > header a, .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  margin: 0;
+}
+
 html {
   background-color: #232927;
   color: #e3d7bf;
-  background: -o-radial-gradient(20% 20%, circle cover, rgba(32, 124, 202, 0.1) 10%, transparent 10%), -o-radial-gradient(30% 30%, circle cover, rgba(205, 92, 92, 0.2) 5%, transparent 5%), -o-radial-gradient(60% 40%, circle cover, rgba(255, 255, 255, 0.1) 15%, transparent 15%), -o-radial-gradient(80% 60%, circle cover, rgba(128, 128, 0, 0.2) 8%, transparent 8%), -o-radial-gradient(40% 60%, circle cover, rgba(32, 124, 202, 0.2) 5%, transparent 5%), -o-radial-gradient(40% 50%, circle cover, rgba(0, 0, 0, 0.2) 5%, transparent 5%), url('../img/denim.png?1324008221');
-  background: -webkit-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, transparent 10em), -webkit-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, transparent 5em), -webkit-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, transparent 15em), -webkit-radial-gradient(80em 60em, circle cover, rgba(128, 128, 0, 0.2) 8em, transparent 8em), -webkit-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, transparent 5em), -webkit-radial-gradient(40em 50em, circle cover, rgba(0, 0, 0, 0.2) 5em, transparent 5em), url('../img/denim.png?1324008221');
+  background: -webkit-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -webkit-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -webkit-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -webkit-radial-gradient(80em 60em, circle cover, rgba(128, 128, 0, 0.2) 8em, rgba(128, 128, 0, 0) 8em), -webkit-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -webkit-radial-gradient(40em 50em, circle cover, rgba(0, 0, 0, 0.2) 5em, rgba(0, 0, 0, 0) 5em), url('../img/denim.png?1324008221');
+  background: -moz-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -moz-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -moz-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -moz-radial-gradient(80em 60em, circle cover, rgba(128, 128, 0, 0.2) 8em, rgba(128, 128, 0, 0) 8em), -moz-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -moz-radial-gradient(40em 50em, circle cover, rgba(0, 0, 0, 0.2) 5em, rgba(0, 0, 0, 0) 5em), url('../img/denim.png?1324008221');
+  background: -o-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -o-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -o-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -o-radial-gradient(80em 60em, circle cover, rgba(128, 128, 0, 0.2) 8em, rgba(128, 128, 0, 0) 8em), -o-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -o-radial-gradient(40em 50em, circle cover, rgba(0, 0, 0, 0.2) 5em, rgba(0, 0, 0, 0) 5em), url('../img/denim.png?1324008221');
+  background: -ms-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -ms-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -ms-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -ms-radial-gradient(80em 60em, circle cover, rgba(128, 128, 0, 0.2) 8em, rgba(128, 128, 0, 0) 8em), -ms-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -ms-radial-gradient(40em 50em, circle cover, rgba(0, 0, 0, 0.2) 5em, rgba(0, 0, 0, 0) 5em), url('../img/denim.png?1324008221');
+  background: radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), radial-gradient(80em 60em, circle cover, rgba(128, 128, 0, 0.2) 8em, rgba(128, 128, 0, 0) 8em), radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), radial-gradient(40em 50em, circle cover, rgba(0, 0, 0, 0.2) 5em, rgba(0, 0, 0, 0) 5em), url('../img/denim.png?1324008221');
   min-height: 100%;
   max-width: 100%;
 }
@@ -276,19 +286,10 @@ body {
   font: 16px/1.5 "Open Sans", sans-serif;
 }
 
-header.index {
-  text-align: center;
-}
-
-h2 {
-  text-transform: uppercase;
-}
-
 header.index h1 {
   font-size: 5em;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 1px #e88860, 2px 2px 1px #e88860, 3px 3px 1px #e88860, 4px 4px 1px #0c0d0d, 5px 5px 3px #0c0d0d;
   line-height: 1.2em;
+  text-shadow: 1px 1px 1px #e88860, 2px 2px 1px #e88860, 3px 3px 1px #e88860, 3px 3px 1px #0c0d0d, 4px 4px 3px #0c0d0d;
   margin: 0.8em 0 0.5em 0;
 }
 
@@ -298,7 +299,6 @@ header.index h1 img {
 
 header.index h1 + h2 {
   font-size: 1em;
-  text-transform: lowercase;
   margin: 0 auto;
   max-width: 60%;
   text-shadow: 1px 1px 1px #0c0d0d;
@@ -310,7 +310,6 @@ header.index h1, header.index h2 b {
 
 header.index h2 b {
   font-size: 2em;
-  display: block;
   color: #e88860;
 }
 
@@ -318,8 +317,6 @@ header.index h1 b,
 header.index h3,
 article h3 b i {
   font-family: 'Open Sans', sans-serif;
-  text-transform: uppercase;
-  display: block;
   line-height: 1;
 }
 
@@ -343,10 +340,6 @@ header.index input[type="search"] {
   color: black;
 }
 
-header.index h3 {
-  margin: 0;
-}
-
 article h2 {
   color: #232927;
   text-shadow: 1px 1px 1px #0b587a;
@@ -368,7 +361,6 @@ article > header {
 article > header h4, article > header h2, article > header h3, article > header a {
   display: inline-block;
   vertical-align: middle;
-  margin: 0;
 }
 article > header > a {
   position: absolute;
@@ -376,54 +368,44 @@ article > header > a {
   top: 1rem;
   width: 2rem;
   height: 2rem;
-  cursor: pointer;
 }
 article > header > a:before {
   content: "+";
-  position: absolute;
-  top: 0;
-  left: 0;
   font-size: 2rem;
   line-height: 2rem;
+  border-radius: 2rem;
+  height: 2rem;
   text-align: center;
   color: white;
   text-shadow: 1px 1px 1px #957941;
   box-shadow: 0 0 7px #b49455 inset;
-  width: 2rem;
-  display: block;
-  height: 2rem;
-  border-radius: 2rem;
   background: #c4ab78;
 }
 article > header i {
   font-style: normal;
 }
-article > header h4, article > header b, article > header h3 {
+article > header h4, article > header b {
   font-weight: normal;
 }
 article > header h4 {
   font-size: 0.8em;
-  text-transform: uppercase;
+  color: #e3d7bf;
   position: absolute;
   left: -5em;
   text-align: right;
   margin-top: 1.5em;
-  display: block;
   width: 4.5em;
   z-index: 1;
-  color: #e3d7bf;
   text-shadow: 1px 1px 1px #232927;
 }
 article > header h3 {
   background: indianred;
+  font-size: 2em;
   border-radius: 0.2rem 0 0 0.2rem;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
   margin-right: 1em;
   color: white;
   text-shadow: 1px 1px black;
-  font-size: 2em;
-  text-transform: uppercase;
-  font-weight: bold;
   position: relative;
   box-shadow: 4px 0px 6px #b43737 inset;
 }
@@ -433,7 +415,6 @@ article > header h3:before, article > header h3:after {
   width: 0.8em;
   position: absolute;
   right: -0.8em;
-  background: -webkit-gradient(linear, 34deg, 34deg, color-stop(50%, #cd5c5c), color-stop(53%, #bc3a3a), color-stop(56%, rgba(205, 92, 92, 0)));
   background: -webkit-linear-gradient(34deg, #cd5c5c 50%, #bc3a3a 53%, rgba(205, 92, 92, 0) 56%);
   background: -moz-linear-gradient(34deg, #cd5c5c 50%, #bc3a3a 53%, rgba(205, 92, 92, 0) 56%);
   background: -o-linear-gradient(34deg, #cd5c5c 50%, #bc3a3a 53%, rgba(205, 92, 92, 0) 56%);
@@ -445,7 +426,6 @@ article > header h3:before {
 }
 article > header h3:after {
   bottom: 0;
-  background: -webkit-gradient(linear, -34deg, -34deg, color-stop(50%, #cd5c5c), color-stop(53%, #bc3a3a), color-stop(56%, rgba(205, 92, 92, 0)));
   background: -webkit-linear-gradient(-34deg, #cd5c5c 50%, #bc3a3a 53%, rgba(205, 92, 92, 0) 56%);
   background: -moz-linear-gradient(-34deg, #cd5c5c 50%, #bc3a3a 53%, rgba(205, 92, 92, 0) 56%);
   background: -o-linear-gradient(-34deg, #cd5c5c 50%, #bc3a3a 53%, rgba(205, 92, 92, 0) 56%);
@@ -461,14 +441,12 @@ article > header h3 i {
 }
 article > header h3 i b {
   font-size: 1.5em;
-  display: block;
 }
 article > header h3.use {
   background: olive;
   box-shadow: 4px 0px 6px #434300 inset;
 }
 article > header h3.use:before {
-  background: -webkit-gradient(linear, 34deg, 34deg, color-stop(50%, #808000), color-stop(53%, #666700), color-stop(56%, rgba(128, 128, 0, 0)));
   background: -webkit-linear-gradient(34deg, #808000 50%, #666700 53%, rgba(128, 128, 0, 0) 56%);
   background: -moz-linear-gradient(34deg, #808000 50%, #666700 53%, rgba(128, 128, 0, 0) 56%);
   background: -o-linear-gradient(34deg, #808000 50%, #666700 53%, rgba(128, 128, 0, 0) 56%);
@@ -476,7 +454,6 @@ article > header h3.use:before {
   background: linear-gradient(34deg, #808000 50%, #666700 53%, rgba(128, 128, 0, 0) 56%);
 }
 article > header h3.use:after {
-  background: -webkit-gradient(linear, -34deg, -34deg, color-stop(50%, #808000), color-stop(53%, #666700), color-stop(56%, rgba(128, 128, 0, 0)));
   background: -webkit-linear-gradient(-34deg, #808000 50%, #666700 53%, rgba(128, 128, 0, 0) 56%);
   background: -moz-linear-gradient(-34deg, #808000 50%, #666700 53%, rgba(128, 128, 0, 0) 56%);
   background: -o-linear-gradient(-34deg, #808000 50%, #666700 53%, rgba(128, 128, 0, 0) 56%);
@@ -488,7 +465,6 @@ article > header h3.caution {
   box-shadow: 4px 0 6px #c27d00 inset;
 }
 article > header h3.caution:before {
-  background: -webkit-gradient(linear, 34deg, 34deg, color-stop(50%, #ffa500), color-stop(53%, #e69500), color-stop(56%, rgba(255, 165, 0, 0)));
   background: -webkit-linear-gradient(34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
   background: -moz-linear-gradient(34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
   background: -o-linear-gradient(34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
@@ -496,7 +472,6 @@ article > header h3.caution:before {
   background: linear-gradient(34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
 }
 article > header h3.caution:after {
-  background: -webkit-gradient(linear, -34deg, -34deg, color-stop(50%, #ffa500), color-stop(53%, #e69500), color-stop(56%, rgba(255, 165, 0, 0)));
   background: -webkit-linear-gradient(-34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
   background: -moz-linear-gradient(-34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
   background: -o-linear-gradient(-34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
@@ -506,10 +481,10 @@ article > header h3.caution:after {
 
 article div.more {
   display: none;
-  padding: 0.5em 1em 1.5em 1em;
   opacity: 0;
   background: white;
   border-radius: 0 0 0.3rem 0.3rem;
+  padding: 0.5em 1em 1.5em 1em;
   margin-top: -0.3rem;
   position: relative;
   z-index: 0;
@@ -535,8 +510,13 @@ article.expanded > header > a:before {
   line-height: 1.7rem;
 }
 article.expanded div.more {
-  display: block;
   opacity: 1;
+}
+article.expanded .updateurl {
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 0.5em;
+  right: 1em;
 }
 
 /* =============================================================================
@@ -575,7 +555,6 @@ article.expanded div.more {
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
-  margin: 0;
   overflow: visible;
   position: static;
   width: auto;
