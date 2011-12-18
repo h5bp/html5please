@@ -12,7 +12,9 @@ var listOptions = {
     searchresults = document.querySelectorAll('.features article'),
     searchurl = document.getElementById('searchurl');	
 
-search.onkeyup = function() {
+search.onkeyup = updatesearch;
+
+function updatesearch() {
   if (search.value != '') {
     searchurl.href='/#' + search.value;
     searchurl.style.opacity = 1;
