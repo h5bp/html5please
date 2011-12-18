@@ -5,7 +5,7 @@
 
 var listOptions = {
 		listClass: 'features',
-		valueNames: ['name', 'recco']
+		valueNames: ['kind', 'status', 'name']
 	},
 	featureList = new List('gfs', listOptions);
 	
