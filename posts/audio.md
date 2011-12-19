@@ -1,6 +1,6 @@
 feature: audio
-status: avoid
-tags: 
+status: use
+tags: polyfill
 kind: html
 polyfillurls: [jPlayer](https://github.com/happyworm/jPlayer), [audio.js](http://kolber.github.com/audiojs/), [Sound Manager 2](http://www.schillmania.com/projects/soundmanager2/)
 
