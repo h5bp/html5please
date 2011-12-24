@@ -16,7 +16,7 @@ search.onkeyup = updatesearch;
 
 function updatesearch() {
   if (search.value != '') {
-    searchurl.href='/#' + search.value;
+    searchurl.href='./#' + search.value;
     searchurl.style.height = "2.5em";
     for (var i = 0, len = searchresults.length; i < len; i++) {
         classList(searchresults[i]).add('expanded');
