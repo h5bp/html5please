@@ -253,14 +253,26 @@ header.index input[type="search"] {
   border-radius: 10em;
   border: 0;
   color: darken($dark, 20%);
+  margin: 0;
 }
 
 #searchurl { 
-  @include our-transition('opacity 1s linear'); 
-  @extend .display-block;
   @extend .text-uppercase;  
+  @extend .display-block;
+  @include our-transition('height 500ms linear'); 
+  @include background(linear-gradient(90deg, #f16529,  lighten(#f16529, 10%)));      
   font-size: 0.8em;
-  
+  padding: 0 1em;
+  line-height: 2.5;
+  left: 50%;
+  width: 15em;
+  color: white;
+  text-shadow: 1px 1px 1px darken(#f16529, 40%);
+  border-radius: 0 0 10px 10px;
+  height: 0em;
+  margin-left: -7.5em;  
+  overflow: hidden;
+  position: absolute;
 }
 
 header.index h3 { @extend .reset-margin; }

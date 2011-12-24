@@ -17,12 +17,12 @@ search.onkeyup = updatesearch;
 function updatesearch() {
   if (search.value != '') {
     searchurl.href='/#' + search.value;
-    searchurl.style.opacity = 1;
+    searchurl.style.height = "2.5em";
     for (var i = 0, len = searchresults.length; i < len; i++) {
         classList(searchresults[i]).add('expanded');
     }
   } else {
-    searchurl.style.opacity = 0;
+    searchurl.style.height = "0";
     for (var i = 0, len = searchresults.length; i < len; i++) {
         classList(searchresults[i]).remove('expanded');
     }
