@@ -37,14 +37,14 @@ done
 
 while [ -z "$tags" ]
 do
-    tags=$(promptValue "Enter Tags (one or more of: gtie6,gtie7,gtie8,nopolyfill,polyfill, or fallback)")
+    tags=$(promptValue "Enter Tags (one or more of: gtie6,gtie7,gtie8,prefixes,polyfill, fallback, or none)")
     if [ -n "$tags" ]
     then
       set $(echo $tags)
       while [ $# -gt 0 ]
       do
           case "$1" in
-            gtie6|gtie7|gtie8|nopolyfill|polyfill|fallback)  shift ;;
+            gtie6|gtie7|gtie8|prefixes|polyfill|fallback|none)  shift ;;
             *)              echo "Unknown Tag: $1" 1>&2; tags= ; break ;;
           esac
       done
@@ -53,9 +53,9 @@ done
 
 while [ -z "$kind" ]
 do
-    kind=$(promptValue "Enter Type (css,html,js,dom or svg)")
+    kind=$(promptValue "Enter Type (css,html,js,api or svg)")
     case $kind in
-        css|html|js|dom|svg) : ;;
+        css|html|js|api|svg) : ;;
         *)                 kind= ;;
     esac
 done
