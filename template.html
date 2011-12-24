@@ -35,9 +35,10 @@
             </header>
             <div class="more">
               <div class='recco'>{{{contents}}}</div>
-              <div class='polyfills'><b>Recommended Polyfills: </b>{{{polyfillurls}}}</div> 
+              <div class='polyfills'>{{#if polyfillurls}}<b>Recommended Polyfills: </b>{{{polyfillurls}}}{{/if}}</div> 
               <a class="updateurl" href={{{editurl}}}>Edit info on {{{feature}}}</a>              
             </div>
+            <footer class="tags">{{tags}}</footer>
           </article>          
         {{/features}}    
       </section>

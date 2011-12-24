@@ -35,9 +35,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>CSS Animations are still in a flux. The Working Group has decided to provide a universal animation spec that would work across CSS, SVG and HTML. For now, use animations for providing additional glamour and use feature detection to provide alternative experience on browsers that do not support this feature for critical animations.</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/animations.md>Edit info on animations</a>              
             </div>
+            <footer class="tags">fallback</footer>
           </article>          
         
           <article class="polyfill">
@@ -52,6 +53,7 @@
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/happyworm/jPlayer">jPlayer</a>, <a href="http://kolber.github.com/audiojs/">audio.js</a>, <a href="http://www.schillmania.com/projects/soundmanager2/">Sound Manager 2</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/audio.md>Edit info on audio</a>              
             </div>
+            <footer class="tags">polyfill</footer>
           </article>          
         
           <article class="fallback prefixes">
@@ -63,37 +65,40 @@
             </header>
             <div class="more">
               <div class='recco'><p>Make sure to use all the right prefixes (<code>-o-</code>, <code>-webkit</code>, <code>-ms-</code>, <code>-moz-</code>). You should let this fallback to either a normal solid border or no border at all (depending on whether a border is essential for readability). We recommend you avoid polyfills, but <a href="http://css3pie.com">CSS3Pie</a> is a polyfill you should use if you are forced into such a situation. </p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/border-image.md>Edit info on border-image</a>              
             </div>
+            <footer class="tags">fallback prefixes</footer>
           </article>          
         
-          <article class="nopolyfill">
+          <article class="">
             <header>
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
+              <h3 class="status use">use <i></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/border-radius">border-radius</a></h2>
               <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Border Radius can be safely used without a prefix for all modern browsers, and gracefully renders rectangles when not supported. If you do need to render border radii on unsupported browsers, you can sue <a href="http://css3pie.com/">CSSPie</a> as a polyfill.</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/border-radius.md>Edit info on border-radius</a>              
             </div>
+            <footer class="tags"></footer>
           </article>          
         
-          <article class="nopolyfill">
+          <article class="none">
             <header>
               <h4 class="kind css">css</h4>
-              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>
+              <h3 class="status caution">caution <i></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/box-shadow">box-shadow</a></h2>
               <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Box-shadow is safe to use most of the time, except when you are applying it on a large area, which might cause significant performance hit when the user interacts with your page (on scroll, hover, etc). You do not need a polyfill, and in the unlikely event of needing one, use <a href="http://css3pie.com/">CSSPie</a>.</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/box-shadow.md>Edit info on box-shadow</a>              
             </div>
+            <footer class="tags">none</footer>
           </article>          
         
           <article class="fallback prefixes">
@@ -105,9 +110,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>Firefox is the only browser that requires a prefix for box-sizing. You can use it without a prefix for everything else. <a href="https://github.com/Schepp/box-sizing-polyfill">Box Sizing Polyfill</a> provides this feature in IE 6 and 7 (you could scope the adjustments using <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">IE conditionals</a> or Modernizr's <code>no-box-sizing</code>).</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/box-sizing.md>Edit info on box-sizing</a>              
             </div>
+            <footer class="tags">fallback prefixes</footer>
           </article>          
         
           <article class="none">
@@ -119,9 +125,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>IE and Firefox are the only supporting browsers, which makes using calc in production tedious given the impact it can have on layout and the consequent breaking of your design on unsupported browsers. We encourage you use it for experimentation but not for any production use. </p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/calc.md>Edit info on calc()</a>              
             </div>
+            <footer class="tags">none</footer>
           </article>          
         
           <article class="gtie8 polyfill">
@@ -136,6 +143,7 @@
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://flashcanvas.net/">FlashCanvas</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/canvas.md>Edit info on canvas</a>              
             </div>
+            <footer class="tags">gtie8 polyfill</footer>
           </article>          
         
           <article class="fallback gtie8">
@@ -147,9 +155,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>If you found yourself wanting to use <code>papayawhip</code> or <code>goldenrod</code> or <code>indianred</code> as your colors of choice, do feel free. You might have to specify a fallback color for IE 8 users. </p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/css3-colors.md>Edit info on css3-colors</a>              
             </div>
+            <footer class="tags">fallback gtie8</footer>
           </article>          
         
           <article class="polyfill">
@@ -164,6 +173,7 @@
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://miketaylr.com/code/datalist.html">jQuery Datalist Plugin</a>, <a href="http://css-tricks.com/15346-relevant-dropdowns-polyfill-for-datalist/">Relevant Dropdowns Polyfill</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/datalist.md>Edit info on datalist</a>              
             </div>
+            <footer class="tags">polyfill</footer>
           </article>          
         
           <article class="polyfill">
@@ -178,6 +188,7 @@
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://eligrey.com/blog/post/html-5-dataset-support">HTML5 dataset support</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/dataset.md>Edit info on dataset</a>              
             </div>
+            <footer class="tags">polyfill</footer>
           </article>          
         
           <article class="polyfill">
@@ -192,6 +203,7 @@
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://mathiasbynens.be/notes/html5-details-jquery">Details</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/details.md>Edit info on details</a>              
             </div>
+            <footer class="tags">polyfill</footer>
           </article>          
         
           <article class="fallback">
@@ -206,6 +218,7 @@
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/remy/polyfills/blob/master/EventSource.js">EventSource.js</a>, <a href="https://github.com/rwldrn/jquery.eventsource">jQuery.eventsource</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/Eventsource.md>Edit info on Eventsource</a>              
             </div>
+            <footer class="tags">fallback</footer>
           </article>          
         
           <article class="none">
@@ -217,9 +230,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>Exclusions are new and exciting, but again very much in a flux. Active development to get an implementation out is on-going, but again, please avoid using this until there are stable implementations in the wild.</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/exclusions.md>Edit info on exclusions</a>              
             </div>
+            <footer class="tags">none</footer>
           </article>          
         
           <article class="none">
@@ -231,9 +245,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>Unfortunately, older versions of this spec has been implemented in Gecko, Webkit and Trident. But the spec has changed significantly (starting from the syntax), hence we recommend you avoid using this until the stable version of the spec finds wide-spread implementation.</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/flex-box.md>Edit info on flex-box</a>              
             </div>
+            <footer class="tags">none</footer>
           </article>          
         
           <article class="none">
@@ -245,9 +260,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>IE10 and Firefox 4 support low level control over font feature settings. What this means is other browsers merely will not render the flourishes you seek. </p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/font-feature-settings.md>Edit info on font-feature-settings</a>              
             </div>
+            <footer class="tags">none</footer>
           </article>          
         
           <article class="polyfill">
@@ -262,6 +278,7 @@
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/366184">Geolocation Shim</a>, <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/geo-location.md>Edit info on geo-location</a>              
             </div>
+            <footer class="tags">polyfill</footer>
           </article>          
         
           <article class="fallback prefixes">
@@ -275,9 +292,10 @@
               <div class='recco'><p>We strongly recommend you use all the prefixes ((<code>-o-</code>, <code>-webkit</code>, <code>-ms-</code>, <code>-moz-</code>)) when you provide gradients as image values (<code>background</code> or <code>border-image</code>). Do provide a fallback color if you are using this as a value for <code>background</code> so browsers that do not support the gradients can render a solid background color. </p>
 
 <p>We also suggest you drop old webkit syntax and only use the latest syntax for gradient values. </p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/gradients.md>Edit info on gradients</a>              
             </div>
+            <footer class="tags">fallback prefixes</footer>
           </article>          
         
           <article class="none">
@@ -289,9 +307,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>This is also a spec that is in a flux. Older versions of the spec has found implementation, but you should wait until the spec is more stable to use this. </p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/grids.md>Edit info on grids</a>              
             </div>
+            <footer class="tags">none</footer>
           </article>          
         
           <article class="fallback">
@@ -306,6 +325,7 @@
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/balupton/history.js">History.js</a>, <a href="http://pjax.heroku.com/">pjax</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/history.md>Edit info on history</a>              
             </div>
+            <footer class="tags">fallback</footer>
           </article>          
         
           <article class="none prefixes">
@@ -317,9 +337,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>CSS3 lets you break words using hyphens. As it does not make text unreadable on browsers which do not support this feature, we recommend you use it without any polyfills or fallbacks. <a href="http://code.google.com/p/hyphenator/">CSS Hyphenator</a> is a polyfill that works on browsers that support the soft hyphen. </p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/hyphens.md>Edit info on hyphens</a>              
             </div>
+            <footer class="tags">none prefixes</footer>
           </article>          
         
           <article class="polyfill">
@@ -331,9 +352,10 @@
             </header>
             <div class="more">
               <div class='recco'><p><a href="https://github.com/paulirish/matchMedia.js/">MatchMedia.js</a> provides a shim for unsupported browsers. If you want a shim that is responsive to window resizing, you can use <a href="http://www.paulrhayes.com/2011-11/use-css-transitions-to-link-media-queries-and-javascript/">this fork</a>.</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/match-media.md>Edit info on match-media</a>              
             </div>
+            <footer class="tags">polyfill</footer>
           </article>          
         
           <article class="none">
@@ -345,9 +367,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>Media Queries work on all modern browsers. IE6,7,8 unfortunately do not understand media queries on features, which means none of your CSS within media queries will be parsed by them. We recommend you make peace with that (or use Chrome Frame), but if you absolutely cannot, then you can use <a href="https://github.com/scottjehl/Respond">Respond.js</a>.</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/media-queries.md>Edit info on media-queries</a>              
             </div>
+            <footer class="tags">none</footer>
           </article>          
         
           <article class="polyfill">
@@ -362,6 +385,7 @@
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/medialize/jQuery-contextMenu">contextMenu</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/menu.md>Edit info on menu</a>              
             </div>
+            <footer class="tags">polyfill</footer>
           </article>          
         
           <article class="polyfill">
@@ -376,6 +400,7 @@
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/667320">meter-polyfill</a>, <a href="https://github.com/xjamundx/HTML5-Meter-Shim">jQuery shim</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/meter.md>Edit info on meter</a>              
             </div>
+            <footer class="tags">polyfill</footer>
           </article>          
         
           <article class="fallback">
@@ -387,9 +412,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>Multiple backgrounds when unsupported <a href="http://snook.ca/archives/html_and_css/multiple-bg-css-gradients">are ignored completely</a>. If you can make do with a simple background color, make sure to declare <code>background-color: &lt;color&gt;</code> before you start using multiple backgrounds or you can also set an image as a background with <code>background-image</code> and override it with your multiple background declaration. We strongly recommend you don't polyfill this, but <a href="http://css3pie.com/">CSSPie</a> should help you out if you need one.</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/multiple-backgrounds.md>Edit info on multiple-backgrounds</a>              
             </div>
+            <footer class="tags">fallback</footer>
           </article>          
         
           <article class="prefixes">
@@ -401,9 +427,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>IE, and Opera support CSS3 Multicol without prefixes. So you only need <code>-webkit</code> and <code>-moz</code>. We recommend you do not polyfill this, but a basic <a href="http://www.csscripting.com/css-multi-column/">Multicol Polyfill</a> exists. </p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/multiple-columns.md>Edit info on multiple-columns</a>              
             </div>
+            <footer class="tags">prefixes</footer>
           </article>          
         
           <article class="polyfill">
@@ -415,9 +442,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>…</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/offline-events.md>Edit info on offline-events</a>              
             </div>
+            <footer class="tags">polyfill</footer>
           </article>          
         
           <article class="none">
@@ -429,9 +457,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>This spec is actively under development, so we recommend you wait till there is enough implementations around.</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/paged-media.md>Edit info on paged-media</a>              
             </div>
+            <footer class="tags">none</footer>
           </article>          
         
           <article class="fallback">
@@ -443,9 +472,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>Pointer events are available in SVG and CSS. All modern browsers support them in SVG, but IE and Opera do not support them in CSS yet. There is a <a href="https://github.com/ausi/Feature-detection-technique-for-pointer-events/blob/master/modernizr-pointerevents.js">modernizr plugin</a> to detect support which can be used to implement a JavaScript interceptor for elements which require pointer events to be disabled. </p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/pointer-events.md>Edit info on pointer-events</a>              
             </div>
+            <footer class="tags">fallback</footer>
           </article>          
         
           <article class="polyfill">
@@ -460,6 +490,7 @@
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/LeaVerou/HTML5-Progress-polyfill">HTML5 Progress Polyfill</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/progress.md>Edit info on progress</a>              
             </div>
+            <footer class="tags">polyfill</footer>
           </article>          
         
           <article class="none">
@@ -471,9 +502,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>Pseudo-elements are supposed to follow this syntax <code>::before</code> and <code>::after</code>. But, if you intend to support IE7+, you would have to use <code>:before</code> and <code>:after</code>. Use these to provide only additional information, so when they are unsupported they do not destroy the readability of your page. </p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/pseudo-elements.md>Edit info on pseudo-elements</a>              
             </div>
+            <footer class="tags">none</footer>
           </article>          
         
           <article class="none">
@@ -485,9 +517,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>CSS Regions is in active development. As a result, the syntax is in a flux. A polyfill based on an older syntax exists, but we recommend you hold your horses till this spec seems some stability and 3 or more implementations. </p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/regions.md>Edit info on regions</a>              
             </div>
+            <footer class="tags">none</footer>
           </article>          
         
           <article class="fallback">
@@ -502,6 +535,7 @@
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://www.useragentman.com/blog/2010/10/29/cross-browser-html5-ruby-annotations-using-css/">Cross-browser Ruby</a>, <a href="http://sideshowbarker.net/2009/11/13/html5-ruby/#comment-3388">basic fallback</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/ruby.md>Edit info on ruby</a>              
             </div>
+            <footer class="tags">fallback</footer>
           </article>          
         
           <article class="fallback">
@@ -513,9 +547,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>CSS Selectors are supported from IE7 onwards, so you should be safe to use. But do note that, on browsers that do not support these selectors, a whole rule will be detected as invalid if these unsupported selectors are present. For example, in IE6 <code>#main, p:first-child {}</code> would be invalid because it is unable to understand <code>p:first-child</code>. Again, we strongly recommend you do not try to polyfill this, but if you do need one, you can use <a href="http://selectivizr.com/">Selectivizr</a>.</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/selectors.md>Edit info on selectors</a>              
             </div>
+            <footer class="tags">fallback</footer>
           </article>          
         
           <article class="gtie8 polyfill">
@@ -530,6 +565,7 @@
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://code.google.com/p/svgweb/">svgweb</a>, <a href="http://raphaeljs.com/">raphaeljs</a>, <a href="http://code.google.com/p/canvg/">canvg</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/svg.md>Edit info on svg</a>              
             </div>
+            <footer class="tags">gtie8 polyfill</footer>
           </article>          
         
           <article class="none">
@@ -541,9 +577,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>Text Overflow is most commonly used for <code>text-overflow: ellipsis</code>. With Firefox 7, all modern browsers now support this property prefixless and you should use it. On unsupported browsers, it merely does not render the ellipsis which we feel is not bad enough to merit a polyfill. However, there is a <a href="http://www.bramstein.com/projects/text-overflow/">jQuery plugin</a> in the unlikely event of you needing one. </p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/text-overflow.md>Edit info on text-overflow</a>              
             </div>
+            <footer class="tags">none</footer>
           </article>          
         
           <article class="fallback">
@@ -555,9 +592,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>Let text-shadow render only when supported. </p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/text-shadow.md>Edit info on text-shadow</a>              
             </div>
+            <footer class="tags">fallback</footer>
           </article>          
         
           <article class="fallback">
@@ -569,9 +607,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>Make sure you use all the right prefixes (<code>-o-</code>, <code>-webkit</code>, <code>-ms-</code>, <code>-moz-</code>). If your transforms destroy the readability of your site on browsers that do not support them, use Modernizr's no-csstransforms class to adjust the design so that the text remains readable. In the unlikely event of you needing a polyfill for unsupported browsers, use <a href="https://github.com/pbakaus/transformie">Transformie</a> or <a href="http://www.useragentman.com/blog/csssandpaper-a-css3-javascript-library/">CSSSandpaper</a>.</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/transforms.md>Edit info on transforms</a>              
             </div>
+            <footer class="tags">fallback</footer>
           </article>          
         
           <article class="fallback">
@@ -583,9 +622,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>If there is any critical interaction that requires transitions to be present, we recommend you provide an alternative experience for users on browsers that do not support this feature by using feature detection. </p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/transitions.md>Edit info on transitions</a>              
             </div>
+            <footer class="tags">fallback</footer>
           </article>          
         
           <article class="polyfill">
@@ -600,6 +640,7 @@
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://mediaelementjs.com/">mediaelementjs</a>, <a href="http://videojs.com/">videojs</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/video.md>Edit info on video</a>              
             </div>
+            <footer class="tags">polyfill</footer>
           </article>          
         
           <article class="fallback">
@@ -611,9 +652,10 @@
             </header>
             <div class="more">
               <div class='recco'><p>Use the <a href="http://www.fontsquirrel.com/fontface/generator">Font Squirrel Generator</a> for fonts you have license for using as web fonts. <a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax">Font Squirrel @font-face syntax</a> is also the most bullet-proof way of serving web fonts. You do not need polyfills just fonts in several formats. </p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b></div> 
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/web-fonts.md>Edit info on web-fonts</a>              
             </div>
+            <footer class="tags">fallback</footer>
           </article>          
             
       </section>

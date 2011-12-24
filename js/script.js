@@ -5,7 +5,7 @@
 
 var listOptions = {
 		listClass: 'features',
-		valueNames: ['kind', 'status', 'name']
+		valueNames: ['kind', 'status', 'name', 'tags']
 	},
 	featureList = new List('gfs', listOptions),
 	search = document.getElementById('livesearch'),

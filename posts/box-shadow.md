@@ -1,6 +1,6 @@
 feature: box-shadow
 status: caution
-tags: nopolyfill
+tags: none
 kind: css
 polyfillurls:
 

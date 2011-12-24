@@ -405,10 +405,12 @@ article > header {
         @include background(linear-gradient(-34deg, #FFA500 50%, darken(#ffa500, 5%) 53%, transparentize(#ffa500, 1) 56%));                  
       }
     }  
-  }
+  }   
   
-  
-  
+}
+
+article .tags { 
+  display: none;
 }
 
 article div.more {   

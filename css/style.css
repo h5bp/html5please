@@ -505,6 +505,10 @@ article > header h3.caution:after {
   background: linear-gradient(-34deg, #ffa500 50%, #e69500 53%, rgba(255, 165, 0, 0) 56%);
 }
 
+article .tags {
+  display: none;
+}
+
 article div.more {
   display: none;
   opacity: 0;

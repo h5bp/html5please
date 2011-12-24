@@ -1,6 +1,6 @@
 feature: border-radius
 status: use
-tags: nopolyfill
+tags: 
 kind: css
 polyfillurls:
 
