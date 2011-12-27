@@ -4,4 +4,4 @@ tags: none
 kind: css
 polyfillurls:
 
-This spec is actively under development, so we recommend you wait till there is enough implementations around.
+This spec is actively under development, so we recommend you wait until there are enough implementations around.
