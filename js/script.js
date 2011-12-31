@@ -29,13 +29,13 @@ function updatesearch() {
   }
 }
 
-var expandfeatures = document.querySelectorAll('a.expand'),
+var expandfeatures = document.querySelectorAll('.features article header'),
     count = expandfeatures.length;
     
 for(var i = 0; i < count; i++) {
   expandfeatures[i].onclick = function(e) {
       e = e || window.event;
-      var parent = (e.target || e.srcElement).parentNode.parentNode;
+      var parent = (e.target || e.srcElement).parentNode;
       classList(parent).toggle('expanded');
   };
 }    

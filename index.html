@@ -28,10 +28,10 @@
         
           <article class="fallback">
             <header>
+              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/animations">animations</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>CSS Animations are still in a flux. The Working Group has decided to provide a universal animation spec that would work across CSS, SVG and HTML. For now, use animations for providing additional glamour and use feature detection to provide alternative experience on browsers that do not support this feature for critical animations.</p></div>
@@ -43,13 +43,13 @@
         
           <article class="polyfill">
             <header>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind html">html</h4>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/audio">audio</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
-              <div class='recco'><p>As with video, you need to provide your audio file in multiple formats for these to work. jPlayer also has a jQuery dependency. Sound Manager has extensive API for further customization. </p></div>
+              <div class='recco'><p>As with video, you need to provide your audio file in multiple formats for these to work. jPlayer also has a jQuery dependency. Sound Manager has an extensive API for further customization. </p></div>
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/happyworm/jPlayer">jPlayer</a>, <a href="http://kolber.github.com/audiojs/">audio.js</a>, <a href="http://www.schillmania.com/projects/soundmanager2/">Sound Manager 2</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/audio.md>Edit info on audio</a>              
             </div>
@@ -58,10 +58,10 @@
         
           <article class="fallback prefixes">
             <header>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/border-image">border-image</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Make sure to use all the right prefixes (<code>-o-</code>, <code>-webkit</code>, <code>-ms-</code>, <code>-moz-</code>). You should let this fallback to either a normal solid border or no border at all (depending on whether a border is essential for readability). We recommend you avoid polyfills, but <a href="http://css3pie.com">CSS3Pie</a> is a polyfill you should use if you are forced into such a situation. </p></div>
@@ -73,13 +73,13 @@
         
           <article class="">
             <header>
+              <h3 class="status use">use <i></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/border-radius">border-radius</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
-              <div class='recco'><p>Border Radius can be safely used without a prefix for all modern browsers, and gracefully renders rectangles when not supported. If you do need to render border radii on unsupported browsers, you can sue <a href="http://css3pie.com/">CSSPie</a> as a polyfill.</p></div>
+              <div class='recco'><p>Border Radius can be safely used without a prefix for all modern browsers, and gracefully renders rectangles when not supported. If you do need to render border radii on unsupported browsers, you can use <a href="http://css3pie.com/">CSSPie</a> as a polyfill.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/border-radius.md>Edit info on border-radius</a>              
             </div>
@@ -88,10 +88,10 @@
         
           <article class="none">
             <header>
+              <h3 class="status caution">caution <i></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status caution">caution <i></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/box-shadow">box-shadow</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Box-shadow is safe to use most of the time, except when you are applying it on a large area, which might cause significant performance hit when the user interacts with your page (on scroll, hover, etc). You do not need a polyfill, and in the unlikely event of needing one, use <a href="http://css3pie.com/">CSSPie</a>.</p></div>
@@ -103,10 +103,10 @@
         
           <article class="fallback prefixes">
             <header>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/box-sizing">box-sizing</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Firefox is the only browser that requires a prefix for box-sizing. You can use it without a prefix for everything else. <a href="https://github.com/Schepp/box-sizing-polyfill">Box Sizing Polyfill</a> provides this feature in IE 6 and 7 (you could scope the adjustments using <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">IE conditionals</a> or Modernizr's <code>no-box-sizing</code>).</p></div>
@@ -118,10 +118,10 @@
         
           <article class="none">
             <header>
+              <h3 class="status avoid">avoid <i></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status avoid">avoid <i></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/calc()">calc()</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>IE and Firefox are the only supporting browsers, which makes using calc in production tedious given the impact it can have on layout and the consequent breaking of your design on unsupported browsers. We encourage you use it for experimentation but not for any production use. </p></div>
@@ -133,13 +133,13 @@
         
           <article class="gtie8 polyfill">
             <header>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind html">html</h4>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/canvas">canvas</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
-              <div class='recco'><p>Canvas is definitely good to go for modern browsers. But if you are looking to use it in IE 8 and below, use FlashCanvas. </p></div>
+              <div class='recco'><p>Canvas is definitely good to go for modern browsers. If however you're looking to use it in IE 8 and below, use FlashCanvas. </p></div>
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://flashcanvas.net/">FlashCanvas</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/canvas.md>Edit info on canvas</a>              
             </div>
@@ -148,10 +148,10 @@
         
           <article class="fallback gtie8">
             <header>
+              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/css3-colors">css3-colors</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>If you found yourself wanting to use <code>papayawhip</code> or <code>goldenrod</code> or <code>indianred</code> as your colors of choice, do feel free. You might have to specify a fallback color for IE 8 users. </p></div>
@@ -163,10 +163,10 @@
         
           <article class="polyfill">
             <header>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind html">html</h4>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/datalist">datalist</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Jeremy Keith has a <a href="http://adactio.com/journal/4272/">graceful fallback solution</a> that does not use a script.</p></div>
@@ -178,10 +178,10 @@
         
           <article class="polyfill">
             <header>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind html">html</h4>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/dataset">dataset</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p><a href="http://dev.opera.com/articles/view/an-introduction-to-datasets/">More info about dataset</a></p></div>
@@ -193,13 +193,13 @@
         
           <article class="polyfill">
             <header>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind html">html</h4>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/details">details</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
-              <div class='recco'><p>Use detail element if you intent to show a summary which when clicked reveals detailed information. </p></div>
+              <div class='recco'><p>Use the details element if you intend to show a summary which when clicked reveals detailed information. </p></div>
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://mathiasbynens.be/notes/html5-details-jquery">Details</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/details.md>Edit info on details</a>              
             </div>
@@ -208,13 +208,13 @@
         
           <article class="fallback">
             <header>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind html">html</h4>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/Eventsource">Eventsource</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
-              <div class='recco'><p>EventSource.js provides base fallback and is not dependent on jQuery.</p></div>
+              <div class='recco'><p>EventSource.js provides a base fallback and is not dependent on jQuery.</p></div>
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/remy/polyfills/blob/master/EventSource.js">EventSource.js</a>, <a href="https://github.com/rwldrn/jquery.eventsource">jQuery.eventsource</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/Eventsource.md>Edit info on Eventsource</a>              
             </div>
@@ -223,10 +223,10 @@
         
           <article class="none">
             <header>
+              <h3 class="status avoid">avoid <i></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status avoid">avoid <i></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/exclusions">exclusions</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Exclusions are new and exciting, but again very much in a flux. Active development to get an implementation out is on-going, but again, please avoid using this until there are stable implementations in the wild.</p></div>
@@ -238,13 +238,13 @@
         
           <article class="none">
             <header>
+              <h3 class="status avoid">avoid <i></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status avoid">avoid <i></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/flex-box">flex-box</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
-              <div class='recco'><p>Unfortunately, older versions of this spec has been implemented in Gecko, Webkit and Trident. But the spec has changed significantly (starting from the syntax), hence we recommend you avoid using this until the stable version of the spec finds wide-spread implementation.</p></div>
+              <div class='recco'><p>Unfortunately, older versions of this spec have been implemented in Gecko, Webkit and Trident. But the spec has changed significantly (starting from the syntax), hence we recommend you avoid using this until the stable version of the spec finds wide-spread implementation.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/flex-box.md>Edit info on flex-box</a>              
             </div>
@@ -253,10 +253,10 @@
         
           <article class="none">
             <header>
+              <h3 class="status use">use <i></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/font-feature-settings">font-feature-settings</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>IE10 and Firefox 4 support low level control over font feature settings. What this means is other browsers merely will not render the flourishes you seek. </p></div>
@@ -268,14 +268,14 @@
         
           <article class="polyfill">
             <header>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind html">html</h4>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/geo-location">geo-location</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
-              <div class='recco'><p>The Geolocation shim requires jQuery to work, but if you are looking for a mobile specific script, you are better off using the geo-location-javascript.</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/366184">Geolocation Shim</a>, <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a></p></div> 
+              <div class='recco'><p>The Geolocation shim requires jQuery to work, but if you are looking for a mobile specific script, you are better off using geo-location-javascript.</p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/366184">Geolocation Shim</a>, <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a>, <a href="https://github.com/teleject/HTML5-GeoLocation-jQuery-Plugin">HTML5 Geolocation jQuery Plugin</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/geo-location.md>Edit info on geo-location</a>              
             </div>
             <footer class="tags">polyfill</footer>
@@ -283,10 +283,10 @@
         
           <article class="fallback prefixes">
             <header>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/gradients">gradients</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>We strongly recommend you use all the prefixes ((<code>-o-</code>, <code>-webkit</code>, <code>-ms-</code>, <code>-moz-</code>)) when you provide gradients as image values (<code>background</code> or <code>border-image</code>). Do provide a fallback color if you are using this as a value for <code>background</code> so browsers that do not support the gradients can render a solid background color. </p>
@@ -300,10 +300,10 @@
         
           <article class="none">
             <header>
+              <h3 class="status avoid">avoid <i></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status avoid">avoid <i></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/grids">grids</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>This is also a spec that is in a flux. Older versions of the spec has found implementation, but you should wait until the spec is more stable to use this. </p></div>
@@ -315,10 +315,10 @@
         
           <article class="fallback">
             <header>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind api">api</h4>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/history">history</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>History.js has cross-compatibility between HTML5 browser implementations and optional hashchange fallback for HTML4 browsers. PJax (pushState + ajax = pjax) is what is used by Github for their fallback solution.</p></div>
@@ -330,10 +330,10 @@
         
           <article class="none prefixes">
             <header>
+              <h3 class="status use">use <i></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/hyphens">hyphens</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>CSS3 lets you break words using hyphens. As it does not make text unreadable on browsers which do not support this feature, we recommend you use it without any polyfills or fallbacks. <a href="http://code.google.com/p/hyphenator/">CSS Hyphenator</a> is a polyfill that works on browsers that support the soft hyphen. </p></div>
@@ -345,10 +345,10 @@
         
           <article class="polyfill">
             <header>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind api">api</h4>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/match-media">match-media</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p><a href="https://github.com/paulirish/matchMedia.js/">MatchMedia.js</a> provides a shim for unsupported browsers. If you want a shim that is responsive to window resizing, you can use <a href="http://www.paulrhayes.com/2011-11/use-css-transitions-to-link-media-queries-and-javascript/">this fork</a>.</p></div>
@@ -360,10 +360,10 @@
         
           <article class="none">
             <header>
+              <h3 class="status use">use <i></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/media-queries">media-queries</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Media Queries work on all modern browsers. IE6,7,8 unfortunately do not understand media queries on features, which means none of your CSS within media queries will be parsed by them. We recommend you make peace with that (or use Chrome Frame), but if you absolutely cannot, then you can use <a href="https://github.com/scottjehl/Respond">Respond.js</a>.</p></div>
@@ -375,10 +375,10 @@
         
           <article class="polyfill">
             <header>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind html">html</h4>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/menu">menu</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Do note that this polyfill requires a jQuery dependency.</p></div>
@@ -390,10 +390,10 @@
         
           <article class="polyfill">
             <header>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind html">html</h4>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/meter">meter</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'></div>
@@ -405,10 +405,10 @@
         
           <article class="fallback">
             <header>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/multiple-backgrounds">multiple-backgrounds</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Multiple backgrounds when unsupported <a href="http://snook.ca/archives/html_and_css/multiple-bg-css-gradients">are ignored completely</a>. If you can make do with a simple background color, make sure to declare <code>background-color: &lt;color&gt;</code> before you start using multiple backgrounds or you can also set an image as a background with <code>background-image</code> and override it with your multiple background declaration. We strongly recommend you don't polyfill this, but <a href="http://css3pie.com/">CSSPie</a> should help you out if you need one.</p></div>
@@ -420,10 +420,10 @@
         
           <article class="prefixes">
             <header>
+              <h3 class="status use">use <i></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/multiple-columns">multiple-columns</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>IE, and Opera support CSS3 Multicol without prefixes. So you only need <code>-webkit</code> and <code>-moz</code>. We recommend you do not polyfill this, but a basic <a href="http://www.csscripting.com/css-multi-column/">Multicol Polyfill</a> exists. </p></div>
@@ -435,10 +435,10 @@
         
           <article class="polyfill">
             <header>
+              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind html">html</h4>
-              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/offline-events">offline-events</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>…</p></div>
@@ -450,13 +450,13 @@
         
           <article class="none">
             <header>
+              <h3 class="status avoid">avoid <i></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status avoid">avoid <i></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/paged-media">paged-media</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
-              <div class='recco'><p>This spec is actively under development, so we recommend you wait till there is enough implementations around.</p></div>
+              <div class='recco'><p>This spec is actively under development, so we recommend you wait until there are enough implementations around.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/paged-media.md>Edit info on paged-media</a>              
             </div>
@@ -465,13 +465,13 @@
         
           <article class="fallback">
             <header>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/pointer-events">pointer-events</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
-              <div class='recco'><p>Pointer events are available in SVG and CSS. All modern browsers support them in SVG, but IE and Opera do not support them in CSS yet. There is a <a href="https://github.com/ausi/Feature-detection-technique-for-pointer-events/blob/master/modernizr-pointerevents.js">modernizr plugin</a> to detect support which can be used to implement a JavaScript interceptor for elements which require pointer events to be disabled. </p></div>
+              <div class='recco'><p>Pointer events are available in SVG and CSS. All modern browsers support them in SVG, but IE and Opera do not support them in CSS yet. There is a <a href="https://github.com/Modernizr/Modernizr/feature-detects/pointerevents.js">modernizr plugin</a> to detect support which can be used to implement a JavaScript interceptor for elements which require pointer events to be disabled. </p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/pointer-events.md>Edit info on pointer-events</a>              
             </div>
@@ -480,10 +480,10 @@
         
           <article class="polyfill">
             <header>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind html">html</h4>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/progress">progress</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'></div>
@@ -495,10 +495,10 @@
         
           <article class="none">
             <header>
+              <h3 class="status use">use <i></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/pseudo-elements">pseudo-elements</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Pseudo-elements are supposed to follow this syntax <code>::before</code> and <code>::after</code>. But, if you intend to support IE7+, you would have to use <code>:before</code> and <code>:after</code>. Use these to provide only additional information, so when they are unsupported they do not destroy the readability of your page. </p></div>
@@ -510,10 +510,10 @@
         
           <article class="none">
             <header>
+              <h3 class="status avoid">avoid <i></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status avoid">avoid <i></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/regions">regions</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>CSS Regions is in active development. As a result, the syntax is in a flux. A polyfill based on an older syntax exists, but we recommend you hold your horses till this spec seems some stability and 3 or more implementations. </p></div>
@@ -525,10 +525,10 @@
         
           <article class="fallback">
             <header>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind html">html</h4>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/ruby">ruby</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>If you are using Ruby element you dont need a script-based fallback but you can provide a CSS based set of good defaults. </p></div>
@@ -540,10 +540,10 @@
         
           <article class="fallback">
             <header>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/selectors">selectors</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>CSS Selectors are supported from IE7 onwards, so you should be safe to use. But do note that, on browsers that do not support these selectors, a whole rule will be detected as invalid if these unsupported selectors are present. For example, in IE6 <code>#main, p:first-child {}</code> would be invalid because it is unable to understand <code>p:first-child</code>. Again, we strongly recommend you do not try to polyfill this, but if you do need one, you can use <a href="http://selectivizr.com/">Selectivizr</a>.</p></div>
@@ -555,10 +555,10 @@
         
           <article class="gtie8 polyfill">
             <header>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind svg">svg</h4>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/svg">svg</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>SVG has good support for several years in most browsers except IE. IE9 brings support, which means you can use a polyfill library like SVGWeb or Canvg or create SVG dynamically via RaphaelJS.</p></div>
@@ -570,10 +570,10 @@
         
           <article class="none">
             <header>
+              <h3 class="status use">use <i></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/text-overflow">text-overflow</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Text Overflow is most commonly used for <code>text-overflow: ellipsis</code>. With Firefox 7, all modern browsers now support this property prefixless and you should use it. On unsupported browsers, it merely does not render the ellipsis which we feel is not bad enough to merit a polyfill. However, there is a <a href="http://www.bramstein.com/projects/text-overflow/">jQuery plugin</a> in the unlikely event of you needing one. </p></div>
@@ -585,13 +585,13 @@
         
           <article class="fallback">
             <header>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/text-shadow">text-shadow</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
-              <div class='recco'><p>Let text-shadow render only when supported. </p></div>
+              <div class='recco'><p>Text-shadow enjoys support in modern browsers including IE 10+. For IE 8-9, use <code>:before</code> and <code>:after</code> pseudo-elements to generate text that can then be positioned, styled behind HTML text. An example of this can be found <a href="http://jsfiddle.net/9tsBq/">here</a>.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/text-shadow.md>Edit info on text-shadow</a>              
             </div>
@@ -600,10 +600,10 @@
         
           <article class="fallback">
             <header>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/transforms">transforms</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Make sure you use all the right prefixes (<code>-o-</code>, <code>-webkit</code>, <code>-ms-</code>, <code>-moz-</code>). If your transforms destroy the readability of your site on browsers that do not support them, use Modernizr's no-csstransforms class to adjust the design so that the text remains readable. In the unlikely event of you needing a polyfill for unsupported browsers, use <a href="https://github.com/pbakaus/transformie">Transformie</a> or <a href="http://www.useragentman.com/blog/csssandpaper-a-css3-javascript-library/">CSSSandpaper</a>.</p></div>
@@ -615,10 +615,10 @@
         
           <article class="fallback">
             <header>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/transitions">transitions</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>If there is any critical interaction that requires transitions to be present, we recommend you provide an alternative experience for users on browsers that do not support this feature by using feature detection. </p></div>
@@ -630,10 +630,10 @@
         
           <article class="polyfill">
             <header>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind html">html</h4>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/video">video</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'><p>Do note you need to supply your video in various formats to cater to all browsers and fallbacks. There is also a way to do this without any scripting as explained by Kroc Camen in his article <a href="http://camendesign.com/code/video_for_everybody">Video for Everybody</a>.</p></div>
@@ -645,13 +645,13 @@
         
           <article class="fallback">
             <header>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h2 class='name'><a href="http://caniuse.com/web-fonts">web-fonts</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
-              <div class='recco'><p>Use the <a href="http://www.fontsquirrel.com/fontface/generator">Font Squirrel Generator</a> for fonts you have license for using as web fonts. <a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax">Font Squirrel @font-face syntax</a> is also the most bullet-proof way of serving web fonts. You do not need polyfills just fonts in several formats. </p></div>
+              <div class='recco'><p>Use the <a href="http://www.fontsquirrel.com/fontface/generator">Font Squirrel Generator</a> for fonts you have license for using as web fonts. <a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax">Font Squirrel @font-face syntax</a> is also the most bullet-proof way of serving web fonts. You do not need polyfills - just fonts in several formats. </p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/web-fonts.md>Edit info on web-fonts</a>              
             </div>
@@ -662,7 +662,7 @@
     </div>
     <footer>
       <p>with love &amp; tears from</p>
-      <p class=builders><a href="http://twitter.com/divya"><img src="http://api.twitter.com/1/users/profile_image/divya?size=normal"><b>Divya</b> Manian</a> <a href="http://twitter.com/paul_irish"><img src="http://api.twitter.com/1/users/profile_image/paul_irish?size=normal"><b>Paul</b> Irish</a> <a href="http://twitter.com/tbranyen"><img src="http://api.twitter.com/1/users/profile_image/tbranyen?size=normal"><b>Tim</b> Branyen</a><a href="http://twitter.com/brianblakely"><img src="http://api.twitter.com/1/users/profile_image/brianblakely?size=normal"><b>Brian</b> Blakely</a> <a href='https://github.com/h5bp/html5please/contributors'>&amp; more</a>
+      <p class=builders><a href="http://twitter.com/divya"><img src="http://api.twitter.com/1/users/profile_image/divya?size=normal"><b>Divya</b> Manian</a> <a href="http://twitter.com/paul_irish"><img src="http://api.twitter.com/1/users/profile_image/paul_irish?size=normal"><b>Paul</b> Irish</a> <a href="http://twitter.com/tbranyen"><img src="http://api.twitter.com/1/users/profile_image/tbranyen?size=normal"><b>Tim</b> Branyen</a><a href="http://twitter.com/brianblakely"><img src="http://api.twitter.com/1/users/profile_image/brianblakely?size=normal"><b>Brian</b> Blakely</a> <a href="http://twitter.com/addyosmani"><img src="http://api.twitter.com/1/users/profile_image/addyosmani?size=normal"><b>Addy</b> Osmani</a> <a href='https://github.com/h5bp/html5please/contributors'>&amp; more</a>
         </p>
     </footer>
     <!-- scripts concatenated and minified via ant build script -->

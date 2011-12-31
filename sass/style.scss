@@ -289,29 +289,32 @@ article {
 }
 
 article > header {
+  @extend .clearfix;
   background: $lightest;
   border-radius: 0.3rem;
   box-shadow: 0 0 7px darken($lightest, 10%) inset;    
   position: relative;
   z-index: 1;
+  cursor: pointer;
   
   h4, h2, h3, a {
     @extend .reset-margin;
     display: inline-block;
     vertical-align: middle;    
   }
+  
+  h2, h4, a {
+    padding-top: 0.2rem;
+  }
 
   > a { 
-    position: absolute; 
-    right: 1rem; top: 1rem;
-    width: 2rem; height: 2rem;
+    margin: 0 0.5rem 0 1rem; 
     &:before {
-      @extend .display-block;
+      display: inline-block;
+      vertical-align: middle;
       content: "+";
-      position: absolute;
-      top: 0; left: 0;
       font-size: 2rem;
-      line-height: 2rem;
+      line-height: 1;
       border-radius: 2rem;   
       height: 2rem;   
       width: 2rem;
@@ -344,13 +347,13 @@ article > header {
     @extend .text-uppercase;
     background: indianred;
     font-size: 2em;    
-    border-radius: 0.2rem 0 0 0.2rem;
-    padding: 0.5rem 0.5rem 0.5rem 1rem;
-    margin-right: 1em;
+    border-radius: 0 0.2rem 0.2rem 0;
+    padding: 0 1rem 0 0.5rem;
     color: white;
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px 1px black;
     position: relative;
-    box-shadow: 4px 0px 6px darken(#CD5C5C, 12%) inset;
+    float: right;
+    box-shadow: -4px 0px 6px darken(#CD5C5C, 12%) inset;
     
     //Arrow like figures on the right
     &:before, 
@@ -359,15 +362,15 @@ article > header {
       height: 50%;
       width: 0.8em;
       position: absolute;
-      right: -0.8em; 
-      @include background(linear-gradient(34deg, #CD5C5C 50%,  darken(#CD5C5C, 10%) 53%, transparentize(#CD5C5C, 1) 56%));    
+      left: -0.8em; 
+      @include background(linear-gradient(34deg, transparentize(#CD5C5C, 1), transparentize(#CD5C5C, 1) 50%, darken(#CD5C5C, 10%) 53%, #CD5C5C 56%));    
     }
     
     &:before { top: 0; }
     
     &:after {
       bottom: 0;
-      @include background(linear-gradient(-34deg, #CD5C5C 50%, darken(#CD5C5C, 10%) 53%, transparentize(#CD5C5C, 1) 56%));          
+      @include background(linear-gradient(-34deg, transparentize(#CD5C5C, 1), transparentize(#CD5C5C, 1) 50%, darken(#CD5C5C, 10%) 53%, #CD5C5C 56%));          
     }
     
     i {
@@ -376,6 +379,7 @@ article > header {
       line-height: 1;
       text-transform: none; 
       font-weight: normal;
+
       b {
         @extend .display-block;
         font-size: 1.5em;
@@ -384,25 +388,25 @@ article > header {
     
     &.use { 
       background: olive; 
-      box-shadow: 4px 0px 6px darken(olive, 12%) inset;
+      box-shadow: -4px 0px 4px darken(olive, 5%) inset;
       &:before{
-        @include background(linear-gradient(34deg, olive 50%,  darken(olive, 5%) 53%, transparentize(olive, 1) 56%));                    
+        @include background(linear-gradient(34deg, transparentize(olive, 1),  transparentize(olive, 1) 50%, darken(olive, 5%) 53%,  olive 56%));                    
       }
       
       &:after {
-        @include background(linear-gradient(-34deg, olive 50%, darken(olive, 5%) 53%, transparentize(olive, 1) 56%));                  
+        @include background(linear-gradient(-34deg, transparentize(olive, 1),  transparentize(olive, 1) 50%, darken(olive, 5%) 53%,  olive 56%));                  
       }
     }
     
     &.caution { 
-      background: orange; 
-      box-shadow: 4px 0 6px darken(#ffa500, 12%) inset;
+      background: darken(#ffa500, 5%); 
+      box-shadow: -4px 0 6px darken(#ffa500, 12%) inset;
       &:before{
-        @include background(linear-gradient(34deg, #FFA500 50%, darken(#ffa500, 5%) 53%, transparentize(#ffa500, 1) 56%));            
+        @include background(linear-gradient(34deg, transparentize(#ffa500, 1), transparentize(#ffa500, 1) 50%, #FFA500 53%, darken(#ffa500, 5%) 56%));            
       }
       
       &:after {
-        @include background(linear-gradient(-34deg, #FFA500 50%, darken(#ffa500, 5%) 53%, transparentize(#ffa500, 1) 56%));                  
+        @include background(linear-gradient(-34deg, transparentize(#ffa500, 1), transparentize(#ffa500, 1) 50%, #FFA500 53%, darken(#ffa500, 5%) 56%));                  
       }
     }  
   }   

@@ -16,7 +16,7 @@
     "backbone": "0.5.3",
     "underscore": "1.2.2",
     "handlebars": "*",
-    "node-markdown": "*"    
+    "node-markdown": "*"
   },
   "devDependencies": {}
 }

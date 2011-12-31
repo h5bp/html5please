@@ -28,10 +28,10 @@
         {{#features}}
           <article class="{{tags}}">
             <header>
+              <h3 class="status {{status}}">{{status}} <i>{{{polyfillaction tags}}}</i> </h3>                            
+              <a class=expand title="open"></a>                            
               <h4 class="kind {{kind}}">{{kind}}</h4>
-              <h3 class="status {{status}}">{{status}} <i>{{{polyfillaction tags}}}</i> </h3>
               <h2 class='name'><a href="http://caniuse.com/{{{feature}}}">{{{feature}}}</a></h2>
-              <a class=expand title="open"></a>              
             </header>
             <div class="more">
               <div class='recco'>{{{contents}}}</div>
