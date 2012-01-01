@@ -1,4 +1,5 @@
 @import "compass/css3/gradient";
+@import "compass/css3/box-sizing";
 @import "vars";
 
 @mixin our-transition($arg) {
@@ -170,7 +171,7 @@ table { border-collapse: collapse; border-spacing: 0; }
    Primary styles
    Author: Divya Manian
    ========================================================================== */
-* { box-sizing: border-box; }
+* { @include box-sizing(border-box); }
 
 @import "extends";
    
