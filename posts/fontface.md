@@ -1,4 +1,4 @@
-feature: web-fonts
+feature: fontface
 status: use
 tags: fallback
 kind: css

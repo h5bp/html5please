@@ -1,4 +1,4 @@
-feature: offline-events
+feature: offline
 status: caution
 tags: polyfill
 kind: html

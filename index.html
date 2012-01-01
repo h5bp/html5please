@@ -266,17 +266,32 @@
             <footer class="tags">none</footer>
           </article>          
         
+          <article class="fallback">
+            <header>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                            
+              <a class=expand title="open"></a>                            
+              <h4 class="kind css">css</h4>
+              <h2 class='name'><a href="http://caniuse.com/fontface">fontface</a></h2>
+            </header>
+            <div class="more">
+              <div class='recco'><p>Use the <a href="http://www.fontsquirrel.com/fontface/generator">Font Squirrel Generator</a> for fonts you have license for using as web fonts. <a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax">Font Squirrel @font-face syntax</a> is also the most bullet-proof way of serving web fonts. You do not need polyfills - just fonts in several formats. </p></div>
+              <div class='polyfills'></div> 
+              <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/fontface.md>Edit info on fontface</a>              
+            </div>
+            <footer class="tags">fallback</footer>
+          </article>          
+        
           <article class="polyfill">
             <header>
               <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                            
               <a class=expand title="open"></a>                            
               <h4 class="kind html">html</h4>
-              <h2 class='name'><a href="http://caniuse.com/geo-location">geo-location</a></h2>
+              <h2 class='name'><a href="http://caniuse.com/geolocation">geolocation</a></h2>
             </header>
             <div class="more">
               <div class='recco'><p>The Geolocation shim requires jQuery to work, but if you are looking for a mobile specific script, you are better off using geo-location-javascript.</p></div>
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/366184">Geolocation Shim</a>, <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a>, <a href="https://github.com/teleject/HTML5-GeoLocation-jQuery-Plugin">HTML5 Geolocation jQuery Plugin</a></p></div> 
-              <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/geo-location.md>Edit info on geo-location</a>              
+              <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/geolocation.md>Edit info on geolocation</a>              
             </div>
             <footer class="tags">polyfill</footer>
           </article>          
@@ -363,12 +378,12 @@
               <h3 class="status use">use <i></i> </h3>                            
               <a class=expand title="open"></a>                            
               <h4 class="kind css">css</h4>
-              <h2 class='name'><a href="http://caniuse.com/media-queries">media-queries</a></h2>
+              <h2 class='name'><a href="http://caniuse.com/mediaqueries">mediaqueries</a></h2>
             </header>
             <div class="more">
               <div class='recco'><p>Media Queries work on all modern browsers. IE6,7,8 unfortunately do not understand media queries on features, which means none of your CSS within media queries will be parsed by them. We recommend you make peace with that (or use Chrome Frame), but if you absolutely cannot, then you can use <a href="https://github.com/scottjehl/Respond">Respond.js</a>.</p></div>
               <div class='polyfills'></div> 
-              <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/media-queries.md>Edit info on media-queries</a>              
+              <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/mediaqueries.md>Edit info on mediaqueries</a>              
             </div>
             <footer class="tags">none</footer>
           </article>          
@@ -403,6 +418,21 @@
             <footer class="tags">polyfill</footer>
           </article>          
         
+          <article class="prefixes">
+            <header>
+              <h3 class="status use">use <i></i> </h3>                            
+              <a class=expand title="open"></a>                            
+              <h4 class="kind css">css</h4>
+              <h2 class='name'><a href="http://caniuse.com/multicolumn">multicolumn</a></h2>
+            </header>
+            <div class="more">
+              <div class='recco'><p>IE, and Opera support CSS3 Multicol without prefixes. So you only need <code>-webkit</code> and <code>-moz</code>. We recommend you do not polyfill this, but a basic <a href="http://www.csscripting.com/css-multi-column/">Multicol Polyfill</a> exists. </p></div>
+              <div class='polyfills'></div> 
+              <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/multicolumn.md>Edit info on multicolumn</a>              
+            </div>
+            <footer class="tags">prefixes</footer>
+          </article>          
+        
           <article class="fallback">
             <header>
               <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                            
@@ -418,32 +448,17 @@
             <footer class="tags">fallback</footer>
           </article>          
         
-          <article class="prefixes">
-            <header>
-              <h3 class="status use">use <i></i> </h3>                            
-              <a class=expand title="open"></a>                            
-              <h4 class="kind css">css</h4>
-              <h2 class='name'><a href="http://caniuse.com/multiple-columns">multiple-columns</a></h2>
-            </header>
-            <div class="more">
-              <div class='recco'><p>IE, and Opera support CSS3 Multicol without prefixes. So you only need <code>-webkit</code> and <code>-moz</code>. We recommend you do not polyfill this, but a basic <a href="http://www.csscripting.com/css-multi-column/">Multicol Polyfill</a> exists. </p></div>
-              <div class='polyfills'></div> 
-              <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/multiple-columns.md>Edit info on multiple-columns</a>              
-            </div>
-            <footer class="tags">prefixes</footer>
-          </article>          
-        
           <article class="polyfill">
             <header>
               <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>                            
               <a class=expand title="open"></a>                            
               <h4 class="kind html">html</h4>
-              <h2 class='name'><a href="http://caniuse.com/offline-events">offline-events</a></h2>
+              <h2 class='name'><a href="http://caniuse.com/offline">offline</a></h2>
             </header>
             <div class="more">
               <div class='recco'><p>…</p></div>
               <div class='polyfills'></div> 
-              <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/offline-events.md>Edit info on offline-events</a>              
+              <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/offline.md>Edit info on offline</a>              
             </div>
             <footer class="tags">polyfill</footer>
           </article>          
@@ -641,21 +656,6 @@
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/video.md>Edit info on video</a>              
             </div>
             <footer class="tags">polyfill</footer>
-          </article>          
-        
-          <article class="fallback">
-            <header>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                            
-              <a class=expand title="open"></a>                            
-              <h4 class="kind css">css</h4>
-              <h2 class='name'><a href="http://caniuse.com/web-fonts">web-fonts</a></h2>
-            </header>
-            <div class="more">
-              <div class='recco'><p>Use the <a href="http://www.fontsquirrel.com/fontface/generator">Font Squirrel Generator</a> for fonts you have license for using as web fonts. <a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax">Font Squirrel @font-face syntax</a> is also the most bullet-proof way of serving web fonts. You do not need polyfills - just fonts in several formats. </p></div>
-              <div class='polyfills'></div> 
-              <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/web-fonts.md>Edit info on web-fonts</a>              
-            </div>
-            <footer class="tags">fallback</footer>
           </article>          
             
       </section>

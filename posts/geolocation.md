@@ -1,4 +1,4 @@
-feature: geo-location
+feature: geolocation
 status: use
 tags: polyfill
 kind: html

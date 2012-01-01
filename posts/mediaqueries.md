@@ -1,4 +1,4 @@
-feature: media-queries
+feature: mediaqueries
 status: use
 tags: none
 kind: css

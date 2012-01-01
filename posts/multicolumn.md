@@ -1,4 +1,4 @@
-feature: multiple-columns
+feature: multicolumn
 status: use
 tags: prefixes
 kind: css
