@@ -195,58 +195,53 @@ body {
   max-width: 70%;
   margin: 3em auto;
   min-width: 60%;
-  font: 16px/1.5 'Open Sans', sans-serif;
+  font: 16px/1.5 $default-font-family;
 }
 
-header.index { @extend .text-center; }
+.index { 
+  @extend .text-center; 
+  
+  h1 {
+    @extend .text-uppercase;
+    font-size: 5em; 
+    line-height: 1.2em;   
+    text-shadow: solid-text-shadows(lighten($contrast, 10%), 3), 3px 3px 1px darken($dark, 10%), 4px 4px 3px darken($dark, 10%);
+    margin: 0.8em 0 0.5em 0; 
 
-article h2 { @extend .text-uppercase; }
-
-header.index h1{ 
-  @extend .text-uppercase;
-  font-size: 5em; 
-  line-height: 1.2em;   
-  text-shadow: solid-text-shadows(lighten($contrast, 10%), 3), 3px 3px 1px darken($dark, 10%), 4px 4px 3px darken($dark, 10%);
-  margin: 0.8em 0 0.5em 0; 
+    img { vertical-align: -10%; }    
+  }
+  
+  h2 {
+    font-size: 1em;  
+    margin: 0 auto; 
+    max-width: 60%; 
+    text-shadow: 1px 1px 1px darken($dark, 10%);
+    font-weight: normal; 
+    text-transform: none; 
+    font-style: normal;    
+    
+    b {
+      @extend .display-block;   
+      font-size: 2em; 
+      color: lighten($contrast, 10%);          
+    }
+  }
+  
+  h1, h2 b { font-family: $index-font-family; }  
 }
 
-header.index h1 img { vertical-align: -10%; }
-
-header.index h1 + h2 { 
-  font-size: 1em;  
-  margin: 0 auto; 
-  max-width: 60%; 
-  text-shadow: 1px 1px 1px darken($dark, 10%);
-}
-header.index h1, header.index h2 b { font-family: 'Francois One', sans-serif; }
-
-header.index h2 b {
-  @extend .display-block;   
-  font-size: 2em; 
-  color: lighten($contrast, 10%); 
-}
-
-header.index h1 b, 
-header.index h3, 
+.index h1 b,  
 article h3 b i { 
   @extend .display-block;
   @extend .text-uppercase;  
-  font-family: 'Open Sans', sans-serif;  
+  font-family: $default-font-family;  
   line-height: 1;  
 }
 
 
+.index > div { padding: 1em 0 4em 0; }
 
-header.index h3, 
-header.index h2 { 
-  font-weight: normal; 
-  text-transform: none; 
-  font-style: normal; 
-}
-
-header.index > div { padding: 1em 0 4em 0; }
-
-header.index input[type="search"] { 
+.index input[type="search"] { 
   width: 50%; 
   padding: 0.5em 1em; 
   background: white;
@@ -275,61 +270,48 @@ header.index input[type="search"] {
   position: absolute;
 }
 
-header.index h3 { @extend .reset-margin; }
-
-article h2 { 
-  color: $dark; 
-  text-shadow: 1px 1px 1px darken(#149CD7, 20%);  
-  letter-spacing: 1px;
-}
-
 article { 
   color: $dark;
   margin-bottom: 2em; 
 }
 
 article > header {
-  @extend .clearfix;
+  overflow: hidden;
   background: $lightest;
   border-radius: 0.3rem;
   box-shadow: 0 0 7px darken($lightest, 10%) inset;    
   position: relative;
   z-index: 1;
   cursor: pointer;
-  
-  h4, h2, h3, a {
+
+  &:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "+";
+    font-size: 2rem;
+    line-height: 1;
+    border-radius: 2rem;   
+    height: 2rem; width: 2rem;
+    margin: 0.4rem 0.5rem 0 1rem;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px darken($lightest, 40%);
+    box-shadow: 0 0 7px darken($lightest, 30%) inset;
+    background: darken($lightest, 20%);      
+  }
+    
+  .kind, .name, .status {
     @extend .reset-margin;
     display: inline-block;
     vertical-align: middle;    
   }
   
-  h2, h4, a {
-    padding-top: 0.2rem;
-  }
-
-  > a { 
-    margin: 0 0.5rem 0 1rem; 
-    &:before {
-      display: inline-block;
-      vertical-align: middle;
-      content: "+";
-      font-size: 2rem;
-      line-height: 1;
-      border-radius: 2rem;   
-      height: 2rem;   
-      width: 2rem;
-      text-align: center;
-      color: white;
-      text-shadow: 1px 1px 1px darken($lightest, 40%);
-      box-shadow: 0 0 7px darken($lightest, 30%) inset;
-      background: darken($lightest, 20%);      
-    }
-  }  
+  .name, .kind { padding-top: 0.4rem; }
   
   i { font-style: normal; }
-  h4, b { font-weight: normal; }
+  .kind, b { font-weight: normal; }
   
-  h4 {
+  .kind {
     @extend .text-uppercase;    
     @extend .display-block;
     font-size: 0.8em;
@@ -343,79 +325,84 @@ article > header {
     text-shadow: 1px 1px 1px $dark;
   }
   
-  h3 {
-    @extend .text-uppercase;
-    background: indianred;
-    font-size: 2em;    
-    border-radius: 0 0.2rem 0.2rem 0;
-    padding: 0 1rem 0 0.5rem;
-    color: white;
-    text-shadow: 1px 1px 1px black;
-    position: relative;
-    float: right;
-    box-shadow: -4px 0px 6px darken(#CD5C5C, 12%) inset;
+  .name {
+    @extend .text-uppercase;     
+    text-shadow: 1px 1px 1px darken(#149CD7, 40%);  
+    letter-spacing: 1px;   
     
-    //Arrow like figures on the right
-    &:before, 
-    &:after {
-      content: "";
-      height: 50%;
-      width: 0.8em;
-      position: absolute;
-      left: -0.8em; 
-      @include background(linear-gradient(34deg, transparentize(#CD5C5C, 1), transparentize(#CD5C5C, 1) 50%, darken(#CD5C5C, 10%) 53%, #CD5C5C 56%));    
-    }
-    
-    &:before { top: 0; }
-    
-    &:after {
-      bottom: 0;
-      @include background(linear-gradient(-34deg, transparentize(#CD5C5C, 1), transparentize(#CD5C5C, 1) 50%, darken(#CD5C5C, 10%) 53%, #CD5C5C 56%));          
-    }
-    
-    i {
-      font-size: 0.3em;
-      display: inline-block;
-      line-height: 1;
-      text-transform: none; 
-      font-weight: normal;
+    a { color: darken($link-color, 5%); } 
+  }  
+}
 
-      b {
-        @extend .display-block;
-        font-size: 1.5em;
-      }
-    }
-    
-    &.use { 
-      background: olive; 
-      box-shadow: -4px 0px 4px darken(olive, 5%) inset;
-      &:before{
-        @include background(linear-gradient(34deg, transparentize(olive, 1),  transparentize(olive, 1) 50%, darken(olive, 5%) 53%,  olive 56%));                    
-      }
-      
-      &:after {
-        @include background(linear-gradient(-34deg, transparentize(olive, 1),  transparentize(olive, 1) 50%, darken(olive, 5%) 53%,  olive 56%));                  
-      }
-    }
-    
-    &.caution { 
-      background: darken(#ffa500, 5%); 
-      box-shadow: -4px 0 6px darken(#ffa500, 12%) inset;
-      &:before{
-        @include background(linear-gradient(34deg, transparentize(#ffa500, 1), transparentize(#ffa500, 1) 50%, #FFA500 53%, darken(#ffa500, 5%) 56%));            
-      }
-      
-      &:after {
-        @include background(linear-gradient(-34deg, transparentize(#ffa500, 1), transparentize(#ffa500, 1) 50%, #FFA500 53%, darken(#ffa500, 5%) 56%));                  
-      }
-    }  
-  }   
+.status {
+  @extend .text-uppercase;
+  background: indianred;
+  font-size: 2em;    
+  border-radius: 0 0.2rem 0.2rem 0;
+  padding: 0 1rem 0 0.5rem;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  position: relative;
+  float: right;
+  box-shadow: -4px 0px 6px darken(#CD5C5C, 12%) inset;
   
+  //Arrow like figures on the right
+  &:before, 
+  &:after {
+    content: "";
+    height: 50%;
+    width: 0.8em;
+    position: absolute;
+    left: -0.8em; 
+    @include background(linear-gradient(34deg, transparentize(#CD5C5C, 1), transparentize(#CD5C5C, 1) 50%, darken(#CD5C5C, 10%) 53%, #CD5C5C 56%));    
+  }
+  
+  &:before { top: 0; }
+  
+  &:after {
+    bottom: 0;
+    @include background(linear-gradient(-34deg, transparentize(#CD5C5C, 1), transparentize(#CD5C5C, 1) 50%, darken(#CD5C5C, 10%) 53%, #CD5C5C 56%));          
+  }
+  
+  i {
+    font-size: 0.3em;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none; 
+    font-weight: normal;
+
+    b {
+      @extend .display-block;
+      font-size: 1.5em;
+    }
+  }
+  
+  &.use { 
+    background: olive; 
+    box-shadow: -4px 0px 4px darken(olive, 5%) inset;
+    &:before{
+      @include background(linear-gradient(34deg, transparentize(olive, 1),  transparentize(olive, 1) 50%, darken(olive, 5%) 53%,  olive 56%));                    
+    }
+    
+    &:after {
+      @include background(linear-gradient(-34deg, transparentize(olive, 1),  transparentize(olive, 1) 50%, darken(olive, 5%) 53%,  olive 56%));                  
+    }
+  }
+  
+  &.caution { 
+    background: darken(#ffa500, 5%); 
+    box-shadow: -4px 0 6px darken(#ffa500, 12%) inset;
+    &:before{
+      @include background(linear-gradient(34deg, transparentize(#ffa500, 1), transparentize(#ffa500, 1) 50%, #FFA500 53%, darken(#ffa500, 5%) 56%));            
+    }
+    
+    &:after {
+      @include background(linear-gradient(-34deg, transparentize(#ffa500, 1), transparentize(#ffa500, 1) 50%, #FFA500 53%, darken(#ffa500, 5%) 56%));                  
+    }
+  }  
 }
 
-article .tags { 
-  display: none;
-}
+article .tags { display: none; }
 
 article div.more {   
   display: none;
@@ -434,23 +421,7 @@ article div.more {
   .polyfills b { font-weight: bold; }
   
   .polyfills p { display: inline; }
-}
-
-article.expanded {
-  > header {
-    border-bottom: 1px solid lighten($dark, 45%);
-    box-shadow: 0 0 7px darken($lightest, 10%) inset, 0 1px 7px lighten($dark, 35%);      
-  }
-  > header > a:before {
-      content: "-"; 
-      line-height: 1.7rem;   
-  }
   
-  div.more { 
-    @extend .display-block;
-    opacity: 1; 
-  }
-
   .updateurl {
     @extend .text-uppercase;
     font-size: 0.8em;
@@ -458,6 +429,20 @@ article.expanded {
     bottom: 0.5em;
     right: 1em;    
   }  
+}
+
+article.expanded {
+  > header {
+    border-bottom: 1px solid lighten($dark, 45%);
+    box-shadow: 0 0 7px darken($lightest, 10%) inset, 0 1px 7px lighten($dark, 35%);      
+    
+    &:before { content: "-"; line-height: 1.7rem; }
+  }
+  
+  div.more { 
+    @extend .display-block;
+    opacity: 1; 
+  }
 }
 
 body > footer {

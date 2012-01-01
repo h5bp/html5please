@@ -239,19 +239,17 @@ table {
   box-sizing: border-box;
 }
 
-.text-center, header.index {
+.text-center, .index {
   text-align: center;
 }
 
-.text-uppercase, article h2, header.index h1, header.index h1 b,
-header.index h3,
-article h3 b i, #searchurl, article > header h4, article > header h3, article.expanded .updateurl, body > footer p:first-child {
+.text-uppercase, .index h1, .index h1 b,
+article h3 b i, #searchurl, article > header .kind, article > header .name, .status, article div.more .updateurl, body > footer p:first-child {
   text-transform: uppercase;
 }
 
-.display-block, header.index h2 b, header.index h1 b,
-header.index h3,
-article h3 b i, #searchurl, article > header h4, article > header h3 i b, article.expanded div.more {
+.display-block, .index h2 b, .index h1 b,
+article h3 b i, #searchurl, article > header .kind, .status i b, article.expanded div.more {
   display: block;
 }
 
@@ -259,7 +257,7 @@ article h3 b i, #searchurl, article > header h4, article > header h3 i b, articl
   display: inline;
 }
 
-.reset-margin, body, nav ul, nav ol, figure, form, fieldset, button, input, select, textarea, header.index h3, article > header h4, article > header h2, article > header h3, article > header a, .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+.reset-margin, body, nav ul, nav ol, figure, form, fieldset, button, input, select, textarea, article > header .kind, article > header .name, article > header .status, .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
   margin: 0;
 }
 
@@ -283,52 +281,43 @@ body {
   font: 16px/1.5 "Open Sans", sans-serif;
 }
 
-header.index h1 {
+.index h1 {
   font-size: 5em;
   line-height: 1.2em;
   text-shadow: 1px 1px 1px #e88860, 2px 2px 1px #e88860, 3px 3px 1px #e88860, 3px 3px 1px #0c0d0d, 4px 4px 3px #0c0d0d;
   margin: 0.8em 0 0.5em 0;
 }
-
-header.index h1 img {
+.index h1 img {
   vertical-align: -10%;
 }
-
-header.index h1 + h2 {
+.index h2 {
   font-size: 1em;
   margin: 0 auto;
   max-width: 60%;
   text-shadow: 1px 1px 1px #0c0d0d;
-}
-
-header.index h1, header.index h2 b {
-  font-family: 'Francois One', sans-serif;
-}
-
-header.index h2 b {
-  font-size: 2em;
-  color: #e88860;
-}
-
-header.index h1 b,
-header.index h3,
-article h3 b i {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1;
-}
-
-header.index h3,
-header.index h2 {
   font-weight: normal;
   text-transform: none;
   font-style: normal;
 }
+.index h2 b {
+  font-size: 2em;
+  color: #e88860;
+}
+.index h1, .index h2 b {
+  font-family: "Francois One", sans-serif;
+}
 
-header.index > div {
+.index h1 b,
+article h3 b i {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1;
+}
+
+.index > div {
   padding: 1em 0 4em 0;
 }
 
-header.index input[type="search"] {
+.index input[type="search"] {
   width: 50%;
   padding: 0.5em 1em;
   background: white;
@@ -362,18 +351,13 @@ header.index input[type="search"] {
   position: absolute;
 }
 
-article h2 {
-  color: #232927;
-  text-shadow: 1px 1px 1px #0b587a;
-  letter-spacing: 1px;
-}
-
 article {
   color: #232927;
   margin-bottom: 2em;
 }
 
 article > header {
+  overflow: hidden;
   background: #e3d7bf;
   border-radius: 0.3rem;
   box-shadow: 0 0 7px #d3c19c inset;
@@ -381,17 +365,7 @@ article > header {
   z-index: 1;
   cursor: pointer;
 }
-article > header h4, article > header h2, article > header h3, article > header a {
-  display: inline-block;
-  vertical-align: middle;
-}
-article > header h2, article > header h4, article > header a {
-  padding-top: 0.2rem;
-}
-article > header > a {
-  margin: 0 0.5rem 0 1rem;
-}
-article > header > a:before {
+article > header:before {
   display: inline-block;
   vertical-align: middle;
   content: "+";
@@ -400,19 +374,27 @@ article > header > a:before {
   border-radius: 2rem;
   height: 2rem;
   width: 2rem;
+  margin: 0.4rem 0.5rem 0 1rem;
   text-align: center;
   color: white;
   text-shadow: 1px 1px 1px #957941;
   box-shadow: 0 0 7px #b49455 inset;
   background: #c4ab78;
 }
+article > header .kind, article > header .name, article > header .status {
+  display: inline-block;
+  vertical-align: middle;
+}
+article > header .name, article > header .kind {
+  padding-top: 0.4rem;
+}
 article > header i {
   font-style: normal;
 }
-article > header h4, article > header b {
+article > header .kind, article > header b {
   font-weight: normal;
 }
-article > header h4 {
+article > header .kind {
   font-size: 0.8em;
   color: #e3d7bf;
   position: absolute;
@@ -423,7 +405,15 @@ article > header h4 {
   z-index: 1;
   text-shadow: 1px 1px 1px #232927;
 }
-article > header h3 {
+article > header .name {
+  text-shadow: 1px 1px 1px #03151c;
+  letter-spacing: 1px;
+}
+article > header .name a {
+  color: #128bc0;
+}
+
+.status {
   background: indianred;
   font-size: 2em;
   border-radius: 0 0.2rem 0.2rem 0;
@@ -434,7 +424,7 @@ article > header h3 {
   float: right;
   box-shadow: -4px 0px 6px #b43737 inset;
 }
-article > header h3:before, article > header h3:after {
+.status:before, .status:after {
   content: "";
   height: 50%;
   width: 0.8em;
@@ -446,10 +436,10 @@ article > header h3:before, article > header h3:after {
   background: -ms-linear-gradient(34deg, rgba(205, 92, 92, 0), rgba(205, 92, 92, 0) 50%, #bc3a3a 53%, #cd5c5c 56%);
   background: linear-gradient(34deg, rgba(205, 92, 92, 0), rgba(205, 92, 92, 0) 50%, #bc3a3a 53%, #cd5c5c 56%);
 }
-article > header h3:before {
+.status:before {
   top: 0;
 }
-article > header h3:after {
+.status:after {
   bottom: 0;
   background: -webkit-linear-gradient(-34deg, rgba(205, 92, 92, 0), rgba(205, 92, 92, 0) 50%, #bc3a3a 53%, #cd5c5c 56%);
   background: -moz-linear-gradient(-34deg, rgba(205, 92, 92, 0), rgba(205, 92, 92, 0) 50%, #bc3a3a 53%, #cd5c5c 56%);
@@ -457,46 +447,46 @@ article > header h3:after {
   background: -ms-linear-gradient(-34deg, rgba(205, 92, 92, 0), rgba(205, 92, 92, 0) 50%, #bc3a3a 53%, #cd5c5c 56%);
   background: linear-gradient(-34deg, rgba(205, 92, 92, 0), rgba(205, 92, 92, 0) 50%, #bc3a3a 53%, #cd5c5c 56%);
 }
-article > header h3 i {
+.status i {
   font-size: 0.3em;
   display: inline-block;
   line-height: 1;
   text-transform: none;
   font-weight: normal;
 }
-article > header h3 i b {
+.status i b {
   font-size: 1.5em;
 }
-article > header h3.use {
+.status.use {
   background: olive;
   box-shadow: -4px 0px 4px #666700 inset;
 }
-article > header h3.use:before {
+.status.use:before {
   background: -webkit-linear-gradient(34deg, rgba(128, 128, 0, 0), rgba(128, 128, 0, 0) 50%, #666700 53%, #808000 56%);
   background: -moz-linear-gradient(34deg, rgba(128, 128, 0, 0), rgba(128, 128, 0, 0) 50%, #666700 53%, #808000 56%);
   background: -o-linear-gradient(34deg, rgba(128, 128, 0, 0), rgba(128, 128, 0, 0) 50%, #666700 53%, #808000 56%);
   background: -ms-linear-gradient(34deg, rgba(128, 128, 0, 0), rgba(128, 128, 0, 0) 50%, #666700 53%, #808000 56%);
   background: linear-gradient(34deg, rgba(128, 128, 0, 0), rgba(128, 128, 0, 0) 50%, #666700 53%, #808000 56%);
 }
-article > header h3.use:after {
+.status.use:after {
   background: -webkit-linear-gradient(-34deg, rgba(128, 128, 0, 0), rgba(128, 128, 0, 0) 50%, #666700 53%, #808000 56%);
   background: -moz-linear-gradient(-34deg, rgba(128, 128, 0, 0), rgba(128, 128, 0, 0) 50%, #666700 53%, #808000 56%);
   background: -o-linear-gradient(-34deg, rgba(128, 128, 0, 0), rgba(128, 128, 0, 0) 50%, #666700 53%, #808000 56%);
   background: -ms-linear-gradient(-34deg, rgba(128, 128, 0, 0), rgba(128, 128, 0, 0) 50%, #666700 53%, #808000 56%);
   background: linear-gradient(-34deg, rgba(128, 128, 0, 0), rgba(128, 128, 0, 0) 50%, #666700 53%, #808000 56%);
 }
-article > header h3.caution {
+.status.caution {
   background: #e69500;
   box-shadow: -4px 0 6px #c27d00 inset;
 }
-article > header h3.caution:before {
+.status.caution:before {
   background: -webkit-linear-gradient(34deg, rgba(255, 165, 0, 0), rgba(255, 165, 0, 0) 50%, #ffa500 53%, #e69500 56%);
   background: -moz-linear-gradient(34deg, rgba(255, 165, 0, 0), rgba(255, 165, 0, 0) 50%, #ffa500 53%, #e69500 56%);
   background: -o-linear-gradient(34deg, rgba(255, 165, 0, 0), rgba(255, 165, 0, 0) 50%, #ffa500 53%, #e69500 56%);
   background: -ms-linear-gradient(34deg, rgba(255, 165, 0, 0), rgba(255, 165, 0, 0) 50%, #ffa500 53%, #e69500 56%);
   background: linear-gradient(34deg, rgba(255, 165, 0, 0), rgba(255, 165, 0, 0) 50%, #ffa500 53%, #e69500 56%);
 }
-article > header h3.caution:after {
+.status.caution:after {
   background: -webkit-linear-gradient(-34deg, rgba(255, 165, 0, 0), rgba(255, 165, 0, 0) 50%, #ffa500 53%, #e69500 56%);
   background: -moz-linear-gradient(-34deg, rgba(255, 165, 0, 0), rgba(255, 165, 0, 0) 50%, #ffa500 53%, #e69500 56%);
   background: -o-linear-gradient(-34deg, rgba(255, 165, 0, 0), rgba(255, 165, 0, 0) 50%, #ffa500 53%, #e69500 56%);
@@ -529,23 +519,23 @@ article div.more .polyfills b {
 article div.more .polyfills p {
   display: inline;
 }
+article div.more .updateurl {
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 0.5em;
+  right: 1em;
+}
 
 article.expanded > header {
   border-bottom: 1px solid #91a19b;
   box-shadow: 0 0 7px #d3c19c inset, 0 1px 7px #758983;
 }
-article.expanded > header > a:before {
+article.expanded > header:before {
   content: "-";
   line-height: 1.7rem;
 }
 article.expanded div.more {
   opacity: 1;
-}
-article.expanded .updateurl {
-  font-size: 0.8em;
-  position: absolute;
-  bottom: 0.5em;
-  right: 1em;
 }
 
 body > footer {
@@ -615,16 +605,16 @@ body > footer .builders b {
   visibility: hidden;
 }
 
-.clearfix:before, article > header:before, .clearfix:after, article > header:after {
+.clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
 
-.clearfix:after, article > header:after {
+.clearfix:after {
   clear: both;
 }
 
-.clearfix, article > header {
+.clearfix {
   zoom: 1;
 }
 

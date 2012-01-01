@@ -35,8 +35,10 @@ var expandfeatures = document.querySelectorAll('.features article header'),
 for(var i = 0; i < count; i++) {
   expandfeatures[i].onclick = function(e) {
       e = e || window.event;
-      var parent = (e.target || e.srcElement).parentNode;
+      var node = e.target || e.srcElement;
+      var parent = node.parentNode;
       classList(parent).toggle('expanded');
+      node.setAttribute('title', node.getAttribute('title') == 'expand' ? 'minimize' : 'expand');
   };
 }    
 
