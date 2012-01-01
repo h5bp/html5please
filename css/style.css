@@ -332,9 +332,10 @@ article h3 b i {
 
 #searchurl {
   -webkit-transition: height 500ms linear;
-  -o-transition: height 500ms linear;
   -moz-transition: height 500ms linear;
   -ms-transition: height 500ms linear;
+  -o-transition: height 500ms linear;
+  transition: height 500ms linear;
   background: -webkit-linear-gradient(90deg, #f16529, #f48759);
   background: -moz-linear-gradient(90deg, #f16529, #f48759);
   background: -o-linear-gradient(90deg, #f16529, #f48759);
@@ -512,9 +513,10 @@ article div.more {
   z-index: 0;
   box-shadow: 0 0 7px #0c0d0d;
   -webkit-transition: opacity 1s ease-in;
-  -o-transition: opacity 1s ease-in;
   -moz-transition: opacity 1s ease-in;
   -ms-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
 }
 article div.more .polyfills b {
   font-weight: bold;

@@ -4,9 +4,10 @@
 
 @mixin our-transition($arg) {
   -webkit-transition: unquote($arg);
-  -o-transition: unquote($arg);
-  -moz-transition: unquote($arg);
-  -ms-transition: unquote($arg);
+     -moz-transition: unquote($arg);
+      -ms-transition: unquote($arg);
+       -o-transition: unquote($arg);
+          transition: unquote($arg);
 }
 
 @mixin text-shadows($arg) {
