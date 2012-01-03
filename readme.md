@@ -4,11 +4,13 @@
 ```
   npm install
 ```
+
 2. To generate the index.html page, type:
 ```
   node .
 ```
-3. Each of the features requires its own markdown file under `posts` folder. It is easy to create using the shell script on the parent directory.
+
+3. Each of the features requires its own markdown file under `posts` folder. It is easy to create using the shell script on the parent directory. Just type `./new_feature.sh` and start entering details about the feature you want to add. 
 
 4.  All styles must be in the included `Sass` file rather than be updated in the generated CSS file. Easiest way to compile them is to use [Compass](http://compass-style.org/):
 ```
