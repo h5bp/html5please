@@ -53,16 +53,7 @@ A very basic idea of how this would look like. Lame filters and colors. See: htt
 
 To do
 ------
-1. Make this list a JSON. So, we can link directly to MDN and the Github wiki.
-3. Fix the filters
-5. Link to Paul Irish's post on responsible polyfilling.
-6. Link each recommendation to a "more details" page in the wiki (thnx @necolas). 
-
-Design
-------
-2. Footer: what/if
-3. Different color states for badges "use this/ dont / etc"
-5. Proper prefixes/fallbacks
+- Link to Paul Irish's post on responsible polyfilling.
 
 
 Context
