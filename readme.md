@@ -1,14 +1,16 @@
-## Want to help? Awesome - here's how!
+## First Run
 
-1. First step:
+1. In your terminal, navigate to this project and type: 
 ```
-  npm install .
+  npm install
 ```
-2. To compile, in your terminal, within the project folder, type:
+2. To generate the index.html page, type:
 ```
   node .
 ```
-3.  To compile the CSS, use (in another terminal window):
+3. Each of the features requires its own markdown file under `posts` folder. It is easy to create using the shell script on the parent directory.
+
+4.  All styles must be in the included `Sass` file rather than be updated in the generated CSS file. Easiest way to compile them is to use [Compass](http://compass-style.org/):
 ```
   compass watch .
 ```
