@@ -65,7 +65,7 @@ body, button, input, select, textarea { font-family: sans-serif; color: $lightes
 
 a { color: $link-color; text-decoration: none; }
 a:focus { outline: thin dotted; }
-a:hover, a:active { outline: 0; text-decoration: dotted; }
+a:hover, a:active { outline: 0; text-decoration: underline; }
 
 
 // =============================================================================
