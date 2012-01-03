@@ -1,3 +1,20 @@
+## Want to help? Awesome - here's how!
+
+1. First step:
+```
+  npm install .
+```
+2. To compile, in your terminal, within the project folder, type:
+```
+  node .
+```
+3.  To compile the CSS, use (in another terminal window):
+```
+  compass watch .
+```
+
+## Changelog
+
 ### Dec 12 2011
 
 - No more JSON!
@@ -10,20 +27,7 @@ So new workflow for adding content here would be to run `./new_feature.sh`. But 
 
 ### Nov 7 2011
 
-This branch uses node. 
-
-- First step:
-
-  npm install .
-
-- To compile, in your terminal, within the project folder, type:
-
-  node .
-
-- To compile the CSS, use (in another terminal window):
-
-  compass watch .
-
+Branch now uses node and compass!
 
 ### July 9 2011
 A very basic idea of how this would look like. Lame filters and colors. See: http://dl.dropbox.com/u/952/gfs/index.html
