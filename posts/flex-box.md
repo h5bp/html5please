@@ -1,4 +1,4 @@
-feature: flex-box
+feature: flexbox
 status: avoid
 tags: none
 kind: css
