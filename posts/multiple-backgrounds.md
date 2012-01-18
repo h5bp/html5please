@@ -1,6 +1,6 @@
-feature: multiple-backgrounds
+feature: multibackgrounds
 status: use
-tags: fallback
+tags: fallback gtie8
 kind: css
 polyfillurls:
 
