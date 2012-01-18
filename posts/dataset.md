@@ -1,7 +1,7 @@
 feature: dataset
 status: use
-tags: polyfill noie nooldmobile
+tags: fallback noie nooldmobile
 kind: api
 polyfillurls:[HTML5 dataset support](http://eligrey.com/blog/post/html-5-dataset-support)
 
-Dataset is unsupported in IE and older mobile browsers, which is why we recommend using it with a polyfill.
+`elem.dataset` is unsupported in IE and older mobile browsers. Using data-* attributes will be totally fine in all browsers, but instead of using `elem.dataset.foo` just use `elem.getAttribute('data-foo')` instead. A polyfill is availble if you want terser syntax.
