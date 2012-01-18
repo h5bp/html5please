@@ -48,3 +48,9 @@ if(window.location.hash) {
   featureList.search(hash);
   updatesearch();
 }
+
+// keyboard shortcut for / to go to search box.
+addEventListener('keyup', function(e){
+  if (e.which == 191 && document.activeElement != search)
+    search.focus();
+});
