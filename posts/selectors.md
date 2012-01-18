@@ -1,6 +1,6 @@
 feature: selectors
 status: use
-tags: fallback
+tags: fallback gtie6
 kind: css
 polyfillurls:
 
