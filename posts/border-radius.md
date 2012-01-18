@@ -1,5 +1,5 @@
 feature: border-radius
-status: use
+status: caution
 tags: 
 kind: css
 polyfillurls:
