@@ -19,7 +19,8 @@
         Look up properties and see if it is ready for use, and if so how you should use it with a polyfill, a fallback value or as it is.
       </h2>
       <div>
-        <input id=livesearch class=search name=livesearch placeholder='type to filter' type='search' value='' />        
+        <input id=livesearch class=search name=livesearch placeholder='type to filter' type='search' value='' autofocus
+                />
         <a href="/" id=searchurl>link to this search ›</a>
       </div>
     </header>
@@ -70,7 +71,7 @@
         
           <article class="">
             <header title="expand">
-              <h3 class="status use">use <i></i> </h3>                                                        
+              <h3 class="status caution">caution <i></i> </h3>                                                        
               <h4 class="kind css">css</h4>
               <h2 class='name'><a href="http://caniuse.com/border-radius">border-radius</a></h2>
             </header>
@@ -197,11 +198,11 @@
           <article class="polyfill noie nooldmobile">
             <header title="expand">
               <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
-              <h4 class="kind js">js</h4>
+              <h4 class="kind api">api</h4>
               <h2 class='name'><a href="http://caniuse.com/dataset">dataset</a></h2>
             </header>
             <div class="more">
-              <div class='recco'><p>Dataset is unsupported in IE and older mobile browsers, which is why recommend using it with a polyfill.</p></div>
+              <div class='recco'><p>Dataset is unsupported in IE and older mobile browsers, which is why we recommend using it with a polyfill.</p></div>
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://eligrey.com/blog/post/html-5-dataset-support">HTML5 dataset support</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/dataset.md>Edit info on dataset</a>              
             </div>
@@ -554,7 +555,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <h2 class='name'><a href="http://caniuse.com/pseudo-elements">pseudo-elements</a></h2>
             </header>
             <div class="more">
-              <div class='recco'><p>Pseudo-elements are supposed to follow this syntax <code>::before</code> and <code>::after</code>. But, if you intend to support IE7+, you would have to use <code>:before</code> and <code>:after</code>. Use these to provide only additional information, so when they are unsupported they do not destroy the readability of your page. </p></div>
+              <div class='recco'><p>The pseudo-element notation was updated to use a double colon - <code>::</code> - in the CSS3 Selectors module. The CSS3 module requires that browsers support both the single and double colon notations for the pseudo-elements introduced in CSS1 and CSS2 - <code>:first-line</code>, <code>:first-letter</code>, <code>:before</code> and <code>:after</code>. Therefore, if you intend to support IE8+, you should use the earlier single colon notation. When adding generated content to your page with <code>:before</code> and <code>:after</code>, make sure that it is only for presentation and not to add content that should be included in the HTML source.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/pseudo-elements.md>Edit info on pseudo-elements</a>              
             </div>
@@ -652,7 +653,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <h2 class='name'><a href="http://caniuse.com/text-shadow">text-shadow</a></h2>
             </header>
             <div class="more">
-              <div class='recco'></div>
+              <div class='recco'><p>All modern browsers support text-shadow except IE. Since it's mostly used for decorative purposes, we do not recommend using a <a href="https://github.com/heygrady/textshadow">polyfill</a>, just make sure the text is still legible without a text-shadow. We also advise you to avoid large text-shadows because they can have a negative impact on performance.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/text-shadow.md>Edit info on text-shadow</a>              
             </div>
@@ -694,8 +695,8 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <h2 class='name'><a href="http://caniuse.com/video">video</a></h2>
             </header>
             <div class="more">
-              <div class='recco'><p>Do note you need to supply your video in various formats to cater to all browsers and fallbacks. There is also a way to do this without any scripting as explained by Kroc Camen in his article <a href="http://camendesign.com/code/video_for_everybody">Video for Everybody</a>.</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://mediaelementjs.com/">mediaelementjs</a></p></div> 
+              <div class='recco'><p>Do note you need to supply your video in various formats to cater to all browsers and fallbacks&mdash;<a href="http://www.mirovideoconverter.com/">Miro Video Converter</a> makes this trivial. H264 and WebM cover all browsers (except Firefox 3.6 which needs Ogg Vorbis). Use one of the polyfills below or gracefully handle all cases without any scripting as explained by Kroc Camen in <a href="http://camendesign.com/code/video_for_everybody">Video for Everybody</a>.</p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://videojs.com/">Video.js</a>, <a href="http://mediaelementjs.com/">mediaelementjs</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/video.md>Edit info on video</a>              
             </div>
             <footer class="tags">polyfill gtie8</footer>
