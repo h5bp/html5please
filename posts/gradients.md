@@ -1,6 +1,6 @@
 feature: gradients
 status: use
-tags: fallback prefixes
+tags: fallback prefixes gtie8
 kind: css
 polyfillurls:
 
