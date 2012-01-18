@@ -1,6 +1,6 @@
 feature: pointer-events
 status: use
-tags: fallback
+tags: fallback noie
 kind: css
 polyfillurls:
 
