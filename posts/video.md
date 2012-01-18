@@ -1,6 +1,6 @@
 feature: video
 status: use
-tags: polyfill
+tags: polyfill gtie8
 kind: html
 polyfillurls:[mediaelementjs](http://mediaelementjs.com/)
 
