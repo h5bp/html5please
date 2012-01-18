@@ -1,4 +1,10 @@
-## First Run
+## Before you begin
+
+1. Install Node (with npm): http://nodejs.org/#download
+2. Install Sass: http://sass-lang.com/download.html 
+3. Optionally, install Compass: http://compass-style.org/
+
+## Getting Started
 
 1. In your terminal, navigate to this project and type: 
 ```
@@ -52,10 +58,6 @@ A very basic idea of how this would look like. Lame filters and colors. See: htt
 3. modernizr
 4. CSS Preprocessors? 
 5. caniuse.com?
-
-To do
-------
-- Link to Paul Irish's post on responsible polyfilling.
 
 
 Context
