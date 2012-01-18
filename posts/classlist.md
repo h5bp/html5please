@@ -1,8 +1,7 @@
 feature: classlist
-status: caution
-tags: gtie7 polyfill
-kind: js
-polyfillurls:[classlist.js](https://github.com/eligrey/classList.js),
-[classlist polyfill](https://gist.github.com/1381839)
+status: use
+tags: polyfill noie nooldmobile
+kind: html
+polyfillurls:[classlist.js](https://github.com/eligrey/classList.js)
 
-Use the polyfills, as this isn't supported well in IE or mobile devices.
+Classlist is unsupported in older mobile browsers and IE. This is not a concern if you are using a library like jQuery and using it to add/remove class names, but if not, make sure you use the polyfill.
