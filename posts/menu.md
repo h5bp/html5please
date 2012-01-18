@@ -1,6 +1,6 @@
 feature: menu
 status: use
-tags: polyfill
+tags: polyfill noie nomobile
 kind: html
 polyfillurls:[contextMenu](https://github.com/medialize/jQuery-contextMenu)
 
