@@ -7,7 +7,6 @@
      -moz-transition: unquote($arg);
       -ms-transition: unquote($arg);
        -o-transition: unquote($arg);
-          transition: unquote($arg);
 }
 
 @mixin text-shadows($arg) {
@@ -347,7 +346,8 @@ article > header {
   position: relative;
   float: right;
   box-shadow: -4px 0px 6px darken(#CD5C5C, 12%) inset;
-  
+  border-right: 1px solid darken(#CD5c5c, 22%);
+
   //Arrow like figures on the right
   &:before, 
   &:after {
@@ -382,6 +382,8 @@ article > header {
   &.use { 
     background: olive; 
     box-shadow: -4px 0px 4px darken(olive, 5%) inset;
+    border-right-color: darken(olive, 12%);
+
     &:before{
       @include background(linear-gradient(34deg, transparentize(olive, 1),  transparentize(olive, 1) 50%, darken(olive, 5%) 53%,  olive 56%));                    
     }
@@ -394,6 +396,8 @@ article > header {
   &.caution { 
     background: darken(#ffa500, 5%); 
     box-shadow: -4px 0 6px darken(#ffa500, 12%) inset;
+    border-right-color: darken(#ffa500, 22%);
+    
     &:before{
       @include background(linear-gradient(34deg, transparentize(#ffa500, 1), transparentize(#ffa500, 1) 50%, #FFA500 53%, darken(#ffa500, 5%) 56%));            
     }
@@ -412,7 +416,7 @@ article div.more {
   background: white;  
   border-radius: 0 0 0.3rem 0.3rem; 
   padding: 0.5em 1em 1.5em 1em;  
-  margin-top: -0.3rem;
+  margin: -0.3rem 1px 0 1px;
   position: relative;
   z-index: 0;
   box-shadow: 0 0 7px darken($dark, 10%); 
@@ -459,9 +463,9 @@ body > footer {
   
   .builders a { 
     display: inline-block;
-    margin-right: 1.2em;
+    margin: 0 1em 1em 0;
     text-align: left;
-    width: 10em;
+    width: 12em;
   }
   
   .builders img {
