@@ -1,5 +1,5 @@
 feature: ol-reversed
-status: avoid
+status: use  
 tags: polyfill
 kind: html
 polyfillurls:[HTML5 reverse ordered lists](https://github.com/impressivewebs/HTML5-Reverse-Ordered-Lists)
