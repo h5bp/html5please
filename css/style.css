@@ -252,7 +252,7 @@ table {
 }
 
 .display-block, .index h2 b, .index h1 b,
-article h3 b i, #searchurl, article > header .kind, .status i b, article.expanded div.more {
+article h3 b i, article > header .kind, .status i b, article.expanded div.more {
   display: block;
 }
 
@@ -320,7 +320,7 @@ article h3 b i {
   padding: 1em 0 4em 0;
 }
 
-.index input[type="search"] {
+#livesearch {
   width: 50%;
   padding: 0.5em 1em;
   background: white;
@@ -328,30 +328,37 @@ article h3 b i {
   border: 0;
   color: black;
   margin: 0;
+  z-index: 1;
 }
 
 #searchurl {
-  -webkit-transition: height 500ms linear;
-  -moz-transition: height 500ms linear;
-  -ms-transition: height 500ms linear;
-  -o-transition: height 500ms linear;
+  -webkit-transition: width 500ms linear;
+  -moz-transition: width 500ms linear;
+  -ms-transition: width 500ms linear;
+  -o-transition: width 500ms linear;
   background: -webkit-linear-gradient(90deg, #f16529, #f48759);
   background: -moz-linear-gradient(90deg, #f16529, #f48759);
   background: -o-linear-gradient(90deg, #f16529, #f48759);
   background: -ms-linear-gradient(90deg, #f16529, #f48759);
   background: linear-gradient(90deg, #f16529, #f48759);
+  display: inline-block;
   font-size: 0.8em;
-  padding: 0 1em;
-  line-height: 2.5;
-  left: 50%;
-  width: 15em;
+  line-height: 2.4;
+  width: 0;
   color: white;
   text-shadow: 1px 1px 1px #491905;
-  border-radius: 0 0 10px 10px;
-  height: 0em;
-  margin-left: -7.5em;
+  border-radius: 0 10em 10em 0;
+  height: 2.45em;
   overflow: hidden;
-  position: absolute;
+  margin-left: -2em;
+  padding-left: 1.5em;
+}
+
+#livesearch,
+#searchurl {
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
 }
 
 article {

@@ -242,7 +242,7 @@ article h3 b i {
 
 .index > div { padding: 1em 0 4em 0; }
 
-.index input[type="search"] { 
+#livesearch{ 
   width: 50%; 
   padding: 0.5em 1em; 
   background: white;
@@ -250,24 +250,30 @@ article h3 b i {
   border: 0;
   color: darken($dark, 20%);
   margin: 0;
+  z-index: 1;
 }
 
 #searchurl { 
-  @extend .display-block;
-  @include our-transition('height 500ms linear'); 
+  @include our-transition('width 500ms linear'); 
   @include background(linear-gradient(90deg, #f16529,  lighten(#f16529, 10%)));      
+  display: inline-block;
   font-size: 0.8em;
-  padding: 0 1em;
-  line-height: 2.5;
-  left: 50%;
-  width: 15em;
+  line-height: 2.4;
+  width: 0;
   color: white;
   text-shadow: 1px 1px 1px darken(#f16529, 40%);
-  border-radius: 0 0 10px 10px;
-  height: 0em;
-  margin-left: -7.5em;  
+  border-radius: 0 10em 10em 0;
+  height: 2.45em;
   overflow: hidden;
-  position: absolute;
+  margin-left: -2em;
+  padding-left: 1.5em;
+}
+
+#livesearch, 
+#searchurl {
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
 }
 
 article { 
