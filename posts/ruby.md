@@ -1,4 +1,4 @@
-feature: ruby
+feature: <ruby>
 status: use
 tags: fallback
 kind: html

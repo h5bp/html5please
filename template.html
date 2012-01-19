@@ -31,12 +31,14 @@
             <header title="expand">
               <h3 class="status {{status}}">{{status}} <i>{{{polyfillaction tags}}}</i> </h3>                                                        
               <h4 class="kind {{kind}}">{{kind}}</h4>
-              <h2 class='name'><a href="http://caniuse.com/{{{feature}}}">{{{feature}}}</a></h2>
+              <h2 class='name'><a
+                  href="http://caniuse.com/{{{editfrag}}}">{{{featuretag feature}}}</a></h2>
             </header>
             <div class="more">
               <div class='recco'>{{{contents}}}</div>
               <div class='polyfills'>{{#if polyfillurls}}<b>Recommended Polyfills: </b>{{{polyfillurls}}}{{/if}}</div> 
-              <a class="updateurl" href={{{editurl}}}>Edit info on {{{feature}}}</a>              
+              <a class="updateurl" href={{{editurl}}}>Edit info on
+                {{{featuretag feature}}}</a>              
             </div>
             <footer class="tags">{{tags}}</footer>
           </article>          

@@ -1,4 +1,4 @@
-feature: audio
+feature: <audio>
 status: use
 tags: polyfill
 kind: html

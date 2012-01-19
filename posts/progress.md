@@ -1,4 +1,4 @@
-feature: progress
+feature: &lt;progress>
 status: use
 tags: polyfill gtie9
 kind: html
