@@ -8,6 +8,7 @@ promptValue() {
 }
 
 feature=
+featureslug=
 status=
 tags=
 kind=
@@ -18,10 +19,11 @@ do
 done
 
 # Make feature name slug friendly
-feature=$(
+featureslug=$(
   echo $feature   | 
   # Use sed to replace spaces with hyphens
-  sed -e "s/ /-/" | 
+  sed -e "s/<//" -e "s/>//" |
+
   # BSD sed doesn't accept \L, so use tr instead for case conversion
   tr "[A-Z]" "[a-z]"
 )
@@ -44,7 +46,7 @@ do
       while [ $# -gt 0 ]
       do
           case "$1" in
-            gtie6|gtie7|gtie8|prefixes|polyfill|fallback|none)  shift ;;
+            gtie6|gtie7|gtie8|gtie9|prefixes|polyfill|fallback|noie|nomobile|nooldmobile|none)  shift ;;
             *)              echo "Unknown Tag: $1" 1>&2; tags= ; break ;;
           esac
       done
@@ -64,9 +66,9 @@ done
 # Creating markdown file in posts folder
 POSTS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/posts"
 
-[ -e "$POSTS_DIR/$feature.md" ] && echo "$feature.md already exists" && exit 1
+[ -e "$POSTS_DIR/$featureslug.md" ] && echo "$featureslug.md already exists" && exit 1
 
-cat > $POSTS_DIR/$feature.md <<EOF
+cat > $POSTS_DIR/$featureslug.md <<EOF
 feature: $feature
 status: $status
 tags: $tags
@@ -76,7 +78,7 @@ polyfillurls:
 …
 EOF
 
-echo "Created file $POSTS_DIR/$feature.md" 1>&2
+echo "Created file $POSTS_DIR/$featureslug.md" 1>&2
 
 # Open it in your editor for adding content
-[ -n "$EDITOR" ] && $EDITOR "$POSTS_DIR/$feature.md"
+[ -n "$EDITOR" ] && $EDITOR "$POSTS_DIR/$featureslug.md"
