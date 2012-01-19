@@ -150,7 +150,8 @@ button, input { line-height: normal; *overflow: visible; }
 
 button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
 
-input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; -webkit-appearance: normal; }
+input[type="search"] { -moz-box-sizing: content-box; -webkit-box-sizing:
+content-box; box-sizing: content-box; -webkit-appearance: textfield; }
 
 button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
 
@@ -190,13 +191,13 @@ html {
           );
   min-height: 100%; 
   max-width: 100%; 
+  font: 16px/1.5 $default-font-family;
 }
  
 body {
   max-width: 70%;
   margin: 3em auto;
   min-width: 60%;
-  font: 16px/1.5 $default-font-family;
 }
 
 .index { 
@@ -245,31 +246,41 @@ article h3 b i {
 
 #livesearch{ 
   width: 50%; 
-  padding: 0.5em 1em; 
+  padding: 0 1em; 
+  height: 2rem;
   background: white;
   border-radius: 10em;
   border: 0;
+  outline: none;
   color: darken($dark, 20%);
   margin: 0;
   z-index: 1;
 }
 
+#livesearch:focus {
+  box-shadow: 0 0 0.5em darken($contrast, 30%);
+}  
+
 #searchurl { 
-  @include our-transition('width 500ms linear'); 
-  @include background(linear-gradient(90deg, #f16529,  lighten(#f16529, 10%)));      
+  @include our-transition('width 500ms linear, opacity 600ms linear'); 
+  @include background(linear-gradient(90deg, darken(#f16529, 20%), #f16529));      
   display: inline-block;
   font-size: 0.8em;
-  line-height: 2.4;
-  width: 0;
+  line-height: 2rem;
+  height: 2rem;
+  width: 0; opacity: 0;
   color: white;
   text-shadow: 1px 1px 1px darken(#f16529, 40%);
   border-radius: 0 10em 10em 0;
-  height: 2.45em;
   overflow: hidden;
   margin-left: -2em;
-  padding-left: 1.5em;
 }
 
+#searchurl.active {
+  width: 12em;
+  padding-left: 1.5em;
+  opacity: 1;
+}  
 #livesearch, 
 #searchurl {
   display: inline-block;
@@ -277,15 +288,23 @@ article h3 b i {
   position: relative;
 }
 
+.featuretags {
+  a { text-decoration: none; color: lighten($link-color, 20%); }
+
+  a +a::before { content: " • "; color: $lightest; }
+}  
+
+
 article { 
   color: $dark;
   margin-bottom: 2em; 
+
+  .tags { display: none; }  
 }
 
 article > header {
   background: $lightest;
   border-radius: 0.3rem;
-  box-shadow: 0 0 7px darken($lightest, 10%) inset;    
   position: relative;
   z-index: 1;
   cursor: pointer;
@@ -294,54 +313,89 @@ article > header {
     display: inline-block;
     vertical-align: middle;
     content: "+";
-    font-size: 2rem;
     line-height: 1;
-    border-radius: 2rem;   
-    height: 2rem; width: 2rem;
+    font-size: 1.5rem; border-radius: 1.5rem;height: 1.5rem; width: 1.5rem;
     margin: 0 0.5rem 0 1rem;
     text-align: center;
     color: white;
     text-shadow: 1px 1px 1px darken($lightest, 40%);
-    box-shadow: 0 0 7px darken($lightest, 30%) inset;
-    background: darken($lightest, 20%);      
+    background: darken($lightest, 10%);      
+    border: 1px solid darken($lightest, 15%);
   }
     
   .kind, .name, .status {
     @extend .reset-margin;
     display: inline-block;
     vertical-align: middle;    
-
   }
   
   
   i { font-style: normal; }
   .kind, b { font-weight: normal; }
   
-  .kind {
-
-    @extend .display-block;
-    font-size: 0.8em;
-    line-height: 3rem;
-    color: $lightest;    
-    position: absolute;
-    left: -5em;
-    text-align: right;
-    width: 4.5em;
-    z-index: 1;
-    text-shadow: 1px 1px 1px $dark;
-  }
-  
-  .name {
-    padding: 0.4rem 0; 
-    text-shadow: 1px 1px 1px darken(#149CD7, 40%);  
-    letter-spacing: 1px;   
     
-    a { color: darken($link-color, 5%); } 
+}
+
+
+article div.more {   
+  @include our-transition("opacity 1s ease-in");  
+  display: none;
+  opacity: 0;
+  background: white;  
+  border-radius: 0 0 0.3rem 0.3rem; 
+  padding: 0.5em 1em 1.5em 1em;  
+  margin: -0.3rem 1px 0 1px;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 0 7px darken($dark, 10%); 
+  
+  .polyfills b { font-weight: bold; }
+  
+  .polyfills p { display: inline; }
+  
+  .updateurl {
+    font-size: 0.8em;
+    position: absolute;
+    bottom: 0.5em;
+    right: 1em;    
   }  
 }
 
-.status {
+article.expanded {
+  > header {
+    border-bottom: 1px solid lighten($dark, 45%);
+    
+    &:before { content: "-"; line-height: 0.75; }
+  }
+  
+  div.more { 
+    @extend .display-block;
+    opacity: 1; 
+  }
+}
 
+.kind {
+  @extend .display-block;
+  font-size: 0.8em;
+  line-height: 3rem;
+  color: $lightest;    
+  position: absolute;
+  left: -5em;
+  text-align: right;
+  width: 4.5em;
+  z-index: 1;
+  text-shadow: 1px 1px 1px $dark;
+}
+
+.name {
+  padding: 0.4rem 0; 
+  text-shadow: 1px 1px 1px darken(#149CD7, 40%);  
+  letter-spacing: 1px;   
+  
+  a { color: darken($link-color, 5%); } 
+}
+
+.status {
   background: indianred;
   font-size: 2em;    
   border-radius: 0 0.2rem 0.2rem 0;
@@ -422,48 +476,7 @@ code {
   }
 }
 
-article .tags { display: none; }
 
-article div.more {   
-  display: none;
-  opacity: 0;
-  background: white;  
-  border-radius: 0 0 0.3rem 0.3rem; 
-  padding: 0.5em 1em 1.5em 1em;  
-  margin: -0.3rem 1px 0 1px;
-  position: relative;
-  z-index: 0;
-  box-shadow: 0 0 7px darken($dark, 10%); 
-  
-  @include our-transition("opacity 1s ease-in");  
-  
-
-  .polyfills b { font-weight: bold; }
-  
-  .polyfills p { display: inline; }
-  
-  .updateurl {
-
-    font-size: 0.8em;
-    position: absolute;
-    bottom: 0.5em;
-    right: 1em;    
-  }  
-}
-
-article.expanded {
-  > header {
-    border-bottom: 1px solid lighten($dark, 45%);
-    box-shadow: 0 0 7px darken($lightest, 10%) inset, 0 1px 7px lighten($dark, 35%);      
-    
-    &:before { content: "-"; line-height: 1.7rem; }
-  }
-  
-  div.more { 
-    @extend .display-block;
-    opacity: 1; 
-  }
-}
 
 body > footer {
   text-align: center;  
@@ -513,9 +526,11 @@ body > footer {
 
 
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 480px) {
   /* Style adjustments for viewports 480px and over go here */
-
+  html { font-size: 13px; }
+  article > header::before { display: none; }
+  .index h2 { max-width: 100%; }
 }
 
 @media only screen and (min-width: 768px) {

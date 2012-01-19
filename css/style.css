@@ -207,7 +207,7 @@ input[type="search"] {
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
-  -webkit-appearance: normal;
+  -webkit-appearance: textfield;
 }
 
 button::-moz-focus-inner, input::-moz-focus-inner {
@@ -252,7 +252,7 @@ table {
 }
 
 .display-block, .index h2 b, .index h1 b,
-article h3 b i, article > header .kind, .status i b, article.expanded div.more {
+article h3 b i, article.expanded div.more, .kind, .status i b {
   display: block;
 }
 
@@ -275,13 +275,13 @@ html {
   background: radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), radial-gradient(80em 60em, circle cover, rgba(128, 128, 0, 0.2) 8em, rgba(128, 128, 0, 0) 8em), radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), radial-gradient(40em 50em, circle cover, rgba(0, 0, 0, 0.2) 5em, rgba(0, 0, 0, 0) 5em), url('../img/denim.png?1324008221');
   min-height: 100%;
   max-width: 100%;
+  font: 16px/1.5 "Open Sans", sans-serif;
 }
 
 body {
   max-width: 70%;
   margin: 3em auto;
   min-width: 60%;
-  font: 16px/1.5 "Open Sans", sans-serif;
 }
 
 .index h1 {
@@ -323,36 +323,48 @@ article h3 b i {
 
 #livesearch {
   width: 50%;
-  padding: 0.5em 1em;
+  padding: 0 1em;
+  height: 2rem;
   background: white;
   border-radius: 10em;
   border: 0;
+  outline: none;
   color: black;
   margin: 0;
   z-index: 1;
 }
 
+#livesearch:focus {
+  box-shadow: 0 0 0.5em #6c2b10;
+}
+
 #searchurl {
-  -webkit-transition: width 500ms linear;
-  -moz-transition: width 500ms linear;
-  -ms-transition: width 500ms linear;
-  -o-transition: width 500ms linear;
-  background: -webkit-linear-gradient(90deg, #f16529, #f48759);
-  background: -moz-linear-gradient(90deg, #f16529, #f48759);
-  background: -o-linear-gradient(90deg, #f16529, #f48759);
-  background: -ms-linear-gradient(90deg, #f16529, #f48759);
-  background: linear-gradient(90deg, #f16529, #f48759);
+  -webkit-transition: width 500ms linear, opacity 600ms linear;
+  -moz-transition: width 500ms linear, opacity 600ms linear;
+  -ms-transition: width 500ms linear, opacity 600ms linear;
+  -o-transition: width 500ms linear, opacity 600ms linear;
+  background: -webkit-linear-gradient(90deg, #a93a0b, #f16529);
+  background: -moz-linear-gradient(90deg, #a93a0b, #f16529);
+  background: -o-linear-gradient(90deg, #a93a0b, #f16529);
+  background: -ms-linear-gradient(90deg, #a93a0b, #f16529);
+  background: linear-gradient(90deg, #a93a0b, #f16529);
   display: inline-block;
   font-size: 0.8em;
-  line-height: 2.4;
+  line-height: 2rem;
+  height: 2rem;
   width: 0;
+  opacity: 0;
   color: white;
   text-shadow: 1px 1px 1px #491905;
   border-radius: 0 10em 10em 0;
-  height: 2.45em;
   overflow: hidden;
   margin-left: -2em;
+}
+
+#searchurl.active {
+  width: 12em;
   padding-left: 1.5em;
+  opacity: 1;
 }
 
 #livesearch,
@@ -362,15 +374,26 @@ article h3 b i {
   position: relative;
 }
 
+.featuretags a {
+  text-decoration: none;
+  color: #61c5f0;
+}
+.featuretags a + a::before {
+  content: " • ";
+  color: #e3d7bf;
+}
+
 article {
   color: #232927;
   margin-bottom: 2em;
+}
+article .tags {
+  display: none;
 }
 
 article > header {
   background: #e3d7bf;
   border-radius: 0.3rem;
-  box-shadow: 0 0 7px #d3c19c inset;
   position: relative;
   z-index: 1;
   cursor: pointer;
@@ -379,17 +402,17 @@ article > header:before {
   display: inline-block;
   vertical-align: middle;
   content: "+";
-  font-size: 2rem;
   line-height: 1;
-  border-radius: 2rem;
-  height: 2rem;
-  width: 2rem;
+  font-size: 1.5rem;
+  border-radius: 1.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
   margin: 0 0.5rem 0 1rem;
   text-align: center;
   color: white;
   text-shadow: 1px 1px 1px #957941;
-  box-shadow: 0 0 7px #b49455 inset;
-  background: #c4ab78;
+  background: #d3c19c;
+  border: 1px solid #ccb68a;
 }
 article > header .kind, article > header .name, article > header .status {
   display: inline-block;
@@ -401,7 +424,47 @@ article > header i {
 article > header .kind, article > header b {
   font-weight: normal;
 }
-article > header .kind {
+
+article div.more {
+  -webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -ms-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  display: none;
+  opacity: 0;
+  background: white;
+  border-radius: 0 0 0.3rem 0.3rem;
+  padding: 0.5em 1em 1.5em 1em;
+  margin: -0.3rem 1px 0 1px;
+  position: relative;
+  z-index: 0;
+  box-shadow: 0 0 7px #0c0d0d;
+}
+article div.more .polyfills b {
+  font-weight: bold;
+}
+article div.more .polyfills p {
+  display: inline;
+}
+article div.more .updateurl {
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 0.5em;
+  right: 1em;
+}
+
+article.expanded > header {
+  border-bottom: 1px solid #91a19b;
+}
+article.expanded > header:before {
+  content: "-";
+  line-height: 0.75;
+}
+article.expanded div.more {
+  opacity: 1;
+}
+
+.kind {
   font-size: 0.8em;
   line-height: 3rem;
   color: #e3d7bf;
@@ -412,12 +475,13 @@ article > header .kind {
   z-index: 1;
   text-shadow: 1px 1px 1px #232927;
 }
-article > header .name {
+
+.name {
   padding: 0.4rem 0;
   text-shadow: 1px 1px 1px #03151c;
   letter-spacing: 1px;
 }
-article > header .name a {
+.name a {
   color: #128bc0;
 }
 
@@ -518,50 +582,6 @@ code:hover {
   background: #e0e0e0;
 }
 
-article .tags {
-  display: none;
-}
-
-article div.more {
-  display: none;
-  opacity: 0;
-  background: white;
-  border-radius: 0 0 0.3rem 0.3rem;
-  padding: 0.5em 1em 1.5em 1em;
-  margin: -0.3rem 1px 0 1px;
-  position: relative;
-  z-index: 0;
-  box-shadow: 0 0 7px #0c0d0d;
-  -webkit-transition: opacity 1s ease-in;
-  -moz-transition: opacity 1s ease-in;
-  -ms-transition: opacity 1s ease-in;
-  -o-transition: opacity 1s ease-in;
-}
-article div.more .polyfills b {
-  font-weight: bold;
-}
-article div.more .polyfills p {
-  display: inline;
-}
-article div.more .updateurl {
-  font-size: 0.8em;
-  position: absolute;
-  bottom: 0.5em;
-  right: 1em;
-}
-
-article.expanded > header {
-  border-bottom: 1px solid #91a19b;
-  box-shadow: 0 0 7px #d3c19c inset, 0 1px 7px #758983;
-}
-article.expanded > header:before {
-  content: "-";
-  line-height: 1.7rem;
-}
-article.expanded div.more {
-  opacity: 1;
-}
-
 body > footer {
   text-align: center;
   padding: 3em 0;
@@ -642,8 +662,19 @@ body > footer .builders b {
   zoom: 1;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 480px) {
   /* Style adjustments for viewports 480px and over go here */
+  html {
+    font-size: 13px;
+  }
+
+  article > header::before {
+    display: none;
+  }
+
+  .index h2 {
+    max-width: 100%;
+  }
 }
 @media only screen and (min-width: 768px) {
   /* Style adjustments for viewports 768px and over go here */
