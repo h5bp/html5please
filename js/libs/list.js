@@ -328,6 +328,16 @@ function List(id, options, values) {
                 for(var j in columns) {
                     if(columns.hasOwnProperty(j) && columns[j] !== null) {
                         var text = columns[j].toString().toLowerCase();
+
+                        // gtieX augments. so a search is matching .gtie8, 
+                        // need to match .gtie7 and .gtie6 too
+                        text = text.replace('gtie11', 'gtie11 gtie10');
+                        text = text.replace('gtie10', 'gtie10 gtie9');
+                        text = text.replace('gtie9',  'gtie9 gtie8');
+                        text = text.replace('gtie8',  'gtie8 gtie7');
+                        text = text.replace('gtie7',  'gtie7 gtie6');
+
+
                         if ((searchString !== "") && (text.search(searchString) > -1)) {
                             found = true;
                         }

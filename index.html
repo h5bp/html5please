@@ -456,25 +456,25 @@
               <h2 class='name'><a href="http://caniuse.com/multibackgrounds">multibackgrounds</a></h2>
             </header>
             <div class="more">
-              <div class='recco'><p>Multiple backgrounds when unsupported <a href="http://snook.ca/archives/html_and_css/multiple-bg-css-gradients">are ignored completely</a>. If you can make do with a simple background color, make sure to declare <code>background-color: &lt;color&gt;</code> before you start using multiple backgrounds or you can also set an image as a background with <code>background-image</code> and override it with your multiple background declaration. We strongly recommend you don't polyfill this, but <a href="http://css3pie.com/">CSSPie</a> should help you out if you need one.</p></div>
+              <div class='recco'><p>Multiple backgrounds when unsupported <a href="http://snook.ca/archives/html_and_css/multiple-bg-css-gradients">are ignored completely</a>. If you can make do with a simple background color, make sure to declare <code>background-color: &lt;color&gt;</code> before you start using multiple backgrounds or you can also set an image as a background with <code>background-image</code> and override it with a second  background declaration. We strongly recommend you don't polyfill this, but <a href="http://css3pie.com/">CSSPie</a> should help you out if you need one.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/multiple-backgrounds.md>Edit info on multibackgrounds</a>              
             </div>
             <footer class="tags">fallback gtie8</footer>
           </article>          
         
-          <article class="polyfill gtie9">
+          <article class="fallback gtie9">
             <header title="expand">
-              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>                                                        
               <h4 class="kind html">html</h4>
               <h2 class='name'><a href="http://caniuse.com/offline">offline</a></h2>
             </header>
             <div class="more">
-              <div class='recco'></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://code.google.com/p/html5-gears/">html5 gears</a></p></div> 
+              <div class='recco'><p>If Application Cache isn't available natively, there is no way to mimic it. Only supporting browser will be able to load a page while offline. Still many apps can make use of local storage enable offline interaction if the page is already open.</p></div>
+              <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/offline.md>Edit info on offline</a>              
             </div>
-            <footer class="tags">polyfill gtie9</footer>
+            <footer class="tags">fallback gtie9</footer>
           </article>          
         
           <article class="polyfill">
@@ -710,8 +710,8 @@ Note that you need to use all the usual prefixes to make this work in all browse
               <h2 class='name'><a href="http://caniuse.com/web-storage">web-storage</a></h2>
             </header>
             <div class="more">
-              <div class='recco'></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/350433">storage polyfill</a>,</p></div> 
+              <div class='recco'><p>IE8 supported <code>localStorage</code> and <code>sessionStorage</code> so you may not need a polyfill. If you do, Remy's is a piece of cake to immplement and use.</p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/350433">Remy's storage polyfill</a>,</p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/web-storage.md>Edit info on web-storage</a>              
             </div>
             <footer class="tags">gtie7, polyfill</footer>
@@ -757,7 +757,7 @@ Note that you need to use all the usual prefixes to make this work in all browse
     
     </footer>
     <!-- scripts concatenated and minified via ant build script -->
-    <script src='js/libs/list.min.js'></script>
+    <script src='js/libs/list.js'></script>
     <script src='js/libs/classList.js'></script>    
     <script src='js/script.js'></script>
     <!-- end scripts -->
