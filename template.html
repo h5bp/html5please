@@ -22,6 +22,12 @@
         <input id=livesearch class=search name=livesearch placeholder='type to filter' type='search' value='' autofocus
                 />
         <a href="/" id=searchurl>link to this search ›</a>
+        <p>
+        Explore features: 
+        {{#each featuretags}}
+          <a href="#{{this}}">{{this}}</a>
+        {{/each}}
+        </p>
       </div>
     </header>
     <div id=main role=main>

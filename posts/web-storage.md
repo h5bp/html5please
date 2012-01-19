@@ -1,6 +1,6 @@
 feature: web-storage
 status: use
-tags: gtie7, polyfill
+tags: gtie7 polyfill
 kind: api
 polyfillurls:[Remy's storage polyfill](https://gist.github.com/350433),
 [sessionstorage](http://code.google.com/p/sessionstorage/)

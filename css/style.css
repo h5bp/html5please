@@ -289,6 +289,7 @@ body {
   line-height: 1.2em;
   text-shadow: 1px 1px 1px #e88860, 2px 2px 1px #e88860, 3px 3px 1px #e88860, 3px 3px 1px #0c0d0d, 4px 4px 3px #0c0d0d;
   margin: 0.8em 0 0.5em 0;
+  text-transform: uppercase;
 }
 .index h1 img {
   vertical-align: -10%;
