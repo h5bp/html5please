@@ -22,6 +22,11 @@ Most CSS Selectors are supported from IE7 onwards, so you should be safe to use.
 * ` :before, :after` and generated content
 * `:focus` for elements with current focus
 
+#### When you sunset IE8 support, you can use:
+
+* These very useful selectors: <a href="http://css-tricks.com/how-nth-child-works/">`:nth-child(n)`</a>, `:last-child`, `:target`, `:not(s)`, `:enabled`, `:disabled`, `:checked`, `::selection`
+* These ones, too: `:root`, `:nth-last-child(n)`, `:nth-of-type(n)`, `:nth-last-of-type(n)`, `:first-of-type`, `:last-of-type`, `:only-child`, `:only-of-type`, `:empty`
+
 <!-- 
 
 Resources:
