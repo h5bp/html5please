@@ -499,6 +499,19 @@ article > header .name a {
   background: linear-gradient(-34deg, rgba(255, 165, 0, 0), rgba(255, 165, 0, 0) 50%, #ffa500 53%, #e69500 56%);
 }
 
+code {
+  background: #f0f0f0;
+  border-radius: 3px;
+  padding: 0 2px;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+}
+code:hover {
+  background: #e0e0e0;
+}
+
 article .tags {
   display: none;
 }

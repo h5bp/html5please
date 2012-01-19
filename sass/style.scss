@@ -407,6 +407,15 @@ article > header {
   }  
 }
 
+code { 
+  background: hsl(0, 0%, 94%); border-radius: 3px; padding: 0 2px; 
+  @include our-transition("all .3s ease-in"); 
+
+  &:hover {
+    background: hsl(0, 0%, 88%);
+  }
+}
+
 article .tags { display: none; }
 
 article div.more {   

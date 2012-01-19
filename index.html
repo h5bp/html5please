@@ -321,18 +321,18 @@
             <footer class="tags">fallback</footer>
           </article>          
         
-          <article class="polyfill gtie8">
+          <article class="fallback gtie8">
             <header title="expand">
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
               <h4 class="kind api">api</h4>
               <h2 class='name'><a href="http://caniuse.com/geolocation">geolocation</a></h2>
             </header>
             <div class="more">
-              <div class='recco'><p>The Geolocation shim requires jQuery to work, but if you are looking for a mobile specific script, you are better off using geo-location-javascript.</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/366184">Geolocation Shim</a>, <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a>, <a href="https://github.com/teleject/HTML5-GeoLocation-jQuery-Plugin">HTML5 Geolocation jQuery Plugin</a></p></div> 
+              <div class='recco'><p><a href="https://gist.github.com/366184">Paul's shim</a> uses Google's IP-geocoding service as a fallback. <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a> doesn't but has hooks into Blackberry, WebOS, and Google Gears specific APIs. In most cases, you should just not expose geo features in your app if the feature is not natively present.</p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/366184">Paul's geolocation Shim</a>, <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/geolocation.md>Edit info on geolocation</a>              
             </div>
-            <footer class="tags">polyfill gtie8</footer>
+            <footer class="tags">fallback gtie8</footer>
           </article>          
         
           <article class="fallback prefixes gtie8">
@@ -625,7 +625,42 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <h2 class='name'><a href="http://caniuse.com/selectors">selectors</a></h2>
             </header>
             <div class="more">
-              <div class='recco'><p>Most CSS Selectors are supported from IE7 onwards, so you should be safe to use. But do note that, on browsers that do not support these selectors, a whole rule will be detected as invalid if these unsupported selectors are present. For example, in IE6 <code>#main, p:first-child {}</code> would be invalid because it is unable to understand <code>p:first-child</code>. We strongly recommend you do not try to polyfill this, but if you do need one, you can use <a href="http://selectivizr.com/">Selectivizr</a>.</p></div>
+              <div class='recco'><p>Most CSS Selectors are supported from IE7 onwards, so you should be safe to use. But do note that, on browsers that do not support these selectors, a whole rule will be detected as invalid if these unsupported selectors are present. For example, in IE6 <code>#main, p:first-child {}</code> would be invalid because it is unable to understand <code>p:first-child</code>. We strongly recommend you do not try to polyfill this, but if you do need one, you can use <a href="http://selectivizr.com/">Selectivizr</a>.</p>
+
+<h4>When you sunset IE6 support, you can use:</h4>
+
+<ul>
+<li><code>tr &gt; td</code> : Immediate descendant (child) selector.</li>
+<li><code>dt + dd</code> : next sibling selector</li>
+<li><code>dt ~ dd</code> : any following sibling</li>
+<li><code>div[attr]</code> and <code>img[src$=png]</code> : Attribute selector (starts with, ends with, contains).</li>
+<li><code>p:first-child</code> </li>
+<li><code>div:hover</code> and <code>:hover</code> state on all non-<code>&lt;a&gt;</code>'s</li>
+<li><code>li.food.vegetable</code> : without worrying about the <a href="http://paulirish.com/2008/the-two-css-selector-bugs-in-ie6/">chained classes bug</a></li>
+</ul>
+
+<h4>When you sunset IE7 support, you can use:</h4>
+
+<ul>
+<li><code>:before, :after</code> and generated content</li>
+<li><code>:focus</code> for elements with current focus</li>
+</ul>
+
+<!-- 
+
+Resources:
+
+* http://coding.smashingmagazine.com/2009/10/14/css-differences-in-internet-explorer-6-7-and-8/
+* http://www.bennadel.com/blog/2306-What-CSS-Properties-Are-Supported-When-You-Drop-IE6-Support.htm
+* http://analogysoft.com/learning/ui-hulk-out/#beyondie6
+* http://msdn.microsoft.com/en-us/library/cc351024(v=vs.85).aspx#selectors  
+
+    [].forEach.call( document.querySelectorAll('td'), function(elem){ 
+      if (elem.innerText.trim() == 'No') elem.style.backgroundColor = 'red';
+      if (elem.innerText.trim() == 'Yes') elem.style.backgroundColor = 'green';
+    });
+
+--></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/selectors.md>Edit info on selectors</a>              
             </div>
