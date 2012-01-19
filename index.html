@@ -97,18 +97,18 @@
             <footer class="tags">none</footer>
           </article>          
         
-          <article class="fallback prefixes gtie8">
+          <article class="fallback prefixes gtie7">
             <header title="expand">
               <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
               <h4 class="kind css">css</h4>
               <h2 class='name'><a href="http://caniuse.com/box-sizing">box-sizing</a></h2>
             </header>
             <div class="more">
-              <div class='recco'><p>Firefox is the only browser that requires a prefix for box-sizing. You can use it without a prefix for everything else. <a href="https://github.com/Schepp/box-sizing-polyfill">Box Sizing Polyfill</a> provides this feature in IE 6 and 7 (you could scope the adjustments using <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">IE conditionals</a> or Modernizr's <code>no-box-sizing</code>).</p></div>
+              <div class='recco'><p><a href="http://css-tricks.com/box-sizing/"><code>box-sizing</code></a><code>: border-box</code> may be a much more sensible default for you. You can apply it to all (<code>*</code>) elements if you like. Firefox is the only browser that requires a prefix for box-sizing. You can use it without a prefix for everything else. IE8 has this feature natively and you can optionally use the <a href="https://github.com/Schepp/box-sizing-polyfill">box-sizing polyfill</a> provides this feature in IE 6/7 (you could scope the adjustments using <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">IE conditionals</a> or Modernizr's <a href="http://www.modernizr.com/download/#-cssclasses-addtest-css_boxsizing"><code>no-box-sizing</code></a>).</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/box-sizing.md>Edit info on box-sizing</a>              
             </div>
-            <footer class="tags">fallback prefixes gtie8</footer>
+            <footer class="tags">fallback prefixes gtie7</footer>
           </article>          
         
           <article class="none">
@@ -649,7 +649,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
 <h4>When you sunset IE8 support, you can use:</h4>
 
 <ul>
-<li>These very useful selectors: <a href="http://css-tricks.com/how-nth-child-works/"><code>:nth-child(n)</code></a>, <code>:last-child</code>, <code>:target</code>, <code>:not(s)</code>, <code>:enabled</code>, <code>:disabled</code>, <code>:checked</code></li>
+<li>These very useful selectors: <a href="http://css-tricks.com/how-nth-child-works/"><code>:nth-child(n)</code></a>, <code>:last-child</code>, <code>:target</code>, <code>:not(s)</code>, <code>:enabled</code>, <code>:disabled</code>, <code>:checked</code>, <code>::selection</code></li>
 <li>These ones, too: <code>:root</code>, <code>:nth-last-child(n)</code>, <code>:nth-of-type(n)</code>, <code>:nth-last-of-type(n)</code>, <code>:first-of-type</code>, <code>:last-of-type</code>, <code>:only-child</code>, <code>:only-of-type</code>, <code>:empty</code></li>
 </ul>
 
