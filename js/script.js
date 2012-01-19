@@ -1,4 +1,4 @@
-/* Author: 
+/* Author: Divya Manian, Paul Irish, et al 
 
 */
 
@@ -7,26 +7,27 @@
 var ies = ['gtie10', 'gtie9', 'gtie8', 'gtie7', 'gtie6'];
 
 
-var listOptions = {
-		listClass: 'features',
-		valueNames: ['kind', 'status', 'name', 'tags']
-	},
-	search = document.getElementById('livesearch'),
-  searchresults = document.querySelectorAll('.features article'),
-  searchurl = document.getElementById('searchurl');	
+var	search = document.getElementById('livesearch'),
+    searchresults = document.querySelectorAll('.features article'),
+    searchurl = document.getElementById('searchurl');	
 
 ies.map(function(ie, ieindex) {
   [].map.call(searchresults, function(result) {
     var classes = classList(result);
-    if(classes.contains(ie){
-      classes.add(ies.slice(ieindex + 1).join(' '));
+    if(classes.contains(ie)){
+      ies.slice(ieindex +1).forEach(function(classname) {
+        classes.add(classname);
+      });
     }  
   });
-};
+});
 
-
-featureList = new List('gfs', listOptions);
-search.onkeyup = updatesearch;
+var listOptions = {
+		listClass: 'features',
+		valueNames: ['kind', 'status', 'name', 'tags']
+	},
+  featureList = new List('gfs', listOptions);
+  search.onkeyup = updatesearch;
 
 function updatesearch() {
   if (search.value != '') {
