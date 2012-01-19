@@ -1,4 +1,4 @@
-feature: menu
+feature: &lt;menu>
 status: use
 tags: polyfill noie nomobile
 kind: html
