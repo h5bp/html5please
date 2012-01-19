@@ -38,8 +38,13 @@
             <header title="expand">
               <h3 class="status {{status}}">{{status}} <i>{{{polyfillaction tags}}}</i> </h3>                                                        
               <h4 class="kind {{kind}}">{{kind}}</h4>
-              <h2 class='name'><a
-                  href="{{{moreurl}}}">{{{featuretag feature}}}</a></h2>
+              <h2 class='name'>
+                {{#if moreurl}}
+                  <a href="{{{moreurl}}}">{{{featuretag feature}}}</a>
+                {{else}}
+                  {{{featuretag feature}}}
+                {{/if}}
+              </h2>
             </header>
             <div class="more">
               <div class='recco'>{{{contents}}}</div>
