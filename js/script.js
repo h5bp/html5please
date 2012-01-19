@@ -2,16 +2,30 @@
 
 */
 
+// gtieX augments. so a search is matching .gtie8, 
+// need to match .gtie7 and .gtie6 too
+var ies = ['gtie10', 'gtie9', 'gtie8', 'gtie7', 'gtie6'];
+
 
 var listOptions = {
 		listClass: 'features',
 		valueNames: ['kind', 'status', 'name', 'tags']
 	},
-	featureList = new List('gfs', listOptions),
 	search = document.getElementById('livesearch'),
-    searchresults = document.querySelectorAll('.features article'),
-    searchurl = document.getElementById('searchurl');	
+  searchresults = document.querySelectorAll('.features article'),
+  searchurl = document.getElementById('searchurl');	
 
+ies.map(function(ie, ieindex) {
+  [].map.call(searchresults, function(result) {
+    var classes = classList(result);
+    if(classes.contains(ie){
+      classes.add(ies.slice(ieindex + 1).join(' '));
+    }  
+  });
+};
+
+
+featureList = new List('gfs', listOptions);
 search.onkeyup = updatesearch;
 
 function updatesearch() {
