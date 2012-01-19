@@ -1,4 +1,4 @@
-feature: meter
+feature: &lt;meter>
 status: use
 tags: polyfill noie nomobile
 kind: html

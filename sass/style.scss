@@ -203,7 +203,7 @@ body {
   @extend .text-center; 
   
   h1 {
-    @extend .text-uppercase;
+
     font-size: 5em; 
     line-height: 1.2em;   
     text-shadow: solid-text-shadows(lighten($contrast, 10%), 3), 3px 3px 1px darken($dark, 10%), 4px 4px 3px darken($dark, 10%);
@@ -234,7 +234,7 @@ body {
 .index h1 b,  
 article h3 b i { 
   @extend .display-block;
-  @extend .text-uppercase;  
+
   font-family: $default-font-family;  
   line-height: 1;  
 }
@@ -253,7 +253,6 @@ article h3 b i {
 }
 
 #searchurl { 
-  @extend .text-uppercase;  
   @extend .display-block;
   @include our-transition('height 500ms linear'); 
   @include background(linear-gradient(90deg, #f16529,  lighten(#f16529, 10%)));      
@@ -313,7 +312,7 @@ article > header {
   .kind, b { font-weight: normal; }
   
   .kind {
-    @extend .text-uppercase;    
+
     @extend .display-block;
     font-size: 0.8em;
     color: $lightest;    
@@ -327,7 +326,7 @@ article > header {
   }
   
   .name {
-    @extend .text-uppercase;     
+  
     text-shadow: 1px 1px 1px darken(#149CD7, 40%);  
     letter-spacing: 1px;   
     
@@ -336,7 +335,7 @@ article > header {
 }
 
 .status {
-  @extend .text-uppercase;
+
   background: indianred;
   font-size: 2em;    
   border-radius: 0 0.2rem 0.2rem 0;
@@ -429,7 +428,7 @@ article div.more {
   .polyfills p { display: inline; }
   
   .updateurl {
-    @extend .text-uppercase;
+
     font-size: 0.8em;
     position: absolute;
     bottom: 0.5em;
@@ -458,7 +457,7 @@ body > footer {
   text-shadow: 1px 1px 1px $dark;     
     
   p:first-child { 
-    @extend .text-uppercase; 
+
   }
   
   .builders a { 
