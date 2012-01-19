@@ -22,10 +22,11 @@
         <input id=livesearch class=search name=livesearch placeholder='type to filter' type='search' value='' autofocus
                 />
         <a href="/" id=searchurl>link to this search ›</a>
-        <p>
+        <p class=featuretags>
         Explore features: 
+        <a href="./#all">all</a>
         {{#each featuretags}}
-          <a href="#{{this}}">{{this}}</a>
+          <a href="./#{{this}}">{{this}}</a>
         {{/each}}
         </p>
       </div>
@@ -38,7 +39,7 @@
               <h3 class="status {{status}}">{{status}} <i>{{{polyfillaction tags}}}</i> </h3>                                                        
               <h4 class="kind {{kind}}">{{kind}}</h4>
               <h2 class='name'><a
-                  href="http://caniuse.com/{{{editfrag}}}">{{{featuretag feature}}}</a></h2>
+                  href="{{{moreurl}}}">{{{featuretag feature}}}</a></h2>
             </header>
             <div class="more">
               <div class='recco'>{{{contents}}}</div>
