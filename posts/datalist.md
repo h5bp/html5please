@@ -1,4 +1,4 @@
-feature: &lt;datalist>
+feature: <datalist>
 status: use
 tags: polyfill gtie9 nomobile
 kind: html

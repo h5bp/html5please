@@ -1,4 +1,4 @@
-feature: svg
+feature: <svg>
 status: use
 tags: gtie8 polyfill
 kind: svg

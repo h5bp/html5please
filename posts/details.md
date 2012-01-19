@@ -1,4 +1,4 @@
-feature: &lt;details>
+feature: <details>
 status: use
 tags: polyfill
 kind: html

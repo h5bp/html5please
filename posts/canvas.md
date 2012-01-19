@@ -1,4 +1,4 @@
-feature: &lt;canvas>
+feature: <canvas>
 status: use
 tags: gtie8 polyfill
 kind: html

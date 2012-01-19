@@ -1,4 +1,4 @@
-feature: &lt;video>
+feature: <video>
 status: use
 tags: polyfill gtie8
 kind: html
