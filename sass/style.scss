@@ -276,7 +276,6 @@ article {
 }
 
 article > header {
-  overflow: hidden;
   background: $lightest;
   border-radius: 0.3rem;
   box-shadow: 0 0 7px darken($lightest, 10%) inset;    
@@ -292,7 +291,7 @@ article > header {
     line-height: 1;
     border-radius: 2rem;   
     height: 2rem; width: 2rem;
-    margin: 0.4rem 0.5rem 0 1rem;
+    margin: 0 0.5rem 0 1rem;
     text-align: center;
     color: white;
     text-shadow: 1px 1px 1px darken($lightest, 40%);
@@ -304,9 +303,9 @@ article > header {
     @extend .reset-margin;
     display: inline-block;
     vertical-align: middle;    
+
   }
   
-  .name, .kind { padding-top: 0.4rem; }
   
   i { font-style: normal; }
   .kind, b { font-weight: normal; }
@@ -315,18 +314,18 @@ article > header {
 
     @extend .display-block;
     font-size: 0.8em;
+    line-height: 3rem;
     color: $lightest;    
     position: absolute;
     left: -5em;
     text-align: right;
-    margin-top: 0.75em;
     width: 4.5em;
     z-index: 1;
     text-shadow: 1px 1px 1px $dark;
   }
   
   .name {
-  
+    padding: 0.4rem 0; 
     text-shadow: 1px 1px 1px darken(#149CD7, 40%);  
     letter-spacing: 1px;   
     
@@ -465,9 +464,6 @@ body > footer {
   font-size: 0.8em;   
   text-shadow: 1px 1px 1px $dark;     
     
-  p:first-child { 
-
-  }
   
   .builders a { 
     display: inline-block;
