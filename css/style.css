@@ -662,7 +662,7 @@ body > footer .builders b {
   zoom: 1;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 490px) {
   /* Style adjustments for viewports 480px and over go here */
   html {
     font-size: 13px;
