@@ -2,7 +2,7 @@ feature: web-storage
 status: use
 tags: gtie7, polyfill
 kind: api
-polyfillurls:[storage polyfill](https://gist.github.com/350433),
-[sessionstorage](http://code.google.com/p/sessionstorage/),
-[amplify.js](http://amplifyjs.com/), [realStorage](http://code.google.com/p/realstorage/), [YUI3 CacheOffline](http://yuilibrary.com/yui/docs/cache/#offline)
+polyfillurls:[Remy's storage polyfill](https://gist.github.com/350433),
+[sessionstorage](http://code.google.com/p/sessionstorage/)
 
+IE8 supported `localStorage` and `sessionStorage` so you may not need a polyfill. If you do, Remy's is a piece of cake to immplement and use.

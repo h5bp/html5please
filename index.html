@@ -48,8 +48,8 @@
               <h2 class='name'><a href="http://caniuse.com/audio">audio</a></h2>
             </header>
             <div class="more">
-              <div class='recco'><p>As with video, you need to provide your audio file in multiple formats for these to work. jPlayer also has a jQuery dependency. Sound Manager has an extensive API for further customization. </p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/happyworm/jPlayer">jPlayer</a>, <a href="http://kolber.github.com/audiojs/">audio.js</a>, <a href="http://www.schillmania.com/projects/soundmanager2/">Sound Manager 2</a></p></div> 
+              <div class='recco'><p>As with video, you need to provide your audio file in multiple formats for these to work&mdash;you'll need <a href="http://www.scirra.com/blog/44/on-html5-audio-formats-aac-and-ogg">Ogg and AAC</a>. jPlayer has a jQuery dependency. Sound Manager has an extensive API for further customization. </p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/happyworm/jPlayer">jPlayer</a>, <a href="http://www.schillmania.com/projects/soundmanager2/">Sound Manager 2</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/audio.md>Edit info on audio</a>              
             </div>
             <footer class="tags">polyfill</footer>
@@ -62,7 +62,7 @@
               <h2 class='name'><a href="http://caniuse.com/border-image">border-image</a></h2>
             </header>
             <div class="more">
-              <div class='recco'><p>Make sure to use all the right prefixes (<code>-o-</code>, <code>-webkit</code>, <code>-ms-</code>, <code>-moz-</code>). You should let this fallback to either a normal solid border or no border at all (depending on whether a border is essential for readability). We recommend you avoid polyfills, but <a href="http://css3pie.com">CSS3Pie</a> is a polyfill you should use if you are forced into such a situation. </p></div>
+              <div class='recco'><p>Make sure to use all the right prefixes (<code>-o-</code>, <code>-webkit</code>, <code>-ms-</code>, <code>-moz-</code>); additionally, <a href="http://border-image.com/">border-image.com</a> may help. You should let this fallback to either a normal solid border or no border at all (depending on whether a border is essential for readability). We recommend you avoid polyfills, but <a href="http://css3pie.com">CSS3Pie</a> is a polyfill you should use if you are forced into such a situation. </p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/border-image.md>Edit info on border-image</a>              
             </div>
@@ -195,18 +195,18 @@
             <footer class="tags">polyfill gtie9 nomobile</footer>
           </article>          
         
-          <article class="polyfill noie nooldmobile">
+          <article class="fallback noie nooldmobile">
             <header title="expand">
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
               <h4 class="kind api">api</h4>
               <h2 class='name'><a href="http://caniuse.com/dataset">dataset</a></h2>
             </header>
             <div class="more">
-              <div class='recco'><p>Dataset is unsupported in IE and older mobile browsers, which is why we recommend using it with a polyfill.</p></div>
+              <div class='recco'><p><code>elem.dataset</code> is unsupported in IE and older mobile browsers. Using data-* attributes will be totally fine in all browsers, but instead of using <code>elem.dataset.foo</code> just use <code>elem.getAttribute('data-foo')</code> instead. A polyfill is availble if you want terser syntax.</p></div>
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://eligrey.com/blog/post/html-5-dataset-support">HTML5 dataset support</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/dataset.md>Edit info on dataset</a>              
             </div>
-            <footer class="tags">polyfill noie nooldmobile</footer>
+            <footer class="tags">fallback noie nooldmobile</footer>
           </article>          
         
           <article class="polyfill">
@@ -272,7 +272,7 @@
               <h2 class='name'><a href="http://caniuse.com/flexbox">flexbox</a></h2>
             </header>
             <div class="more">
-              <div class='recco'><p>Unfortunately, older versions of this spec have been implemented in Gecko, Webkit and Trident. But the spec has changed significantly (starting from the syntax), hence we recommend you avoid using this until the stable version of the spec finds wide-spread implementation.</p></div>
+              <div class='recco'><p>Unfortunately, older versions of this spec have been implemented in Gecko, Webkit and Trident. But <a href="http://dev.w3.org/csswg/css3-flexbox/">the spec</a> has changed significantly (starting from the syntax), hence we recommend you avoid using this until the stable version of the spec finds wide-spread implementation.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/flex-box.md>Edit info on flexbox</a>              
             </div>
@@ -300,7 +300,7 @@
               <h2 class='name'><a href="http://caniuse.com/fontface">fontface</a></h2>
             </header>
             <div class="more">
-              <div class='recco'><p>Use the <a href="http://www.fontsquirrel.com/fontface/generator">Font Squirrel Generator</a> for fonts you have license for using as web fonts. <a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax">Font Squirrel @font-face syntax</a> is also the most bullet-proof way of serving web fonts. You do not need polyfills - just fonts in several formats. </p></div>
+              <div class='recco'><p>Use the <a href="http://www.fontsquirrel.com/fontface/generator">Font Squirrel Generator</a> for fonts you have license for using as web fonts. <a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax">Font Squirrel @font-face syntax</a> is also the most bullet-proof way of serving web fonts. You do not need polyfills - just fonts in several formats. Don't use sIFR or Cufon anymore.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/fontface.md>Edit info on fontface</a>              
             </div>
@@ -330,7 +330,7 @@
             <div class="more">
               <div class='recco'><p>We strongly recommend you use all the prefixes ((<code>-o-</code>, <code>-webkit</code>, <code>-ms-</code>, <code>-moz-</code>)) when you provide gradients as image values (<code>background</code> or <code>border-image</code>). Do provide a fallback color if you are using this as a value for <code>background</code> so browsers that do not support the gradients can render a solid background color. </p>
 
-<p>We also suggest you drop old webkit syntax and only use the latest syntax for gradient values. </p></div>
+<p>We also suggest you drop old webkit syntax and only use the <a href="http://www.broken-links.com/2012/01/11/the-new-and-hopefully-final-linear-gradient-syntax/">latest syntax</a> for gradient values. </p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/gradients.md>Edit info on gradients</a>              
             </div>
@@ -611,7 +611,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <h2 class='name'><a href="http://caniuse.com/selectors">selectors</a></h2>
             </header>
             <div class="more">
-              <div class='recco'><p>CSS Selectors are supported from IE7 onwards, so you should be safe to use. But do note that, on browsers that do not support these selectors, a whole rule will be detected as invalid if these unsupported selectors are present. For example, in IE6 <code>#main, p:first-child {}</code> would be invalid because it is unable to understand <code>p:first-child</code>. Again, we strongly recommend you do not try to polyfill this, but if you do need one, you can use <a href="http://selectivizr.com/">Selectivizr</a>.</p></div>
+              <div class='recco'><p>Most CSS Selectors are supported from IE7 onwards, so you should be safe to use. But do note that, on browsers that do not support these selectors, a whole rule will be detected as invalid if these unsupported selectors are present. For example, in IE6 <code>#main, p:first-child {}</code> would be invalid because it is unable to understand <code>p:first-child</code>. We strongly recommend you do not try to polyfill this, but if you do need one, you can use <a href="http://selectivizr.com/">Selectivizr</a>.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/selectors.md>Edit info on selectors</a>              
             </div>
@@ -681,7 +681,8 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <h2 class='name'><a href="http://caniuse.com/transitions">transitions</a></h2>
             </header>
             <div class="more">
-              <div class='recco'><p>Note that you need to use all the usual prefixes to make this work in all browsers (<code>-o-</code>, <code>-webkit</code>, <code>-moz-</code>, <code>-ms-</code>).If there is any critical interaction that requires transitions to be present, we recommend you provide an alternative experience for users on browsers that do not support this feature by using feature detection. </p></div>
+              <div class='recco'><p>Most of the time, transitions just add to the experience and are not neccessary. If there is any critical interaction that requires transitions to be present, we recommend you provide an alternative experience for users on browsers that do not support this feature by feature detecting its presence. 
+Note that you need to use all the usual prefixes to make this work in all browsers (<code>-o-</code>, <code>-webkit</code>, <code>-moz-</code>, <code>-ms-</code>).</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/transitions.md>Edit info on transitions</a>              
             </div>
@@ -750,9 +751,11 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
       <p>with love &amp; tears from</p>
       <p class=builders><a href="http://twitter.com/divya"><img src="http://api.twitter.com/1/users/profile_image/divya?size=normal"><b>Divya</b> Manian</a> <a href="http://twitter.com/paul_irish"><img src="http://api.twitter.com/1/users/profile_image/paul_irish?size=normal"><b>Paul</b> Irish</a> <a href="http://twitter.com/tbranyen"><img src="http://api.twitter.com/1/users/profile_image/tbranyen?size=normal"><b>Tim</b> Branyen</a> <a href="http://twitter.com/connor"><img src="http://api.twitter.com/1/users/profile_image/connor?size=normal"><b>Connor</b> Montgomery</a> <a href='https://github.com/h5bp/html5please/contributors'>&amp; more</a>
         </p>
+
+
+    <p>The above recommendations are not an exhaustive list of all choices, but rather careful recommendations from HTML5 and CSS3 experts</p>
+    
     </footer>
-
-
     <!-- scripts concatenated and minified via ant build script -->
     <script src='js/libs/list.min.js'></script>
     <script src='js/libs/classList.js'></script>    
