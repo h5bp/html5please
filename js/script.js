@@ -42,12 +42,23 @@ for(var i = 0; i < count; i++) {
   };
 }    
 
+var clicktags = document.querySelectorAll('.featuretags a');
+
+[].map.call(clicktags, function(tag) {
+  tag.onclick = function(e) {
+    showsearch(/#(.*)/.exec(tag.href)[1]);
+  };  
+});
+
 if(window.location.hash) {
-  var hash = /^#(.*)/.exec(window.location.hash)[1];
+  showsearch(/^#(.*)/.exec(window.location.hash)[1]);
+}
+
+function showsearch(hash) {
   search.value = hash;
   featureList.search(hash);
   updatesearch();
-}
+};
 
 // keyboard shortcut for / to go to search box.
 addEventListener('keyup', function(e){
