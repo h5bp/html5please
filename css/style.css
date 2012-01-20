@@ -501,6 +501,7 @@ article.expanded div.more {
   float: right;
   box-shadow: -4px 0px 6px #791c18 inset;
   border-right: 1px solid #4e120f;
+  pointer-events: none;
 }
 .status:before, .status:after {
   content: "";

@@ -415,6 +415,8 @@ article.expanded {
   float: right;
   box-shadow: -4px 0px 6px darken($avoid, 12%) inset;
   border-right: 1px solid darken($avoid, 22%);
+  pointer-events: none;
+
 
   //Arrow like figures on the right
   &:before, 
