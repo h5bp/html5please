@@ -18,8 +18,9 @@ var	search = document.getElementById('livesearch'),
         return tag.match(/gtie.*/);
       });
 
+  tagslist.push('showall');
+
   var ieindex = ies.indexOf(ielist[0]);
-  
   if(ieindex != -1){
     tagslist = tagslist.concat(ies.slice(ieindex + 1));
   }
