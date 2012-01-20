@@ -308,11 +308,15 @@ article {
 }
 
 article > header {
-  background: $lightest;
+  background: lighten($light, 50%);
   border-radius: 0.3rem;
   position: relative;
   z-index: 1;
   cursor: pointer;
+
+  &:hover {
+    background: $lightest;
+  }
 
   &:before {
     display: inline-block;
@@ -323,9 +327,9 @@ article > header {
     margin: 0 0.5rem 0 1rem;
     text-align: center;
     color: white;
-    text-shadow: 1px 1px 1px darken($lightest, 40%);
-    background: darken($lightest, 10%);      
-    border: 1px solid darken($lightest, 15%);
+    text-shadow: 1px 1px 1px $light;
+    background: lighten($light, 40%);      
+    border: 1px solid lighten($light, 30%);
   }
     
   .kind, .name, .status {
@@ -394,7 +398,7 @@ article.expanded {
 
 .name {
   padding: 0.4rem 0; 
-  text-shadow: 0px 1px 1px darken(#149CD7, 40%);  
+  text-shadow: 1px 1px 1px darken(#149CD7, 40%);  
   letter-spacing: 1px;   
   
   a { color: darken($link-color, 10%); } 

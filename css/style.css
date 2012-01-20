@@ -394,11 +394,14 @@ article .tags {
 }
 
 article > header {
-  background: #e3d7bf;
+  background: #d3e0e4;
   border-radius: 0.3rem;
   position: relative;
   z-index: 1;
   cursor: pointer;
+}
+article > header:hover {
+  background: #e3d7bf;
 }
 article > header:before {
   display: inline-block;
@@ -412,9 +415,9 @@ article > header:before {
   margin: 0 0.5rem 0 1rem;
   text-align: center;
   color: white;
-  text-shadow: 1px 1px 1px #957941;
-  background: #d3c19c;
-  border: 1px solid #ccb68a;
+  text-shadow: 1px 1px 1px #476871;
+  background: #b4cad0;
+  border: 1px solid #95b4bc;
 }
 article > header .kind, article > header .name, article > header .status {
   display: inline-block;
@@ -480,7 +483,7 @@ article.expanded div.more {
 
 .name {
   padding: 0.4rem 0;
-  text-shadow: 0px 1px 1px #03151c;
+  text-shadow: 1px 1px 1px #03151c;
   letter-spacing: 1px;
 }
 .name a {
