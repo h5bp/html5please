@@ -101,7 +101,7 @@
               </h2>
             </header>
             <div class="more">
-              <div class='recco'><p>Make sure to use all the right prefixes (<code>-o-</code>, <code>-webkit</code>, <code>-ms-</code>, <code>-moz-</code>); additionally, <a href="http://border-image.com/">border-image.com</a> may help. You should let this fallback to either a normal solid border or no border at all (depending on whether a border is essential for readability). We recommend you avoid polyfills, but <a href="http://css3pie.com">CSS3Pie</a> is a polyfill you should use if you are forced into such a situation. </p></div>
+              <div class='recco'><p>Make sure to use all the right prefixes (<code>-o-</code>, <code>-webkit</code>, <code>-ms-</code>, <code>-moz-</code>); additionally, <a href="http://border-image.com/">border-image.com</a> may help. You should let this fallback to either a normal solid border or no border at all (depending on whether a border is essential for readability). We recommend you avoid polyfills. </p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/border-image.md>Edit info on
                 border-image</a>              
@@ -120,7 +120,7 @@
               </h2>
             </header>
             <div class="more">
-              <div class='recco'><p>Border Radius can be safely used without a prefix for all modern browsers, and gracefully renders rectangles when not supported. If you do need to render border radii on unsupported browsers, you can use <a href="http://css3pie.com/">CSSPie</a> as a polyfill.</p></div>
+              <div class='recco'><p>Border Radius can be safely used without a prefix for all modern browsers, and gracefully renders rectangles when not supported. However, note that applying this to a large area and on many elements might cause significant performance impact when scrolling or when the window is redrawn. Use with caution. </p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/border-radius.md>Edit info on
                 border-radius</a>              
@@ -158,7 +158,7 @@
               </h2>
             </header>
             <div class="more">
-              <div class='recco'><p>Box-shadow is safe to use most of the time, except when you are applying it on a large area, which might cause significant performance hit when the user interacts with your page (on scroll, hover, etc). You do not need a polyfill, and in the unlikely event of needing one, use <a href="http://css3pie.com/">CSSPie</a>.</p></div>
+              <div class='recco'><p>Box-shadow is safe to use most of the time, except when you are applying it on a large area, which might cause significant performance hit when the user interacts with your page (on scroll, hover, etc). You do not need a polyfill.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/box-shadow.md>Edit info on
                 box-shadow</a>              
@@ -694,7 +694,7 @@ might be your path to salvation.</p></div>
               </h2>
             </header>
             <div class="more">
-              <div class='recco'><p>Multiple backgrounds when unsupported <a href="http://snook.ca/archives/html_and_css/multiple-bg-css-gradients">are ignored completely</a>. If you can make do with a simple background color, make sure to declare <code>background-color: &lt;color&gt;</code> before you start using multiple backgrounds or you can also set an image as a background with <code>background-image</code> and override it with a second  background declaration. We strongly recommend you don't polyfill this, but <a href="http://css3pie.com/">CSSPie</a> should help you out if you need one.</p></div>
+              <div class='recco'><p>Multiple backgrounds when unsupported <a href="http://snook.ca/archives/html_and_css/multiple-bg-css-gradients">are ignored completely</a>. If you can make do with a simple background color, make sure to declare <code>background-color: &lt;color&gt;</code> before you start using multiple backgrounds or you can also set an image as a background with <code>background-image</code> and override it with a second  background declaration. We strongly recommend you don't polyfill this.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/multibackgrounds.md>Edit info on
                 multibackgrounds</a>              
@@ -752,7 +752,7 @@ might be your path to salvation.</p></div>
             </header>
             <div class="more">
               <div class='recco'><p>Please use that polyfill, as Webkit is the only engine that supports it.
-Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Loui's</a> post about the polyfill.</p></div>
+Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Louis's</a> post about the polyfill.</p></div>
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/impressivewebs/HTML5-Reverse-Ordered-Lists">HTML5 reverse ordered lists</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/ol-reversed.md>Edit info on
                 ol-reversed</a>              
