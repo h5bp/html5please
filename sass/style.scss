@@ -1,3 +1,4 @@
+
 @import "compass/css3/gradient";
 @import "compass/css3/box-sizing";
 @import "vars";
@@ -211,7 +212,11 @@ body {
     margin: 0.8em 0 0.5em 0; 
     text-transform: uppercase;
     
-    img { vertical-align: -10%; }    
+    img { 
+      vertical-align: -10%;
+      width: 64px;
+      height: 64px;
+    }    
   }
   
   h2 {
@@ -389,14 +394,14 @@ article.expanded {
 
 .name {
   padding: 0.4rem 0; 
-  text-shadow: 1px 1px 1px darken(#149CD7, 40%);  
+  text-shadow: 0px 1px 1px darken(#149CD7, 40%);  
   letter-spacing: 1px;   
   
-  a { color: darken($link-color, 5%); } 
+  a { color: darken($link-color, 10%); } 
 }
 
 .status {
-  background: indianred;
+  background: $avoid;
   font-size: 2em;    
   border-radius: 0 0.2rem 0.2rem 0;
   padding: 0 1rem 0 0.5rem;
@@ -404,8 +409,8 @@ article.expanded {
   text-shadow: 1px 1px 1px black;
   position: relative;
   float: right;
-  box-shadow: -4px 0px 6px darken(#CD5C5C, 12%) inset;
-  border-right: 1px solid darken(#CD5c5c, 22%);
+  box-shadow: -4px 0px 6px darken($avoid, 12%) inset;
+  border-right: 1px solid darken($avoid, 22%);
 
   //Arrow like figures on the right
   &:before, 
@@ -415,14 +420,14 @@ article.expanded {
     width: 0.8em;
     position: absolute;
     left: -0.8em; 
-    @include background(linear-gradient(34deg, transparentize(#CD5C5C, 1), transparentize(#CD5C5C, 1) 50%, darken(#CD5C5C, 10%) 53%, #CD5C5C 56%));    
+    @include background(linear-gradient(34deg, transparentize($avoid, 1), transparentize($avoid, 1) 50%, darken($avoid, 10%) 53%, $avoid 56%));    
   }
   
   &:before { top: 0; }
   
   &:after {
     bottom: 0;
-    @include background(linear-gradient(-34deg, transparentize(#CD5C5C, 1), transparentize(#CD5C5C, 1) 50%, darken(#CD5C5C, 10%) 53%, #CD5C5C 56%));          
+    @include background(linear-gradient(-34deg, transparentize($avoid, 1), transparentize($avoid, 1) 50%, darken($avoid, 10%) 53%, $avoid 56%));          
   }
   
   i {
@@ -439,30 +444,30 @@ article.expanded {
   }
   
   &.use { 
-    background: olive; 
-    box-shadow: -4px 0px 4px darken(olive, 5%) inset;
-    border-right-color: darken(olive, 12%);
+    background: $use; 
+    box-shadow: -4px 0px 4px darken($use, 5%) inset;
+    border-right-color: darken($use, 12%);
 
     &:before{
-      @include background(linear-gradient(34deg, transparentize(olive, 1),  transparentize(olive, 1) 50%, darken(olive, 5%) 53%,  olive 56%));                    
+      @include background(linear-gradient(34deg, transparentize($use, 1),  transparentize($use, 1) 50%, darken($use, 5%) 53%,  $use 56%));                    
     }
     
     &:after {
-      @include background(linear-gradient(-34deg, transparentize(olive, 1),  transparentize(olive, 1) 50%, darken(olive, 5%) 53%,  olive 56%));                  
+      @include background(linear-gradient(-34deg, transparentize($use, 1),  transparentize($use, 1) 50%, darken($use, 5%) 53%,  $use 56%));                  
     }
   }
   
   &.caution { 
-    background: darken(#ffa500, 5%); 
-    box-shadow: -4px 0 6px darken(#ffa500, 12%) inset;
-    border-right-color: darken(#ffa500, 22%);
+    background: darken($caution, 5%); 
+    box-shadow: -4px 0 6px darken($caution, 12%) inset;
+    border-right-color: darken($caution, 22%);
     
     &:before{
-      @include background(linear-gradient(34deg, transparentize(#ffa500, 1), transparentize(#ffa500, 1) 50%, #FFA500 53%, darken(#ffa500, 5%) 56%));            
+      @include background(linear-gradient(34deg, transparentize($caution, 1), transparentize($caution, 1) 50%, $caution 53%, darken($caution, 5%) 56%));            
     }
     
     &:after {
-      @include background(linear-gradient(-34deg, transparentize(#ffa500, 1), transparentize(#ffa500, 1) 50%, #FFA500 53%, darken(#ffa500, 5%) 56%));                  
+      @include background(linear-gradient(-34deg, transparentize($caution, 1), transparentize($caution, 1) 50%, $caution 53%, darken($caution, 5%) 56%));                  
     }
   }  
 }
