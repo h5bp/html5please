@@ -547,9 +547,12 @@ body > footer {
   .index h2 { max-width: 100%; }
 }
 
-@media only screen and (min-width: 768px) {
-  /* Style adjustments for viewports 768px and over go here */
-
+@media only screen and (min-width: 1400px) {
+  /* Style adjustments for bigass, wide viewports go here */
+  body {
+    max-width: 1070px;
+    min-width: initial;
+  }
 }
 
 
