@@ -4,22 +4,26 @@
 
 // gtieX augments. so a search is matching .gtie8, 
 // need to match .gtie7 and .gtie6 too
-var ies = ['gtie10', 'gtie9', 'gtie8', 'gtie7', 'gtie6'];
+var ies = ['gtie6', 'gtie7', 'gtie8', 'gtie9', 'gtie10'];
 
 
 var	search = document.getElementById('livesearch'),
     searchresults = document.querySelectorAll('.features article'),
     searchurl = document.getElementById('searchurl');	
 
-ies.map(function(ie, ieindex) {
-  [].map.call(searchresults, function(result) {
-    var classes = classList(result);
-    if(classes.contains(ie)){
-      ies.slice(ieindex +1).forEach(function(classname) {
-        classes.add(classname);
+[].map.call(searchresults, function(result) {
+  var tags = result.querySelector('.tags'),
+      tagslist = tags.textContent.split(' '),
+      ielist = tagslist.filter(function(tag) {
+        return tag.match(/gtie.*/);
       });
-    }  
-  });
+
+  var ieindex = ies.indexOf(ielist[0]);
+  
+  if(ieindex != -1){
+    tagslist = tagslist.concat(ies.slice(ieindex + 1));
+  }
+  tags.textContent = tagslist.join(' ');  
 });
 
 var listOptions = {
