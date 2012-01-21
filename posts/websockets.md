@@ -1,6 +1,6 @@
 feature: websockets
 status: caution
-tags: none 
+tags: polyfill 
 kind: api
 polyfillurls: [Socket.io](http://socket.io/)
 
