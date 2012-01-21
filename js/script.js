@@ -62,7 +62,7 @@ for(var i = 0; i < count; i++) {
   };
 }    
 
-var clicktags = document.querySelectorAll('.featuretags a');
+var clicktags = document.querySelectorAll('.explore-features a');
 
 [].map.call(clicktags, function(tag) {
   tag.onclick = function(e) {

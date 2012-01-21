@@ -22,31 +22,15 @@
         <input id=livesearch class=search name=livesearch placeholder='type to filter' type='search' value='' autofocus
                 />
         <a href="/" id=searchurl>link to this search ›</a>
-        <p class=featuretags>
-        Explore features: 
-        <a href="./#showall">all</a>
-        
-          <a href="./#fallback">fallback</a>
-        
-          <a href="./#polyfill">polyfill</a>
-        
-          <a href="./#prefixes">prefixes</a>
-        
-          <a href="./#gtie7">gtie7</a>
-        
-          <a href="./#gtie8">gtie8</a>
-        
-          <a href="./#noie">noie</a>
-        
-          <a href="./#nooldmobile">nooldmobile</a>
-        
-          <a href="./#gtie9">gtie9</a>
-        
-          <a href="./#nomobile">nomobile</a>
-        
-          <a href="./#gtie6">gtie6</a>
-        
-        </p>
+        <div class="explore-features">
+          <h2><b>Explore</b> features</h2>
+          <ul>
+            <li>supported by <a href="#gtie9">IE9+</a> <a href="#gtie8">IE8+</a> <a href="#gtie7">IE7+</a> <a href="#gtie6">IE6+</a> <a href="#noie">no IE</a> </li>
+            <li>not supported by <a href="#nomobile">mobile devices</a> <a href="#nooldmobile">older mobile devices</a></li>
+            <li>requiring <a href="#prefixes">prefixes</a><a href="#polyfill">polyfill</a><a href="#fallback">fallback</a></li>
+            <li> <a href="./#showall">all features</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <div id=main role=main>
@@ -63,7 +47,7 @@
               </h2>
             </header>
             <div class="more">
-              <div class='recco'><p>CSS Animations are still in a flux. The Working Group has decided to provide a universal animation spec that would work across CSS, SVG and HTML. For now, use animations for providing additional glamour and use feature detection to provide alternative experience on browsers that do not support this feature for critical animations.</p></div>
+              <div class='recco'><p>CSS Animations are still in a flux. The Working Group has <a href="http://www.w3.org/2012/01/13-svg-minutes.html#action02">decided to provide</a> a universal animation spec that would work across CSS, SVG and HTML. For now, use animations for providing additional glamour and use feature detection to provide alternative experience on browsers that do not support this feature for critical animations.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/animations.md>Edit info on
                 animations</a>              
@@ -134,7 +118,7 @@
               <h4 class="kind css">css</h4>
               <h2 class='name'>
                 
-                  box-reflection
+                  <a href="http://caniuse.com/box-reflection">box-reflection</a>
                 
               </h2>
             </header>
@@ -458,7 +442,7 @@ change radically before stabilizing. Avoid using this. </p></div>
               <h4 class="kind css">css</h4>
               <h2 class='name'>
                 
-                  font-feature-settings
+                  <a href="http://caniuse.com/font-feature-settings">font-feature-settings</a>
                 
               </h2>
             </header>
@@ -613,7 +597,7 @@ might be your path to salvation.</p></div>
               <h4 class="kind api">api</h4>
               <h2 class='name'>
                 
-                  match-media
+                  <a href="http://caniuse.com/match-media">match-media</a>
                 
               </h2>
             </header>
@@ -746,7 +730,7 @@ might be your path to salvation.</p></div>
               <h4 class="kind html">html</h4>
               <h2 class='name'>
                 
-                  ol-reversed
+                  <a href="http://caniuse.com/ol-reversed">ol-reversed</a>
                 
               </h2>
             </header>
@@ -766,7 +750,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <h4 class="kind css">css</h4>
               <h2 class='name'>
                 
-                  paged-media
+                  <a href="http://caniuse.com/paged-media">paged-media</a>
                 
               </h2>
             </header>
@@ -899,7 +883,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <h4 class="kind css">css</h4>
               <h2 class='name'>
                 
-                  scoped-css
+                  <a href="http://caniuse.com/scoped-css">scoped-css</a>
                 
               </h2>
             </header>
@@ -1109,9 +1093,9 @@ Note that you need to use all the usual prefixes to make this work in all browse
             <footer class="tags">fallback</footer>
           </article>          
         
-          <article class="none">
+          <article class="polyfill">
             <header title="expand">
-              <h3 class="status avoid">avoid <i></i> </h3>                                                        
+              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
               <h4 class="kind api">api</h4>
               <h2 class='name'>
                 
@@ -1120,12 +1104,12 @@ Note that you need to use all the usual prefixes to make this work in all browse
               </h2>
             </header>
             <div class="more">
-              <div class='recco'><p>While polyfills exist for web-sockets, browser support is not as widespread to recommend usage. If you like playing with fire, go ahead and use <a href="https://github.com/sockjs/sockjs-client">sockJS</a>,<a href="http://socket.io/">socket.io</a>, <a href="https://github.com/gimite/web-socket-js/">web-socket.js</a></p></div>
-              <div class='polyfills'></div> 
+              <div class='recco'><p>Making your app real-time is a huge boost and <a href="http://socket.io/">Socket.io</a> helps with downlevel transports for browsers lacking native websocket support (and supports IE6+). However be prepared to tune your AJAX polling or Comet in order to meet the needs of your app.</p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://socket.io/">Socket.io</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/websockets.md>Edit info on
                 websockets</a>              
             </div>
-            <footer class="tags">none</footer>
+            <footer class="tags">polyfill</footer>
           </article>          
         
           <article class="gtie7 polyfill">

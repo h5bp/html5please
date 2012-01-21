@@ -206,15 +206,16 @@ body {
 
 .index { 
   @extend .text-center; 
-  
-  h1 {
+  text-shadow: 1px 1px 1px darken($dark, 10%);
 
+  h1 {
     font-size: 5em; 
     line-height: 1.2em;   
     text-shadow: solid-text-shadows(lighten($contrast, 10%), 3), 3px 3px 1px darken($dark, 10%), 4px 4px 3px darken($dark, 10%);
     margin: 0.8em 0 0.5em 0; 
     text-transform: uppercase;
-    
+    font-family: $index-font-family
+
     img { 
       vertical-align: -10%;
       width: 64px;
@@ -226,33 +227,31 @@ body {
     font-size: 1em;  
     margin: 0 auto; 
     max-width: 60%; 
-    text-shadow: 1px 1px 1px darken($dark, 10%);
     font-weight: normal; 
     text-transform: none; 
     font-style: normal;    
     
     b {
-      @extend .display-block;   
-      font-size: 2em; 
+      @extend .display-block;
+      @include secondary-title;
+      margin-bottom: 0.5em;
       color: lighten($contrast, 10%);          
     }
   }
-  
-  h1, h2 b { font-family: $index-font-family; }  
 }
 
 .index h1 b,  
 article h3 b i { 
   @extend .display-block;
-
   font-family: $default-font-family;  
   line-height: 1;  
 }
 
 
-.index > div { padding: 1em 0 4em 0; }
+.index > div { padding: 2rem 0; }
 
-#livesearch{ 
+#livesearch{
+  @extend .reset-margin; 
   width: 50%; 
   padding: 0 1em; 
   height: 2rem;
@@ -261,7 +260,6 @@ article h3 b i {
   border: 0;
   outline: none;
   color: darken($dark, 20%);
-  margin: 0;
   z-index: 1;
 }
 
@@ -278,7 +276,6 @@ article h3 b i {
   height: 2rem;
   width: 0; opacity: 0;
   color: white;
-  text-shadow: 1px 1px 1px darken(#f16529, 40%);
   border-radius: 0 10em 10em 0;
   overflow: hidden;
   margin-left: -2em;
@@ -288,7 +285,8 @@ article h3 b i {
   width: 12em;
   padding-left: 1.5em;
   opacity: 1;
-}  
+} 
+
 #livesearch, 
 #searchurl {
   display: inline-block;
@@ -296,7 +294,34 @@ article h3 b i {
   position: relative;
 }
 
-.featuretags {
+.explore-features {
+  header & {
+    margin: 2rem 0;
+  }  
+
+  h2 { 
+    width: 5em;
+     margin-left: 2.4rem; 
+
+    b { margin-bottom: 0; text-indent: -2.4rem; }
+  }
+
+  h2, ul {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  ul {
+    @extend .reset-list;
+    border-left: 1px solid $light;
+    padding-left: 1em;    
+  }  
+
+  li { padding: 0.5rem 0; }  
+
+  li + li { border-top: 1px dotted $light; }
+
   a { text-decoration: none; color: lighten($link-color, 20%); }
 
   a +a::before { content: " • "; color: $lightest; }
@@ -408,7 +433,6 @@ article.expanded {
 }
 
 .status {
-  background: $avoid;
   font-size: 2em;    
   border-radius: 0 0.2rem 0.2rem 0;
   padding: 0 1rem 0 0.5rem;
@@ -416,8 +440,6 @@ article.expanded {
   text-shadow: 1px 1px 1px black;
   position: relative;
   float: right;
-  box-shadow: -4px 0px 6px darken($avoid, 12%) inset;
-  border-right: 1px solid darken($avoid, 22%);
   pointer-events: none;
 
 
@@ -429,15 +451,11 @@ article.expanded {
     width: 0.8em;
     position: absolute;
     left: -0.8em; 
-    @include background(linear-gradient(34deg, transparentize($avoid, 1), transparentize($avoid, 1) 50%, darken($avoid, 10%) 53%, $avoid 56%));    
   }
   
   &:before { top: 0; }
   
-  &:after {
-    bottom: 0;
-    @include background(linear-gradient(-34deg, transparentize($avoid, 1), transparentize($avoid, 1) 50%, darken($avoid, 10%) 53%, $avoid 56%));          
-  }
+  &:after { bottom: 0; }
   
   i {
     font-size: 0.3em;
@@ -451,34 +469,40 @@ article.expanded {
       font-size: 1.5em;
     }
   }
-  
-  &.use { 
-    background: $use; 
-    box-shadow: -4px 0px 4px darken($use, 5%) inset;
-    border-right-color: darken($use, 12%);
+ 
+  &.avoid { @include apply-status-style($avoid); } 
 
-    &:before{
-      @include background(linear-gradient(34deg, transparentize($use, 1),  transparentize($use, 1) 50%, darken($use, 5%) 53%,  $use 56%));                    
-    }
-    
-    &:after {
-      @include background(linear-gradient(-34deg, transparentize($use, 1),  transparentize($use, 1) 50%, darken($use, 5%) 53%,  $use 56%));                  
-    }
-  }
+  &.use { @include apply-status-style($use); }
   
-  &.caution { 
-    background: darken($caution, 5%); 
-    box-shadow: -4px 0 6px darken($caution, 12%) inset;
-    border-right-color: darken($caution, 22%);
-    
-    &:before{
-      @include background(linear-gradient(34deg, transparentize($caution, 1), transparentize($caution, 1) 50%, $caution 53%, darken($caution, 5%) 56%));            
-    }
-    
-    &:after {
-      @include background(linear-gradient(-34deg, transparentize($caution, 1), transparentize($caution, 1) 50%, $caution 53%, darken($caution, 5%) 56%));                  
-    }
-  }  
+  &.caution { @include apply-status-style($caution); }  
+}
+
+
+body > footer {
+  text-align: center;  
+  padding: 3em 0;
+  font-size: 0.8em;   
+  text-shadow: 1px 1px 1px $dark;     
+}
+
+.builders {
+  a {   
+    display: inline-block;
+    margin: 0 1em 1em 0;
+    text-align: left;
+    width: 12em;
+  }
+
+  img {
+    float: left;
+    margin-right: 1em;
+    border-radius: 0.2rem;
+  }
+
+  b {
+    font-weight: normal;
+    display: block;
+  }
 }
 
 code { 
@@ -490,33 +514,6 @@ code {
   }
 }
 
-
-
-body > footer {
-  text-align: center;  
-  padding: 3em 0;
-  font-size: 0.8em;   
-  text-shadow: 1px 1px 1px $dark;     
-    
-  
-  .builders a { 
-    display: inline-block;
-    margin: 0 1em 1em 0;
-    text-align: left;
-    width: 12em;
-  }
-  
-  .builders img {
-    float: left;
-    margin-right: 1em;
-    border-radius: 0.2rem;
-  }
-  
-  .builders b {
-    font-weight: normal;
-    display: block;
-  }
-}
 /* =============================================================================
    Non-semantic helper classes
    Please define your styles before this section.
@@ -540,12 +537,30 @@ body > footer {
 
 
 
-@media only screen and (max-width: 490px) {
-  /* Style adjustments for viewports 480px and over go here */
+@media only screen and (max-width: 680px) {
   html { font-size: 13px; }
+  body { max-width: 90%; }
+  article > header h2.name { padding-left: 0.5em; }
   article > header::before { display: none; }
   .index h2 { max-width: 100%; }
 }
+
+@media only screen and (max-width: 60em) {
+  .explore-features {
+    h2, ul { width: 100%; }
+
+    h2 { 
+      display: block; 
+      @include secondary-title;
+      font-weight: bold;
+      margin: 0 0 0.5em 0;
+
+      b { display: inline; font-size: 1em; }
+    }
+
+    ul { border-left: 0; padding-left: 0 }
+  }
+}  
 
 @media only screen and (min-width: 1400px) {
   /* Style adjustments for bigass, wide viewports go here */

@@ -22,13 +22,15 @@
         <input id=livesearch class=search name=livesearch placeholder='type to filter' type='search' value='' autofocus
                 />
         <a href="/" id=searchurl>link to this search ›</a>
-        <p class=featuretags>
-        Explore features: 
-        <a href="./#showall">all</a>
-        {{#each featuretags}}
-          <a href="./#{{this}}">{{this}}</a>
-        {{/each}}
-        </p>
+        <div class="explore-features">
+          <h2><b>Explore</b> features</h2>
+          <ul>
+            <li>supported by <a href="#gtie9">IE9+</a> <a href="#gtie8">IE8+</a> <a href="#gtie7">IE7+</a> <a href="#gtie6">IE6+</a> <a href="#noie">no IE</a> </li>
+            <li>not supported by <a href="#nomobile">mobile devices</a> <a href="#nooldmobile">older mobile devices</a></li>
+            <li>requiring <a href="#prefixes">prefixes</a><a href="#polyfill">polyfill</a><a href="#fallback">fallback</a></li>
+            <li> <a href="./#showall">all features</a></li>
+          </ul>
+        </div>
       </div>
     </header>
     <div id=main role=main>

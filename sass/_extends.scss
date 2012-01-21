@@ -7,3 +7,32 @@
 .display-inline { display: inline; }
 
 .reset-margin { margin: 0; }
+
+.reset-list {
+  margin: 0; padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0; padding: 0;
+  }
+}  
+
+@mixin apply-status-style($color) {
+    background: $color; 
+    box-shadow: -4px 0px 4px darken($color, 5%) inset;
+    border-right-color: darken($color, 12%);
+
+    &:before{
+      @include background(linear-gradient(34deg, transparentize($color, 1),  transparentize($color, 1) 50%, darken($color, 5%) 53%,  $color 56%));                    
+    }
+    
+    &:after {
+      @include background(linear-gradient(-34deg, transparentize($color, 1),  transparentize($color, 1) 50%, darken($color, 5%) 53%,  $color 56%));                  
+    }
+}  
+
+@mixin secondary-title {
+  font-size: 2em;
+  line-height: 1;
+  font-family: $index-font-family
+}
