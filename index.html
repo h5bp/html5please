@@ -161,7 +161,7 @@
               </h2>
             </header>
             <div class="more">
-              <div class='recco'><p><a href="http://css-tricks.com/box-sizing/"><code>box-sizing</code></a><code>: border-box</code> may be a much more sensible default for you. You can apply it to all (<code>*</code>) elements if you like. Firefox is the only browser that requires a prefix for box-sizing. You can use it without a prefix for everything else. IE8 has this feature natively and you can optionally use the <a href="https://github.com/Schepp/box-sizing-polyfill">box-sizing polyfill</a> provides this feature in IE 6/7 (you could scope the adjustments using <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">IE conditionals</a> or Modernizr's <a href="http://www.modernizr.com/download/#-cssclasses-addtest-css_boxsizing"><code>no-box-sizing</code></a>).</p></div>
+              <div class='recco'><p><a href="http://css-tricks.com/box-sizing/"><code>box-sizing</code></a><code>: border-box</code> may be a much more sensible default for you. You can apply it to all (<code>*</code>) elements if you like. Firefox is the only browser that requires a prefix for box-sizing. You can use it without a prefix for everything else. IE8 has this feature natively and you can optionally use the <a href="https://github.com/Schepp/box-sizing-polyfill">box-sizing polyfill</a> to provide this feature in IE 6/7 (you could scope the adjustments using <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">IE conditionals</a> or Modernizr's <a href="http://www.modernizr.com/download/#-cssclasses-addtest-css_boxsizing"><code>no-box-sizing</code></a>).</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/box-sizing.md>Edit info on
                 box-sizing</a>              
@@ -294,7 +294,7 @@
               </h2>
             </header>
             <div class="more">
-              <div class='recco'><p><code>elem.dataset</code> is unsupported in IE and older mobile browsers. Using data-* attributes will be totally fine in all browsers, but instead of using <code>elem.dataset.foo</code> just use <code>elem.getAttribute('data-foo')</code> instead. A polyfill is availble if you want terser syntax.</p></div>
+              <div class='recco'><p><code>elem.dataset</code> is unsupported in IE and older mobile browsers. Using data-* attributes will be totally fine in all browsers, but instead of using <code>elem.dataset.foo</code> just use <code>elem.getAttribute('data-foo')</code>. A polyfill is availble if you want terser syntax.</p></div>
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://eligrey.com/blog/post/html-5-dataset-support">HTML5 dataset support</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/dataset.md>Edit info on
                 dataset</a>              
@@ -333,7 +333,7 @@
             </header>
             <div class="more">
               <div class='recco'><p>Not supported in Opera</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/MrSwitch/dropfile">dropfile</a>,</p></div> 
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/MrSwitch/dropfile">dropfile</a>, <a href="https://github.com/eligrey/FileSaver.js">fileSaver</a>, <a href="https://github.com/vjeux/jDataView">jDataView</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/dragndrop.md>Edit info on
                 drag-and-drop</a>              
             </div>
@@ -442,7 +442,7 @@ change radically before stabilizing. Avoid using this. </p></div>
               <h4 class="kind css">css</h4>
               <h2 class='name'>
                 
-                  font-feature-settings
+                  <a href="http://blog.fontdeck.com/post/15777165734/opentype-1?503cde40">font-feature-settings</a>
                 
               </h2>
             </header>
@@ -485,8 +485,8 @@ change radically before stabilizing. Avoid using this. </p></div>
               </h2>
             </header>
             <div class="more">
-              <div class='recco'><p><a href="https://gist.github.com/366184">Paul's shim</a> uses Google's IP-geocoding service as a fallback. <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a> doesn't but has hooks into Blackberry, WebOS, and Google Gears specific APIs. In most cases, you should just not expose geo features in your app if the feature is not natively present.</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/366184">Paul's geolocation Shim</a>, <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a></p></div> 
+              <div class='recco'><p><a href="https://gist.github.com/366184">geolocation shim</a> uses Google's IP-geocoding service as a fallback. <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a> doesn't but has hooks into Blackberry, WebOS, and Google Gears specific APIs. In most cases, you should just not expose geo features in your app if the feature is not natively present.</p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/366184">geolocation shim</a>, <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/geolocation.md>Edit info on
                 geolocation</a>              
             </div>
@@ -504,9 +504,9 @@ change radically before stabilizing. Avoid using this. </p></div>
               </h2>
             </header>
             <div class="more">
-              <div class='recco'><p>We strongly recommend you use all the prefixes ((<code>-o-</code>, <code>-webkit</code>, <code>-ms-</code>, <code>-moz-</code>)) when you provide gradients as image values (<code>background</code> or <code>border-image</code>). Do provide a fallback color if you are using this as a value for <code>background</code> so browsers that do not support the gradients can render a solid background color. </p>
+              <div class='recco'><p>We strongly recommend you use all the prefixes (<code>-o-</code>, <code>-webkit</code>, <code>-ms-</code>, <code>-moz-</code>) when you provide gradients as image values (<code>background</code> or <code>border-image</code>). Do provide a fallback color if you are using this as a value for <code>background</code> so browsers that do not support the gradients can render a solid background color. </p>
 
-<p>We also suggest you drop old webkit syntax and only use the <a href="http://www.broken-links.com/2012/01/11/the-new-and-hopefully-final-linear-gradient-syntax/">latest syntax</a> for gradient values. </p></div>
+<p>We also suggest you drop old webkit syntax and only use the <a href="https://developer.mozilla.org/en/CSS/-moz-linear-gradient">newer syntax</a> for gradient values and <a href="http://www.broken-links.com/2012/01/11/the-new-and-hopefully-final-linear-gradient-syntax/">not the latest one</a>. </p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/gradients.md>Edit info on
                 gradients</a>              
@@ -697,7 +697,7 @@ might be your path to salvation.</p></div>
               </h2>
             </header>
             <div class="more">
-              <div class='recco'><p>IE, and Opera support CSS3 Multicol without prefixes. So you only need <code>-webkit</code> and <code>-moz</code>. We recommend you do not polyfill this, but a basic <a href="http://www.csscripting.com/css-multi-column/">Multicol Polyfill</a> exists. </p></div>
+              <div class='recco'><p>IE, and Opera support CSS3 Multicol without prefixes. So you only need <code>-webkit</code> and <code>-moz</code>. We recommend you do not polyfill this. </p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/multicolumn.md>Edit info on
                 multicolumn</a>              
@@ -750,7 +750,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <h4 class="kind css">css</h4>
               <h2 class='name'>
                 
-                  paged-media
+                  <a href="http://css3clickchart.com/#paged-media">paged-media</a>
                 
               </h2>
             </header>
@@ -995,9 +995,9 @@ Resources:
             <footer class="tags">none</footer>
           </article>          
         
-          <article class="fallback gtie9">
+          <article class="gtie9">
             <header title="expand">
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h3 class="status use">use <i></i> </h3>                                                        
               <h4 class="kind css">css</h4>
               <h2 class='name'>
                 
@@ -1006,12 +1006,12 @@ Resources:
               </h2>
             </header>
             <div class="more">
-              <div class='recco'><p>All modern browsers support text-shadow except IE. Since it's mostly used for decorative purposes, we do not recommend using a <a href="https://github.com/heygrady/textshadow">polyfill</a>, just make sure the text is still legible without a text-shadow. We also advise you to avoid large text-shadows because they can have a negative impact on performance.</p></div>
+              <div class='recco'><p>All modern browsers support text-shadow except IE. Since it's mostly used for decorative purposes, we do not recommend using a polyfill, just make sure the text is still legible without a text-shadow. We also advise you to avoid large text-shadows because they can have a negative impact on performance.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/text-shadow.md>Edit info on
                 text-shadow</a>              
             </div>
-            <footer class="tags">fallback gtie9</footer>
+            <footer class="tags">gtie9</footer>
           </article>          
         
           <article class="fallback prefixes">
@@ -1066,7 +1066,7 @@ Note that you need to use all the usual prefixes to make this work in all browse
             <div class="more">
               <div class='recco'><p>Do note you need to supply your video in various formats to cater to all browsers and fallbacks&mdash;<a href="http://www.mirovideoconverter.com/">Miro Video Converter</a> makes this trivial. H264 and WebM cover all browsers (except Firefox 3.6 which needs Ogg Vorbis). Use one of the polyfills below or gracefully handle all cases without any scripting as explained by Kroc Camen in <a href="http://camendesign.com/code/video_for_everybody">Video for Everybody</a>.</p>
 
-<p>There is also an incredibly useful service called <a href="http://vid.ly">vid.ly</a> which converts video online into all necessary formats and provides a short url that detects your browser/hardware and sends the correct format. Archive.org also converts MP4 videos uploaded to OGG automatically, same with audio.</p></div>
+<p>There is also an incredibly useful service called <a href="http://vid.ly">vid.ly</a> which converts video online into all necessary formats and provides a short url that detects your browser/hardware and sends the correct format. <a href="http://archive.org">Archive.org</a> also converts MP4 videos uploaded to OGG automatically, same with audio.</p></div>
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://videojs.com/">Video.js</a>, <a href="http://mediaelementjs.com/">mediaelementjs</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/video.md>Edit info on
                 &lt;video></a>              
@@ -1126,7 +1126,7 @@ Note that you need to use all the usual prefixes to make this work in all browse
               <div class='recco'><p>Local and session storage are a great way to store data without resorting to cookies.  IE8 supported <code>localStorage</code> and <code>sessionStorage</code> so you may not need a polyfill. If you do, Remy's is a piece of cake to immplement and use.</p>
 
 <p>This is a simple key/value store, so if you want to store complex data use <code>JSON.parse(str)</code> and <code>JSON.stringify(obj)</code> on your way in and out. There is also no way to know if you exceeded the storage cross-browser, so wrap your store commands in try/catch. Up to 5MB is safe to use.</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/350433">Remy's storage polyfill</a>,</p></div> 
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/350433">Remy's storage polyfill</a>, <a href="http://code.google.com/p/sessionstorage/">sessionstorage</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/webstorage.md>Edit info on
                 web-storage</a>              
             </div>
@@ -1138,10 +1138,8 @@ Note that you need to use all the usual prefixes to make this work in all browse
     <footer>
       <p>with love &amp; tears from</p>
       <p class=builders><a href="http://twitter.com/divya"><img src="http://api.twitter.com/1/users/profile_image/divya?size=normal"><b>Divya</b> Manian</a> <a href="http://twitter.com/paul_irish"><img src="http://api.twitter.com/1/users/profile_image/paul_irish?size=normal"><b>Paul</b> Irish</a> <a href="http://twitter.com/tbranyen"><img src="http://api.twitter.com/1/users/profile_image/tbranyen?size=normal"><b>Tim</b> Branyen</a> <a href="http://twitter.com/connor"><img src="http://api.twitter.com/1/users/profile_image/connor?size=normal"><b>Connor</b> Montgomery</a> <a href='https://github.com/h5bp/html5please/contributors'>&amp; more</a>
-        </p>
-
-
-    <p>The above recommendations are not an exhaustive list of all choices, but rather careful recommendations from HTML5 and CSS3 experts</p>
+      </p>
+      <p>The above recommendations are not an exhaustive list of all choices, but rather careful recommendations from HTML5 and CSS3 experts</p>
     
     </footer>
     <!-- scripts concatenated and minified via ant build script -->
