@@ -84,3 +84,11 @@ addEventListener('keyup', function(e){
   if (e.which == 191 && document.activeElement != search)
     search.focus();
 });
+
+var moredetails = document.getElementById("clickmore");
+
+moredetails.onclick = function(e) {
+  classList(e.target).toggle('active');
+  classList(document.getElementById(/#(.*)/.exec(e.target.href)[1])).toggle('active');
+  e.preventDefault();
+};

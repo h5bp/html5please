@@ -319,7 +319,7 @@ body {
 .index h2 {
   font-size: 1em;
   margin: 0 auto;
-  max-width: 60%;
+  max-width: 38em;
   font-weight: normal;
   text-transform: none;
   font-style: normal;
@@ -340,6 +340,34 @@ article h3 b i {
 
 .index > div {
   padding: 2rem 0;
+}
+
+#clickmore {
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+#clickmore::after {
+  content: " ▶";
+  vertical-align: -0.1em;
+}
+
+#clickmore.active::after {
+  content: " ▼";
+}
+
+#moredetails {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: height 100ms ease-in;
+  -moz-transition: height 100ms ease-in;
+  -ms-transition: height 100ms ease-in;
+  -o-transition: height 100ms ease-in;
+  font-size: 0.9em;
+}
+
+#moredetails:target, #moredetails.active {
+  max-height: 10em;
 }
 
 #livesearch {
