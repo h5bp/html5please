@@ -1,4 +1,4 @@
-feature: ol-reversed
+feature: ol[reversed]
 status: use  
 tags: polyfill
 kind: html

@@ -1,4 +1,4 @@
-feature: multibackgrounds
+feature: multiple backgrounds
 status: use
 tags: fallback gtie8
 kind: css

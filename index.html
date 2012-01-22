@@ -214,7 +214,7 @@
               <h4 class="kind api">api</h4>
               <h2 class='name'>
                 
-                <a href="http://caniuse.com/classlist"><b class="namevalue">classlist</b></a>
+                <a href="http://caniuse.com/classlist"><b class="namevalue">classList</b></a>
                 
               </h2>
             </header>
@@ -222,7 +222,7 @@
               <div class='recco'><p>Classlist is unsupported in older mobile browsers and IE. This is not a concern if you are using a library like jQuery and using it to add/remove class names, but if not, make sure you use the polyfill.</p></div>
               <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/eligrey/classList.js">classlist.js</a></p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/classlist.md>Edit info on
-                classlist</a>              
+                classList</a>              
             </div>
             <footer class="tags">polyfill noie nooldmobile</footer>
           </article>          
@@ -233,15 +233,15 @@
               <h4 class="kind html">html</h4>
               <h2 class='name'>
                 
-                <a href="http://caniuse.com/cors"><b class="namevalue">cors</b></a>
+                <a href="http://caniuse.com/cors"><b class="namevalue">CORS</b></a>
                 
               </h2>
             </header>
             <div class="more">
-              <div class='recco'><p>...</p></div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/toolness/postmessage-proxied-xhr/#readme">postmessage-proxied-xhr</a>, <a href="http://flxhr.flensed.com/">flXHR</a> (target server must have a crossdomain.xml file), <a href="https://github.com/eligrey/pmxdr">pmxdr</a> (sites being requested must have a pmxdr host)</p></div> 
+              <div class='recco'><p>CORS, or cross-origin resource sharing, enables a few things, but most notably cross-domain AJAX. IE8 introduced <a href="http://msdn.microsoft.com/en-us/library/ie/cc288060(v=vs.85">XDomainRequest</a>.aspx), so really only IE7 needs help with cross-domain files. Consider the polyfills below or you can fallback to using a <a href="http://benalman.com/projects/php-simple-proxy/">simple proxy</a>.</p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/toolness/postmessage-proxied-xhr/#readme">postmessage-proxied-xhr</a>, <a href="http://flxhr.flensed.com/">flXHR</a> (requires crossdomain.xml), <a href="https://github.com/eligrey/pmxdr">pmxdr</a> (requires host installed)</p></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/cors.md>Edit info on
-                cors</a>              
+                CORS</a>              
             </div>
             <footer class="tags">polyfill</footer>
           </article>          
@@ -462,7 +462,7 @@ change radically before stabilizing. Avoid using this. </p></div>
               <h4 class="kind css">css</h4>
               <h2 class='name'>
                 
-                <a href="http://caniuse.com/fontface"><b class="namevalue">fontface</b></a>
+                <a href="http://caniuse.com/fontface"><b class="namevalue">@font-face</b></a>
                 
               </h2>
             </header>
@@ -470,7 +470,7 @@ change radically before stabilizing. Avoid using this. </p></div>
               <div class='recco'><p>Use the <a href="http://www.fontsquirrel.com/fontface/generator">Font Squirrel Generator</a> for fonts you have license for using as web fonts. <a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax">Font Squirrel @font-face syntax</a> is also the most bullet-proof way of serving web fonts. You do not need polyfills - just fonts in several formats. Don't use sIFR or Cufon anymore.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/fontface.md>Edit info on
-                fontface</a>              
+                @font-face</a>              
             </div>
             <footer class="tags">fallback</footer>
           </article>          
@@ -598,15 +598,15 @@ might be your path to salvation.</p></div>
               <h4 class="kind api">api</h4>
               <h2 class='name'>
                 
-                  <b class="namevalue">match-media</b>
+                  <b class="namevalue">matchMedia</b>
                 
               </h2>
             </header>
             <div class="more">
-              <div class='recco'><p><a href="https://github.com/paulirish/matchMedia.js/">MatchMedia.js</a> provides a shim for unsupported browsers. If you want a shim that is responsive to window resizing, you can use <a href="http://www.paulrhayes.com/2011-11/use-css-transitions-to-link-media-queries-and-javascript/">this fork</a>.</p></div>
+              <div class='recco'><p>matchMedia provides a javascript API to see if a media query will succeed. <a href="https://github.com/paulirish/matchMedia.js/">MatchMedia.js</a> provides a shim for unsupported browsers. If you want a shim that is responsive to window resizing, you can use <a href="http://www.paulrhayes.com/2011-11/use-css-transitions-to-link-media-queries-and-javascript/">this fork</a>, though its limited to browsers that support css transitions.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/match-media.md>Edit info on
-                match-media</a>              
+                matchMedia</a>              
             </div>
             <footer class="tags">polyfill</footer>
           </article>          
@@ -751,7 +751,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <h4 class="kind css">css</h4>
               <h2 class='name'>
                 
-                <a href="http://css3clickchart.com/#paged-media"><b class="namevalue">paged-media</b></a>
+                <a href="http://css3clickchart.com/#paged-media"><b class="namevalue">paged media</b></a>
                 
               </h2>
             </header>
@@ -759,7 +759,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class='recco'><p>This spec is actively under development, so we recommend you wait until there are enough implementations around.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/paged-media.md>Edit info on
-                paged-media</a>              
+                paged media</a>              
             </div>
             <footer class="tags">none</footer>
           </article>          
@@ -789,7 +789,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <h4 class="kind css">css</h4>
               <h2 class='name'>
                 
-                <a href="http://caniuse.com/pointer-events"><b class="namevalue">pointer-events</b></a>
+                <a href="http://caniuse.com/pointer-events"><b class="namevalue">pointer events</b></a>
                 
               </h2>
             </header>
@@ -797,9 +797,28 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class='recco'><p>Pointer events are available in SVG and CSS. All modern browsers support them in SVG, but IE and Opera do not support them in CSS yet. There is a <a href="https://github.com/Modernizr/Modernizr/feature-detects/pointerevents.js">modernizr plugin</a> to detect support which can be used to implement a JavaScript interceptor for elements which require pointer events to be disabled. </p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/pointer-events.md>Edit info on
-                pointer-events</a>              
+                pointer events</a>              
             </div>
             <footer class="tags">fallback noie</footer>
+          </article>          
+        
+          <article class="api">
+            <header title="expand">
+              <h3 class="status use">use <i></i> </h3>                                                        
+              <h4 class="kind html">html</h4>
+              <h2 class='name'>
+                
+                <a href="http://caniuse.com/postmessage"><b class="namevalue">postMessage</b></a>
+                
+              </h2>
+            </header>
+            <div class="more">
+              <div class='recco'><p><code>postMessage</code> is present in IE8 and up, but if you need robust support for cross-frame and cross-domain communication, use <a href="http://easyxdm.net/wp/">EasyXDM</a></p></div>
+              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://easyxdm.net/wp/">EasyXDM</a></p></div> 
+              <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/postmessage.md>Edit info on
+                postMessage</a>              
+            </div>
+            <footer class="tags">api</footer>
           </article>          
         
           <article class="polyfill gtie9">
@@ -827,7 +846,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <h4 class="kind css">css</h4>
               <h2 class='name'>
                 
-                <a href="http://caniuse.com/pseudo-elements"><b class="namevalue">pseudo-elements</b></a>
+                <a href="http://caniuse.com/pseudo-elements"><b class="namevalue">pseudo elements</b></a>
                 
               </h2>
             </header>
@@ -835,7 +854,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class='recco'><p>The pseudo-element notation was updated to use a double colon - <code>::</code> - in the CSS3 Selectors module. The CSS3 module requires that browsers support both the single and double colon notations for the pseudo-elements introduced in CSS1 and CSS2 - <code>:first-line</code>, <code>:first-letter</code>, <code>:before</code> and <code>:after</code>. Therefore, if you intend to support IE8+, you should use the earlier single colon notation. When adding generated content to your page with <code>:before</code> and <code>:after</code>, make sure that it is only for presentation and not to add content that should be included in the HTML source.</p></div>
               <div class='polyfills'></div> 
               <a class="updateurl" href=https://github.com/h5bp/html5please/blob/master/posts/pseudo-elements.md>Edit info on
-                pseudo-elements</a>              
+                pseudo elements</a>              
             </div>
             <footer class="tags">none</footer>
           </article>          

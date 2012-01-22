@@ -8,7 +8,7 @@
 
 1. In your terminal, navigate to this project and type: 
 ```
-  npm install
+  npm install .
 ```
 
 2. To generate the index.html page, type:
