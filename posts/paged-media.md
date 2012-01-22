@@ -1,4 +1,4 @@
-feature: paged-media
+feature: paged media
 status: avoid
 tags: none
 kind: css

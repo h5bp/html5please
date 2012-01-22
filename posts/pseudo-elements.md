@@ -1,4 +1,4 @@
-feature: pseudo-elements
+feature: pseudo elements
 status: use
 tags: none
 kind: css

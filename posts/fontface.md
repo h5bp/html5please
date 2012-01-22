@@ -1,4 +1,4 @@
-feature: fontface
+feature: @font-face
 status: use
 tags: fallback
 kind: css

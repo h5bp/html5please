@@ -1,4 +1,4 @@
-feature: pointer-events
+feature: pointer events
 status: use
 tags: fallback noie
 kind: css

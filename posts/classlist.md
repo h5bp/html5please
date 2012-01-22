@@ -1,4 +1,4 @@
-feature: classlist
+feature: classList
 status: use
 tags: polyfill noie nooldmobile
 kind: api
