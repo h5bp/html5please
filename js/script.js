@@ -58,7 +58,6 @@ for(var i = 0; i < count; i++) {
       var node = e.target || e.srcElement;
       var parent = node.parentNode;
       classList(parent).toggle('expanded');
-      node.setAttribute('title', node.getAttribute('title') == 'expand' ? 'minimize' : 'expand');
   };
 }    
 

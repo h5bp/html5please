@@ -283,7 +283,6 @@ article h3 b i, article.expanded div.more, .kind, .status i b {
 }
 
 html {
-  background-color: #232927;
   background-image: url('../img/denim.png?1324008221');
   color: #e3d7bf;
   background: -webkit-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -webkit-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -webkit-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -webkit-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -webkit-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324008221');
@@ -291,6 +290,7 @@ html {
   background: -o-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -o-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -o-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -o-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -o-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324008221');
   background: -ms-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -ms-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -ms-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -ms-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -ms-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324008221');
   background: radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324008221');
+  background-color: #232927;
   min-height: 100%;
   max-width: 100%;
   font: 16px/1.5 "Open Sans", sans-serif;
@@ -368,6 +368,7 @@ article h3 b i {
   background: -o-linear-gradient(90deg, #a93a0b, #f16529);
   background: -ms-linear-gradient(90deg, #a93a0b, #f16529);
   background: linear-gradient(90deg, #a93a0b, #f16529);
+  background-color: #a93a0b;
   display: inline-block;
   font-size: 0.8em;
   line-height: 2rem;
@@ -437,6 +438,10 @@ article .tags {
 }
 
 article > header {
+  -webkit-transition: background-color 100ms ease-in;
+  -moz-transition: background-color 100ms ease-in;
+  -ms-transition: background-color 100ms ease-in;
+  -o-transition: background-color 100ms ease-in;
   background: #d3e0e4;
   border-radius: 0.3rem;
   position: relative;
@@ -531,6 +536,16 @@ article.expanded div.more {
 }
 .name a {
   color: #107aa8;
+}
+.name a:hover {
+  text-decoration: none;
+}
+.name a:hover::after {
+  content: " →";
+  font-size: 0.8em;
+  line-height: 0;
+  font-weight: normal;
+  vertical-align: -0.1em;
 }
 
 .status {

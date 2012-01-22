@@ -182,7 +182,6 @@ table { border-collapse: collapse; border-spacing: 0; }
 @import "extends";
    
 html {  
-  background-color:  $dark; 
   background-image: image-url('denim.png');
   color: $lightest; 
   @include background(
@@ -193,6 +192,7 @@ html {
             radial-gradient(35em 45em, circle cover, transparentize(black, 0.8) 7em, transparentize(black, 1) 7em),
             image-url('denim.png')            
           );
+  background-color:  $dark; 
   min-height: 100%; 
   max-width: 100%; 
   font: 16px/1.5 $default-font-family;
@@ -270,6 +270,7 @@ article h3 b i {
 #searchurl { 
   @include our-transition('width 500ms linear, opacity 600ms linear'); 
   @include background(linear-gradient(90deg, darken(#f16529, 20%), #f16529));      
+  background-color: darken(#f16529, 20%);
   display: inline-block;
   font-size: 0.8em;
   line-height: 2rem;
@@ -337,12 +338,13 @@ article {
 }
 
 article > header {
+  @include our-transition("background-color 100ms ease-in");
   background: lighten($light, 50%);
   border-radius: 0.3rem;
   position: relative;
   z-index: 1;
   cursor: pointer;
-
+  
   &:hover {
     background: $lightest;
   }
@@ -431,6 +433,15 @@ article.expanded {
   letter-spacing: 1px;   
   
   a { color: darken($link-color, 10%); } 
+  
+  a:hover { text-decoration: none; }
+  a:hover::after { 
+    content: " →"; 
+    font-size: 0.8em; 
+    line-height: 0; 
+    font-weight: normal; 
+    vertical-align: -0.1em;
+  }
 }
 
 .status {
