@@ -19,8 +19,7 @@
         Look up properties and see if it is ready for use, and if so how you should use it with a polyfill, a fallback value or as it is.
       </h2>
       <div>
-        <input id=livesearch class=search name=livesearch placeholder='type to filter' type='search' value='' autofocus
-                />
+        <input id=livesearch class=search name=livesearch placeholder='type to filter' type='search' value='' autofocus />
         <a href="/" id=searchurl>link to this search ›</a>
         <div class="explore-features">
           <h2><b>Explore</b> features</h2>
@@ -28,6 +27,8 @@
             <li>supported by <a href="#gtie9">IE9+</a> <a href="#gtie8">IE8+</a> <a href="#gtie7">IE7+</a> <a href="#gtie6">IE6+</a> <a href="#noie">no IE</a> </li>
             <li>not supported by <a href="#nomobile">mobile devices</a> <a href="#nooldmobile">older mobile devices</a></li>
             <li>requiring <a href="#prefixes">prefixes</a><a href="#polyfill">polyfill</a><a href="#fallback">fallback</a></li>
+            <li>that you can <a href="#use">use</a> <a href="#caution">use with caution</a> <a href="#avoid">avoid</a></li>
+            <li>that are <a href="#css">css</a> <a href="#html">html</a><a href="#api">api</a><a href="#js">js</a></li>
             <li> <a href="./#showall">all features</a></li>
           </ul>
         </div>
@@ -42,9 +43,9 @@
               <h4 class="kind {{kind}}">{{kind}}</h4>
               <h2 class='name'>
                 {{#if moreurl}}
-                  <a href="{{{moreurl}}}">{{{featuretag feature}}}</a>
+                <a href="{{{moreurl}}}"><b class="namevalue">{{{featuretag feature}}}</b></a>
                 {{else}}
-                  {{{featuretag feature}}}
+                  <b class="namevalue">{{{featuretag feature}}}</b>
                 {{/if}}
               </h2>
             </header>
@@ -60,10 +61,9 @@
       </section>
     </div>
     <footer>
-      <p>with love &amp; tears from</p>
+      <p>built by</p>
       <p class=builders><a href="http://twitter.com/divya"><img src="http://api.twitter.com/1/users/profile_image/divya?size=normal"><b>Divya</b> Manian</a> <a href="http://twitter.com/paul_irish"><img src="http://api.twitter.com/1/users/profile_image/paul_irish?size=normal"><b>Paul</b> Irish</a> <a href="http://twitter.com/tbranyen"><img src="http://api.twitter.com/1/users/profile_image/tbranyen?size=normal"><b>Tim</b> Branyen</a> <a href="http://twitter.com/connor"><img src="http://api.twitter.com/1/users/profile_image/connor?size=normal"><b>Connor</b> Montgomery</a> <a href='https://github.com/h5bp/html5please/contributors'>&amp; more</a>
       </p>
-      <p>The above recommendations are not an exhaustive list of all choices, but rather careful recommendations from HTML5 and CSS3 experts</p>
     
     </footer>
     <!-- scripts concatenated and minified via ant build script -->
