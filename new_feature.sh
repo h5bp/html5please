@@ -22,9 +22,9 @@ done
 featureslug=$(
   echo $feature   | 
   # Use sed to replace spaces with hyphens
-  sed -e "s/<//" -e "s/>//" |
+  sed -E -e "s/ +/-/" -e "s/[^A-Za-z0-9\-]//g" |
 
-  # BSD sed doesn't accept \L, so use tr instead for case conversion
+  # BSD sed doesnt accept \L, so use tr instead for case conversion
   tr "[A-Z]" "[a-z]"
 )
 
