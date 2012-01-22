@@ -316,9 +316,10 @@ article h3 b i {
     @extend .reset-list;
     border-left: 1px solid $light;
     padding-left: 1em;    
+
+    li { padding: 0.25rem 0; }  
   }  
 
-  li { padding: 0.5rem 0; }  
 
   li + li { border-top: 1px dotted $light; }
 

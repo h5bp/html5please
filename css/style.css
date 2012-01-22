@@ -413,8 +413,8 @@ header .explore-features {
   border-left: 1px solid #476871;
   padding-left: 1em;
 }
-.explore-features li {
-  padding: 0.5rem 0;
+.explore-features ul li {
+  padding: 0.25rem 0;
 }
 .explore-features li + li {
   border-top: 1px dotted #476871;
