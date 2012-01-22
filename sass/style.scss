@@ -1,6 +1,7 @@
 
 @import "compass/css3/gradient";
 @import "compass/css3/box-sizing";
+@import "compass/css3/transform";
 @import "vars";
 
 @mixin our-transition($arg) {
@@ -364,6 +365,7 @@ article > header {
   }
 
   &:before {
+    @include our-transition("all 100ms ease-in");
     display: inline-block;
     vertical-align: middle;
     content: "+";
@@ -376,6 +378,11 @@ article > header {
     background: lighten($light, 40%);      
     border: 1px solid lighten($light, 30%);
   }
+  /*
+  &:hover:before {
+    @include transform(rotate(270deg));
+  }
+  */
     
   .kind, .name, .status {
     @extend .reset-margin;
@@ -419,7 +426,9 @@ article.expanded {
   > header {
     border-bottom: 1px solid lighten($dark, 45%);
     
-    &:before { content: "-"; line-height: 0.75; }
+    &:before { content: "-"; line-height: 0.75;
+      @include transform(none); 
+    }
   }
   
   div.more { 
