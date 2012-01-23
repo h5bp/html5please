@@ -4,5 +4,4 @@ tags: none
 kind: api
 polyfillurls:
 
-Although it found initial favor as a client-side database api, it has
-now been abandoned in favor of IndexDB.  
+Although it initially found favor as a clientside database API, it has now [been abandoned](http://www.w3.org/TR/webdatabase/#status-of-this-document) in favor of IndexedDB.  
