@@ -809,7 +809,7 @@ change radically before stabilizing. Avoid using this. </p>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Local and session storage are a great way to store data without resorting to cookies.  IE8 supported <code>localStorage</code> and <code>sessionStorage</code> so you may not need a polyfill. If you do, Remy's is a piece of cake to immplement and use.</p>
+                <p>Local and session storage are a great way to store data without resorting to cookies.  IE8 supported <code>localStorage</code> and <code>sessionStorage</code> so you may not need a polyfill. If you do, Remy's is a piece of cake to implement and use.</p>
 
 <p>This is a simple key/value store, so if you want to store complex data use <code>JSON.parse(str)</code> and <code>JSON.stringify(obj)</code> on your way in and out. There is also no way to know if you exceeded the storage cross-browser, so wrap your store commands in try/catch. Up to 5MB is safe to use.</p>
               </div>
@@ -1585,11 +1585,11 @@ Note that you need to use all the usual prefixes to make this work in all browse
             </header>
             <div class="more">
               <div class="recco">
-                <p>Making your app real-time is a huge boost and <a href="http://socket.io/">Socket.io</a> helps with downlevel transports for browsers lacking native websocket support (and supports IE6+). However be prepared to tune your AJAX polling or Comet in order to meet the needs of your app.</p>
+                <p>Making your app real-time is a huge boost and <a href="http://socket.io/">Socket.io</a> is a Node+Javascript framework that helps with downlevel transports for browsers lacking native websocket support (and supports IE6+). However be prepared to tune your AJAX polling or Comet in order to meet the needs of your app.</p>
 
-<p>As a word of caution, the protocol backing the Web Socket API has changed several times in the past year, but should have matured enough to not introduce any more breaking changes.</p>
+<p>As a word of caution, the protocol backing the Web Socket API has changed several times in the past year, but has matured enough to not introduce any more breaking changes.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://socket.io/">Socket.io</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://socket.io/">Socket.io</a>, <a href="https://github.com/gimite/web-socket-js">web-socket-js</a></p></div> 
 
               <p class="links">
               
@@ -1633,6 +1633,8 @@ Note that you need to use all the usual prefixes to make this work in all browse
       <p>HTML5 Please is a community project (<a href="https://github.com/h5bp/html5please/">contribute on github!</a>) from the people behind <a href="http://html5boilerplate.com">HTML5 Boilerplate</a>, <a href="http://modernizr.com">Modernizr</a> &amp; <a href="http://css3please.com">CSS3 Please</a>.</p>
     <p class="builders"> <a href="http://twitter.com/divya"><img src="http://api.twitter.com/1/users/profile_image/divya?size=normal" alt="Divya Manian"><b>Divya</b> Manian</a> <a href="http://twitter.com/paul_irish"><img src="http://api.twitter.com/1/users/profile_image/paul_irish?size=normal" alt="Paul Irish"><b>Paul</b> Irish</a> <a href="http://twitter.com/tbranyen"><img src="http://api.twitter.com/1/users/profile_image/tbranyen?size=normal" alt="Tim Branyen"><b>Tim</b> Branyen</a> <a href="http://twitter.com/connor"><img src="http://api.twitter.com/1/users/profile_image/connor?size=normal" alt="Connor Montgomery"><b>Connor</b> Montgomery</a> <a href="https://github.com/h5bp/html5please/contributors">&amp; more</a>
       </p>
+      <small>While named HTML5 Please, this site discusses features beyond the HTML5 specification, coming from CSS, SVG, and the greater Open Web Platform umbrella.</small>
+      <p>♥</p>
     </footer>
     
     <!-- scripts concatenated and minified via ant build script -->

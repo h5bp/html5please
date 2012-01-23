@@ -705,6 +705,9 @@ body > footer {
   font-weight: normal;
   display: block;
 }
+.builders small {
+  display: block;
+}
 
 code {
   background: #f0f0f0;
