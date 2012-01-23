@@ -1,7 +1,7 @@
 feature: classList
-status: use
+status: caution
 tags: polyfill noie nooldmobile
 kind: api
 polyfillurls:[classlist.js](https://github.com/eligrey/classList.js)
 
-Classlist is unsupported in older mobile browsers and IE. This is not a concern if you are using a library like jQuery and using it to add/remove class names, but if not, make sure you use the polyfill.
+classList is a relatively new feature which may not be available in older browsers and Internet Explorer. While this is not a concern if you are using a library like jQuery to modify class names, make sure you use the polyfill when using classList directly.
