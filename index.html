@@ -16,7 +16,7 @@
       <h1>HTML5 <img src='img/HTML5-logo.png'> Please</h1>
       <h2>
         <b>Use the new and shiny responsibly.</b>
-        <p>Look up HTML5 features, know if they are ready for use, and if so find out you should use them – with polyfills, fallbacks or as they are. <a href="#moredetails" id="clickmore">more about this site</a>
+        <p>Look up HTML5 features, know if they are ready for use, and if so find out how you should use them – with polyfills, fallbacks or as they are. <a href="#moredetails" id="clickmore">more about this site</a>
           </p>
           <div id="moredetails">
             <p><a href="http://caniuse.com">When Can I Use</a> tells you the browser support story, while <a href="http://modernizr.com">Modernizr</a> gives you the power of feature detection. HTML5 Please helps you out with recommendations for <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">polyfills</a> and implementation so you can decide if and how to put each of these features to use.</p>
@@ -76,7 +76,7 @@
               <div class='recco'>
                 <p>As with video, you need to provide your audio file in multiple formats for these to work&mdash;you'll need <a href="http://www.scirra.com/blog/44/on-html5-audio-formats-aac-and-ogg">Ogg and AAC</a>. jPlayer has a jQuery dependency. Sound Manager has an extensive API for further customization. </p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/happyworm/jPlayer">jPlayer</a>, <a href="http://www.schillmania.com/projects/soundmanager2/">Sound Manager 2</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="https://github.com/happyworm/jPlayer">jPlayer</a>, <a href="http://www.schillmania.com/projects/soundmanager2/">Sound Manager 2</a></p></div> 
 
               <p class='links'>
               
@@ -151,10 +151,6 @@
               <div class='polyfills'></div> 
 
               <p class='links'>
-              
-                <a href="http://caniuse.com/box-reflection">
-                  View browser share %
-                </a>  
               
                 <a href=https://github.com/h5bp/html5please/blob/master/posts/box-reflection.md>Edit this info</a>              
               </p>
@@ -246,7 +242,7 @@
               <div class='recco'>
                 <p>Canvas is definitely good to go for modern browsers. If however you're looking to use it in IE 8 and below, use FlashCanvas. </p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://flashcanvas.net/">FlashCanvas</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="http://flashcanvas.net/">FlashCanvas</a></p></div> 
 
               <p class='links'>
               
@@ -270,7 +266,7 @@
               <div class='recco'>
                 <p>Classlist is unsupported in older mobile browsers and IE. This is not a concern if you are using a library like jQuery and using it to add/remove class names, but if not, make sure you use the polyfill.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/eligrey/classList.js">classlist.js</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="https://github.com/eligrey/classList.js">classlist.js</a></p></div> 
 
               <p class='links'>
               
@@ -294,7 +290,7 @@
               <div class='recco'>
                 <p>CORS, or cross-origin resource sharing, enables a few things, but most notably cross-domain AJAX. IE8 introduced <a href="http://msdn.microsoft.com/en-us/library/ie/cc288060(v=vs.85">XDomainRequest</a>.aspx), so really only IE7 needs help with cross-domain files. Consider the polyfills below or you can fallback to using a <a href="http://benalman.com/projects/php-simple-proxy/">simple proxy</a>.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/toolness/postmessage-proxied-xhr/#readme">postmessage-proxied-xhr</a>, <a href="http://flxhr.flensed.com/">flXHR</a> (requires crossdomain.xml), <a href="https://github.com/eligrey/pmxdr">pmxdr</a> (requires host installed)</p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="https://github.com/toolness/postmessage-proxied-xhr/#readme">postmessage-proxied-xhr</a>, <a href="http://flxhr.flensed.com/">flXHR</a> (requires crossdomain.xml), <a href="https://github.com/eligrey/pmxdr">pmxdr</a> (requires host installed)</p></div> 
 
               <p class='links'>
               
@@ -342,7 +338,7 @@
               <div class='recco'>
                 <p>Datalist enables autocomplete combo boxes. It can be polyfilled well with any of the scripts below, though they have <a href="https://github.com/h5bp/html5please/issues/18">varying levels</a> of support for the full feature. You can also use a <a href="http://adactio.com/journal/4272/">graceful fallback</a> if you choose not to polyfill.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://css-tricks.com/relevant-dropdowns-polyfill-for-datalist/">Relavant Dropdowns</a>, <a href="http://afarkas.github.com/webshim/demos/">Webshims</a>, <a href="http://miketaylr.com/code/datalist.html">jQuery Datalist Plugin</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="http://css-tricks.com/relevant-dropdowns-polyfill-for-datalist/">Relavant Dropdowns</a>, <a href="http://afarkas.github.com/webshim/demos/">Webshims</a>, <a href="http://miketaylr.com/code/datalist.html">jQuery Datalist Plugin</a></p></div> 
 
               <p class='links'>
               
@@ -366,7 +362,7 @@
               <div class='recco'>
                 <p><code>elem.dataset</code> is unsupported in IE and older mobile browsers. Using data-* attributes will be totally fine in all browsers, but instead of using <code>elem.dataset.foo</code> just use <code>elem.getAttribute('data-foo')</code>. A polyfill is availble if you want terser syntax.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://eligrey.com/blog/post/html-5-dataset-support">HTML5 dataset support</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="http://eligrey.com/blog/post/html-5-dataset-support">HTML5 dataset support</a></p></div> 
 
               <p class='links'>
               
@@ -390,7 +386,7 @@
               <div class='recco'>
                 <p>Use the details element if you intend to show a summary which when clicked reveals detailed information. </p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://mathiasbynens.be/notes/html5-details-jquery">Details</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="http://mathiasbynens.be/notes/html5-details-jquery">Details</a></p></div> 
 
               <p class='links'>
               
@@ -414,7 +410,7 @@
               <div class='recco'>
                 <p>Drag n Drop was standardized in HTML5 but based on IE's original implementation. So it has wide support (except Opera), but many feel frustrated when using the API. You may want to use jQuery UI Draggable (or another JS library) to handle this for you.  Meanwhile the proposed <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html#the-dropzone-attribute">[dropzone]</a> attribute will improve the situation as it gains browser support.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/MrSwitch/dropfile">dropfile</a>, <a href="https://github.com/eligrey/FileSaver.js">fileSaver</a>, <a href="https://github.com/vjeux/jDataView">jDataView</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="https://github.com/MrSwitch/dropfile">dropfile</a>, <a href="https://github.com/eligrey/FileSaver.js">fileSaver</a>, <a href="https://github.com/vjeux/jDataView">jDataView</a></p></div> 
 
               <p class='links'>
               
@@ -438,7 +434,7 @@
               <div class='recco'>
                 <p>ECMAScript version 5 covers a large number of feature additions to what we normally call JavaScript. Excluding IE8, <a href="http://kangax.github.com/es5-compat-table/">most of ES5 is supported in browsers</a>. As it introduces no new syntax, it's possible to polyfill fairly well. The below polyfills tackle most uses of these features, but <a href="https://gist.github.com/1120592">not <em>all</em> cases</a>.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/kriskowal/es5-shim/">es5-shim</a>, <a href="http://augmentjs.com/">augment.js</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="https://github.com/kriskowal/es5-shim/">es5-shim</a>, <a href="http://augmentjs.com/">augment.js</a></p></div> 
 
               <p class='links'>
               
@@ -462,7 +458,7 @@
               <div class='recco'>
                 <p>EventSource.js provides a base fallback and is not dependent on jQuery.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/remy/polyfills/blob/master/EventSource.js">EventSource.js</a>, <a href="https://github.com/rwldrn/jquery.eventsource">jQuery.eventsource</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="https://github.com/remy/polyfills/blob/master/EventSource.js">EventSource.js</a>, <a href="https://github.com/rwldrn/jquery.eventsource">jQuery.eventsource</a></p></div> 
 
               <p class='links'>
               
@@ -581,7 +577,9 @@ change radically before stabilizing. Avoid using this. </p>
             </header>
             <div class="more">
               <div class='recco'>
-                <p>Use the <a href="http://www.fontsquirrel.com/fontface/generator">Font Squirrel Generator</a> for fonts you have license for using as web fonts. <a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax">Font Squirrel @font-face syntax</a> is also the most bullet-proof way of serving web fonts. You do not need polyfills - just fonts in several formats; WOFF is preferred, followed by TTF and then EOT. Also, don't use sIFR or Cufon anymore.</p>
+                <p>Use the <a href="http://www.fontsquirrel.com/fontface/generator">Font Squirrel Generator</a> for fonts you have license for using as web fonts. <a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax">Font Squirrel @font-face syntax</a> is also the most bullet-proof way of serving web fonts. You do not need polyfills - just fonts in several formats; WOFF is preferred, followed by TTF and then EOT. </p>
+
+<p>Also, don't use sIFR or Cufon anymore.</p>
               </div>
               <div class='polyfills'></div> 
 
@@ -607,7 +605,7 @@ change radically before stabilizing. Avoid using this. </p>
               <div class='recco'>
                 <p><a href="https://gist.github.com/366184">geolocation shim</a> uses Google's IP-geocoding service as a fallback. <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a> doesn't but has hooks into Blackberry, WebOS, and Google Gears specific APIs. In most cases, you should just not expose geo features in your app if the feature is not natively present.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/366184">geolocation shim</a>, <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="https://gist.github.com/366184">geolocation shim</a>, <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a></p></div> 
 
               <p class='links'>
               
@@ -631,7 +629,7 @@ change radically before stabilizing. Avoid using this. </p>
               <div class='recco'>
                 <p>We strongly recommend you use all the prefixes (<code>-o-</code>, <code>-webkit</code>, <code>-ms-</code>, <code>-moz-</code>) when you provide gradients as image values (<code>background</code> or <code>border-image</code>). Do provide a fallback color if you are using this as a value for <code>background</code> so browsers that do not support the gradients can render a solid background color. </p>
 
-<p>We also suggest you drop old webkit syntax and only use the <a href="https://developer.mozilla.org/en/CSS/-moz-linear-gradient">newer syntax</a> for gradient values and <a href="http://www.broken-links.com/2012/01/11/the-new-and-hopefully-final-linear-gradient-syntax/">not the latest one</a>. </p>
+<p>We also suggest you drop old webkit syntax and only use the <a href="https://developer.mozilla.org/en/CSS/-moz-linear-gradient">newer syntax</a> for gradient values and <a href="http://www.broken-links.com/2012/01/11/the-new-and-hopefully-final-linear-gradient-syntax/">not the latest one</a> (yet) until <a href="http://www.w3.org/TR/css3-images/">the spec</a> hits Candidate Recommendation. </p>
               </div>
               <div class='polyfills'></div> 
 
@@ -681,7 +679,7 @@ change radically before stabilizing. Avoid using this. </p>
               <div class='recco'>
                 <p><code>pushState</code> gives you real proper URLs along with permalinks to dynamic app state. You can use it and fall back to page refreshes if you'd like. Alternatively, History.js smooths out some browser implementation differences and an and optional hashchange fallback for HTML4 browsers. PJax (pushState + ajax) is what is used by Github for their fallback solution.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/balupton/history.js">History.js</a>, <a href="http://pjax.heroku.com/">pjax</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="https://github.com/balupton/history.js">History.js</a>, <a href="http://pjax.heroku.com/">pjax</a></p></div> 
 
               <p class='links'>
               
@@ -711,13 +709,9 @@ change radically before stabilizing. Avoid using this. </p>
 
 <p>Lastly, if you need these elements to print correctly, use <a href="https://github.com/aFarkas/html5shiv/blob/master/src/html5shiv-printshiv.js">html5shiv-printshiv.js</a> which addresses an IE bug there.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://code.google.com/p/html5shiv/">html5shiv</a>, <a href="https://github.com/aFarkas/html5shiv/">html5shiv (github)</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="http://code.google.com/p/html5shiv/">html5shiv</a>, <a href="https://github.com/aFarkas/html5shiv/">html5shiv (github)</a></p></div> 
 
               <p class='links'>
-              
-                <a href="http://caniuse.com/html5-sectioningelements">
-                  View browser share %
-                </a>  
               
                 <a href=https://github.com/h5bp/html5please/blob/master/posts/html5-sectioningelements.md>Edit this info</a>              
               </p>
@@ -761,7 +755,7 @@ change radically before stabilizing. Avoid using this. </p>
 
 <p><a href="https://github.com/jensarps/IDBWrapper">IDBWrapper</a> helps smooth out the cross-browser differences. You may still want to use WebSQL DB when IDB isn't present.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/jensarps/IDBWrapper">IDBWrapper</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="https://github.com/jensarps/IDBWrapper">IDBWrapper</a></p></div> 
 
               <p class='links'>
               
@@ -785,7 +779,7 @@ change radically before stabilizing. Avoid using this. </p>
               <div class='recco'>
                 <p>Crockford's <a href="https://github.com/douglascrockford/JSON-js">JSON2.js</a> is a perfect polyfill, that accounts for non-native implementations (basically only IE6 &amp; IE7 at this point). It's robust, well tested and can be used along with the native feature flawlessly.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/douglascrockford/JSON-js">json2.js</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="https://github.com/douglascrockford/JSON-js">json2.js</a></p></div> 
 
               <p class='links'>
               
@@ -811,7 +805,7 @@ change radically before stabilizing. Avoid using this. </p>
 
 <p>This is a simple key/value store, so if you want to store complex data use <code>JSON.parse(str)</code> and <code>JSON.stringify(obj)</code> on your way in and out. There is also no way to know if you exceeded the storage cross-browser, so wrap your store commands in try/catch. Up to 5MB is safe to use.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/350433">Remy's storage polyfill</a>, <a href="http://code.google.com/p/sessionstorage/">sessionstorage</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="https://gist.github.com/350433">Remy's storage polyfill</a>, <a href="http://code.google.com/p/sessionstorage/">sessionstorage</a></p></div> 
 
               <p class='links'>
               
@@ -863,10 +857,6 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class='links'>
               
-                <a href="http://caniuse.com/match-media">
-                  View browser share %
-                </a>  
-              
                 <a href=https://github.com/h5bp/html5please/blob/master/posts/match-media.md>Edit this info</a>              
               </p>
             </div>
@@ -907,7 +897,7 @@ change radically before stabilizing. Avoid using this. </p>
               <div class='recco'>
                 <p>Firefox has native contextmenu support, and the below polyfill will enable that for all other browsers.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/medialize/jQuery-contextMenu">contextMenu</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="https://github.com/medialize/jQuery-contextMenu">contextMenu</a></p></div> 
 
               <p class='links'>
               
@@ -931,7 +921,7 @@ change radically before stabilizing. Avoid using this. </p>
               <div class='recco'>
                 
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://gist.github.com/667320">meter-polyfill</a>, <a href="https://github.com/xjamundx/HTML5-Meter-Shim">jQuery shim</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="https://gist.github.com/667320">meter-polyfill</a>, <a href="https://github.com/xjamundx/HTML5-Meter-Shim">jQuery shim</a></p></div> 
 
               <p class='links'>
               
@@ -943,6 +933,28 @@ change radically before stabilizing. Avoid using this. </p>
               </p>
             </div>
             <footer class="tags">polyfill noie nomobile</footer>
+          </article>          
+        
+          <article class="fallback, gtie6">
+            <header>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h4 class="kind css">css</h4>
+              <h2 class='name'>min/max-width/height </h2>
+            </header>
+            <div class="more">
+              <div class='recco'>
+                <p><code>min-width</code>, <code>max-height</code>, etc are supported everywhere as of IE7. The <a href="http://www.dustindiaz.com/min-height-fast-hack/">min-height fast hack</a> has long been a reliable way of implementing min-height, but as many have sunsetted IE6 support, you likely don't need to worry about fallback anymore.</p>
+
+<p>Use all you like without fallback; certainly do not use CSS expressions to mimic this behavior.</p>
+              </div>
+              <div class='polyfills'></div> 
+
+              <p class='links'>
+              
+                <a href=https://github.com/h5bp/html5please/blob/master/posts/minmax-widthheight.md>Edit this info</a>              
+              </p>
+            </div>
+            <footer class="tags">fallback, gtie6</footer>
           </article>          
         
           <article class="fallback gtie8">
@@ -1028,13 +1040,9 @@ change radically before stabilizing. Avoid using this. </p>
                 <p>Please use the below polyfill, as Webkit is the only engine that supports it.
 Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Louis's ol[reversed] post</a>.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/impressivewebs/HTML5-Reverse-Ordered-Lists">HTML5 reverse ordered lists</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="https://github.com/impressivewebs/HTML5-Reverse-Ordered-Lists">HTML5 reverse ordered lists</a></p></div> 
 
               <p class='links'>
-              
-                <a href="http://caniuse.com/ol-reversed">
-                  View browser share %
-                </a>  
               
                 <a href=https://github.com/h5bp/html5please/blob/master/posts/ol-reversed.md>Edit this info</a>              
               </p>
@@ -1076,7 +1084,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class='recco'>
                 <p>Input placeholders are simply ignored in IE 9 and below. Note that they are only applied when the <strong>type</strong> of the input is <em>text</em>, <em>search</em>, <em>tel</em>, <em>url</em>, or <em>email</em>. Otherwise, it is ignored.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/mathiasbynens/jquery-placeholder">Placeholder jQuery Plugin</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="https://github.com/mathiasbynens/jquery-placeholder">Placeholder jQuery Plugin</a></p></div> 
 
               <p class='links'>
               
@@ -1114,6 +1122,28 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
             <footer class="tags">fallback noie</footer>
           </article>          
         
+          <article class="none">
+            <header>
+              <h3 class="status use">use <i></i> </h3>                                                        
+              <h4 class="kind css">css</h4>
+              <h2 class='name'>position:fixed </h2>
+            </header>
+            <div class="more">
+              <div class='recco'>
+                <p>Fixed positioning wasn't in IE6, but is fine in IE7 and everywhere else (<a href="http://bradfrostweb.com/blog/mobile/fixed-position/">except mobile, which is described at length here</a>). </p>
+
+<p>Use fixed positioning all you like, but you may want to check its behavior in mobile browsers afterward. There is a <a href="https://github.com/Modernizr/Modernizr/issues/167#issuecomment-2155861">messy feature detect</a> if you'd like it.</p>
+              </div>
+              <div class='polyfills'></div> 
+
+              <p class='links'>
+              
+                <a href=https://github.com/h5bp/html5please/blob/master/posts/positionfixed.md>Edit this info</a>              
+              </p>
+            </div>
+            <footer class="tags">none</footer>
+          </article>          
+        
           <article class="api">
             <header>
               <h3 class="status use">use <i></i> </h3>                                                        
@@ -1124,7 +1154,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class='recco'>
                 <p><code>postMessage</code> is present in IE8 and up, but if you need robust support for cross-frame and cross-domain communication, use <a href="http://easyxdm.net/wp/">EasyXDM</a></p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://easyxdm.net/wp/">EasyXDM</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="http://easyxdm.net/wp/">EasyXDM</a></p></div> 
 
               <p class='links'>
               
@@ -1148,7 +1178,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class='recco'>
                 
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="https://github.com/LeaVerou/HTML5-Progress-polyfill">HTML5 Progress Polyfill</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="https://github.com/LeaVerou/HTML5-Progress-polyfill">HTML5 Progress Polyfill</a></p></div> 
 
               <p class='links'>
               
@@ -1196,7 +1226,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
             </header>
             <div class="more">
               <div class='recco'>
-                <p>CSS Regions is in active development. As a result, the syntax is in a flux. A polyfill based on an older syntax exists, but we recommend you hold your horses till this spec seems some stability and 3 or more implementations. </p>
+                <p>CSS Regions is in active development. As a result, the syntax is in a flux. A polyfill based on an older syntax exists, but we recommend you hold your horses till this spec sees some stability and 3 or more implementations. </p>
               </div>
               <div class='polyfills'></div> 
 
@@ -1222,7 +1252,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class='recco'>
                 <p>If you are using Ruby element you dont need a script-based fallback but you can provide a CSS based set of good defaults. </p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://www.useragentman.com/blog/2010/10/29/cross-browser-html5-ruby-annotations-using-css/">Cross-browser Ruby</a>, <a href="http://sideshowbarker.net/2009/11/13/html5-ruby/#comment-3388">basic fallback</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="http://www.useragentman.com/blog/2010/10/29/cross-browser-html5-ruby-annotations-using-css/">Cross-browser Ruby</a>, <a href="http://sideshowbarker.net/2009/11/13/html5-ruby/#comment-3388">basic fallback</a></p></div> 
 
               <p class='links'>
               
@@ -1249,10 +1279,6 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class='polyfills'></div> 
 
               <p class='links'>
-              
-                <a href="http://caniuse.com/scoped-css">
-                  View browser share %
-                </a>  
               
                 <a href=https://github.com/h5bp/html5please/blob/master/posts/scoped-css.md>Edit this info</a>              
               </p>
@@ -1336,7 +1362,7 @@ Resources:
               <div class='recco'>
                 <p>SVG has good support for several years in most browsers except IE. IE9 brings support, which means you can use a polyfill library like SVGWeb or Canvg or create SVG dynamically via RaphaelJS.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://code.google.com/p/svgweb/">svgweb</a>, <a href="http://raphaeljs.com/">raphaeljs</a>, <a href="http://code.google.com/p/canvg/">canvg</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="http://code.google.com/p/svgweb/">svgweb</a>, <a href="http://raphaeljs.com/">raphaeljs</a>, <a href="http://code.google.com/p/canvg/">canvg</a></p></div> 
 
               <p class='links'>
               
@@ -1383,6 +1409,8 @@ Resources:
             <div class="more">
               <div class='recco'>
                 <p>All modern browsers support text-shadow except IE. Since it's mostly used for decorative purposes, we do not recommend using a polyfill, just make sure the text is still legible without a text-shadow. We also advise you to avoid large text-shadows because they can have a negative impact on performance.</p>
+
+<p>Sometimes you may do light/transparent text with an invert text-shadow. In these cases, we recomend to feature detect (with Modernizr) so you can provide solid color <code>.no-textshadow</code> fallback styling.</p>
               </div>
               <div class='polyfills'></div> 
 
@@ -1459,7 +1487,7 @@ Note that you need to use all the usual prefixes to make this work in all browse
 
 <p>There is also an incredibly useful service called <a href="http://vid.ly">vid.ly</a> which converts video online into all necessary formats and provides a short url that detects your browser/hardware and sends the correct format. <a href="http://archive.org">Archive.org</a> also converts MP4 videos uploaded to OGG automatically, same with audio.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://videojs.com/">Video.js</a>, <a href="http://mediaelementjs.com/">mediaelementjs</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="http://videojs.com/">Video.js</a>, <a href="http://mediaelementjs.com/">mediaelementjs</a></p></div> 
 
               <p class='links'>
               
@@ -1473,11 +1501,31 @@ Note that you need to use all the usual prefixes to make this work in all browse
             <footer class="tags">polyfill gtie8</footer>
           </article>          
         
+          <article class="fallback, gtie9">
+            <header>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h4 class="kind api">api</h4>
+              <h2 class='name'>Web Workers </h2>
+            </header>
+            <div class="more">
+              <div class='recco'>
+                <p>Web Workers can parallelize computationally heavy operations very well, freeing up the UI thread to respond to user input. Depending on what <a href="http://stackoverflow.com/questions/2773682/what-are-the-use-cases-for-web-workers/2774022#2774022">use case</a> you have for workers, you may choose to not offer that feature if workers aren't present, or to <a href="http://www.nczonline.net/blog/2009/01/13/speed-up-your-javascript-part-1/">chunk it up</a> and put it on the UI thread. </p>
+              </div>
+              <div class='polyfills'></div> 
+
+              <p class='links'>
+              
+                <a href=https://github.com/h5bp/html5please/blob/master/posts/web-workers.md>Edit this info</a>              
+              </p>
+            </div>
+            <footer class="tags">fallback, gtie9</footer>
+          </article>          
+        
           <article class="fallback">
             <header>
               <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
               <h4 class="kind api">api</h4>
-              <h2 class='name'>webgl </h2>
+              <h2 class='name'>WebGL </h2>
             </header>
             <div class="more">
               <div class='recco'>
@@ -1507,7 +1555,7 @@ Note that you need to use all the usual prefixes to make this work in all browse
               <div class='recco'>
                 <p>Making your app real-time is a huge boost and <a href="http://socket.io/">Socket.io</a> helps with downlevel transports for browsers lacking native websocket support (and supports IE6+). However be prepared to tune your AJAX polling or Comet in order to meet the needs of your app.</p>
               </div>
-              <div class='polyfills'><b>Recommended Polyfills: </b><p><a href="http://socket.io/">Socket.io</a></p></div> 
+              <div class='polyfills'><b>Recommended polyfills: </b><p><a href="http://socket.io/">Socket.io</a></p></div> 
 
               <p class='links'>
               
