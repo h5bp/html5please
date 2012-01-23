@@ -4,4 +4,4 @@ tags:
 kind: css
 polyfillurls:
 
-Scoped CSS is still in active development. 
+Scoped stylesheets are still in active development, the first implementation of which should be available in WebKit soon.
