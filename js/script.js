@@ -29,7 +29,7 @@ var	search = document.getElementById('livesearch'),
 
 var listOptions = {
 		listClass: 'features',
-		valueNames: ['kind', 'status', 'namevalue', 'tags']
+		valueNames: ['kind', 'status', 'name', 'tags']
 	},
   featureList = new List('gfs', listOptions);
   search.onkeyup = updatesearch;
