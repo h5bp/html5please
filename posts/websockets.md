@@ -8,4 +8,4 @@ Making your app real-time is a huge boost and [Socket.io](http://socket.io/) is 
 
 [web-socket-js](https://github.com/gimite/web-socket-js) is a natural polyfill for the Javascript WebSocket API transferring data through Flash Sockets when WebSockets aren't available.
 
-As a word of caution, the protocol backing the Web Socket API has changed several times in the past year, but has matured enough to not introduce any more breaking changes.
+As a word of caution, the protocol backing the Web Socket API has become an [IETF standard](http://tools.ietf.org/html/rfc6455), but Safari has not yet implemented the new version.  It is recommended forcing Flash on Safari (or disabling WebSockets on Safari) for now.
