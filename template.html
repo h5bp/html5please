@@ -46,19 +46,22 @@
             <header>
               <h3 class="status {{status}}">{{status}} <i>{{{polyfillaction tags}}}</i> </h3>                                                        
               <h4 class="kind {{kind}}">{{kind}}</h4>
-              <h2 class='name'>
-                {{#if moreurl}}
-                <a href="{{{moreurl}}}"><b class="namevalue">{{{featuretag feature}}}</b></a>
-                {{else}}
-                  <b class="namevalue">{{{featuretag feature}}}</b>
-                {{/if}}
-              </h2>
+              <h2 class='name'>{{{featuretag feature}}} </h2>
             </header>
             <div class="more">
-              <div class='recco'>{{{contents}}}</div>
-              <div class='polyfills'>{{#if polyfillurls}}<b>Recommended polyfills: </b>{{{polyfillurls}}}{{/if}}</div> 
-              <a class="updateurl" href={{{editurl}}}>Edit info on
-                {{{featuretag feature}}}</a>              
+              <div class='recco'>
+                {{{contents}}}
+              </div>
+              <div class='polyfills'>{{#if polyfillurls}}<b>Recommended Polyfills: </b>{{{polyfillurls}}}{{/if}}</div> 
+
+              <p class='links'>
+              {{#if moreurl}}
+                <a href="{{{moreurl}}}">
+                  {{testurl moreurl}}
+                </a>  
+              {{/if}}
+                <a href={{{editurl}}}>Edit this info</a>              
+              </p>
             </div>
             <footer class="tags">{{tags}}</footer>
           </article>          

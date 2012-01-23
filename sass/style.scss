@@ -387,7 +387,8 @@ article > header {
   .kind, .name, .status {
     @extend .reset-margin;
     display: inline-block;
-    vertical-align: middle;    
+    vertical-align: middle; 
+    pointer-events: none;
   }
   
   
@@ -414,11 +415,22 @@ article div.more {
   
   .polyfills p { display: inline; }
   
-  .updateurl {
+  .links {
+    @extend .reset-margin;
     font-size: 0.8em;
     position: absolute;
     bottom: 0.5em;
     right: 1em;    
+    
+    a { padding: 0.25em 0.5em; }
+    a:hover { 
+      background: $link-color; 
+      color: #fff; 
+      border-radius: 5px; 
+      text-decoration: none;
+      text-shadow: 1px 1px 1px $dark;
+    }
+    a + a { margin-left: 0.5em; } 
   }  
 }
 
@@ -452,19 +464,9 @@ article.expanded {
 
 .name {
   padding: 0.4rem 0; 
-  text-shadow: 1px 1px 1px darken(#149CD7, 40%);  
+  text-shadow: 1px 1px 1px darken(#149CD7, 60%);  
   letter-spacing: 1px;   
-  
-  a { color: darken($link-color, 10%); } 
-  
-  a:hover { text-decoration: none; }
-  a:hover::after { 
-    content: " →"; 
-    font-size: 0.8em; 
-    line-height: 0; 
-    font-weight: normal; 
-    vertical-align: -0.1em;
-  }
+  color: darken($link-color, 10%); 
 }
 
 .status {
@@ -475,7 +477,6 @@ article.expanded {
   text-shadow: 1px 1px 1px black;
   position: relative;
   float: right;
-  pointer-events: none;
 
 
   //Arrow like figures on the right

@@ -267,7 +267,7 @@ article h3 b i, article.expanded div.more, .kind, .status i b {
   display: inline;
 }
 
-.reset-margin, body, nav ul, nav ol, figure, form, fieldset, button, input, select, textarea, #livesearch, article > header .kind, article > header .name, article > header .status, .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+.reset-margin, body, nav ul, nav ol, figure, form, fieldset, button, input, select, textarea, #livesearch, article > header .kind, article > header .name, article > header .status, article div.more .links, .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
   margin: 0;
 }
 
@@ -507,6 +507,7 @@ article > header:before {
 article > header .kind, article > header .name, article > header .status {
   display: inline-block;
   vertical-align: middle;
+  pointer-events: none;
 }
 article > header i {
   font-style: normal;
@@ -536,11 +537,24 @@ article div.more .polyfills b {
 article div.more .polyfills p {
   display: inline;
 }
-article div.more .updateurl {
+article div.more .links {
   font-size: 0.8em;
   position: absolute;
   bottom: 0.5em;
   right: 1em;
+}
+article div.more .links a {
+  padding: 0.25em 0.5em;
+}
+article div.more .links a:hover {
+  background: #149cd7;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #232927;
+}
+article div.more .links a + a {
+  margin-left: 0.5em;
 }
 
 article.expanded > header {
@@ -573,21 +587,9 @@ article.expanded div.more {
 
 .name {
   padding: 0.4rem 0;
-  text-shadow: 1px 1px 1px #03151c;
+  text-shadow: 1px 1px 1px black;
   letter-spacing: 1px;
-}
-.name a {
   color: #107aa8;
-}
-.name a:hover {
-  text-decoration: none;
-}
-.name a:hover::after {
-  content: " →";
-  font-size: 0.8em;
-  line-height: 0;
-  font-weight: normal;
-  vertical-align: -0.1em;
 }
 
 .status {
@@ -598,7 +600,6 @@ article.expanded div.more {
   text-shadow: 1px 1px 1px black;
   position: relative;
   float: right;
-  pointer-events: none;
 }
 .status:before, .status:after {
   content: "";
