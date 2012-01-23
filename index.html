@@ -436,7 +436,11 @@
             </header>
             <div class="more">
               <div class="recco">
-                <p>ECMAScript version 5 covers a large number of feature additions to what we normally call JavaScript. Excluding IE8, <a href="http://kangax.github.com/es5-compat-table/">most of ES5 is supported in browsers</a>. As it introduces no new syntax, it's possible to polyfill fairly well. The below polyfills tackle most uses of these features, but <a href="https://gist.github.com/1120592">not <em>all</em> cases</a>.</p>
+                <p>ECMAScript version 5 covers a large number of feature additions to what we normally call JavaScript. 
+Excluding IE8, <a href="http://kangax.github.com/es5-compat-table/">most of ES5 is supported in browsers</a>. 
+As it introduces no new syntax, it's possible to polyfill fairly well. 
+The below polyfills tackle most uses of these features, but <a href="https://gist.github.com/1664895">there is an unshimmable subset of ES5</a>. 
+Also note that some shims are known to have <a href="https://gist.github.com/1120592">edgecase compliance bugs</a>.</p>
               </div>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/kriskowal/es5-shim/">es5-shim</a>, <a href="http://augmentjs.com/">augment.js</a></p></div> 
 
@@ -581,7 +585,7 @@ change radically before stabilizing. Avoid using this. </p>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Use the <a href="http://www.fontsquirrel.com/fontface/generator">Font Squirrel Generator</a> for fonts you have license for using as web fonts. <a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax">Font Squirrel @font-face syntax</a> is also the most bullet-proof way of serving web fonts. You do not need polyfills - just fonts in several formats; WOFF is preferred, followed by TTF and then EOT. </p>
+                <p>Use the <a href="http://www.fontsquirrel.com/fontface/generator">Font Squirrel Generator</a> for fonts you have license for using as web fonts. <a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax">Fontspring @font-face syntax</a> is also the most bullet-proof way of serving web fonts. You do not need polyfills - just fonts in several formats; WOFF is preferred, followed by TTF and then EOT. </p>
 
 <p>Also, don't use sIFR or Cufon anymore.</p>
               </div>
@@ -597,6 +601,30 @@ change radically before stabilizing. Avoid using this. </p>
               </p>
             </div>
             <footer class="tags">fallback</footer>
+          </article>          
+        
+          <article class="polyfill">
+            <header>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h4 class="kind html, gtie9">html, gtie9</h4>
+              <h2 class="name">form validation </h2>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>HTML5 has baked in clientside form validation, and polyfills can enable this for legacy browsers as well. Using the defined HTML5 API for constraint validation may be a more maintainable direction than using a jQuery Validation plugin, depending on your team.</p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://afarkas.github.com/webshim/demos/">webshims</a>, <a href="https://github.com/dperini/nwxforms">nwxforms</a>, <a href="https://github.com/ryanseddon/H5F">H5F</a></p></div> 
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/form-validation">
+                  View browser share %
+                </a>  
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/form-validation.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">polyfill</footer>
           </article>          
         
           <article class="fallback gtie8">
@@ -775,6 +803,114 @@ change radically before stabilizing. Avoid using this. </p>
               </p>
             </div>
             <footer class="tags">polyfill, gtie8</footer>
+          </article>          
+        
+          <article class="gtie9">
+            <header>
+              <h3 class="status use">use <i></i> </h3>                                                        
+              <h4 class="kind html">html</h4>
+              <h2 class="name">input[placeholder] </h2>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>Input placeholders are simply ignored in IE 9 and below. Note that they are only applied when the <strong>type</strong> of the input is <em>text</em>, <em>search</em>, <em>tel</em>, <em>url</em>, or <em>email</em>. Otherwise, it is ignored.</p>
+
+<p><code>input[placeholder]</code> is commonly the first polyfill anyone writes and, as such, there are <a href="http://bit.ly/polyfills">many of them</a>. Password inputs and submit event clearing are among many of the gotchas that catch naïve implemenations; Mathias's polyfill below handles these cases very well.</p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/mathiasbynens/jquery-placeholder">Placeholder jQuery Plugin</a></p></div> 
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/input-placeholder">
+                  View browser share %
+                </a>  
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/input-placeholder.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">gtie9</footer>
+          </article>          
+        
+          <article class="polyfill,gtie9">
+            <header>
+              <h3 class="status avoid">avoid <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h4 class="kind html">html</h4>
+              <h2 class="name">&lt;input type=color> </h2>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>Color inputs will fall back to a plain text input if it's not supported, but excluding Opera, no desktop browser has added support for color inputs. </p>
+
+<p>You should probably avoid this until it has support in WebKit, Gecko or IE.</p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/jo/JSColor">jscolor</a>, <a href="http://www.useragentman.com/blog/2010/07/27/cross-browser-html5-forms-using-modernizr-webforms2-and-html5widgets/">html5widgets</a></p></div> 
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/input-typecolor">
+                  View browser share %
+                </a>  
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/input-typecolor.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">polyfill,gtie9</footer>
+          </article>          
+        
+          <article class="polyfill,gtie9">
+            <header>
+              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h4 class="kind html">html</h4>
+              <h2 class="name">&lt;input type=date> </h2>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>There are many date inputs: <code>datetime-local, date, time, month, week</code> that should provide a datepicker to the user. For a long time, WebKit offered a spinner UI on these inputs, but this was an incomplete implementation (and has since been removed). </p>
+
+<p>A few polyfills offer a proper datepicker UI, if the feature is not offered natively. </p>
+
+<p>We suggest you use Modernizr to detect this feature, as it has correctly detected these features, regardless of WebKit's partial implementation or other browser bugs.</p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://afarkas.github.com/webshim/demos/demos/webforms.html">webshims</a>, <a href="http://www.useragentman.com/blog/2010/07/27/cross-browser-html5-forms-using-modernizr-webforms2-and-html5widgets/">html5widgets</a>,</p></div> 
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/input-typedate">
+                  View browser share %
+                </a>  
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/input-typedate.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">polyfill,gtie9</footer>
+          </article>          
+        
+          <article class="polyfill,gtie9">
+            <header>
+              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h4 class="kind html">html</h4>
+              <h2 class="name">&lt;input type=range> </h2>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>Range inputs (AKA sliders) will fall back to a plain text input if it's not supported. </p>
+
+<p>You can use freqdec's <a href="http://www.frequency-decoder.com/2010/11/18/unobtrusive-slider-control-html5-input-range-polyfill/">Input Range Polyfill</a> or for just Firefox support, Frank Yan's <a href="https://github.com/fryn/html5slider">html5slider</a>.</p>
+
+<p>These polyfills aren't drop-in polyfills and you'll need to wire them up a little, but your markup can depend on <code>&lt;input type=range&gt;</code> creating a slider.</p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://www.frequency-decoder.com/2010/11/18/unobtrusive-slider-control-html5-input-range-polyfill/">Input Range Polyfill</a>, <a href="https://github.com/fryn/html5slider">html5slider</a></p></div> 
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/input-typerange">
+                  View browser share %
+                </a>  
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/input-typerange.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">polyfill,gtie9</footer>
           </article>          
         
           <article class="gtie7, polyfill">
@@ -1005,7 +1141,9 @@ change radically before stabilizing. Avoid using this. </p>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Internet Explorer, and Opera support CSS Multiple Column without vendor prefixes, so you only need prefixed versions for <code>-webkit</code> and <code>-moz</code>. We recommend you do not polyfill this and let it fall back to single column text.</p>
+                <p>Internet Explorer (10+), and Opera support CSS Multiple Column without vendor prefixes, so you only need prefixed versions for <code>-webkit</code> and <code>-moz</code>. A further note, features like <code>column-break-after</code>, <code>column-break-before</code>, and <code>column-break-inside</code> which are necessary for advanced typography are webkit-only right now. </p>
+
+<p>We recommend you do not polyfill this and let it fall back to single column text.</p>
               </div>
               <div class="polyfills"></div> 
 
@@ -1092,30 +1230,6 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               </p>
             </div>
             <footer class="tags">none</footer>
-          </article>          
-        
-          <article class="gtie9">
-            <header>
-              <h3 class="status use">use <i></i> </h3>                                                        
-              <h4 class="kind html">html</h4>
-              <h2 class="name">placeholder </h2>
-            </header>
-            <div class="more">
-              <div class="recco">
-                <p>Input placeholders are simply ignored in IE 9 and below. Note that they are only applied when the <strong>type</strong> of the input is <em>text</em>, <em>search</em>, <em>tel</em>, <em>url</em>, or <em>email</em>. Otherwise, it is ignored.</p>
-              </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/mathiasbynens/jquery-placeholder">Placeholder jQuery Plugin</a></p></div> 
-
-              <p class="links">
-              
-                <a href="http://caniuse.com/placeholder">
-                  View browser share %
-                </a>  
-              
-                <a href="https://github.com/h5bp/html5please/blob/master/posts/placeholder.md">Edit this info</a>
-              </p>
-            </div>
-            <footer class="tags">gtie9</footer>
           </article>          
         
           <article class="fallback noie">
@@ -1581,15 +1695,15 @@ Note that you need to use all the usual prefixes to make this work in all browse
             <header>
               <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
               <h4 class="kind api">api</h4>
-              <h2 class="name">websockets </h2>
+              <h2 class="name">WebSockets </h2>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Making your app real-time is a huge boost and <a href="http://socket.io/">Socket.io</a> is a Node+Javascript framework that helps with downlevel transports for browsers lacking native websocket support (and supports IE6+). However be prepared to tune your AJAX polling or Comet in order to meet the needs of your app.</p>
+                <p>Making your app real-time is a huge boost and <a href="http://socket.io/">Socket.io</a> is a Node+JavaScript framework that helps with downlevel transports for browsers lacking native WebSocket support (and supports IE6+). However be prepared to tune your AJAX polling or Comet in order to meet the needs of your app.</p>
 
-<p><a href="https://github.com/gimite/web-socket-js">web-socket-js</a> is a natural polyfill for the Javascript WebSocket API transferring data through Flash Sockets when WebSockets aren't available.</p>
+<p><a href="https://github.com/gimite/web-socket-js">web-socket-js</a> is a natural polyfill for the JavaScript WebSocket API transferring data through Flash Sockets when WebSockets aren't available.</p>
 
-<p>As a word of caution, the protocol backing the Web Socket API has become an <a href="http://tools.ietf.org/html/rfc6455">IETF standard</a>, but Safari has not yet implemented the new version.  It is recommended forcing Flash on Safari (or disabling WebSockets on Safari) for now.</p>
+<p>As a word of caution, the protocol backing the Web Socket API has become an <a href="http://tools.ietf.org/html/rfc6455">IETF standard</a>, but Safari has not yet implemented the new version. It is recommended forcing Flash on Safari (if Flash is available, N/A on mobile), or disabling WebSockets on Safari for now.</p>
               </div>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://socket.io/">Socket.io</a>, <a href="https://github.com/gimite/web-socket-js">web-socket-js</a></p></div> 
 

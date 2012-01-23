@@ -1,7 +1,7 @@
 feature: &lt;input type=range>
 status: caution
-tags: polyfill
-kind: html, gtie9
+tags: polyfill,gtie9
+kind: html
 polyfillurls: [Input Range Polyfill](http://www.frequency-decoder.com/2010/11/18/unobtrusive-slider-control-html5-input-range-polyfill/), [html5slider](https://github.com/fryn/html5slider)
 
 Range inputs (AKA sliders) will fall back to a plain text input if it's not supported. 
