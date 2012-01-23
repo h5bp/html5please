@@ -1,6 +1,6 @@
 feature: Web Workers
 status: use
-tags: fallback, gtie9
+tags: fallback gtie9
 kind: api
 polyfillurls:
 
