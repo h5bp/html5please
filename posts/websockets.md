@@ -1,5 +1,5 @@
 feature: WebSockets
-status: caution
+status: use
 tags: polyfill 
 kind: api
 polyfillurls: [Socket.io](http://socket.io/), [web-socket-js](https://github.com/gimite/web-socket-js)
