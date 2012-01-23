@@ -4,4 +4,4 @@ tags: none
 kind: css
 polyfillurls:
 
-This is also a spec that is in a flux. Older versions of the spec has found implementation, but you should wait until the spec is more stable to use this. 
+The [CSS Grid Layout](http://dev.w3.org/csswg/css3-grid-align/) specification supersedes several older ones, and only features an experimental implementation in Internet Explorer 10. Until the specification matures and more implementations exist, we suggest that you avoid using this.
