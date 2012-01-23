@@ -1,6 +1,6 @@
 feature: opacity
 status: use
-tags: none
+tags: gtie8
 kind: css
 polyfillurls:
 
