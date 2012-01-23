@@ -1,6 +1,6 @@
 feature: background-image options
 status: use
-tags: none
+tags: gtie8
 kind: css
 polyfillurls:
 
