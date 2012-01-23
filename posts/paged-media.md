@@ -5,4 +5,4 @@ kind: css
 polyfillurls:
 moreurl: http://css3clickchart.com/#paged-media
 
-This spec is actively under development, so we recommend you wait until there are enough implementations around.
+This specification is actively under development and thus still in flux. We recommend you wait until it has matured, and multiple implementations are available.
