@@ -2,6 +2,8 @@ feature: WebGL
 status: use
 tags: fallback
 kind: api
-polyfillurls: [JebGL](http://code.google.com/p/jebgl/), [IEWebGL](http://iewebgl.com/)
+polyfillurls: 
 
-There are polyfills and plugins to enable WebGL for IE, but you probably shouldn't use them. Use WebGL if it's present, else point the user to [get.webgl.org](http://get.webgl.org/).
+There are polyfills and plugins to enable WebGL for IE, 
+but apart from [Google Chrome Frame](http://code.google.com/chrome/chromeframe/) you probably shouldn't use them. 
+Use WebGL if it's present, else point the user to [get.webgl.org](http://get.webgl.org/).
