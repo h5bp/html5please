@@ -1,4 +1,4 @@
-feature: webgl
+feature: WebGL
 status: use
 tags: fallback
 kind: api
