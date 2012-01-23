@@ -213,7 +213,7 @@ body {
     font-size: 5em; 
     line-height: 1.2em;   
     text-shadow: solid-text-shadows(lighten($contrast, 10%), 3), 3px 3px 1px darken($dark, 10%), 4px 4px 3px darken($dark, 10%);
-    margin: 0.8em 0 0.5em 0; 
+    margin: 0.6em 0 0.5em 0; 
     text-transform: uppercase;
     font-family: $index-font-family
 
@@ -252,7 +252,7 @@ article h3 b i {
 .index > div { padding: 2rem 0; }
 
 #clickmore { white-space: nowrap; text-decoration: none; }
-#clickmore::after { content: " ▶"; vertical-align: -0.1em; }
+#clickmore::after { content: " ▶"; vertical-align: -0.1em; font-size: 0.7em;}
 
 #clickmore.active::after { content: " ▼"; }
 

@@ -16,9 +16,12 @@
       <h1>HTML5 <img src='img/HTML5-logo.png'> Please</h1>
       <h2>
         <b>Use the new and shiny responsibly.</b>
-        <p>Look up HTML5 features, know if they are ready for use, and if so find out you should use them – with polyfills, fallbacks or as they are. <a href="#moredetails" id="clickmore">learn more</a>
+        <p>Look up HTML5 features, know if they are ready for use, and if so find out you should use them – with polyfills, fallbacks or as they are. <a href="#moredetails" id="clickmore">more about this site</a>
           </p>
-          <p id="moredetails"><a href="http://caniuse.com">When Can I Use</a> tells you the browser support story, while <a href="http://modernizr.com">Modernizr</a> gives you the power of feature detection. HTML5 Please helps you out with recommendations for polyfills and implementation so you can decide if and how to put each of these features to use.</p>
+          <div id="moredetails">
+            <p><a href="http://caniuse.com">When Can I Use</a> tells you the browser support story, while <a href="http://modernizr.com">Modernizr</a> gives you the power of feature detection. HTML5 Please helps you out with recommendations for <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills">polyfills</a> and implementation so you can decide if and how to put each of these features to use.</p>
+            <p>The recommendations below represent the collective knowledge of developers who have been deep in the HTML5 trenches. We hope they serve you well.</p>
+          </div>
       </h2>
       <div>
         <input id=livesearch class=search name=livesearch placeholder='type to filter' type='search' value='' autofocus />
@@ -31,7 +34,7 @@
             <li>requiring <a href="#prefixes">prefixes</a><a href="#polyfill">polyfill</a><a href="#fallback">fallback</a></li>
             <li>that you should <a href="#use">use</a> <a href="#caution">use with caution</a> <a href="#avoid">avoid</a></li>
             <li>that are <a href="#css">css</a> <a href="#html">html</a><a href="#api">api</a><a href="#js">js</a></li>
-            <li> <a href="./#showall">all features</a></li>
+            <li> <a href="#showall">all features</a></li>
           </ul>
         </div>
       </div>
@@ -53,7 +56,7 @@
             </header>
             <div class="more">
               <div class='recco'>{{{contents}}}</div>
-              <div class='polyfills'>{{#if polyfillurls}}<b>Recommended Polyfills: </b>{{{polyfillurls}}}{{/if}}</div> 
+              <div class='polyfills'>{{#if polyfillurls}}<b>Recommended polyfills: </b>{{{polyfillurls}}}{{/if}}</div> 
               <a class="updateurl" href={{{editurl}}}>Edit info on
                 {{{featuretag feature}}}</a>              
             </div>
