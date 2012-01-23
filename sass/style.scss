@@ -525,7 +525,12 @@ body > footer {
     display: inline-block;
     margin: 0 1em 1em 0;
     text-align: left;
-    width: 12em;
+    width: 11em;
+
+    &:last-child {
+      width: auto;
+      margin-right: 0;
+    }
   }
 
   img {
