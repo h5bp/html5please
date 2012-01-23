@@ -292,7 +292,7 @@
             </header>
             <div class="more">
               <div class="recco">
-                <p>CORS, or cross-origin resource sharing, enables a few things, but most notably cross-domain AJAX. IE8 introduced <a href="http://msdn.microsoft.com/en-us/library/ie/cc288060(v=vs.85">XDomainRequest</a>.aspx), so really only IE7 needs help with cross-domain files. Consider the polyfills below or you can fallback to using a <a href="http://benalman.com/projects/php-simple-proxy/">simple proxy</a>.</p>
+                <p>CORS, or cross-origin resource sharing, enables a few things, but most notably cross-domain AJAX. IE8 introduced <a href="http://msdn.microsoft.com/en-us/library/ie/cc288060(v=vs.85).aspx">XDomainRequest</a>, so really only IE7 needs help with cross-domain files. Consider the polyfills below or you can fallback to using a <a href="http://benalman.com/projects/php-simple-proxy/">simple proxy</a>.</p>
               </div>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/toolness/postmessage-proxied-xhr/#readme">postmessage-proxied-xhr</a>, <a href="http://flxhr.flensed.com/">flXHR</a> (requires crossdomain.xml), <a href="https://github.com/eligrey/pmxdr">pmxdr</a> (requires host installed)</p></div> 
 
@@ -1587,7 +1587,9 @@ Note that you need to use all the usual prefixes to make this work in all browse
               <div class="recco">
                 <p>Making your app real-time is a huge boost and <a href="http://socket.io/">Socket.io</a> is a Node+Javascript framework that helps with downlevel transports for browsers lacking native websocket support (and supports IE6+). However be prepared to tune your AJAX polling or Comet in order to meet the needs of your app.</p>
 
-<p>As a word of caution, the protocol backing the Web Socket API has changed several times in the past year, but has matured enough to not introduce any more breaking changes.</p>
+<p><a href="https://github.com/gimite/web-socket-js">web-socket-js</a> is a natural polyfill for the Javascript WebSocket API transferring data through Flash Sockets when WebSockets aren't available.</p>
+
+<p>As a word of caution, the protocol backing the Web Socket API has become an <a href="http://tools.ietf.org/html/rfc6455">IETF standard</a>, but Safari has not yet implemented the new version.  It is recommended forcing Flash on Safari (or disabling WebSockets on Safari) for now.</p>
               </div>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://socket.io/">Socket.io</a>, <a href="https://github.com/gimite/web-socket-js">web-socket-js</a></p></div> 
 
@@ -1611,7 +1613,7 @@ Note that you need to use all the usual prefixes to make this work in all browse
             </header>
             <div class="more">
               <div class="recco">
-                <p>Although it initially found favor as a clientside database API, it has now <a href="http://www.w3.org/TR/webdatabase/#status-of-this-document">been abandoned</a> in favor of IndexedDB. We therefor recommend that you do not use WebSQL. </p>
+                <p>Although it initially found favor as a clientside database API, it has now <a href="http://www.w3.org/TR/webdatabase/#status-of-this-document">been abandoned</a> in favor of IndexedDB. We therefore recommend that you do not use WebSQL. </p>
               </div>
               <div class="polyfills"></div> 
 
