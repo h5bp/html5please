@@ -1,4 +1,4 @@
-feature: web sql
+feature: WebSQL DB
 status: avoid
 tags: none
 kind: api

@@ -1,4 +1,4 @@
-feature: web-storage
+feature: localStorage
 status: use
 tags: gtie7 polyfill
 kind: api

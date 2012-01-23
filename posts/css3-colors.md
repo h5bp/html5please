@@ -1,4 +1,4 @@
-feature: css3-colors
+feature: css3 colors
 status: use
 tags: fallback gtie8
 kind: css

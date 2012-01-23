@@ -4,4 +4,4 @@ tags: polyfill noie nomobile
 kind: html
 polyfillurls:[contextMenu](https://github.com/medialize/jQuery-contextMenu)
 
-Do note that this polyfill requires a jQuery dependency.
+Firefox has native contextmenu support, and the below polyfill will enable that for all other browsers.
