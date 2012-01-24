@@ -2,9 +2,11 @@ feature: HTML5 sectioning elements
 status: use
 tags: gtie8,polyfill,article,header,nav
 kind: html
-polyfillurls: [html5shiv](http://code.google.com/p/html5shiv/), [html5shiv (github)](https://github.com/aFarkas/html5shiv/)
+polyfillurls: [html5shiv](http://code.google.com/p/html5shiv/), [html5shiv (github)](https://github.com/aFarkas/html5shiv/), [accessifyhtml5.js](https://github.com/yatil/accessifyhtml5.js)
 
-The new sectioning elements (like `<header>`, `<footer>`, `<nav>`, `<article>`, and `<section>`) can be used to expose better accessibility to your document structure. All browsers except oldIE (IE <=8) handle these fine. The notes below only apply to oldIE:
+All browsers except oldIE (IE <=8) handle new sectioning elements (like `<header>`, `<footer>`, `<nav>`, `<article>`, and `<section>`) fine. However they aren’t always mapped to accessibility APIs as the [HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#wai-aria) requires. Currently [only Firefox does this](http://html5accessibility.com/) but other browsers are implementing the a11y APIs quickly. In the meantime, [Accessifyhtml5.js](https://github.com/yatil/accessifyhtml5.js) maps them correctly.
+
+The notes below only apply to oldIE:
 
 The [html5shiv](http://code.google.com/p/html5shiv/) enables you to use these in your markup (and Modernizr does the exact same by default). 
 

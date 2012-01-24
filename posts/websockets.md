@@ -1,9 +1,11 @@
-feature: websockets
+feature: WebSockets
 status: caution
 tags: polyfill 
 kind: api
-polyfillurls: [Socket.io](http://socket.io/)
+polyfillurls: [Socket.io](http://socket.io/), [web-socket-js](https://github.com/gimite/web-socket-js)
 
-Making your app real-time is a huge boost and [Socket.io](http://socket.io/) helps with downlevel transports for browsers lacking native websocket support (and supports IE6+). However be prepared to tune your AJAX polling or Comet in order to meet the needs of your app.
+Making your app real-time is a huge boost and [Socket.io](http://socket.io/) is a Node+JavaScript framework that helps with downlevel transports for browsers lacking native WebSocket support (and supports IE6+). However be prepared to tune your AJAX polling or Comet in order to meet the needs of your app.
 
-As a word of caution, the protocol backing the Web Socket API has changed several times in the past year, but should have matured enough to not introduce any more breaking changes.
+[web-socket-js](https://github.com/gimite/web-socket-js) is a natural polyfill for the JavaScript WebSocket API transferring data through Flash Sockets when WebSockets aren't available.
+
+As a word of caution, the protocol backing the Web Socket API has become an [IETF standard](http://tools.ietf.org/html/rfc6455), but Safari has not yet implemented the new version. It is recommended forcing Flash on Safari (if Flash is available, N/A on mobile), or disabling WebSockets on Safari for now.
