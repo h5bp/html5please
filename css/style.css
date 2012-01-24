@@ -282,13 +282,13 @@ article h3 b i, article.expanded div.more, .kind, .status i b {
 }
 
 html {
-  background-image: url('../img/denim.png?1324333869');
+  background-image: url('../img/denim.png?1327436784');
   color: #e3d7bf;
-  background: -webkit-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -webkit-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -webkit-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -webkit-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -webkit-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
-  background: -moz-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -moz-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -moz-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -moz-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -moz-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
-  background: -o-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -o-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -o-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -o-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -o-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
-  background: -ms-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -ms-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -ms-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -ms-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -ms-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
-  background: radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
+  background: -webkit-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -webkit-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -webkit-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -webkit-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -webkit-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1327436784');
+  background: -moz-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -moz-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -moz-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -moz-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -moz-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1327436784');
+  background: -o-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -o-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -o-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -o-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -o-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1327436784');
+  background: -ms-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -ms-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -ms-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -ms-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -ms-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1327436784');
+  background: radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1327436784');
   background-color: #232927;
   min-height: 100%;
   max-width: 100%;
@@ -577,33 +577,32 @@ article.expanded div.more {
   position: absolute;
   left: -5em;
   text-align: right;
+  text-shadow: 1px 1px 1px #232927;
   width: 4.5em;
   z-index: 1;
-  text-shadow: 1px 1px 1px #232927;
 }
 
 .name {
-  padding: 0.4rem 0;
-  text-shadow: 1px 1px 1px black;
-  letter-spacing: 1px;
   color: #107aa8;
+  letter-spacing: 1px;
+  padding: 0.4rem 0;
 }
 
 .status {
-  font-size: 2em;
   border-radius: 0 0.2rem 0.2rem 0;
-  padding: 0 1rem 0 0.5rem;
   color: white;
-  text-shadow: 1px 1px 1px black;
-  position: relative;
   float: right;
+  font-size: 2em;
+  padding: 0 1rem 0 0.5rem;
+  position: relative;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 .status:before, .status:after {
   content: "";
   height: 50%;
-  width: 0.8em;
-  position: absolute;
   left: -0.8em;
+  position: absolute;
+  width: 0.8em;
 }
 .status:before {
   top: 0;

@@ -456,26 +456,25 @@ article.expanded {
   position: absolute;
   left: -5em;
   text-align: right;
+  text-shadow: 1px 1px 1px $dark;
   width: 4.5em;
   z-index: 1;
-  text-shadow: 1px 1px 1px $dark;
 }
 
 .name {
-  padding: 0.4rem 0; 
-  text-shadow: 1px 1px 1px darken(#149CD7, 60%);  
-  letter-spacing: 1px;   
-  color: darken($link-color, 10%); 
+  color: darken($link-color, 10%);
+  letter-spacing: 1px;
+  padding: 0.4rem 0;
 }
 
 .status {
-  font-size: 2em;    
   border-radius: 0 0.2rem 0.2rem 0;
-  padding: 0 1rem 0 0.5rem;
   color: white;
-  text-shadow: 1px 1px 1px black;
-  position: relative;
   float: right;
+  font-size: 2em;
+  padding: 0 1rem 0 0.5rem;
+  position: relative;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 
 
   //Arrow like figures on the right
@@ -483,9 +482,9 @@ article.expanded {
   &:after {
     content: "";
     height: 50%;
-    width: 0.8em;
+    left: -0.8em;
     position: absolute;
-    left: -0.8em; 
+    width: 0.8em;
   }
   
   &:before { top: 0; }
