@@ -4,7 +4,7 @@ tags: gtie8,polyfill,article,header,nav
 kind: html
 polyfillurls: [html5shiv](http://code.google.com/p/html5shiv/), [html5shiv (github)](https://github.com/aFarkas/html5shiv/), [accessifyhtml5.js](https://github.com/yatil/accessifyhtml5.js)
 
-All browsers except oldIE (IE <=8) handle new sectioning elements (like `<header>`, `<footer>`, `<nav>`, `<article>`, and `<section>`) fine. However they aren’t always mapped to accessibility APIs as the [HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#wai-aria) requires. Currently [only Firefox does this}(http://html5accessibility.com/) but other browsers are implementing the a11y APIs quickly. In the meantime, [Accessifyhtml5.js](https://github.com/yatil/accessifyhtml5.js) maps them correctly.
+All browsers except oldIE (IE <=8) handle new sectioning elements (like `<header>`, `<footer>`, `<nav>`, `<article>`, and `<section>`) fine. However they aren’t always mapped to accessibility APIs as the [HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#wai-aria) requires. Currently [only Firefox does this](http://html5accessibility.com/) but other browsers are implementing the a11y APIs quickly. In the meantime, [Accessifyhtml5.js](https://github.com/yatil/accessifyhtml5.js) maps them correctly.
 
 The notes below only apply to oldIE:
 
