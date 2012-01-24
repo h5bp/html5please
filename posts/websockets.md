@@ -1,6 +1,6 @@
 feature: WebSockets
 status: caution
-tags: polyfill 
+tags: polyfill prefixes 
 kind: api
 polyfillurls: [Socket.io](http://socket.io/), [web-socket-js](https://github.com/gimite/web-socket-js)
 
