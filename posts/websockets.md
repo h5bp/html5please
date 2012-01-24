@@ -9,3 +9,5 @@ Making your app real-time is a huge boost and [Socket.io](http://socket.io/) is 
 [web-socket-js](https://github.com/gimite/web-socket-js) is a natural polyfill for the JavaScript WebSocket API transferring data through Flash Sockets when WebSockets aren't available.
 
 As a word of caution, the protocol backing the Web Socket API has become an [IETF standard](http://tools.ietf.org/html/rfc6455), but Safari has not yet implemented the new version. It is recommended forcing Flash on Safari (if Flash is available, N/A on mobile), or disabling WebSockets on Safari for now.
+
+To use native WebSockets in Firefox, the prefixed MozWebSocket should be used. However, Firefox 11 will support the [IETF standard](http://tools.ietf.org/html/rfc6455) without the prefix.
