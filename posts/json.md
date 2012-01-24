@@ -1,6 +1,6 @@
 feature: JSON
 status: use
-tags: gtie7, polyfill
+tags: gtie7 polyfill
 kind: js
 polyfillurls: [json2.js](https://github.com/douglascrockford/JSON-js)
 

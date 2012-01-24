@@ -1,6 +1,6 @@
 feature: &lt;input type=date>
 status: caution
-tags: polyfill,gtie9
+tags: polyfill gtie9
 kind: html
 polyfillurls: [webshims](http://afarkas.github.com/webshim/demos/demos/webforms.html), [html5widgets](http://www.useragentman.com/blog/2010/07/27/cross-browser-html5-forms-using-modernizr-webforms2-and-html5widgets/), 
 

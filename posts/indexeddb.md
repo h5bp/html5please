@@ -1,6 +1,6 @@
 feature: IndexedDB
 status: caution
-tags: fallback, gtie8
+tags: fallback gtie8
 kind: api
 polyfillurls: [IDBWrapper](https://github.com/jensarps/IDBWrapper)
 

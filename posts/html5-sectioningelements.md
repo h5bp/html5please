@@ -1,6 +1,6 @@
 feature: HTML5 sectioning elements
 status: use
-tags: gtie8,polyfill,article,header,nav
+tags: gtie8 polyfill
 kind: html
 polyfillurls: [html5shiv](http://code.google.com/p/html5shiv/), [html5shiv (github)](https://github.com/aFarkas/html5shiv/), [accessifyhtml5.js](https://github.com/yatil/accessifyhtml5.js)
 
