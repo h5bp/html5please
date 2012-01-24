@@ -1,6 +1,6 @@
 feature: min/max-width/height
 status: use
-tags: fallback, gtie6
+tags: gtie6
 kind: css
 polyfillurls:
 
