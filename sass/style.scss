@@ -463,9 +463,8 @@ article.expanded {
 
 .name {
   padding: 0.4rem 0; 
-  text-shadow: 1px 1px 1px darken(#149CD7, 60%);  
-  letter-spacing: 1px;   
   color: darken($link-color, 10%); 
+  text-shadow: 0 1px 0px rgba(255, 255, 255, 1);
 }
 
 .status {
@@ -473,7 +472,7 @@ article.expanded {
   border-radius: 0 0.2rem 0.2rem 0;
   padding: 0 1rem 0 0.5rem;
   color: white;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   position: relative;
   float: right;
 
