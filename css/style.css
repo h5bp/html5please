@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
  * HTML5 ✰ Boilerplate
  */
@@ -282,13 +283,13 @@ article h3 b i, article.expanded div.more, .kind, .status i b {
 }
 
 html {
-  background-image: url('../img/denim.png?1324333869');
+  background-image: url('../img/denim.png?1327284124');
   color: #e3d7bf;
-  background: -webkit-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -webkit-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -webkit-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -webkit-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -webkit-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
-  background: -moz-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -moz-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -moz-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -moz-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -moz-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
-  background: -o-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -o-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -o-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -o-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -o-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
-  background: -ms-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -ms-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -ms-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -ms-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -ms-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
-  background: radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
+  background: -webkit-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -webkit-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -webkit-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -webkit-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -webkit-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1327284124');
+  background: -moz-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -moz-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -moz-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -moz-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -moz-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1327284124');
+  background: -o-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -o-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -o-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -o-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -o-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1327284124');
+  background: -ms-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -ms-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -ms-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -ms-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -ms-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1327284124');
+  background: radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1327284124');
   background-color: #232927;
   min-height: 100%;
   max-width: 100%;
@@ -310,10 +311,12 @@ body {
   text-shadow: 1px 1px 1px #e88860, 2px 2px 1px #e88860, 3px 3px 1px #e88860, 3px 3px 1px #0c0d0d, 4px 4px 3px #0c0d0d;
   margin: 0.6em 0 0.5em 0;
   text-transform: uppercase;
-  font-family: "Francois One", sans-serif img;
-  font-family-vertical-align: -10%;
-  font-family-width: 64px;
-  font-family-height: 64px;
+  font-family: "Francois One", sans-serif;
+}
+.index h1 img {
+  vertical-align: -10%;
+  width: 64px;
+  height: 64px;
 }
 .index h2 {
   font-size: 1em;
@@ -584,9 +587,8 @@ article.expanded div.more {
 
 .name {
   padding: 0.4rem 0;
-  text-shadow: 1px 1px 1px black;
-  letter-spacing: 1px;
   color: #107aa8;
+  text-shadow: 0 1px 0px white;
 }
 
 .status {
@@ -594,7 +596,7 @@ article.expanded div.more {
   border-radius: 0 0.2rem 0.2rem 0;
   padding: 0 1rem 0 0.5rem;
   color: white;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   position: relative;
   float: right;
 }
