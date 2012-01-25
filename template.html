@@ -52,34 +52,32 @@
         </div>
       </div>
     </header>
-    <div id="main" role="main">
-      <section class="features list">
-        {{#features}}
-          <article class="{{tags}}">
-            <header>
-              <h3 class="status {{status}}">{{status}} <i>{{{polyfillaction tags}}}</i> </h3>                                                        
-              <h4 class="kind {{kind}}">{{kind}}</h4>
-              <h2 class="name">{{{featuretag feature}}} </h2>
-            </header>
-            <div class="more">
-              <div class="recco">
-                {{{contents}}}
-              </div>
-              <div class="polyfills">{{#if polyfillurls}}<b>Recommended polyfills: </b>{{{polyfillurls}}}{{/if}}</div> 
+    <div id="main" role="main" class="features list">
+     {{#features}}
+       <article class="{{tags}}">
+         <header>
+           <h2 class="name">{{{featuretag feature}}} </h2>
+           <h3 class="status {{status}}">{{status}} <i>{{{polyfillaction tags}}}</i> </h3>                                                        
+           <h4 class="kind {{kind}}">{{kind}}</h4>
+         </header>
+         <div class="more">
+           <div class="recco">
+             {{{contents}}}
+           </div>
+           <div class="polyfills">{{#if polyfillurls}}<b>Recommended polyfills: </b>{{{polyfillurls}}}{{/if}}</div> 
 
-              <p class="links">
-              {{#if moreurl}}
-                <a href="{{{moreurl}}}" target="_blank">
-                  {{testurl moreurl}}
-                </a>  
-              {{/if}}
-                <a href="{{{editurl}}}">Edit this info</a>
-              </p>
-            </div>
-            <footer class="tags">{{tags}}</footer>
-          </article>          
-        {{/features}}    
-      </section>
+           <p class="links">
+           {{#if moreurl}}
+             <a href="{{{moreurl}}}" target="_blank">
+               {{testurl moreurl}}
+             </a>  
+           {{/if}}
+             <a href="{{{editurl}}}">Edit this info</a>
+           </p>
+         </div>
+         <footer class="tags">{{tags}}</footer>
+       </article>          
+     {{/features}}    
     </div>
     <footer>
       <p>HTML5 Please is a community project (<a href="https://github.com/h5bp/html5please/">contribute on github!</a>) from the people behind <a href="http://html5boilerplate.com">HTML5 Boilerplate</a>, <a href="http://modernizr.com">Modernizr</a> &amp; <a href="http://css3please.com">CSS3 Please</a>.</p>
