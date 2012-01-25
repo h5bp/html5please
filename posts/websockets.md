@@ -1,10 +1,10 @@
 feature: WebSockets
 status: caution
-tags: polyfill prefixes 
+tags: polyfill prefixes
 kind: api
 polyfillurls: [web-socket-js](https://github.com/gimite/web-socket-js)
 
-Making your app real-time is a huge boost and [WebSockets](http://dev.w3.org/html5/websockets/) give you the ability to add push notifactions, streams, chat, etc. to your application to increase interactivity and user engagement.
+Making your app real-time is a huge boost and [WebSockets](http://dev.w3.org/html5/websockets/) give you the ability to add bi-directional communication over a persistent connection to your application to increase interactivity and user engagement.
 
 [web-socket-js](https://github.com/gimite/web-socket-js) is a natural polyfill for the JavaScript WebSocket API transferring data through Flash Sockets when WebSockets aren't available.
 
