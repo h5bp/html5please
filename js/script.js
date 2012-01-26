@@ -13,7 +13,7 @@ var	search = document.getElementById('livesearch'),
 
 [].map.call(searchresults, function(result) {
   var tags = result.querySelector('.tags'),
-      tagslist = tags.textContent.split(' '),
+      tagslist = tags.innerText.split(' '),
       ielist = tagslist.filter(function(tag) {
         return tag.match(/gtie.*/);
       });
@@ -80,7 +80,7 @@ function showsearch(hash) {
 };
 
 // keyboard shortcut for / to go to search box.
-addEventListener('keyup', function(e){
+(window.addEventListener || window.attachEvent)('keyup', function(e){
   if (e.which == 191 && document.activeElement != search)
     search.focus();
 });
