@@ -1,6 +1,6 @@
 feature: multicolumn
 status: use
-tags: prefixes gtie9
+tags: prefixes gtie9 columns
 kind: css
 polyfillurls:
 
