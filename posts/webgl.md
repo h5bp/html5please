@@ -1,5 +1,5 @@
 feature: WebGL
-status: use
+status: caution 
 tags: fallback
 kind: api
 polyfillurls:
