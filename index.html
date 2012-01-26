@@ -7,6 +7,9 @@
     <meta name="description" content="Look up HTML5, CSS3, etc features, know if they are ready for use, and if so find out how you should use them – with polyfills, fallbacks or as they are.">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico" />
+
     <!-- For iPhone 4 with high-resolution Retina display: -->
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
 
@@ -19,6 +22,7 @@
     <link href="http://fonts.googleapis.com/css?family=Francois+One|Open+Sans:400italic,400,800" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="js/libs/modernizr-2.0.min.js"></script>
+    <script>if (location.host == 'h5bp.github.com') location.href = '//html5please.us/'</script>
   </head>
   <body id="gfs">
     <header class="index">
@@ -100,15 +104,15 @@
             <footer class="tags">polyfill</footer>
           </article>          
         
-          <article class="gtie8">
+          <article class="gtie8 fallback">
             <header>
               <h2 class="name">background-image options </h2>
-              <h3 class="status use">use <i></i> </h3>                                                        
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>New css3 background-image options includes background-clip, background-origin and background-size. They are each supported in modern browsers and can be used today.</p>
+                <p>CSS3 <code>background-image</code> options include <code>background-clip</code>, <code>background-origin</code> and <code>background-size</code>. Just ensure that your background image does not make it unreadable on IE8- where these properties are not supported. Also, when using <code>background-image</code> make sure you have a fallback color in case the image fails to load. </p>
               </div>
               <div class="polyfills"></div> 
 
@@ -121,7 +125,7 @@
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/background-image.md">Edit this info</a>
               </p>
             </div>
-            <footer class="tags">gtie8</footer>
+            <footer class="tags">gtie8 fallback</footer>
           </article>          
         
           <article class="fallback prefixes">
@@ -534,6 +538,10 @@ Also note that some shims are known to have <a href="https://gist.github.com/112
 
               <p class="links">
               
+                <a href="http://caniuse.com/es6" target="_blank">
+                  View browser share %
+                </a>
+
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/es6.md">Edit this info</a>
               </p>
             </div>
@@ -831,6 +839,10 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
+                <a href="http://caniuse.com/html5-sectioningelements" target="_blank">
+                  View browser share %
+                </a>
+
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/html5-sectioningelements.md">Edit this info</a>
               </p>
             </div>
@@ -903,6 +915,10 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
+                <a href="http://caniuse.com/input-placeholder" target="_blank">
+                  View browser share %
+                </a>
+
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/input-placeholder.md">Edit this info</a>
               </p>
             </div>
@@ -925,6 +941,10 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
+                <a href="http://caniuse.com/input-typecolor" target="_blank">
+                  View browser share %
+                </a>
+
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/input-typecolor.md">Edit this info</a>
               </p>
             </div>
@@ -949,6 +969,10 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
+                <a href="http://caniuse.com/input-typedate" target="_blank">
+                  View browser share %
+                </a>
+
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/input-typedate.md">Edit this info</a>
               </p>
             </div>
@@ -973,6 +997,10 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
+                <a href="http://caniuse.com/input-typerange" target="_blank">
+                  View browser share %
+                </a>
+
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/input-typerange.md">Edit this info</a>
               </p>
             </div>
@@ -1067,6 +1095,10 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
+                <a href="http://caniuse.com/match-media" target="_blank">
+                  View browser share %
+                </a>
+
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/match-media.md">Edit this info</a>
               </p>
             </div>
@@ -1165,6 +1197,10 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
+                <a href="http://caniuse.com/microdata-domapi" target="_blank">
+                  View browser share %
+                </a>
+
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/microdata-domapi.md">Edit this info</a>
               </p>
             </div>
@@ -1187,6 +1223,10 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
+                <a href="http://caniuse.com/minmax-widthheight" target="_blank">
+                  View browser share %
+                </a>
+
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/minmax-widthheight.md">Edit this info</a>
               </p>
             </div>
@@ -1282,6 +1322,10 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
 
               <p class="links">
               
+                <a href="http://caniuse.com/ol-reversed" target="_blank">
+                  View browser share %
+                </a>
+
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/ol-reversed.md">Edit this info</a>
               </p>
             </div>
@@ -1376,6 +1420,10 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
 
               <p class="links">
               
+                <a href="http://caniuse.com/positionfixed" target="_blank">
+                  View browser share %
+                </a>
+
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/positionfixed.md">Edit this info</a>
               </p>
             </div>
@@ -1546,6 +1594,10 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
 
               <p class="links">
               
+                <a href="http://caniuse.com/scoped-css" target="_blank">
+                  View browser share %
+                </a>
+
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/scoped-css.md">Edit this info</a>
               </p>
             </div>
@@ -1807,6 +1859,10 @@ Note that you need to use all the usual prefixes to make this work in all browse
 
               <p class="links">
               
+                <a href="http://caniuse.com/web-workers" target="_blank">
+                  View browser share %
+                </a>
+
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/web-workers.md">Edit this info</a>
               </p>
             </div>
