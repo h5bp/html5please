@@ -2,6 +2,22 @@
 
 */
 
+// el.innerText / el.textContent helper
+var text;
+if (document.body.innerText) {
+  text = function (el, v) { return v ? el.innerText = v : el.innerText; };
+} else if (document.body.textContent) {
+  text = function (el, v) { return v ? el.textContent = v : el.textContent; };
+}
+
+// el.addEventListener / el.attachEvent helper
+var addEvent;
+if (window.attachEvent) {
+  addEvent = function (el, ev, cb) { el.attachEvent("on" + ev, cb); };
+} else if (window.addEventListener) {
+  addEvent = function (el, ev, cb, capture) { el.addEventListener(ev, cb, capture); };
+}
+
 // gtieX augments. so a search is matching .gtie8, 
 // need to match .gtie7 and .gtie6 too
 var ies = ['gtie6', 'gtie7', 'gtie8', 'gtie9', 'gtie10'];
@@ -13,7 +29,7 @@ var	search = document.getElementById('livesearch'),
 
 [].map.call(searchresults, function(result) {
   var tags = result.querySelector('.tags'),
-      tagslist = tags.textContent.split(' '),
+      tagslist = text(tags).split(' '),
       ielist = tagslist.filter(function(tag) {
         return tag.match(/gtie.*/);
       });
@@ -80,7 +96,7 @@ function showsearch(hash) {
 };
 
 // keyboard shortcut for / to go to search box.
-addEventListener('keyup', function(e){
+addEvent(window, 'keyup', function(e){
   if (e.which == 191 && document.activeElement != search)
     search.focus();
 });
@@ -88,7 +104,10 @@ addEventListener('keyup', function(e){
 var moredetails = document.getElementById("clickmore");
 
 moredetails.onclick = function(e) {
-  classList(e.target).toggle('active');
-  classList(document.getElementById(/#(.*)/.exec(e.target.href)[1])).toggle('active');
-  e.preventDefault();
+  e || (e = window.event);
+  var target = e.target || e.srcElement;
+
+  classList(target).toggle('active');
+  classList(document.getElementById(/#(.*)/.exec(target.href)[1])).toggle('active');
+  e.preventDefault && e.preventDefault();
 };
