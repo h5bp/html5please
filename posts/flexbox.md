@@ -1,6 +1,6 @@
 feature: flexbox
 status: avoid
-tags: none
+tags: none flexible
 kind: css
 polyfillurls:
 
