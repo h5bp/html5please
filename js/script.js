@@ -67,11 +67,19 @@ function updatesearch() {
 
 var expandfeatures = document.querySelectorAll('.features article header'),
     count = expandfeatures.length,
+    toggleFeatureExpansionTriggered = false,
     toggleFeatureExpansion = function(e) {
+        if (toggleFeatureExpansionTriggered) {
+            return;
+        }
         e = e || window.event;
         var node = e.target || e.srcElement;
         var parent = node.parentNode;
         classList(parent).toggle('expanded');
+        toggleFeatureExpansionTriggered = true;
+        setTimeout(function() {
+            toggleFeatureExpansionTriggered = false;
+        }, 100)
     };
     
 for(var i = 0; i < count; i++) {
