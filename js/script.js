@@ -66,15 +66,30 @@ function updatesearch() {
 }
 
 var expandfeatures = document.querySelectorAll('.features article header'),
-    count = expandfeatures.length;
+    count = expandfeatures.length,
+    toggleFeatureExpansionTriggered = false,
+    toggleFeatureExpansion = function(e) {
+        if (toggleFeatureExpansionTriggered) {
+            return;
+        }
+        e = e || window.event;
+        var node = e.target || e.srcElement;
+        var parent = node.parentNode;
+        classList(parent).toggle('expanded');
+        toggleFeatureExpansionTriggered = true;
+        setTimeout(function() {
+            toggleFeatureExpansionTriggered = false;
+        }, 100)
+    };
     
 for(var i = 0; i < count; i++) {
-  expandfeatures[i].onclick = function(e) {
+  expandfeatures[i].onclick = toggleFeatureExpansion;
+  expandfeatures[i].onkeyup = function(e) {
       e = e || window.event;
-      var node = e.target || e.srcElement;
-      var parent = node.parentNode;
-      classList(parent).toggle('expanded');
-  };
+      if (e.keyCode === 13) {
+          toggleFeatureExpansion(e);
+      }
+  }
 }    
 
 var clicktags = document.querySelectorAll('.explore-features a');
