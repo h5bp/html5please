@@ -4,7 +4,7 @@ tags: polyfill gtie9
 kind: api
 polyfillurls: [requestAnimationFrame polyfill](https://gist.github.com/1579671)
 
-[requestAnimationFrame is recommended](http://paulirish.com/2011/requestanimationframe-for-smart-animating/) for animation as its battery and power friendly and allows the browser to optimize the performance of your animations. 
+[requestAnimationFrame is recommended](http://paulirish.com/2011/requestanimationframe-for-smart-animating/) for animation as it's battery and power friendly and allows the browser to optimize the performance of your animations. 
 
 The spec has gotten some fixes and settled down. In addition to Chrome and Firefox, IE10 will have it.
 
