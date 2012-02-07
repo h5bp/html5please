@@ -2,7 +2,7 @@ feature: localStorage
 status: use
 tags: gtie7 polyfill
 kind: api
-polyfillurls:[Remy's storage polyfill](https://gist.github.com/350433), [sessionstorage](http://code.google.com/p/sessionstorage/)
+polyfillurls:[Remy's storage polyfill](https://gist.github.com/350433), [sessionstorage](http://code.google.com/p/sessionstorage/), [Storagify jQuery Plugin] (http://ek.alphaschildren.org/resources/jquery-plugins/storagify/)
 
 Local and session storage are a great way to store data without resorting to cookies. IE8 supported `localStorage` and `sessionStorage` so you may not need a polyfill. If you do, Remy's is a piece of cake to implement and use.
 
