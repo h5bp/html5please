@@ -7,22 +7,19 @@
     <meta name="description" content="Look up HTML5, CSS3, etc features, know if they are ready for use, and if so find out how you should use them – with polyfills, fallbacks or as they are.">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- favicon -->
+    <base target="_blank"> <!-- open all links on page in a new tab. hope that's cool with you. -->
+
     <link rel="shortcut icon" href="favicon.ico" />
-
-    <!-- For iPhone 4 with high-resolution Retina display: -->
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
-
-    <!-- For first-generation iPad: -->
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
-
-    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
 
     <link href="http://fonts.googleapis.com/css?family=Francois+One|Open+Sans:400italic,400,800" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="js/libs/modernizr-2.0.min.js"></script>
     <script>if (location.host == 'h5bp.github.com') location.href = '//html5please.us/'</script>
+
+
   </head>
   <body id="gfs">
     <header class="index">
@@ -70,7 +67,7 @@
 
               <p class="links">
               
-                <a href="http://caniuse.com/animations" target="_blank">
+                <a href="http://caniuse.com/animations">
                   View browser share %
                 </a>  
               
@@ -94,7 +91,7 @@
 
               <p class="links">
               
-                <a href="http://caniuse.com/audio" target="_blank">
+                <a href="http://caniuse.com/audio">
                   View browser share %
                 </a>  
               
@@ -118,7 +115,7 @@
 
               <p class="links">
               
-                <a href="http://caniuse.com/background-image" target="_blank">
+                <a href="http://caniuse.com/background-image">
                   View browser share %
                 </a>  
               
@@ -142,7 +139,7 @@
 
               <p class="links">
               
-                <a href="http://caniuse.com/border-image" target="_blank">
+                <a href="http://caniuse.com/border-image">
                   View browser share %
                 </a>  
               
@@ -166,7 +163,7 @@
 
               <p class="links">
               
-                <a href="http://caniuse.com/border-radius" target="_blank">
+                <a href="http://caniuse.com/border-radius">
                   View browser share %
                 </a>  
               
@@ -190,7 +187,7 @@
 
               <p class="links">
               
-                <a href="http://www.webkit.org/blog/182/css-reflections/" target="_blank">
+                <a href="http://www.webkit.org/blog/182/css-reflections/">
                   Learn more
                 </a>  
               
@@ -216,7 +213,7 @@
 
               <p class="links">
               
-                <a href="http://caniuse.com/box-shadow" target="_blank">
+                <a href="http://caniuse.com/box-shadow">
                   View browser share %
                 </a>  
               
@@ -234,13 +231,13 @@
             </header>
             <div class="more">
               <div class="recco">
-                <p><a href="http://css-tricks.com/box-sizing/"><code>box-sizing</code></a><code>: border-box</code> may be a much more sensible default for you. You can apply it to all (<code>*</code>) elements if you like. Firefox is the only browser that requires a prefix for box-sizing. You can use it without a prefix for everything else. IE8 has this feature natively, and you can optionally use the <a href="https://github.com/Schepp/box-sizing-polyfill">box-sizing polyfill</a> to provide this feature in IE 6/7 (you could scope the adjustments using <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">IE conditionals</a> or Modernizr's <a href="http://www.modernizr.com/download/#-cssclasses-addtest-css_boxsizing"><code>no-box-sizing</code></a>).</p>
+                <p><a href="http://paulirish.com/2012/box-sizing-border-box-ftw/"><code>box-sizing : border-box</code></a> may be a much more sensible default for you. You can apply it to all (<code>*</code>) elements if you like. Firefox is the only browser that requires a prefix for box-sizing. You can use it without a prefix for everything else. IE8 has this feature natively, and you can optionally use the <a href="https://github.com/Schepp/box-sizing-polyfill">box-sizing polyfill</a> to provide this feature in IE 6/7 (you could scope the adjustments using <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">IE conditionals</a> or Modernizr's <a href="http://www.modernizr.com/download/#-cssclasses-addtest-css_boxsizing"><code>no-box-sizing</code></a>).</p>
               </div>
               <div class="polyfills"></div> 
 
               <p class="links">
               
-                <a href="http://caniuse.com/box-sizing" target="_blank">
+                <a href="http://caniuse.com/box-sizing">
                   View browser share %
                 </a>  
               
@@ -264,7 +261,7 @@
 
               <p class="links">
               
-                <a href="http://caniuse.com/calc" target="_blank">
+                <a href="http://caniuse.com/calc">
                   View browser share %
                 </a>  
               
@@ -288,7 +285,7 @@
 
               <p class="links">
               
-                <a href="http://caniuse.com/canvas" target="_blank">
+                <a href="http://caniuse.com/canvas">
                   View browser share %
                 </a>  
               
@@ -312,7 +309,7 @@
 
               <p class="links">
               
-                <a href="http://caniuse.com/classlist" target="_blank">
+                <a href="http://caniuse.com/classlist">
                   View browser share %
                 </a>  
               
@@ -330,13 +327,13 @@
             </header>
             <div class="more">
               <div class="recco">
-                <p>CORS, or cross-origin resource sharing, enables a few things, but most notably cross-domain AJAX. IE8 introduced <a href="http://msdn.microsoft.com/en-us/library/ie/cc288060(v=vs.85).aspx">XDomainRequest</a>, so really only IE7 needs help with cross-domain files. Consider the polyfills below or you can fall back to using a <a href="http://benalman.com/projects/php-simple-proxy/">simple proxy</a>.</p>
+                <p>CORS, or cross-origin resource sharing, enables a few things, but most notably cross-domain AJAX. All non-IE browsers have support for CORS. IE8 introduced <a href="http://msdn.microsoft.com/en-us/library/ie/cc288060(v=vs.85).aspx">XDomainRequest</a>, so really only IE7 needs help with cross-domain files. Consider the polyfills below or you can fall back to using a <a href="http://benalman.com/projects/php-simple-proxy/">simple proxy</a>.</p>
               </div>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/toolness/postmessage-proxied-xhr/#readme">postmessage-proxied-xhr</a>, <a href="http://flxhr.flensed.com/">flXHR</a> (requires crossdomain.xml), <a href="https://github.com/eligrey/pmxdr">pmxdr</a> (requires host installed)</p></div> 
 
               <p class="links">
               
-                <a href="http://caniuse.com/cors" target="_blank">
+                <a href="http://caniuse.com/cors">
                   View browser share %
                 </a>  
               
@@ -360,7 +357,7 @@
 
               <p class="links">
               
-                <a href="http://caniuse.com/css3-colors" target="_blank">
+                <a href="http://caniuse.com/css3-colors">
                   View browser share %
                 </a>  
               
@@ -384,7 +381,7 @@
 
               <p class="links">
               
-                <a href="http://caniuse.com/datalist" target="_blank">
+                <a href="http://caniuse.com/datalist">
                   View browser share %
                 </a>  
               
@@ -408,7 +405,7 @@
 
               <p class="links">
               
-                <a href="http://caniuse.com/dataset" target="_blank">
+                <a href="http://caniuse.com/dataset">
                   View browser share %
                 </a>  
               
@@ -432,7 +429,7 @@
 
               <p class="links">
               
-                <a href="http://caniuse.com/details" target="_blank">
+                <a href="http://caniuse.com/details">
                   View browser share %
                 </a>  
               
@@ -458,7 +455,7 @@
 
               <p class="links">
               
-                <a href="http://caniuse.com/dom" target="_blank">
+                <a href="http://caniuse.com/dom">
                   View browser share %
                 </a>  
               
@@ -482,7 +479,7 @@
 
               <p class="links">
               
-                <a href="http://caniuse.com/dragndrop" target="_blank">
+                <a href="http://caniuse.com/dragndrop">
                   View browser share %
                 </a>  
               
@@ -510,7 +507,7 @@ Also note that some shims are known to have <a href="https://gist.github.com/112
 
               <p class="links">
               
-                <a href="http://caniuse.com/ec" target="_blank">
+                <a href="http://caniuse.com/ec">
                   View browser share %
                 </a>  
               
@@ -558,7 +555,7 @@ Also note that some shims are known to have <a href="https://gist.github.com/112
 
               <p class="links">
               
-                <a href="http://caniuse.com/Eventsource" target="_blank">
+                <a href="http://caniuse.com/Eventsource">
                   View browser share %
                 </a>  
               
@@ -582,7 +579,7 @@ Also note that some shims are known to have <a href="https://gist.github.com/112
 
               <p class="links">
               
-                <a href="http://css3clickchart.com/#exclusions" target="_blank">
+                <a href="http://css3clickchart.com/#exclusions">
                   Learn more
                 </a>  
               
@@ -607,7 +604,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://css3clickchart.com/#filters" target="_blank">
+                <a href="http://css3clickchart.com/#filters">
                   Learn more
                 </a>  
               
@@ -631,7 +628,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://caniuse.com/flexbox" target="_blank">
+                <a href="http://caniuse.com/flexbox">
                   View browser share %
                 </a>  
               
@@ -655,7 +652,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://blog.fontdeck.com/post/15777165734/opentype-1?503cde40" target="_blank">
+                <a href="http://blog.fontdeck.com/post/15777165734/opentype-1?503cde40">
                   Learn more
                 </a>  
               
@@ -681,7 +678,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://caniuse.com/fontface" target="_blank">
+                <a href="http://caniuse.com/fontface">
                   View browser share %
                 </a>  
               
@@ -705,7 +702,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://caniuse.com/form-validation" target="_blank">
+                <a href="http://caniuse.com/form-validation">
                   View browser share %
                 </a>  
               
@@ -729,7 +726,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://caniuse.com/geolocation" target="_blank">
+                <a href="http://caniuse.com/geolocation">
                   View browser share %
                 </a>  
               
@@ -755,7 +752,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://caniuse.com/gradients" target="_blank">
+                <a href="http://caniuse.com/gradients">
                   View browser share %
                 </a>  
               
@@ -779,7 +776,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://caniuse.com/grids" target="_blank">
+                <a href="http://caniuse.com/grids">
                   View browser share %
                 </a>  
               
@@ -803,7 +800,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://caniuse.com/history" target="_blank">
+                <a href="http://caniuse.com/history">
                   View browser share %
                 </a>  
               
@@ -855,7 +852,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://caniuse.com/hyphens" target="_blank">
+                <a href="http://caniuse.com/hyphens">
                   View browser share %
                 </a>  
               
@@ -881,7 +878,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://caniuse.com/indexeddb" target="_blank">
+                <a href="http://caniuse.com/indexeddb">
                   View browser share %
                 </a>  
               
@@ -997,7 +994,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://caniuse.com/json" target="_blank">
+                <a href="http://caniuse.com/json">
                   View browser share %
                 </a>  
               
@@ -1023,7 +1020,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://caniuse.com/localstorage" target="_blank">
+                <a href="http://caniuse.com/localstorage">
                   View browser share %
                 </a>  
               
@@ -1047,7 +1044,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://css3clickchart.com/#masks" target="_blank">
+                <a href="http://css3clickchart.com/#masks">
                   Learn more
                 </a>  
               
@@ -1091,7 +1088,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://caniuse.com/mediaqueries" target="_blank">
+                <a href="http://caniuse.com/mediaqueries">
                   View browser share %
                 </a>  
               
@@ -1115,7 +1112,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://caniuse.com/menu" target="_blank">
+                <a href="http://caniuse.com/menu">
                   View browser share %
                 </a>  
               
@@ -1139,7 +1136,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://caniuse.com/meter" target="_blank">
+                <a href="http://caniuse.com/meter">
                   View browser share %
                 </a>  
               
@@ -1149,10 +1146,10 @@ change radically before stabilizing. Avoid using this. </p>
             <footer class="tags">polyfill noie nomobile</footer>
           </article>          
         
-          <article class="ie6 gtie6">
+          <article class="polyfill ie6 gtie6">
             <header>
               <h2 class="name">Microdata DOM API </h2>
-              <h3 class="status use">use <i></i> </h3>                                                        
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
               <h4 class="kind API">API</h4>
             </header>
             <div class="more">
@@ -1163,16 +1160,16 @@ change radically before stabilizing. Avoid using this. </p>
 
 <p>It's supported by Opera and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=591467">also being implemented by Mozilla</a></p>
 
-<p>IE6+ support can be done using <a href="https://github.com/termi1uc1/ES5-DOM-SHIM">this ES5/DOM shim</a></p>
+<p>IE6+ support can be done using <a href="https://github.com/termi/ES5-DOM-SHIM">this ES5/DOM shim</a></p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/termi1uc1/Microdata-JS">microdata shim</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/termi/Microdata-JS">microdata shim</a></p></div> 
 
               <p class="links">
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/microdata-domapi.md">Edit this info</a>
               </p>
             </div>
-            <footer class="tags">ie6 gtie6</footer>
+            <footer class="tags">polyfill ie6 gtie6</footer>
           </article>          
         
           <article class="gtie6">
@@ -1211,7 +1208,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://caniuse.com/multibackgrounds" target="_blank">
+                <a href="http://caniuse.com/multibackgrounds">
                   View browser share %
                 </a>  
               
@@ -1229,7 +1226,7 @@ change radically before stabilizing. Avoid using this. </p>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Internet Explorer (10+), and Opera support CSS Multi-column Layout without vendor prefixes, so you only need prefixed versions for <code>-webkit-</code> and <code>-moz-</code>. A further note, features like <code>column-break-after</code>, <code>column-break-before</code>, and <code>column-break-inside</code> — which are necessary for advanced typography — are currently WebKit-only.</p>
+                <p>Internet Explorer (10+), and Opera support CSS Multi-column Layout without vendor prefixes, so you only need prefixed versions for <code>-webkit-</code> and <code>-moz-</code>.</p>
 
 <p>We recommend you do not polyfill this and let it fall back to single column text.</p>
               </div>
@@ -1237,7 +1234,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://caniuse.com/multicolumn" target="_blank">
+                <a href="http://caniuse.com/multicolumn">
                   View browser share %
                 </a>  
               
@@ -1261,7 +1258,7 @@ change radically before stabilizing. Avoid using this. </p>
 
               <p class="links">
               
-                <a href="http://caniuse.com/offline" target="_blank">
+                <a href="http://caniuse.com/offline">
                   View browser share %
                 </a>  
               
@@ -1306,7 +1303,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
 
               <p class="links">
               
-                <a href="http://caniuse.com/opacity" target="_blank">
+                <a href="http://caniuse.com/opacity">
                   View browser share %
                 </a>  
               
@@ -1330,7 +1327,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
 
               <p class="links">
               
-                <a href="http://css3clickchart.com/#paged-media" target="_blank">
+                <a href="http://css3clickchart.com/#paged-media">
                   Learn more
                 </a>  
               
@@ -1348,13 +1345,13 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
             </header>
             <div class="more">
               <div class="recco">
-                <p>Pointer events are available in SVG and CSS. All modern browsers support them in SVG, but IE and Opera do not support them in CSS yet. There is a <a href="https://github.com/Modernizr/Modernizr/feature-detects/pointerevents.js">modernizr plugin</a> to detect support, which can be used to implement a JavaScript interceptor for elements which require pointer events to be disabled.</p>
+                <p>Pointer events are available in SVG and CSS. All modern browsers support them in SVG, but IE and Opera do not support them in CSS yet. There is a <a href="https://github.com/Modernizr/Modernizr/blob/master/feature-detects/css-pointerevents.js">modernizr plugin</a> to detect support, which can be used to implement a JavaScript interceptor for elements which require pointer events to be disabled.</p>
               </div>
               <div class="polyfills"></div> 
 
               <p class="links">
               
-                <a href="http://caniuse.com/pointer-events" target="_blank">
+                <a href="http://caniuse.com/pointer-events">
                   View browser share %
                 </a>  
               
@@ -1400,7 +1397,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
 
               <p class="links">
               
-                <a href="http://caniuse.com/postmessage" target="_blank">
+                <a href="http://caniuse.com/postmessage">
                   View browser share %
                 </a>  
               
@@ -1424,7 +1421,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
 
               <p class="links">
               
-                <a href="http://caniuse.com/progress" target="_blank">
+                <a href="http://caniuse.com/progress">
                   View browser share %
                 </a>  
               
@@ -1450,7 +1447,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
 
               <p class="links">
               
-                <a href="http://caniuse.com/pseudo-elements" target="_blank">
+                <a href="http://caniuse.com/pseudo-elements">
                   View browser share %
                 </a>  
               
@@ -1474,7 +1471,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
 
               <p class="links">
               
-                <a href="http://caniuse.com/regions" target="_blank">
+                <a href="http://caniuse.com/regions">
                   View browser share %
                 </a>  
               
@@ -1492,7 +1489,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
             </header>
             <div class="more">
               <div class="recco">
-                <p><a href="http://paulirish.com/2011/requestanimationframe-for-smart-animating/">requestAnimationFrame is recommended</a> for animation as its battery and power friendly and allows the browser to optimize the performance of your animations. </p>
+                <p><a href="http://paulirish.com/2011/requestanimationframe-for-smart-animating/">requestAnimationFrame is recommended</a> for animation as it's battery and power friendly and allows the browser to optimize the performance of your animations. </p>
 
 <p>The spec has gotten some fixes and settled down. In addition to Chrome and Firefox, IE10 will have it.</p>
 
@@ -1502,7 +1499,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
 
               <p class="links">
               
-                <a href="http://caniuse.com/requestanimationframe" target="_blank">
+                <a href="http://caniuse.com/requestanimationframe">
                   View browser share %
                 </a>  
               
@@ -1526,7 +1523,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
 
               <p class="links">
               
-                <a href="http://caniuse.com/ruby" target="_blank">
+                <a href="http://caniuse.com/ruby">
                   View browser share %
                 </a>  
               
@@ -1612,7 +1609,7 @@ Resources:
 
               <p class="links">
               
-                <a href="http://caniuse.com/selectors" target="_blank">
+                <a href="http://caniuse.com/selectors">
                   View browser share %
                 </a>  
               
@@ -1638,7 +1635,7 @@ Resources:
 
               <p class="links">
               
-                <a href="http://caniuse.com/svg" target="_blank">
+                <a href="http://caniuse.com/svg">
                   View browser share %
                 </a>  
               
@@ -1662,7 +1659,7 @@ Resources:
 
               <p class="links">
               
-                <a href="http://caniuse.com/text-overflow" target="_blank">
+                <a href="http://caniuse.com/text-overflow">
                   View browser share %
                 </a>  
               
@@ -1688,7 +1685,7 @@ Resources:
 
               <p class="links">
               
-                <a href="http://caniuse.com/text-shadow" target="_blank">
+                <a href="http://caniuse.com/text-shadow">
                   View browser share %
                 </a>  
               
@@ -1712,7 +1709,7 @@ Resources:
 
               <p class="links">
               
-                <a href="http://caniuse.com/text-stroke" target="_blank">
+                <a href="http://caniuse.com/text-stroke">
                   View browser share %
                 </a>  
               
@@ -1736,7 +1733,7 @@ Resources:
 
               <p class="links">
               
-                <a href="http://caniuse.com/transforms" target="_blank">
+                <a href="http://caniuse.com/transforms">
                   View browser share %
                 </a>  
               
@@ -1761,7 +1758,7 @@ Note that you need to use all the usual prefixes to make this work in all browse
 
               <p class="links">
               
-                <a href="http://caniuse.com/transitions" target="_blank">
+                <a href="http://caniuse.com/transitions">
                   View browser share %
                 </a>  
               
@@ -1787,7 +1784,7 @@ Note that you need to use all the usual prefixes to make this work in all browse
 
               <p class="links">
               
-                <a href="http://caniuse.com/video" target="_blank">
+                <a href="http://caniuse.com/video">
                   View browser share %
                 </a>  
               
@@ -1833,7 +1830,7 @@ Note that you need to use all the usual prefixes to make this work in all browse
 
               <p class="links">
               
-                <a href="http://caniuse.com/webgl" target="_blank">
+                <a href="http://caniuse.com/webgl">
                   View browser share %
                 </a>  
               
@@ -1873,7 +1870,7 @@ Note that you need to use all the usual prefixes to make this work in all browse
 
               <p class="links">
               
-                <a href="http://caniuse.com/websockets" target="_blank">
+                <a href="http://caniuse.com/websockets">
                   View browser share %
                 </a>  
               
@@ -1897,7 +1894,7 @@ Note that you need to use all the usual prefixes to make this work in all browse
 
               <p class="links">
               
-                <a href="http://caniuse.com/websql" target="_blank">
+                <a href="http://caniuse.com/websql">
                   View browser share %
                 </a>  
               
