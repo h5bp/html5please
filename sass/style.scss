@@ -581,7 +581,7 @@ code {
 @media only screen and (max-width: 680px) {
   html { font-size: 13px; }
   body { max-width: 90%; }
-  article > header h2.name { padding-left: 0.5em; }
+  article > header h2.name { padding-left: 0.5em; margin-right: -100%;}
   article > header::before { display: none; }
   .index h2 { max-width: 100%; }
 }
