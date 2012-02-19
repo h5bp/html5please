@@ -230,6 +230,8 @@
             <div class="more">
               <div class="recco">
                 <p><a href="http://paulirish.com/2012/box-sizing-border-box-ftw/"><code>box-sizing : border-box</code></a> may be a much more sensible default for you. You can apply it to all (<code>*</code>) elements if you like. Firefox is the only browser that requires a prefix for box-sizing. You can use it without a prefix for everything else. IE8 has this feature natively, and you can optionally use the <a href="https://github.com/Schepp/box-sizing-polyfill">box-sizing polyfill</a> to provide this feature in IE 6/7 (you could scope the adjustments using <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">IE conditionals</a> or Modernizr's <a href="http://www.modernizr.com/download/#-cssclasses-addtest-css_boxsizing"><code>no-box-sizing</code></a>).</p>
+
+<p>There are still issues regarding max-height/min-height and box sizing in Gecko/Firefox, see <a href="https://developer.mozilla.org/En/CSS/Box-sizing#Notes">notes at MDN</a>.</p>
               </div>
               <div class="polyfills"></div> 
 
@@ -698,7 +700,7 @@ change radically before stabilizing. Avoid using this. </p>
             </header>
             <div class="more">
               <div class="recco">
-                <p>HTML5 has baked in clientside form validation, and polyfills can enable this for legacy browsers as well. Using the defined HTML5 API for constraint validation may be a more maintainable direction than using a jQuery Validation plugin, depending on your team.</p>
+                <p>HTML5 has baked in clientside form validation, and polyfills can enable this for legacy browsers as well. Using the defined HTML5 API for constraint validation may be a more maintainable direction than using a jQuery Validation plugin, depending on your team. When detecting this feature, be aware of Safari's half backed support. It does support the form validation, but don't highlight invalid fields or present error messages.</p>
               </div>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://afarkas.github.com/webshim/demos/">webshims</a>, <a href="https://github.com/dperini/nwxforms">nwxforms</a>, <a href="https://github.com/ryanseddon/H5F">H5F</a></p></div> 
 
@@ -1763,6 +1765,30 @@ Resources:
               </p>
             </div>
             <footer class="tags">none</footer>
+          </article>          
+        
+          <article class="polyfill gtie9 webvvt">
+            <header>
+              <h2 class="name">&lt;track> </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h4 class="kind html">html</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p><a href="http://www.html5rocks.com/en/tutorials/track/basics/">The <code>&lt;track&gt;</code> element</a> provides a mechanism of showing captions/subtitles and/or associated metadata with <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code>. The file format the <code>&lt;track&gt;</code> element uses is called WebVVT. Browser support for both is in progress: complete in IE10pp4, ongoing in Webkit, unknown in Opera. A polyfill is a wise choice; Captionator is the most complete and well supported. More at <a href="http://blog.gingertech.net/2011/06/27/recent-developments-around-webvtt/">Sylvia Pfeiffer's blog</a>.</p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://captionatorjs.com/">captionator.js</a></p></div> 
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/track">
+                  View browser share %
+                </a>  
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/track.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">polyfill gtie9 webvvt</footer>
           </article>          
         
           <article class="fallback prefixes">
