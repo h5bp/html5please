@@ -1,4 +1,4 @@
-feature: &lt;input type=range>
+feature: <input type=range>
 status: caution
 tags: polyfill gtie9
 kind: html

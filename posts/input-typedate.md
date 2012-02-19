@@ -1,4 +1,4 @@
-feature: &lt;input type=date>
+feature: <input type=date>
 status: caution
 tags: polyfill gtie9
 kind: html

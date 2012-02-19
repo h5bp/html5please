@@ -1,4 +1,4 @@
-feature: &lt;input type=color>
+feature: <input type=color>
 status: avoid
 tags: polyfill gtie9
 kind: html

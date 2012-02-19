@@ -642,30 +642,6 @@ change radically before stabilizing. Avoid using this. </p>
             <footer class="tags">none flexible</footer>
           </article>          
         
-          <article class="none">
-            <header>
-              <h2 class="name">font-feature-settings </h2>
-              <h3 class="status use">use <i></i> </h3>                                                        
-              <h4 class="kind css">css</h4>
-            </header>
-            <div class="more">
-              <div class="recco">
-                <p>Internet Explorer 10, Firefox 4+ and Chrome 16 (Windows and Linux only) support low level control over font feature settings. What this means is other browsers merely will not render the flourishes you seek. Many features available through the property may be extracted to separate properties in the future, such as font-variant-ligatures. </p>
-              </div>
-              <div class="polyfills"></div> 
-
-              <p class="links">
-              
-                <a href="http://blog.fontdeck.com/post/15777165734/opentype-1?503cde40">
-                  Learn more
-                </a>  
-              
-                <a href="https://github.com/h5bp/html5please/blob/master/posts/font-feature-settings.md">Edit this info</a>
-              </p>
-            </div>
-            <footer class="tags">none</footer>
-          </article>          
-        
           <article class="fallback">
             <header>
               <h2 class="name">@font-face </h2>
@@ -690,6 +666,30 @@ change radically before stabilizing. Avoid using this. </p>
               </p>
             </div>
             <footer class="tags">fallback</footer>
+          </article>          
+        
+          <article class="none">
+            <header>
+              <h2 class="name">font-feature-settings </h2>
+              <h3 class="status use">use <i></i> </h3>                                                        
+              <h4 class="kind css">css</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>Internet Explorer 10, Firefox 4+ and Chrome 16 (Windows and Linux only) support low level control over font feature settings. What this means is other browsers merely will not render the flourishes you seek. Many features available through the property may be extracted to separate properties in the future, such as font-variant-ligatures. </p>
+              </div>
+              <div class="polyfills"></div> 
+
+              <p class="links">
+              
+                <a href="http://blog.fontdeck.com/post/15777165734/opentype-1?503cde40">
+                  Learn more
+                </a>  
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/font-feature-settings.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">none</footer>
           </article>          
         
           <article class="polyfill gtie9">
@@ -896,32 +896,6 @@ change radically before stabilizing. Avoid using this. </p>
             <footer class="tags">fallback gtie8</footer>
           </article>          
         
-          <article class="gtie9">
-            <header>
-              <h2 class="name">input[placeholder] </h2>
-              <h3 class="status use">use <i></i> </h3>                                                        
-              <h4 class="kind html">html</h4>
-            </header>
-            <div class="more">
-              <div class="recco">
-                <p>Input placeholders are simply ignored in IE 9 and below. Note that they are only applied when the <strong>type</strong> of the input is <em>text</em>, <em>password</em>, <em>search</em>, <em>tel</em>, <em>url</em>, or <em>email</em>. <em>Textareas</em> can have placeholders, too. Otherwise, it is ignored.</p>
-
-<p><code>input[placeholder]</code> is commonly the first polyfill anyone writes and, as such, there are <a href="http://bit.ly/polyfills">many of them</a>. Password inputs and submit event clearing are among many of the gotchas that catch native implemenations; Mathias's polyfill below handles these cases very well.</p>
-              </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/mathiasbynens/jquery-placeholder">Placeholder jQuery Plugin</a></p></div> 
-
-              <p class="links">
-              
-                <a href="http://caniuse.com/input-placeholder">
-                  View browser share %
-                </a>  
-              
-                <a href="https://github.com/h5bp/html5please/blob/master/posts/input-placeholder.md">Edit this info</a>
-              </p>
-            </div>
-            <footer class="tags">gtie9</footer>
-          </article>          
-        
           <article class="polyfill gtie9">
             <header>
               <h2 class="name">&lt;input type=color> </h2>
@@ -1002,6 +976,32 @@ change radically before stabilizing. Avoid using this. </p>
               </p>
             </div>
             <footer class="tags">polyfill gtie9</footer>
+          </article>          
+        
+          <article class="gtie9">
+            <header>
+              <h2 class="name">input[placeholder] </h2>
+              <h3 class="status use">use <i></i> </h3>                                                        
+              <h4 class="kind html">html</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>Input placeholders are simply ignored in IE 9 and below. Note that they are only applied when the <strong>type</strong> of the input is <em>text</em>, <em>password</em>, <em>search</em>, <em>tel</em>, <em>url</em>, or <em>email</em>. <em>Textareas</em> can have placeholders, too. Otherwise, it is ignored.</p>
+
+<p><code>input[placeholder]</code> is commonly the first polyfill anyone writes and, as such, there are <a href="http://bit.ly/polyfills">many of them</a>. Password inputs and submit event clearing are among many of the gotchas that catch native implemenations; Mathias's polyfill below handles these cases very well.</p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/mathiasbynens/jquery-placeholder">Placeholder jQuery Plugin</a></p></div> 
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/input-placeholder">
+                  View browser share %
+                </a>  
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/input-placeholder.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">gtie9</footer>
           </article>          
         
           <article class="gtie7 polyfill">
@@ -1230,30 +1230,6 @@ change radically before stabilizing. Avoid using this. </p>
             <footer class="tags">gtie6</footer>
           </article>          
         
-          <article class="fallback gtie8">
-            <header>
-              <h2 class="name">multiple backgrounds </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
-              <h4 class="kind css">css</h4>
-            </header>
-            <div class="more">
-              <div class="recco">
-                <p>Multiple backgrounds will be <a href="http://snook.ca/archives/html_and_css/multiple-bg-css-gradients">completely ignored</a> when they aren't supported. If you can make do with a simple background color, make sure to declare <code>background-color: &lt;color&gt;</code> before you start using multiple backgrounds. Alternatively, you can also set an image as a background with <code>background-image</code> and override it with a second background declaration. We strongly recommend you don't polyfill this.</p>
-              </div>
-              <div class="polyfills"></div> 
-
-              <p class="links">
-              
-                <a href="http://caniuse.com/multibackgrounds">
-                  View browser share %
-                </a>  
-              
-                <a href="https://github.com/h5bp/html5please/blob/master/posts/multibackgrounds.md">Edit this info</a>
-              </p>
-            </div>
-            <footer class="tags">fallback gtie8</footer>
-          </article>          
-        
           <article class="prefixes gtie9 columns">
             <header>
               <h2 class="name">multicolumn </h2>
@@ -1278,6 +1254,30 @@ change radically before stabilizing. Avoid using this. </p>
               </p>
             </div>
             <footer class="tags">prefixes gtie9 columns</footer>
+          </article>          
+        
+          <article class="fallback gtie8">
+            <header>
+              <h2 class="name">multiple backgrounds </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h4 class="kind css">css</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>Multiple backgrounds will be <a href="http://snook.ca/archives/html_and_css/multiple-bg-css-gradients">completely ignored</a> when they aren't supported. If you can make do with a simple background color, make sure to declare <code>background-color: &lt;color&gt;</code> before you start using multiple backgrounds. Alternatively, you can also set an image as a background with <code>background-image</code> and override it with a second background declaration. We strongly recommend you don't polyfill this.</p>
+              </div>
+              <div class="polyfills"></div> 
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/multibackgrounds">
+                  View browser share %
+                </a>  
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/multibackgrounds.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">fallback gtie8</footer>
           </article>          
         
           <article class="fallback gtie9">
@@ -1577,30 +1577,6 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
             <footer class="tags">fallback</footer>
           </article>          
         
-          <article class="">
-            <header>
-              <h2 class="name">style[scoped] </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>                                                        
-              <h4 class="kind css">css</h4>
-            </header>
-            <div class="more">
-              <div class="recco">
-                <p>Scoped stylesheets are still in active development, the first implementation of which should be available in WebKit soon.</p>
-              </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/thingsinjars/jQuery-Scoped-CSS-plugin">jQuery-Scoped-CSS-plugin</a></p></div> 
-
-              <p class="links">
-              
-                <a href="http://caniuse.com/scoped-css">
-                  View browser share %
-                </a>  
-              
-                <a href="https://github.com/h5bp/html5please/blob/master/posts/scoped-css.md">Edit this info</a>
-              </p>
-            </div>
-            <footer class="tags"></footer>
-          </article>          
-        
           <article class="fallback gtie6">
             <header>
               <h2 class="name">selectors </h2>
@@ -1665,6 +1641,30 @@ Resources:
               </p>
             </div>
             <footer class="tags">fallback gtie6</footer>
+          </article>          
+        
+          <article class="">
+            <header>
+              <h2 class="name">style[scoped] </h2>
+              <h3 class="status avoid">avoid <i></i> </h3>                                                        
+              <h4 class="kind css">css</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>Scoped stylesheets are still in active development, the first implementation of which should be available in WebKit soon.</p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/thingsinjars/jQuery-Scoped-CSS-plugin">jQuery-Scoped-CSS-plugin</a></p></div> 
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/scoped-css">
+                  View browser share %
+                </a>  
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/scoped-css.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags"></footer>
           </article>          
         
           <article class="gtie8 polyfill">
