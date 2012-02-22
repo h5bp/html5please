@@ -56,11 +56,13 @@ function updatesearch() {
     searchurl.className = 'active';
     for (var i = 0, len = searchresults.length; i < len; i++) {
         classList(searchresults[i]).add('expanded');
+        searchresults[i].querySelectorAll('h2')[0].setAttribute("aria-expanded", "true");
     }
   } else {
     searchurl.className = '';
     for (var i = 0, len = searchresults.length; i < len; i++) {
         classList(searchresults[i]).remove('expanded');
+        searchresults[i].querySelectorAll('h2')[0].setAttribute("aria-expanded", "false");
     }
   }
 }
@@ -69,13 +71,41 @@ var expandfeatures = document.querySelectorAll('.features article header'),
     count = expandfeatures.length;
     
 for(var i = 0; i < count; i++) {
+
   expandfeatures[i].onclick = function(e) {
       e = e || window.event;
       var node = e.target || e.srcElement;
       var parent = node.parentNode;
+      var h2 = node.querySelectorAll('h2')[0];
       classList(parent).toggle('expanded');
+      h2.setAttribute("aria-expanded", h2.getAttribute("aria-expanded") == "false" ? "true" : "false");
   };
-}    
+
+  var h2 = expandfeatures[i].querySelectorAll('h2')[0];
+  h2.setAttribute("tabIndex","0");
+  h2.setAttribute("role","button");
+  h2.setAttribute("aria-expanded","false");
+
+  h2.onkeydown = function(e) {
+    if(e.keyCode === 13 || e.keyCode === 32 ){
+      e.preventDefault();
+      e = e || window.event;
+      var node = e.target || e.srcElement;
+      var grandParent = node.parentNode.parentNode;
+      node.setAttribute("aria-expanded", node.getAttribute("aria-expanded") == "false" ? "true" : "false");
+      classList(grandParent).toggle('expanded');
+    }
+  };
+
+  h2.onclick = function(e) {
+    e = e || window.event;
+    var node = e.target || e.srcElement;
+    var grandParent = node.parentNode.parentNode;
+    node.setAttribute("aria-expanded", node.getAttribute("aria-expanded") == "false" ? "true" : "false");
+    classList(grandParent).toggle('expanded');
+  };
+
+}
 
 var clicktags = document.querySelectorAll('.explore-features a');
 
