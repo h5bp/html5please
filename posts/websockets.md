@@ -18,6 +18,6 @@ To make websockets easier to use there are multiple server-side framework soluti
 
 [Socket.io](http://socket.io/) is a Node.js framework that helps with downlevel transports for browsers lacking native WebSocket support (and supports IE6+).
 
-XSockets and is a .NET+JavaScript framework that handles fallback via Flash and Silverlight.
+XSockets is a .NET+JavaScript framework that handles fallback via Flash and Silverlight.
 
 For more information see the [Full list of possible server-side websocket solutions](http://www.leggetter.co.uk/real-time-web-technologies-guide#self-hosted)
