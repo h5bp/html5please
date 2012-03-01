@@ -25,7 +25,10 @@ var ies = ['gtie6', 'gtie7', 'gtie8', 'gtie9', 'gtie10'];
 
 var	search = document.getElementById('livesearch'),
     searchresults = document.querySelectorAll('.features article'),
-    searchurl = document.getElementById('searchurl');	
+    searchurl = document.getElementById('searchurl'),
+    articlecontainer = document.querySelector('.explore-features'),
+    originaltop = articlecontainertop = +articlecontainer.getBoundingClientRect().top,
+    moredetailscontainer = document.getElementById('moredetails');
 
 [].map.call(searchresults, function(result) {
   var tags = result.querySelector('.tags'),
@@ -122,7 +125,28 @@ if(window.location.hash) {
 function showsearch(hash) {
   search.value = hash;
   featureList.search(hash);
+  repeatscrolling = window.setInterval(function() {
+    count = count + 10 || 0;
+    animatescroll(count);
+  }, 1);
   updatesearch();
+};
+
+function getYOffset() {
+  if(window.pageYOffset) {
+    return window.pageYOffset;
+  } else {
+    return (((t = document.documentElement) || (t = document.body.parentNode)) && typeof t.ScrollTop == 'number' ? t : document.body).ScrollTop; 
+  }
+};
+
+
+function animatescroll(yOffset) {
+  if(getYOffset() > articlecontainertop) {
+    clearInterval(repeatscrolling);
+  } else {
+    window.scroll(0, yOffset);
+  }
 };
 
 // keyboard shortcut for / to go to search box.
@@ -136,8 +160,8 @@ var moredetails = document.getElementById("clickmore");
 moredetails.onclick = function(e) {
   e || (e = window.event);
   var target = e.target || e.srcElement;
-
-  classList(target).toggle('active');
+  articlecontainertop = originaltop + moredetailscontainer.offsetHeight;
+  classList(target).toggle('active');  
   classList(document.getElementById(/#(.*)/.exec(target.href)[1])).toggle('active');
   e.preventDefault && e.preventDefault();
 };
