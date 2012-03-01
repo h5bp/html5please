@@ -461,6 +461,9 @@ header .explore-features {
   content: " • ";
   color: #e3d7bf;
 }
+.explore-features a.active {
+  color: #e88860;
+}
 
 article {
   color: #232927;

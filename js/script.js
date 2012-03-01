@@ -28,7 +28,8 @@ var	search = document.getElementById('livesearch'),
     searchurl = document.getElementById('searchurl'),
     articlecontainer = document.querySelector('.explore-features'),
     originaltop = articlecontainertop = +articlecontainer.getBoundingClientRect().top,
-    moredetailscontainer = document.getElementById('moredetails');
+    moredetailscontainer = document.getElementById('moredetails'),
+    lastActiveHash = null;
 
 [].map.call(searchresults, function(result) {
   var tags = result.querySelector('.tags'),
@@ -125,6 +126,12 @@ if(window.location.hash) {
 function showsearch(hash) {
   search.value = hash;
   featureList.search(hash);
+
+  currentActiveHash = document.querySelector('a[href="#' + hash +'"]');
+  lastActiveHash && classList(lastActiveHash).remove('active');
+  classList(currentActiveHash).add('active');
+  lastActiveHash = currentActiveHash;
+
   repeatscrolling = window.setInterval(function() {
     count = count + 10 || 0;
     animatescroll(count);

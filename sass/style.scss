@@ -343,6 +343,8 @@ article h3 b i {
   a { text-decoration: none; color: lighten($link-color, 20%); }
 
   a +a::before { content: " • "; color: $lightest; }
+
+  a.active { color: lighten($contrast, 10%); } 
 }  
 
 
