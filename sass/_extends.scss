@@ -34,5 +34,6 @@
 @mixin secondary-title {
   font-size: 2em;
   line-height: 1;
-  font-family: $index-font-family
+  font-family: $index-font-family;
+  font-weight: normal;
 }
