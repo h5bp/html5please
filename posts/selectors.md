@@ -9,13 +9,14 @@ Most CSS Selectors are supported from IE7 onwards, so you should be safe to use 
 #### When you sunset IE6 support, you can use:
 
 * `tr > td` : Immediate descendant (child) selector.
-* `dt + dd` : next sibling selector
+* `dt + dd` : next sibling selector*
 * `dt ~ dd` : any following sibling
 * `div[attr]` and `img[src$=png]` : Attribute selector (starts with, ends with, contains).
-* `p:first-child`
+* `p:first-child`*
 * `div:hover` and `:hover` state on all non-`<a>`'s
 * `li.food.vegetable` : without worrying about the [chained classes bug](http://paulirish.com/2008/the-two-css-selector-bugs-in-ie6/)
 
+\* IE7-8 don't update styles properly when elements are manipulated with JS. Usually you have to force the browser to redraw (e.g. hide and show parent element).
 
 #### When you sunset IE7 support, you can use:
 
@@ -35,6 +36,7 @@ Resources:
 * http://www.bennadel.com/blog/2306-What-CSS-Properties-Are-Supported-When-You-Drop-IE6-Support.htm
 * http://analogysoft.com/learning/ui-hulk-out/#beyondie6
 * http://msdn.microsoft.com/en-us/library/cc351024(v=vs.85).aspx#selectors
+* http://www.quirksmode.org/css/contents.html
 
 	[].forEach.call( document.querySelectorAll('td'), function(elem){
 	  if (elem.innerText.trim() == 'No') elem.style.backgroundColor = 'red';
