@@ -133,8 +133,8 @@ function showsearch(hash) {
   featureList.search(hash);
 
   currentActiveHash = document.querySelector('a[href="#' + hash +'"]');
-  lastActiveHash && classList(lastActiveHash).remove('active');
-  classList(currentActiveHash).add('active');
+  lastActiveHash    && classList(lastActiveHash).remove('active');
+  currentActiveHash && classList(currentActiveHash).add('active');
   lastActiveHash = currentActiveHash;
 
   repeatscrolling = window.setInterval(function() {
