@@ -1,5 +1,6 @@
 feature: ECMAScript 6
 status: avoid
+tags: es6
 kind: js
 
 ECMAScript version 6 is the upcoming version of JavaScript that brings new features and heavy syntax changes. Currently only Chrome(17+) and Firefox support a highly experimental subset of ES6 features. 
