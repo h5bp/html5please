@@ -489,7 +489,7 @@
             <footer class="tags">polyfill nomobile</footer>
           </article>          
         
-          <article class="fallback gtie8 nooldmobile">
+          <article class="fallback gtie8 nooldmobile es5">
             <header>
               <h2 class="name">ECMAScript 5 </h2>
               <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
@@ -514,10 +514,10 @@ Also note that some shims are known to have <a href="https://gist.github.com/112
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/ec.md">Edit this info</a>
               </p>
             </div>
-            <footer class="tags">fallback gtie8 nooldmobile</footer>
+            <footer class="tags">fallback gtie8 nooldmobile es5</footer>
           </article>          
         
-          <article class="">
+          <article class="es6">
             <header>
               <h2 class="name">ECMAScript 6 </h2>
               <h3 class="status avoid">avoid <i></i> </h3>                                                        
@@ -542,7 +542,7 @@ Also note that some shims are known to have <a href="https://gist.github.com/112
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/es6.md">Edit this info</a>
               </p>
             </div>
-            <footer class="tags"></footer>
+            <footer class="tags">es6</footer>
           </article>          
         
           <article class="fallback">
@@ -878,7 +878,7 @@ change radically before stabilizing. Avoid using this. </p>
             </header>
             <div class="more">
               <div class="recco">
-                <p>IndexedDB was a volatile spec for a year, but has settled down. In addition to Chrome and Firefox, IE10 will have it; Opera and Safari have not yet committed to it.</p>
+                <p>IndexedDB was a volatile spec for a year, but has settled down. In addition to Chrome and Firefox, IE10 will have it; Opera has not yet implemented it and Safari has not yet committed to it.</p>
 
 <p><a href="https://github.com/jensarps/IDBWrapper">IDBWrapper</a> helps smooth out the cross-browser differences. You may consider falling back to WebSQL when IndexedDB isn't available, but do keep in mind that WebSQL has been abandoned.</p>
               </div>
@@ -988,7 +988,7 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="recco">
                 <p>Input placeholders are simply ignored in IE 9 and below. Note that they are only applied when the <strong>type</strong> of the input is <em>text</em>, <em>password</em>, <em>search</em>, <em>tel</em>, <em>url</em>, or <em>email</em>. <em>Textareas</em> can have placeholders, too. Otherwise, it is ignored.</p>
 
-<p><code>input[placeholder]</code> is commonly the first polyfill anyone writes and, as such, there are <a href="http://bit.ly/polyfills">many of them</a>. Password inputs and submit event clearing are among many of the gotchas that catch native implemenations; Mathias's polyfill below handles these cases very well.</p>
+<p><code>input[placeholder]</code> is commonly the first polyfill anyone writes and, as such, there are <a href="http://bit.ly/polyfills">many of them</a>. Password inputs and submit event clearing are among many of the gotchas that catch naive implementations; Mathias's polyfill below handles these cases very well.</p>
               </div>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/mathiasbynens/jquery-placeholder">Placeholder jQuery Plugin</a></p></div> 
 
@@ -1031,7 +1031,7 @@ change radically before stabilizing. Avoid using this. </p>
           <article class="gtie7 polyfill">
             <header>
               <h2 class="name">localStorage </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
@@ -1039,8 +1039,12 @@ change radically before stabilizing. Avoid using this. </p>
                 <p>Local and session storage are a great way to store data without resorting to cookies. IE8 supported <code>localStorage</code> and <code>sessionStorage</code> so you may not need a polyfill. If you do, Remy's is a piece of cake to implement and use.</p>
 
 <p>This is a simple key/value store, so if you want to store complex data use <code>JSON.parse(str)</code> and <code>JSON.stringify(obj)</code> on your way in and out. There is also no way to know if you exceeded the storage cross-browser, so wrap your store commands in try/catch. Up to 2.5MB is safe to use.</p>
+
+<p>As part of keeping things simple, <code>localStorage</code> has a synchronous API that runs on the main UI thread in browsers; as a consequence of that, a <a href="http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/#comment-17296">race condition</a> can occur if a user has the same site open in multiple windows or tabs running as separate processes. For many applications, that’s never really a problem in practice. But it can cause data corruption—so applications where it’s important to try to ensure that absolutely no data corruption can occur should instead use a more robust storage mechanism such as <code>IndexedDB</code>.</p>
+
+<p>Due to the shortcomings of <code>localStorage</code>, there are calls <a href="http://paul.kinlan.me/we-need-to-kill-off-the-localstorage-api">to stop advocating for and building examples that use it</a>.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://gist.github.com/350433">Remy's storage polyfill</a>, <a href="http://code.google.com/p/sessionstorage/">sessionstorage</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://gist.github.com/350433">Remy’s storage polyfill</a>, <a href="http://code.google.com/p/sessionstorage/">sessionstorage</a></p></div> 
 
               <p class="links">
               
@@ -1459,9 +1463,10 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
             </header>
             <div class="more">
               <div class="recco">
-                
+                <p>Go read <a href="http://www.useragentman.com/blog/2012/01/03/cross-browser-html5-progress-bars-in-depth/">Cross Browser HTML5 Progress Bars In Depth
+</a>. :)</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/LeaVerou/HTML5-Progress-polyfill">HTML5 Progress Polyfill</a></p></div> 
+              <div class="polyfills"></div> 
 
               <p class="links">
               
@@ -1591,13 +1596,15 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
 
 <ul>
 <li><code>tr &gt; td</code> : Immediate descendant (child) selector.</li>
-<li><code>dt + dd</code> : next sibling selector</li>
+<li><code>dt + dd</code> : next sibling selector*</li>
 <li><code>dt ~ dd</code> : any following sibling</li>
 <li><code>div[attr]</code> and <code>img[src$=png]</code> : Attribute selector (starts with, ends with, contains).</li>
-<li><code>p:first-child</code></li>
+<li><code>p:first-child</code>*</li>
 <li><code>div:hover</code> and <code>:hover</code> state on all non-<code>&lt;a&gt;</code>'s</li>
 <li><code>li.food.vegetable</code> : without worrying about the <a href="http://paulirish.com/2008/the-two-css-selector-bugs-in-ie6/">chained classes bug</a></li>
 </ul>
+
+<p>* IE7-8 don't update styles properly when elements are manipulated with JS. Usually you have to force the browser to redraw (e.g. hide and show parent element).</p>
 
 <h4>When you sunset IE7 support, you can use:</h4>
 
@@ -1621,6 +1628,7 @@ Resources:
 * http://www.bennadel.com/blog/2306-What-CSS-Properties-Are-Supported-When-You-Drop-IE6-Support.htm
 * http://analogysoft.com/learning/ui-hulk-out/#beyondie6
 * http://msdn.microsoft.com/en-us/library/cc351024(v=vs.85).aspx#selectors
+* http://www.quirksmode.org/css/contents.html
 
     [].forEach.call( document.querySelectorAll('td'), function(elem){
       if (elem.innerText.trim() == 'No') elem.style.backgroundColor = 'red';
@@ -1651,9 +1659,9 @@ Resources:
             </header>
             <div class="more">
               <div class="recco">
-                <p>Scoped stylesheets are still in active development, the first implementation of which should be available in WebKit soon.</p>
+                <p>Scoped stylesheets are still in active development. While you can experiment with them in Chrome Canary (see <code>about:flags</code>), there is no stable version of any browser supporting this now. </p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/thingsinjars/jQuery-Scoped-CSS-plugin">jQuery-Scoped-CSS-plugin</a></p></div> 
+              <div class="polyfills"></div> 
 
               <p class="links">
               
@@ -1767,7 +1775,7 @@ Resources:
             <footer class="tags">none</footer>
           </article>          
         
-          <article class="polyfill gtie9 webvvt">
+          <article class="polyfill gtie9 webvtt">
             <header>
               <h2 class="name">&lt;track> </h2>
               <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
@@ -1775,20 +1783,20 @@ Resources:
             </header>
             <div class="more">
               <div class="recco">
-                <p><a href="http://www.html5rocks.com/en/tutorials/track/basics/">The <code>&lt;track&gt;</code> element</a> provides a mechanism of showing captions/subtitles and/or associated metadata with <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code>. The file format the <code>&lt;track&gt;</code> element uses is called WebVVT. Browser support for both is in progress: complete in IE10pp4, ongoing in Webkit, unknown in Opera. A polyfill is a wise choice; Captionator is the most complete and well supported. More at <a href="http://blog.gingertech.net/2011/06/27/recent-developments-around-webvtt/">Sylvia Pfeiffer's blog</a>.</p>
+                <p><a href="http://www.html5rocks.com/en/tutorials/track/basics/">The <code>&lt;track&gt;</code> element</a> provides a mechanism of showing captions/subtitles and/or associated metadata with <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code>. The file format the <code>&lt;track&gt;</code> element uses is called WebVTT. Browser support for both is in progress: complete in IE10pp4, ongoing in Webkit, unknown in Opera. A polyfill is a wise choice; Captionator is the most complete and well supported. More at <a href="http://blog.gingertech.net/2011/06/27/recent-developments-around-webvtt/">Sylvia Pfeiffer's blog</a>.</p>
               </div>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://captionatorjs.com/">captionator.js</a></p></div> 
 
               <p class="links">
               
-                <a href="http://caniuse.com/track">
-                  View browser share %
+                <a href="https://developer.mozilla.org/en/HTML/Element/track#Compatibility">
+                  Learn more
                 </a>  
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/track.md">Edit this info</a>
               </p>
             </div>
-            <footer class="tags">polyfill gtie9 webvvt</footer>
+            <footer class="tags">polyfill gtie9 webvtt</footer>
           </article>          
         
           <article class="fallback prefixes">
@@ -1848,11 +1856,11 @@ Note that you need to use all the usual prefixes to make this work in all browse
             </header>
             <div class="more">
               <div class="recco">
-                <p>Do note you need to supply your video in various formats to cater to all browsers and fallbacks&mdash;<a href="http://www.mirovideoconverter.com/">Miro Video Converter</a> makes this trivial. H264 and WebM cover all browsers (except Firefox 3.6 which needs Ogg Theora). Use one of the polyfills below or gracefully handle all cases without any scripting, as explained by Kroc Camen in <a href="http://camendesign.com/code/video_for_everybody">Video for Everybody</a>.</p>
+                <p>Do note you need to supply your video in various formats to cater to all browsers and fallbacks&mdash;<a href="http://www.mirovideoconverter.com/">Miro Video Converter</a> makes this trivial. H264 and WebM cover all browsers (except Firefox 3.6 which needs Ogg Theora). Use the above polyfill or gracefully handle all cases without any scripting, as explained by Kroc Camen in <a href="http://camendesign.com/code/video_for_everybody">Video for Everybody</a>.</p>
 
 <p>There is also an incredibly useful service called <a href="http://vid.ly">vid.ly</a> which converts video online into all necessary formats and provides a short url that detects your browser/hardware and sends the correct format. <a href="http://archive.org">Archive.org</a> also converts MP4 videos uploaded to OGG automatically, and does the same with audio.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://videojs.com/">Video.js</a>, <a href="http://mediaelementjs.com/">mediaelementjs</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://mediaelementjs.com/">mediaelementjs</a></p></div> 
 
               <p class="links">
               
@@ -1884,7 +1892,7 @@ Note that you need to use all the usual prefixes to make this work in all browse
                   View browser share %
                 </a>  
               
-                <a href="https://github.com/h5bp/html5please/blob/master/posts/web-workers.md">Edit this info</a>
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/webworkers.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback gtie9</footer>
@@ -1938,7 +1946,7 @@ Note that you need to use all the usual prefixes to make this work in all browse
 
 <p><a href="http://socket.io/">Socket.io</a> is a Node.js framework that helps with downlevel transports for browsers lacking native WebSocket support (and supports IE6+).</p>
 
-<p>XSockets and is a .NET+JavaScript framework that handles fallback via Flash and Silverlight.</p>
+<p>XSockets is a .NET+JavaScript framework that handles fallback via Flash and Silverlight.</p>
 
 <p>For more information see the <a href="http://www.leggetter.co.uk/real-time-web-technologies-guide#self-hosted">Full list of possible server-side websocket solutions</a></p>
               </div>

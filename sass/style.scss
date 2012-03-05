@@ -9,6 +9,7 @@
      -moz-transition: unquote($arg);
       -ms-transition: unquote($arg);
        -o-transition: unquote($arg);
+          transition: unquote($arg);
 }
 
 @mixin text-shadows($arg) {
@@ -312,9 +313,16 @@ article h3 b i {
 }
 
 .explore-features {
-  header & {
-    margin: 2rem 0;
-  }  
+
+  margin: 2rem 0;  
+  @include our-transition(all .5s);
+  max-height: 15em;
+  overflow: hidden;
+
+  .searchvalue & {
+    max-height: 0em;
+    margin: 0;
+  }
 
   h2 { 
     width: 5em;

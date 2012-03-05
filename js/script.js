@@ -55,6 +55,10 @@ var listOptions = {
   search.onkeyup = updatesearch;
 
 function updatesearch() {
+
+
+  classList(document.body)[ search.value !== '' ? 'add' : 'remove']('searchvalue');
+
   if (search.value != '') {
     searchurl.href='./#' + search.value;
     searchurl.className = 'active';
@@ -125,6 +129,7 @@ if(window.location.hash) {
 
 function showsearch(hash) {
   search.value = hash;
+
   featureList.search(hash);
 
   currentActiveHash = document.querySelector('a[href="#' + hash +'"]');

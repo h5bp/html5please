@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
  * HTML5 ✰ Boilerplate
  */
@@ -283,13 +282,13 @@ article h3 b i, article.expanded div.more, .kind, .status i b {
 }
 
 html {
-  background-image: url('../img/denim.png?1327284124');
+  background-image: url('../img/denim.png?1324333869');
   color: #e3d7bf;
-  background: -webkit-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -webkit-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -webkit-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -webkit-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -webkit-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1327284124');
-  background: -moz-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -moz-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -moz-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -moz-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -moz-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1327284124');
-  background: -o-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -o-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -o-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -o-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -o-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1327284124');
-  background: -ms-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -ms-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -ms-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -ms-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -ms-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1327284124');
-  background: radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1327284124');
+  background: -webkit-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -webkit-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -webkit-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -webkit-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -webkit-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
+  background: -moz-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -moz-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -moz-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -moz-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -moz-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
+  background: -o-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -o-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -o-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -o-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -o-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
+  background: -ms-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -ms-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -ms-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -ms-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -ms-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
+  background: radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
   background-color: #232927;
   min-height: 100%;
   max-width: 100%;
@@ -368,6 +367,7 @@ article h3 b i {
   -moz-transition: height 100ms ease-in;
   -ms-transition: height 100ms ease-in;
   -o-transition: height 100ms ease-in;
+  transition: height 100ms ease-in;
   font-size: 0.9em;
 }
 
@@ -396,6 +396,7 @@ article h3 b i {
   -moz-transition: width 500ms linear, opacity 600ms linear;
   -ms-transition: width 500ms linear, opacity 600ms linear;
   -o-transition: width 500ms linear, opacity 600ms linear;
+  transition: width 500ms linear, opacity 600ms linear;
   background: -webkit-linear-gradient(90deg, #a93a0b, #f16529);
   background: -moz-linear-gradient(90deg, #a93a0b, #f16529);
   background: -o-linear-gradient(90deg, #a93a0b, #f16529);
@@ -427,8 +428,19 @@ article h3 b i {
   position: relative;
 }
 
-header .explore-features {
+.explore-features {
   margin: 2rem 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  max-height: 15em;
+  overflow: hidden;
+}
+.searchvalue .explore-features {
+  max-height: 0em;
+  margin: 0;
 }
 .explore-features h2 {
   width: 5em;
@@ -478,6 +490,7 @@ article > header {
   -moz-transition: background-color 100ms ease-in;
   -ms-transition: background-color 100ms ease-in;
   -o-transition: background-color 100ms ease-in;
+  transition: background-color 100ms ease-in;
   background: #d3e0e4;
   border-radius: 0.3rem;
   position: relative;
@@ -497,6 +510,7 @@ article > header:before {
   -moz-transition: all 100ms ease-in;
   -ms-transition: all 100ms ease-in;
   -o-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
   display: inline-block;
   vertical-align: middle;
   content: "+";
@@ -529,6 +543,7 @@ article div.more {
   -moz-transition: opacity 1s ease-in;
   -ms-transition: opacity 1s ease-in;
   -o-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
   display: none;
   opacity: 0;
   background: white;
@@ -724,6 +739,7 @@ code {
   -moz-transition: all .3s ease-in;
   -ms-transition: all .3s ease-in;
   -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 code:hover {
   background: #e0e0e0;
