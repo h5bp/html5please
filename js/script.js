@@ -25,7 +25,9 @@ var ies = ['gtie6', 'gtie7', 'gtie8', 'gtie9', 'gtie10'];
 
 var	search = document.getElementById('livesearch'),
     searchresults = document.querySelectorAll('.features article'),
-    searchurl = document.getElementById('searchurl');	
+    searchurl = document.getElementById('searchurl'),
+    currentActiveHash,
+    lastActiveHash;
 
 [].map.call(searchresults, function(result) {
   var tags = result.querySelector('.tags'),
