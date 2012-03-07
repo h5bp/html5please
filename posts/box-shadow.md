@@ -1,8 +1,8 @@
 feature: box-shadow
 status: caution
-tags: prefixes
+tags: prefixes, polyfill
 kind: css
-polyfillurls:
+polyfillurls: [CSS3 Pie](http://css3pie.com/)
 
 `box-shadow` is safe to use most of the time, except when you are applying it on a large area as that may cause significant performance impact when interacting with the page (on scroll and hovers, but also transitions and animations). 
 
