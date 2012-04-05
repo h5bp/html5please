@@ -6,6 +6,7 @@
     <title>HTML5 Please - Use the new and shiny responsibly</title>
     <meta name="description" content="Look up HTML5, CSS3, etc features, know if they are ready for use, and if so find out how you should use them – with polyfills, fallbacks or as they are.">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="google-translate-customization" content="32dbc92059090ec6-2ef06507d9fa4861-gc73adde112b9c70e-f"></meta>
 
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
@@ -54,27 +55,27 @@
           <article class="{{tags}}">
             <header>
               <h2 class="name" id="{{ feature }}">{{{featuretag feature}}} </h2>
-              <h3 class="status {{status}}">{{status}} <i>{{{polyfillaction tags}}}</i> </h3>                                                        
+              <h3 class="status {{status}}">{{status}} <i>{{{polyfillaction tags}}}</i> </h3>
               <h4 class="kind {{kind}}">{{kind}}</h4>
             </header>
             <div class="more">
               <div class="recco">
                 {{{contents}}}
               </div>
-              <div class="polyfills">{{#if polyfillurls}}<b>Recommended polyfills: </b>{{{polyfillurls}}}{{/if}}</div> 
+              <div class="polyfills">{{#if polyfillurls}}<b>Recommended polyfills: </b>{{{polyfillurls}}}{{/if}}</div>
 
               <p class="links">
               {{#if moreurl}}
                 <a href="{{{moreurl}}}">
                   {{testurl moreurl}}
-                </a>  
+                </a>
               {{/if}}
                 <a href="{{{editurl}}}">Edit this info</a>
               </p>
             </div>
             <footer class="tags">{{tags}}</footer>
-          </article>          
-        {{/features}}    
+          </article>
+        {{/features}}
       </section>
     </div>
     <footer>
@@ -82,7 +83,9 @@
       <p class="builders"> <a href="http://twitter.com/divya"><img src="http://api.twitter.com/1/users/profile_image/divya?size=normal" alt="Divya Manian"><b>Divya</b> Manian</a> <a href="http://twitter.com/paul_irish"><img src="http://api.twitter.com/1/users/profile_image/paul_irish?size=normal" alt="Paul Irish"><b>Paul</b> Irish</a> <a href="http://twitter.com/tbranyen"><img src="http://api.twitter.com/1/users/profile_image/tbranyen?size=normal" alt="Tim Branyen"><b>Tim</b> Branyen</a> <a href="http://twitter.com/connor"><img src="http://api.twitter.com/1/users/profile_image/connor?size=normal" alt="Connor Montgomery"><b>Connor</b> Montgomery</a> <a href="http://raynos.org/blog/"><img src="http://gravatar.com/avatar/d840cb1fb7e828284011cc08f40a1015?s=48"><b>Jake</b> Verbaten</a> <a href="https://github.com/h5bp/html5please/contributors">&amp; more</a>
       </p>
     </footer>
-    
+
+    <div id="google_translate_element"></div>
+
     <!-- scripts concatenated and minified via ant build script -->
     <script src="js/libs/augment.js"></script>
     <script src="js/libs/list.js"></script>
@@ -94,6 +97,13 @@
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
         s.parentNode.insertBefore(g,s)}(document,'script'));
+
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT, gaTrack: true, gaId: 'UA-17904194-3'}, 'google_translate_element');
+        }
     </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   </body>
 </html>
