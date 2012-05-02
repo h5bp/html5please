@@ -22,6 +22,7 @@ Most CSS Selectors are supported from IE7 onwards, so you should be safe to use 
 
 * ` :before, :after` and generated content
 * `:focus` for elements with current focus
+* <a href="http://www.w3.org/TR/selectors/#lang-pseudo">`:lang(C)`</a> which targets an element based on language
 
 #### When you sunset IE8 support, you can use:
 
@@ -37,6 +38,7 @@ Resources:
 * http://analogysoft.com/learning/ui-hulk-out/#beyondie6
 * http://msdn.microsoft.com/en-us/library/cc351024(v=vs.85).aspx#selectors
 * http://www.quirksmode.org/css/contents.html
+* http://www.impressivewebs.com/browser-support-css3-selectors/
 
 	[].forEach.call( document.querySelectorAll('td'), function(elem){
 	  if (elem.innerText.trim() == 'No') elem.style.backgroundColor = 'red';
