@@ -1,5 +1,5 @@
 feature: FileSystem & FileWriter API
-status: caution
+status: avoid
 tags: prefixes polyfill
 kind: api
 polyfillurls: [idb.filesystem.js](https://github.com/ebidel/idb.filesystem.js)

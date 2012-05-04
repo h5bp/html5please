@@ -607,8 +607,10 @@ Also note that some shims are known to have <a href="https://gist.github.com/112
             </header>
             <div class="more">
               <div class="recco">
-                <p>Using the File API added to the DOM in HTML5, it's now possible for web content to ask the user to select local files.
-Supported in Chrome 18+, with partial support in Firefox, Safari and Opera.</p>
+                <p>Using the File API added to the DOM in HTML5, it's now possible for web content to ask the user to select local files.</p>
+
+<p>FileReader pairs very well with Drag n Drop to allow for drag 'n drop file uploads, and if neither of those features are present, the fallback of providing an <code>&lt;input type=file&gt;</code> is rather easy.
+Supported in Chrome, Firefox, Opera. Safari is currently missing FileReader support.</p>
 
 <p><a href="https://github.com/Jahdrien/FileReader">FileReader</a> provides useful fallback, based on Flash, jQuery and jQuery UI.</p>
               </div>
@@ -629,7 +631,7 @@ Supported in Chrome 18+, with partial support in Firefox, Safari and Opera.</p>
           <article class="prefixes polyfill">
             <header>
               <h2 class="name" id="FileSystem &amp; FileWriter API">FileSystem & FileWriter API </h2>
-              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>
+              <h3 class="status avoid">avoid <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
