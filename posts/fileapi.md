@@ -1,5 +1,5 @@
 feature: File API
-status: caution
+status: use
 tags: prefixes polyfill
 kind: api
 polyfillurls: [FileReader](https://github.com/Jahdrien/FileReader)
