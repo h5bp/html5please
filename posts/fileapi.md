@@ -1,6 +1,6 @@
 feature: File API
 status: caution
-tags: fallback gtie8
+tags: prefixes polyfill
 kind: api
 polyfillurls: [FileReader](https://github.com/Jahdrien/FileReader)
 
