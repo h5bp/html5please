@@ -1,6 +1,6 @@
 feature: border-image
 status: use
-tags: prefixes polyfill
+tags: fallback prefixes
 kind: css
 polyfillurls:
 
