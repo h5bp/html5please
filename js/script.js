@@ -49,7 +49,8 @@ var listOptions = {
 		listClass: 'features',
 		valueNames: ['kind', 'status', 'name', 'tags']
 	},
-  featureList = new List('gfs', listOptions);
+  featureList = new List('gfs', listOptions),
+  noitemsNotification = document.querySelector('#noitems')
   search.onkeyup = updatesearch;
 
 function updatesearch() {
@@ -64,6 +65,13 @@ function updatesearch() {
         classList(searchresults[i]).add('expanded');
         searchresults[i].querySelectorAll('h2')[0].setAttribute("aria-expanded", "true");
     }
+
+    if (!document.querySelectorAll('.expanded').length) {
+      classList(noitemsNotification).remove('visuallyhidden');
+    } else {
+      classList(noitemsNotification).add('visuallyhidden');
+    }
+
   } else {
     searchurl.className = '';
     for (var i = 0, len = searchresults.length; i < len; i++) {
@@ -75,7 +83,7 @@ function updatesearch() {
 
 var expandfeatures = document.querySelectorAll('.features article header'),
     count = expandfeatures.length;
-    
+
 for(var i = 0; i < count; i++) {
 
   expandfeatures[i].onclick = function(e) {
