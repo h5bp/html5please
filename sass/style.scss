@@ -25,13 +25,13 @@
   $text-shadow: "";
   @while $i < ($width + 1) {
     $text-shadow: $text-shadow + $i + "px " + $i + "px " + "1px " + $color;
-    
+
     @if($i != $width ) {
       $text-shadow: $text-shadow + ", ";
-    }  
+    }
     $i: $i + 1;
   }
-  
+
   @return unquote($text-shadow);
 }
 
@@ -41,7 +41,7 @@
 
 // =============================================================================
 //   HTML5 element display
-//   ========================================================================== 
+//   ==========================================================================
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 audio[controls], canvas, video { display: inline-block; *display: inline; *zoom: 1; }
@@ -49,7 +49,7 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
 
 // =============================================================================
 //   Base
-//   ========================================================================== 
+//   ==========================================================================
 
 html { font-size: 100%; overflow-y: scroll; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
@@ -72,7 +72,7 @@ a:hover, a:active { outline: 0; text-decoration: underline; }
 
 // =============================================================================
 //   Typography
-//   ========================================================================== 
+//   ==========================================================================
 
 abbr[title] { border-bottom: 1px dotted; }
 
@@ -117,13 +117,13 @@ nav ul, nav ol { list-style: none; @extend .reset-margin; padding: 0; }
 
 /*
  * 1. Improve image quality when scaled in IE7 http://h5bp.com/d
- * 2. Remove the gap between images and borders on image containers http://h5bp.com/e 
+ * 2. Remove the gap between images and borders on image containers http://h5bp.com/e
  */
 
 img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 
 /*
- * Correct overflow displayed oddly in IE9 
+ * Correct overflow displayed oddly in IE9
  */
 
 svg:not(:root) { overflow: hidden; }
@@ -182,72 +182,72 @@ table { border-collapse: collapse; border-spacing: 0; }
 * { @include box-sizing(border-box); }
 
 @import "extends";
-   
-html {  
+
+html {
   background-image: image-url('denim.png');
-  color: $lightest; 
+  color: $lightest;
   @include background(
             radial-gradient(20em 20em, circle cover, transparentize(#207cca, 0.9) 10em,  transparentize(#207cca, 1) 10em),
             radial-gradient(30em 30em, circle cover, transparentize(#cd5c5c, 0.8) 5em,  transparentize(#cd5c5c, 1) 5em),
             radial-gradient(60em 40em, circle cover, transparentize(white, 0.9) 15em, transparentize(white, 1) 15em),
             radial-gradient(40em 60em, circle cover, transparentize(#207cca, 0.8) 5em, transparentize(#207cca, 1) 5em),
             radial-gradient(35em 45em, circle cover, transparentize(black, 0.8) 7em, transparentize(black, 1) 7em),
-            image-url('denim.png')            
+            image-url('denim.png')
           );
-  background-color:  $dark; 
-  min-height: 100%; 
-  max-width: 100%; 
+  background-color:  $dark;
+  min-height: 100%;
+  max-width: 100%;
   font: 16px/1.5 $default-font-family;
 }
- 
+
 body {
   max-width: 70%;
   margin: 3em auto;
   min-width: 60%;
 }
 
-.index { 
-  @extend .text-center; 
+.index {
+  @extend .text-center;
   text-shadow: 1px 1px 1px darken($dark, 10%);
 
   h1 {
-    font-size: 5em; 
-    line-height: 1.2em;   
+    font-size: 5em;
+    line-height: 1.2em;
     text-shadow: solid-text-shadows(lighten($contrast, 10%), 3), 3px 3px 1px darken($dark, 10%), 4px 4px 3px darken($dark, 10%);
-    margin: 0.6em 0 0.5em 0; 
+    margin: 0.6em 0 0.5em 0;
     text-transform: uppercase;
     font-family: $index-font-family;
     font-weight: normal;
   }
-  
-  h1 img { 
+
+  h1 img {
     vertical-align: -10%;
     width: 64px;
     height: 64px;
   }
-  
+
   h2 {
-    font-size: 1em;  
-    margin: 0 auto; 
-    max-width: 38em; 
-    font-weight: normal; 
-    text-transform: none; 
-    font-style: normal;    
-    
+    font-size: 1em;
+    margin: 0 auto;
+    max-width: 38em;
+    font-weight: normal;
+    text-transform: none;
+    font-style: normal;
+
     b {
       @extend .display-block;
       @include secondary-title;
       margin-bottom: 0.5em;
-      color: lighten($contrast, 10%);          
+      color: lighten($contrast, 10%);
     }
   }
 }
 
-.index h1 b,  
-article h3 b i { 
+.index h1 b,
+article h3 b i {
   @extend .display-block;
-  font-family: $default-font-family;  
-  line-height: 1;  
+  font-family: $default-font-family;
+  line-height: 1;
 }
 
 
@@ -258,9 +258,9 @@ article h3 b i {
 
 #clickmore.active::after { content: " ▼"; }
 
-#moredetails { 
-  max-height: 0; 
-  overflow: hidden; 
+#moredetails {
+  max-height: 0;
+  overflow: hidden;
   @include our-transition("height 100ms ease-in");
   font-size: 0.9em;
 }
@@ -268,9 +268,9 @@ article h3 b i {
 #moredetails:target, #moredetails.active { max-height: 12em;  }
 
 #livesearch{
-  @extend .reset-margin; 
-  width: 50%; 
-  padding: 0 1em; 
+  @extend .reset-margin;
+  width: 50%;
+  padding: 0 1em;
   height: 2rem;
   background: white;
   border-radius: 10em;
@@ -282,11 +282,11 @@ article h3 b i {
 
 #livesearch:focus {
   box-shadow: 0 0 0.5em darken($contrast, 30%);
-}  
+}
 
-#searchurl { 
-  @include our-transition('width 500ms linear, opacity 600ms linear'); 
-  @include background(linear-gradient(90deg, darken(#f16529, 20%), #f16529));      
+#searchurl {
+  @include our-transition('width 500ms linear, opacity 600ms linear');
+  @include background(linear-gradient(90deg, darken(#f16529, 20%), #f16529));
   background-color: darken(#f16529, 20%);
   display: inline-block;
   font-size: 0.8em;
@@ -303,9 +303,9 @@ article h3 b i {
   width: 12em;
   padding-left: 1.5em;
   opacity: 1;
-} 
+}
 
-#livesearch, 
+#livesearch,
 #searchurl {
   display: inline-block;
   vertical-align: bottom;
@@ -314,15 +314,15 @@ article h3 b i {
 
 .explore-features {
 
-  margin: 2rem 0;  
+  margin: 2rem 0;
   @include our-transition(all .5s);
   max-height: 15em;
   overflow: hidden;
 
 
-  h2 { 
+  h2 {
     width: 5em;
-     margin-left: 2.4rem; 
+     margin-left: 2.4rem;
 
     b { margin-bottom: 0; text-indent: -2.4rem; }
   }
@@ -336,10 +336,10 @@ article h3 b i {
   ul {
     @extend .reset-list;
     border-left: 1px solid $light;
-    padding-left: 1em;    
+    padding-left: 1em;
 
-    li { padding: 0.25rem 0; }  
-  }  
+    li { padding: 0.25rem 0; }
+  }
 
 
   li + li { border-top: 1px dotted $light; }
@@ -348,15 +348,15 @@ article h3 b i {
 
   a +a::before { content: " • "; color: $lightest; }
 
-  a.active { color: lighten($contrast, 10%); } 
-}  
+  a.active { color: lighten($contrast, 10%); }
+}
 
 
-article { 
+article {
   color: $dark;
-  margin-bottom: 2em; 
+  margin-bottom: 2em;
 
-  .tags { display: none; }  
+  .tags { display: none; }
 }
 
 article > header {
@@ -366,7 +366,7 @@ article > header {
   position: relative;
   z-index: 1;
   cursor: pointer;
-  
+
   &:hover {
     background: $lightest;
   }
@@ -382,7 +382,7 @@ article > header {
     text-align: center;
     color: white;
     text-shadow: 1px 1px 1px $light;
-    background: lighten($light, 40%);      
+    background: lighten($light, 40%);
     border: 1px solid lighten($light, 30%);
   }
   /*
@@ -390,68 +390,68 @@ article > header {
     @include transform(rotate(270deg));
   }
   */
-    
+
   .kind, .name, .status {
     @extend .reset-margin;
     display: inline-block;
-    vertical-align: middle; 
+    vertical-align: middle;
     pointer-events: none;
   }
-  
-  
+
+
   i { font-style: normal; }
   .kind, b { font-weight: normal; }
-  
-    
+
+
 }
 
 
-article div.more {   
-  @include our-transition("opacity 1s ease-in");  
+article div.more {
+  @include our-transition("opacity 1s ease-in");
   display: none;
   opacity: 0;
-  background: white;  
-  border-radius: 0 0 0.3rem 0.3rem; 
-  padding: 0.5em 1em 1.5em 1em;  
+  background: white;
+  border-radius: 0 0 0.3rem 0.3rem;
+  padding: 0.5em 1em 1.5em 1em;
   margin: -0.3rem 1px 0 1px;
   position: relative;
   z-index: 0;
-  box-shadow: 0 0 7px darken($dark, 10%); 
-  
+  box-shadow: 0 0 7px darken($dark, 10%);
+
   .polyfills b { font-weight: bold; }
-  
+
   .polyfills p { display: inline; }
-  
+
   .links {
     @extend .reset-margin;
     font-size: 0.8em;
     position: absolute;
     bottom: 0.5em;
-    right: 1em;    
-    
+    right: 1em;
+
     a { padding: 0.25em 0.5em; }
-    a:hover { 
-      background: $link-color; 
-      color: #fff; 
-      border-radius: 5px; 
+    a:hover {
+      background: $link-color;
+      color: #fff;
+      border-radius: 5px;
       text-decoration: none;
       text-shadow: 1px 1px 1px $dark;
     }
-  }  
+  }
 }
 
 article.expanded {
   > header {
     border-bottom: 1px solid lighten($dark, 45%);
-    
+
     &:before { content: "-"; line-height: 0.75;
-      @include transform(none); 
+      @include transform(none);
     }
   }
-  
-  div.more { 
+
+  div.more {
     @extend .display-block;
-    opacity: 1; 
+    opacity: 1;
   }
 }
 
@@ -459,7 +459,7 @@ article.expanded {
   @extend .display-block;
   font-size: 0.8em;
   line-height: 3rem;
-  color: $lightest;    
+  color: $lightest;
   position: absolute;
   left: -5em;
   text-align: right;
@@ -469,8 +469,8 @@ article.expanded {
 }
 
 .name {
-  padding: 0.4rem 0; 
-  color: darken($link-color, 10%); 
+  padding: 0.4rem 0;
+  color: darken($link-color, 10%);
   text-shadow: 0 1px 0px rgba(255, 255, 255, 1);
 }
 
@@ -479,7 +479,7 @@ article.expanded {
 }
 
 .status {
-  font-size: 2em;    
+  font-size: 2em;
   border-radius: 0 0.2rem 0.2rem 0;
   padding: 0 1rem 0 0.5rem;
   color: white;
@@ -489,24 +489,24 @@ article.expanded {
 
 
   //Arrow like figures on the right
-  &:before, 
+  &:before,
   &:after {
     content: "";
     height: 50%;
     width: 0.8em;
     position: absolute;
-    left: -0.8em; 
+    left: -0.8em;
   }
-  
+
   &:before { top: 0; }
-  
+
   &:after { bottom: 0; }
-  
+
   i {
     font-size: 0.3em;
     display: inline-block;
     line-height: 1;
-    text-transform: none; 
+    text-transform: none;
     font-weight: normal;
 
     b {
@@ -514,24 +514,24 @@ article.expanded {
       font-size: 1.5em;
     }
   }
- 
-  &.avoid { @include apply-status-style($avoid); } 
+
+  &.avoid { @include apply-status-style($avoid); }
 
   &.use { @include apply-status-style($use); }
-  
-  &.caution { @include apply-status-style($caution); }  
+
+  &.caution { @include apply-status-style($caution); }
 }
 
 
 body > footer {
-  text-align: center;  
+  text-align: center;
   padding: 3em 0;
-  font-size: 0.8em;   
-  text-shadow: 1px 1px 1px $dark;     
+  font-size: 0.8em;
+  text-shadow: 1px 1px 1px $dark;
 }
 
 .builders {
-  a {   
+  a {
     display: inline-block;
     margin: 0 1em 1em 0;
     text-align: left;
@@ -557,9 +557,9 @@ body > footer {
   small { display:block; }
 }
 
-code { 
-  background: hsl(0, 0%, 94%); border-radius: 3px; padding: 0 2px; 
-  @include our-transition("all .3s ease-in"); 
+code {
+  background: hsl(0, 0%, 94%); border-radius: 3px; padding: 0 2px;
+  @include our-transition("all .3s ease-in");
 
   &:hover {
     background: hsl(0, 0%, 88%);
@@ -601,8 +601,8 @@ code {
   .explore-features {
     h2, ul { width: 100%; }
 
-    h2 { 
-      display: block; 
+    h2 {
+      display: block;
       @include secondary-title;
       font-weight: bold;
       margin: 0 0 0.5em 0;
@@ -612,7 +612,7 @@ code {
 
     ul { border-left: 0; padding-left: 0 }
   }
-}  
+}
 
 @media only screen and (min-width: 1400px) {
   /* Style adjustments for bigass, wide viewports go here */
