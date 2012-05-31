@@ -213,7 +213,9 @@ body {
   h1 {
     font-size: 5em;
     line-height: 1.2em;
-    text-shadow: solid-text-shadows(lighten($contrast, 10%), 3), 3px 3px 1px darken($dark, 10%), 4px 4px 3px darken($dark, 10%);
+    text-shadow: solid-text-shadows(lighten($contrast, 10%), 3),
+                  3px 3px 1px darken($dark, 10%),
+                  4px 4px 3px darken($dark, 10%);
     margin: 0.6em 0 0.5em 0;
     text-transform: uppercase;
     font-family: $index-font-family;
