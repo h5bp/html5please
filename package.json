@@ -21,7 +21,7 @@
     "async": "*",
 
     "grunt": "*",
-    "grunt-closure-compiler" : "*"
+    "grunt-closure-compiler" : "0.0.2"
   },
   "devDependencies": {}
 }
