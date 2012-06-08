@@ -231,9 +231,11 @@
             </header>
             <div class="more">
               <div class="recco">
-                <p><a href="http://paulirish.com/2012/box-sizing-border-box-ftw/"><code>box-sizing : border-box</code></a> may be a much more sensible default for you. You can apply it to all (<code>*</code>) elements if you like. Firefox is the only browser that requires a prefix for box-sizing. You can use it without a prefix for everything else. IE8 has this feature natively, and you can optionally use the <a href="https://github.com/Schepp/box-sizing-polyfill">box-sizing polyfill</a> to provide this feature in IE 6/7 (you could scope the adjustments using <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">IE conditionals</a> or Modernizr's <a href="http://www.modernizr.com/download/#-cssclasses-addtest-css_boxsizing"><code>no-box-sizing</code></a>).</p>
+                <p>Supported in Chrome, IE8+, Opera, Safari 5.1+. The <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/">recommended pattern</a> is <code>box-sizing : border-box;</code>, preceded by the fallbacks <code>-webkit-box-sizing: border-box;</code> for old IOS&lt;=4 and Android&lt;=2.3, and <code>-moz-box-sizing: border-box;</code> for firefox. You can apply it to all (<code>*</code>) elements if you like.</p>
 
-<p>There are still issues regarding max-height/min-height and box sizing in Gecko/Firefox, see <a href="https://developer.mozilla.org/En/CSS/Box-sizing#Notes">notes at MDN</a>.</p>
+<p>For IE6/7 you can optionally use the <a href="https://github.com/Schepp/box-sizing-polyfill">box-sizing polyfill</a> to provide this feature in IE 6/7 (you could scope the adjustments using <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">IE conditionals</a> or Modernizr's <a href="http://www.modernizr.com/download/#-cssclasses-addtest-css_boxsizing"><code>no-box-sizing</code></a>).</p>
+
+<p>Besides the prefix, there are box sizing issues in Gecko/Firefox, see <a href="https://developer.mozilla.org/En/CSS/Box-sizing#Notes">notes at MDN</a>. Most notable, min-height/max-height does not work.</p>
               </div>
               <div class="polyfills"></div>
 
