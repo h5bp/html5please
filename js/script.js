@@ -1,6 +1,8 @@
-/* Author: Divya Manian, Paul Irish, et al 
+/* Author: Divya Manian, Paul Irish, et al
 
 */
+
+/* predef: classList */
 
 // el.innerText / el.textContent helper
 var text;
@@ -18,7 +20,7 @@ if (window.attachEvent) {
   addEvent = function (el, ev, cb, capture) { el.addEventListener(ev, cb, capture); };
 }
 
-// gtieX augments. so a search is matching .gtie8, 
+// gtieX augments. so a search is matching .gtie8,
 // need to match .gtie7 and .gtie6 too
 var ies = ['gtie6', 'gtie7', 'gtie8', 'gtie9', 'gtie10'];
 
@@ -42,7 +44,7 @@ var	search = document.getElementById('livesearch'),
   if(ieindex != -1){
     tagslist = tagslist.concat(ies.slice(ieindex + 1));
   }
-  tags.textContent = tagslist.join(' ');  
+  tags.textContent = tagslist.join(' ');
 });
 
 var listOptions = {
@@ -50,7 +52,7 @@ var listOptions = {
 		valueNames: ['kind', 'status', 'name', 'tags']
 	},
   featureList = new List('gfs', listOptions),
-  noitemsNotification = document.querySelector('#noitems')
+  noitemsNotification = document.querySelector('#noitems');
   search.onkeyup = updatesearch;
 
 function updatesearch() {
@@ -88,19 +90,19 @@ for(var i = 0; i < count; i++) {
 
   expandfeatures[i].onclick = function(e) {
       e = e || window.event;
-      var node = e.target || e.srcElement;
-      var parent = node.parentNode;
-      var h2 = node.querySelectorAll('h2')[0];
+      var node     = e.target || e.srcElement;
+      var parent   = node.parentNode;
+      var h2       = node.querySelectorAll('h2')[0];
       classList(parent).toggle('expanded');
       h2.setAttribute("aria-expanded", h2.getAttribute("aria-expanded") == "false" ? "true" : "false");
   };
 
-  var h2 = expandfeatures[i].querySelectorAll('h2')[0];
-  h2.setAttribute("tabIndex","0");
-  h2.setAttribute("role","button");
-  h2.setAttribute("aria-expanded","false");
+  var h2elem = expandfeatures[i].querySelectorAll('h2')[0];
+  h2elem.setAttribute("tabIndex","0");
+  h2elem.setAttribute("role","button");
+  h2elem.setAttribute("aria-expanded","false");
 
-  h2.onkeydown = function(e) {
+  h2elem.onkeydown = function(e) {
     if(e.keyCode === 13 || e.keyCode === 32 ){
       e.preventDefault();
       e = e || window.event;
@@ -111,7 +113,7 @@ for(var i = 0; i < count; i++) {
     }
   };
 
-  h2.onclick = function(e) {
+  h2elem.onclick = function(e) {
     e = e || window.event;
     var node = e.target || e.srcElement;
     var grandParent = node.parentNode.parentNode;
@@ -126,7 +128,7 @@ var clicktags = document.querySelectorAll('.explore-features a');
 [].map.call(clicktags, function(tag) {
   tag.onclick = function(e) {
     showsearch(/#(.*)/.exec(tag.href)[1]);
-  };  
+  };
 });
 
 if(window.location.hash) {
