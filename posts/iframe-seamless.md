@@ -12,4 +12,4 @@ This attribute instructs browsers to treat the iFrame's content more like inline
 
 Because the user experience of following hyperlinks is so drastically altered in supporting browsers, use this attribute with caution.
 
-Also see [this post on Bocoup.com](http://weblog.bocoup.com/third-party-javascript-development-future/).
+Also see [more about implementing `iframe[seamless]`](http://weblog.bocoup.com/third-party-javascript-development-future/#iframe-seamless) responsibly on Bocoup's blog.
