@@ -101,6 +101,12 @@
     "recco": ""
   },
   {
+    "feature": "iframe[sandbox]",
+    "status": "use",
+    "tags": "gtie9",
+    "recco": ""
+  },
+  {
     "feature": "postMessage",
     "status": "caution",
     "tags": "gtie8",
