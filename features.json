@@ -89,6 +89,12 @@
     "recco": ""
   },
   {
+    "feature": "iframe[seamless]",
+	"status": "use",
+	"tags": "gtie9",
+	"recco": ""
+  },
+  {
     "feature": "postMessage",
     "status": "caution",
     "tags": "gtie8",

@@ -936,6 +936,40 @@ change radically before stabilizing. Avoid using this. </p>
             <footer class="tags">none prefixes</footer>
           </article>
           
+          <article class="none">
+            <header>
+              <h2 class="name" id="iframe[seamless]">iframe[seamless] </h2>
+              <h3 class="status caution">caution <i></i> </h3>
+              <h4 class="kind html">html</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>This attribute instructs browsers to treat the iFrame's content more like inline markup than it would otherwise. Specifically, this means:</p>
+
+<ul>
+<li>Hyperlinks navigate the parent context</li>
+<li>The parent's stylesheets cascade in (importantly, the inverse is not true)</li>
+<li>More "neutral" rendering, roughly equivalent to declaring: <code>scrolling="no" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0"</code></li>
+</ul>
+
+<p>Because the user experience of following hyperlinks is so drastically altered in supporting browsers, use this attribute with caution.</p>
+
+<p>Also see <a href="http://weblog.bocoup.com/third-party-javascript-development-future/">this post on Bocoup.com</a>.</p>
+              </div>
+              <div class="polyfills"></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/iframe-seamless">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/iframe-seamless.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">none</footer>
+          </article>
+          
           <article class="fallback gtie8">
             <header>
               <h2 class="name" id="IndexedDB">IndexedDB </h2>
