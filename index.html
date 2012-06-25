@@ -50,7 +50,7 @@
     </header>
     <div id="main" role="main">
       <section class="features list">
-
+        
           <article class="fallback">
             <header>
               <h2 class="name" id="animations">animations </h2>
@@ -64,17 +64,17 @@
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/animations">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/animations.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback</footer>
           </article>
-
+          
           <article class="polyfill">
             <header>
               <h2 class="name" id="&lt;audio&gt;">&lt;audio> </h2>
@@ -88,17 +88,17 @@
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://mediaelementjs.com/">mediaelement.js</a>, <a href="https://github.com/happyworm/jPlayer">jPlayer</a>, <a href="http://www.schillmania.com/projects/soundmanager2/">Sound Manager 2</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/audio">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/audio.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill</footer>
           </article>
-
+          
           <article class="gtie8 fallback">
             <header>
               <h2 class="name" id="background-image options">background-image options </h2>
@@ -112,17 +112,17 @@
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/background-image">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/background-image.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie8 fallback</footer>
           </article>
-
+          
           <article class="fallback prefixes">
             <header>
               <h2 class="name" id="border-image">border-image </h2>
@@ -132,21 +132,23 @@
             <div class="more">
               <div class="recco">
                 <p>Make sure to use all the right prefixes (<code>-o-</code>, <code>-webkit-</code>, <code>-ms-</code>, <code>-moz-</code>). Additionally, <a href="http://border-image.com/">border-image.com</a> may help. You should let this fall back to either a normal solid border or no border at all, depending on whether a border is essential for readability. We recommend that you avoid polyfills.</p>
+
+<p>There were some syntax changes (requiring the <code>fill</code> keywords) that may catch you off-guard; <a href="http://dbaron.org/log/20120612-border-image">David Baron's border-image post</a> describes the best course of action.</p>
               </div>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/border-image">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/border-image.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback prefixes</footer>
           </article>
-
+          
           <article class="">
             <header>
               <h2 class="name" id="border-radius">border-radius </h2>
@@ -160,17 +162,17 @@
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/border-radius">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/border-radius.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags"></footer>
           </article>
-
+          
           <article class="none">
             <header>
               <h2 class="name" id="box-reflection">box-reflection </h2>
@@ -184,17 +186,17 @@
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://www.webkit.org/blog/182/css-reflections/">
                   Learn more
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/box-reflection.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
           </article>
-
+          
           <article class="prefixes">
             <header>
               <h2 class="name" id="box-shadow">box-shadow </h2>
@@ -212,17 +214,17 @@
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/box-shadow">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/box-shadow.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">prefixes</footer>
           </article>
-
+          
           <article class="fallback prefixes gtie7 border-box">
             <header>
               <h2 class="name" id="box-sizing">box-sizing </h2>
@@ -240,41 +242,41 @@
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/box-sizing">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/box-sizing.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback prefixes gtie7 border-box</footer>
           </article>
-
+          
           <article class="none">
             <header>
               <h2 class="name" id="calc()">calc() </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>
+              <h3 class="status caution">caution <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Internet Explorer and Firefox are the only supporting browsers, which makes using calc() in production tedious given the impact it can have on layout and the consequent breaking of your design on unsupported browsers. We encourage you to use it for experimentation, but to avoid it in production.</p>
+                <p>Internet Explorer, Chrome and Firefox are the only supporting browsers, which makes using calc() in production tedious given the impact it can have on layout and the consequent breaking of your design on unsupported browsers. We encourage you to use it for experimentation and always use a fallback declaration, so it doesn't break browsers which don't support it.</p>
               </div>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/calc">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/calc.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
           </article>
-
+          
           <article class="gtie8 polyfill">
             <header>
               <h2 class="name" id="&lt;canvas&gt;">&lt;canvas> </h2>
@@ -292,17 +294,17 @@
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://flashcanvas.net/">FlashCanvas</a>, <a href="http://code.google.com/p/explorercanvas/">ExplorerCanvas</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/canvas">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/canvas.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie8 polyfill</footer>
           </article>
-
+          
           <article class="polyfill noie nooldmobile">
             <header>
               <h2 class="name" id="classList">classList </h2>
@@ -316,17 +318,17 @@
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/eligrey/classList.js">classlist.js</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/classlist">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/classlist.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill noie nooldmobile</footer>
           </article>
-
+          
           <article class="polyfill">
             <header>
               <h2 class="name" id="CORS">CORS </h2>
@@ -340,17 +342,17 @@
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/toolness/postmessage-proxied-xhr/#readme">postmessage-proxied-xhr</a>, <a href="http://flxhr.flensed.com/">flXHR</a> (requires crossdomain.xml), <a href="https://github.com/eligrey/pmxdr">pmxdr</a> (requires host installed)</p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/cors">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/cors.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill</footer>
           </article>
-
+          
           <article class="fallback gtie8">
             <header>
               <h2 class="name" id="css3 colors">css3 colors </h2>
@@ -364,17 +366,17 @@
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/css3-colors">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/css3-colors.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback gtie8</footer>
           </article>
-
+          
           <article class="polyfill gtie9 nomobile">
             <header>
               <h2 class="name" id="&lt;datalist&gt;">&lt;datalist> </h2>
@@ -388,17 +390,17 @@
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://css-tricks.com/relevant-dropdowns-polyfill-for-datalist/">Relevant Dropdowns</a>, <a href="http://afarkas.github.com/webshim/demos/">Webshims</a>, <a href="http://miketaylr.com/code/datalist.html">jQuery Datalist Plugin</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/datalist">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/datalist.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill gtie9 nomobile</footer>
           </article>
-
+          
           <article class="fallback noie nooldmobile">
             <header>
               <h2 class="name" id="dataset">dataset </h2>
@@ -412,17 +414,17 @@
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://eligrey.com/blog/post/html-5-dataset-support">HTML5 dataset support</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/dataset">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/dataset.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback noie nooldmobile</footer>
           </article>
-
+          
           <article class="polyfill">
             <header>
               <h2 class="name" id="&lt;details&gt;">&lt;details> </h2>
@@ -436,17 +438,17 @@
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://mathiasbynens.be/notes/html5-details-jquery">Details</a>, <a href="http://akral.bitbucket.org/details-tag">jquery-details</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/details">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/details.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill</footer>
           </article>
-
+          
           <article class="polyfill">
             <header>
               <h2 class="name" id="DOM">DOM </h2>
@@ -462,17 +464,17 @@
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/termi/ES5-DOM-SHIM">ES5-DOM-shim</a>, <a href="https://github.com/Raynos/DOM-shim">DOM-shim</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/dom">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/dom.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill</footer>
           </article>
-
+          
           <article class="polyfill nomobile">
             <header>
               <h2 class="name" id="drag n drop">drag n drop </h2>
@@ -486,17 +488,17 @@
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/MrSwitch/dropfile">dropfile</a>, <a href="https://github.com/eligrey/FileSaver.js">fileSaver</a>, <a href="https://github.com/vjeux/jDataView">jDataView</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/dragndrop">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/dragndrop.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill nomobile</footer>
           </article>
-
+          
           <article class="fallback gtie8 nooldmobile es5">
             <header>
               <h2 class="name" id="ECMAScript 5">ECMAScript 5 </h2>
@@ -505,26 +507,26 @@
             </header>
             <div class="more">
               <div class="recco">
-                <p>ECMAScript version 5 covers a large number of feature additions to what we normally call JavaScript.
-Excluding IE8, <a href="http://kangax.github.com/es5-compat-table/">most of ES5 is supported in browsers</a>.
-As it introduces no new syntax, it's possible to polyfill fairly well.
-The below polyfills tackle most uses of these features, but <a href="https://gist.github.com/1664895">there is an unshimmable subset of ES5</a>.
+                <p>ECMAScript version 5 covers a large number of feature additions to what we normally call JavaScript. 
+Excluding IE8, <a href="http://kangax.github.com/es5-compat-table/">most of ES5 is supported in browsers</a>. 
+As it introduces no new syntax, it's possible to polyfill fairly well. 
+The below polyfills tackle most uses of these features, but <a href="https://gist.github.com/1664895">there is an unshimmable subset of ES5</a>. 
 Also note that some shims are known to have <a href="https://gist.github.com/1120592">edgecase compliance bugs</a>.</p>
               </div>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/kriskowal/es5-shim/">es5-shim</a>, <a href="http://augmentjs.com/">augment.js</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/ec">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/ec.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback gtie8 nooldmobile es5</footer>
           </article>
-
+          
           <article class="es6">
             <header>
               <h2 class="name" id="ECMAScript 6">ECMAScript 6 </h2>
@@ -542,17 +544,13 @@ Also note that some shims are known to have <a href="https://gist.github.com/112
               <div class="polyfills"></div>
 
               <p class="links">
-
-                <a href="http://caniuse.com/es6">
-                  View browser share %
-                </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/es6.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">es6</footer>
           </article>
-
+          
           <article class="fallback">
             <header>
               <h2 class="name" id="EventSource">EventSource </h2>
@@ -566,17 +564,17 @@ Also note that some shims are known to have <a href="https://gist.github.com/112
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/remy/polyfills/blob/master/EventSource.js">EventSource.js</a>, <a href="https://github.com/rwldrn/jquery.eventsource">jQuery.eventsource</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/Eventsource">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/Eventsource.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback</footer>
           </article>
-
+          
           <article class="none">
             <header>
               <h2 class="name" id="exclusions">exclusions </h2>
@@ -590,17 +588,17 @@ Also note that some shims are known to have <a href="https://gist.github.com/112
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://css3clickchart.com/#exclusions">
                   Learn more
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/exclusions.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
           </article>
-
+          
           <article class="prefixes polyfill">
             <header>
               <h2 class="name" id="File API">File API </h2>
@@ -619,17 +617,17 @@ Supported in Chrome, Firefox, Opera. Safari is currently missing FileReader supp
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/Jahdrien/FileReader">FileReader</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/fileapi">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/fileapi.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">prefixes polyfill</footer>
           </article>
-
+          
           <article class="prefixes polyfill">
             <header>
               <h2 class="name" id="FileSystem &amp; FileWriter API">FileSystem & FileWriter API </h2>
@@ -646,18 +644,18 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/ebidel/idb.filesystem.js">idb.filesystem.js</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/filesystem">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/filesystem.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">prefixes polyfill</footer>
           </article>
-
-          <article class="none">
+          
+          <article class="prefixes">
             <header>
               <h2 class="name" id="filters">filters </h2>
               <h3 class="status avoid">avoid <i></i> </h3>
@@ -665,23 +663,22 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
             </header>
             <div class="more">
               <div class="recco">
-                <p>This spec is under active development and as such syntaxes are likely to
-change radically before stabilizing. Avoid using this. </p>
+                <p>Filters are now supported by Safari 6 and Chrome 18+. But, given the lack of support in other browsers, consider waiting for other implementations before use. </p>
               </div>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://css3clickchart.com/#filters">
                   Learn more
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/filters.md">Edit this info</a>
               </p>
             </div>
-            <footer class="tags">none</footer>
+            <footer class="tags">prefixes</footer>
           </article>
-
+          
           <article class="none flexible">
             <header>
               <h2 class="name" id="flexbox">flexbox </h2>
@@ -690,22 +687,26 @@ change radically before stabilizing. Avoid using this. </p>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Unfortunately, older versions of this spec have been implemented in Gecko, WebKit and Trident. But <a href="http://dev.w3.org/csswg/css3-flexbox/">the spec</a> has changed significantly (starting from the syntax), hence we recommend you avoid using this until the stable version of the spec finds wide-spread implementation.</p>
+                <p>Unfortunately, <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">older versions of this spec</a> have been implemented in Gecko, WebKit and Trident. A tutorial covering that spec is <a href="http://www.html5rocks.com/en/tutorials/flexbox/quick/">on HTML5 Rocks</a>.</p>
+
+<p>But <a href="http://dev.w3.org/csswg/css3-flexbox/">the spec</a> has changed significantly. Stephan Hay has <a href="http://www.the-haystack.com/2012/01/04/learn-you-a-flexbox/">written a guide on the new flexbox implementation</a>. However, since this revised spec, the spec underwent more naming changes, which have started to debut in Chrome 22. The spec is now at last call and is considered stable so we expect no more breaking changes.</p>
+
+<p>We recommend you avoid using this until the TR version of the spec finds wide-spread implementation.</p>
               </div>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/flexbox">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/flexbox.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none flexible</footer>
           </article>
-
+          
           <article class="fallback">
             <header>
               <h2 class="name" id="@font-face">@font-face </h2>
@@ -721,17 +722,17 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/fontface">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/fontface.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback</footer>
           </article>
-
+          
           <article class="none">
             <header>
               <h2 class="name" id="font-feature-settings">font-feature-settings </h2>
@@ -741,21 +742,23 @@ change radically before stabilizing. Avoid using this. </p>
             <div class="more">
               <div class="recco">
                 <p>Internet Explorer 10, Firefox 4+ and Chrome 16 (Windows and Linux only) support low level control over font feature settings. What this means is other browsers merely will not render the flourishes you seek. Many features available through the property may be extracted to separate properties in the future, such as font-variant-ligatures. </p>
+
+<p>More at <a href="http://www.typotheque.com/articles/opentype_features_in_web_browsers">OpenType features in web browsers</a></p>
               </div>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://blog.fontdeck.com/post/15777165734/opentype-1?503cde40">
                   Learn more
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/font-feature-settings.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
           </article>
-
+          
           <article class="polyfill gtie9">
             <header>
               <h2 class="name" id="form validation">form validation </h2>
@@ -769,17 +772,17 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://afarkas.github.com/webshim/demos/">webshims</a>, <a href="https://github.com/dperini/nwxforms">nwxforms</a>, <a href="https://github.com/ryanseddon/H5F">H5F</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/form-validation">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/form-validation.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill gtie9</footer>
           </article>
-
+          
           <article class="fallback gtie8">
             <header>
               <h2 class="name" id="geolocation">geolocation </h2>
@@ -788,22 +791,22 @@ change radically before stabilizing. Avoid using this. </p>
             </header>
             <div class="more">
               <div class="recco">
-                <p><a href="https://gist.github.com/366184">geolocation shim</a> uses Google's IP-GeoCoding service as a fallback. <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a> doesn't but has hooks into BlackBerry, WebOS, and Google Gears specific APIs. In most cases, you should just not expose Geo features in your app if the feature is not natively present.</p>
+                <p><a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a> has hooks into BlackBerry, WebOS, and Google Gears specific APIs. In most cases, you should just not expose Geo features in your app if the feature is not natively present.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://gist.github.com/366184">geolocation shim</a>, <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a></p></div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/geolocation">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/geolocation.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback gtie8</footer>
           </article>
-
+          
           <article class="fallback prefixes gtie8">
             <header>
               <h2 class="name" id="gradients">gradients </h2>
@@ -819,17 +822,17 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/gradients">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/gradients.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback prefixes gtie8</footer>
           </article>
-
+          
           <article class="none">
             <header>
               <h2 class="name" id="grids">grids </h2>
@@ -843,17 +846,17 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/grids">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/grids.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
           </article>
-
+          
           <article class="fallback">
             <header>
               <h2 class="name" id="history">history </h2>
@@ -867,17 +870,17 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/history">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/history.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback</footer>
           </article>
-
+          
           <article class="gtie8 polyfill">
             <header>
               <h2 class="name" id="HTML5 elements">HTML5 elements </h2>
@@ -899,17 +902,17 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://code.google.com/p/html5shiv/">html5shiv</a>, <a href="https://github.com/aFarkas/html5shiv/">html5shiv (github)</a>, <a href="https://github.com/yatil/accessifyhtml5.js">accessifyhtml5.js</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/html5semantic">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/html5semantic.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie8 polyfill</footer>
           </article>
-
+          
           <article class="none prefixes">
             <header>
               <h2 class="name" id="hyphens">hyphens </h2>
@@ -925,17 +928,41 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/hyphens">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/hyphens.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none prefixes</footer>
           </article>
+          
+          <article class="polyfill">
+            <header>
+              <h2 class="name" id="iframe[srcdoc]">iframe[srcdoc] </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
+              <h4 class="kind html">html</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>This attribute allows for in-line specification of iframe content.</p>
 
+<p>For non-supporting browsers, you can use <a href="https://github.com/jugglinmike/srcdoc-polyfill">this srcdoc polyfill</a> which utilizes script-targeted URLs to provide this functionality in non-supporing browsers.</p>
+
+<p>Also see <a href="http://weblog.bocoup.com/third-party-javascript-development-future/">this post on Bocoup.com</a>.</p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/jugglinmike/srcdoc-polyfill">srcdoc polyfill</a></p></div>
+
+              <p class="links">
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/iframe-srcdoc.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">polyfill</footer>
+          </article>
+          
           <article class="fallback gtie8">
             <header>
               <h2 class="name" id="IndexedDB">IndexedDB </h2>
@@ -946,22 +973,23 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="recco">
                 <p>IndexedDB was a volatile spec for a year, but has settled down. In addition to Chrome and Firefox, IE10 will have it; Opera has not yet implemented it and Safari has not yet committed to it.</p>
 
-<p><a href="https://github.com/jensarps/IDBWrapper">IDBWrapper</a> helps smooth out the cross-browser differences. You may consider falling back to WebSQL when IndexedDB isn't available, but do keep in mind that WebSQL has been abandoned.</p>
+<p>The <a href="http://nparashuram.com/IndexedDBShim">IndexedDB Polyfill</a> is a polyfill for the IndexedDB APIs over WebSql. This enables IndexedDB to work on browsers that support WebSql. 
+<a href="https://github.com/jensarps/IDBWrapper">IDBWrapper</a> helps smooth out the cross-browser differences. You may consider falling back to WebSQL when IndexedDB isn't available, but do keep in mind that WebSQL has been abandoned.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/jensarps/IDBWrapper">IDBWrapper</a></p></div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/jensarps/IDBWrapper">IDBWrapper</a>, <a href="http://nparashuram.com/IndexedDBShim">IndexedDB Polyfill</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/indexeddb">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/indexeddb.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback gtie8</footer>
           </article>
-
+          
           <article class="polyfill gtie9">
             <header>
               <h2 class="name" id="&lt;input type=color&gt;">&lt;input type=color> </h2>
@@ -974,20 +1002,20 @@ change radically before stabilizing. Avoid using this. </p>
 
 <p>You should probably avoid this until it has support in WebKit, Gecko or IE.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/jo/JSColor">jscolor</a>, <a href="http://www.useragentman.com/blog/2010/07/27/cross-browser-html5-forms-using-modernizr-webforms2-and-html5widgets/">html5widgets</a></p></div>
+              <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/input-color">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/input-color.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill gtie9</footer>
           </article>
-
+          
           <article class="polyfill gtie9">
             <header>
               <h2 class="name" id="&lt;input type=date&gt;">&lt;input type=date> </h2>
@@ -1005,17 +1033,45 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://afarkas.github.com/webshim/demos/demos/webforms.html">webshims</a>, <a href="http://www.useragentman.com/blog/2010/07/27/cross-browser-html5-forms-using-modernizr-webforms2-and-html5widgets/">html5widgets</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/input-datetime">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/input-datetime.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill gtie9</footer>
           </article>
+          
+          <article class="polyfill fallback">
+            <header>
+              <h2 class="name" id="&lt;input type=number&gt;">&lt;input type=number> </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
+              <h4 class="kind html">html</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>A number input will fallback to a plain text input if it's not supported.</p>
 
+<p>So far, Chrome, Safari and Opera support it. Jonathan Stipe's <a href="https://github.com/jonstipe/number-polyfill">Number polyfill</a> doesn't need any additional code changes but does require jQuery and CSS to style buttons.</p>
+
+<p>Safari on iOS and the Browser on Android 4.0 (Ice Cream Sandwich) do show number input, but do not use "step", "min" or "max" attributes and neither show increment/decrement buttons.</p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/jonstipe/number-polyfill">Number polyfill</a></p></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/input-number">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/input-number.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">polyfill fallback</footer>
+          </article>
+          
           <article class="polyfill gtie9">
             <header>
               <h2 class="name" id="&lt;input type=range&gt;">&lt;input type=range> </h2>
@@ -1033,17 +1089,17 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://www.frequency-decoder.com/2010/11/18/unobtrusive-slider-control-html5-input-range-polyfill/">Input Range Polyfill</a>, <a href="https://github.com/fryn/html5slider">html5slider</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/input-range">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/input-range.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill gtie9</footer>
           </article>
-
+          
           <article class="gtie9">
             <header>
               <h2 class="name" id="input[placeholder]">input[placeholder] </h2>
@@ -1059,17 +1115,17 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/mathiasbynens/jquery-placeholder">Placeholder jQuery Plugin</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/input-placeholder">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/input-placeholder.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie9</footer>
           </article>
-
+          
           <article class="gtie7 polyfill">
             <header>
               <h2 class="name" id="JSON">JSON </h2>
@@ -1083,17 +1139,17 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/douglascrockford/JSON-js">json2.js</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/json">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/json.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie7 polyfill</footer>
           </article>
-
+          
           <article class="gtie7 polyfill">
             <header>
               <h2 class="name" id="localStorage">localStorage </h2>
@@ -1113,17 +1169,17 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://gist.github.com/350433">Remy’s storage polyfill</a>, <a href="http://code.google.com/p/sessionstorage/">sessionstorage</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/localstorage">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/localstorage.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie7 polyfill</footer>
           </article>
-
+          
           <article class="none">
             <header>
               <h2 class="name" id="masks">masks </h2>
@@ -1137,17 +1193,17 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://css3clickchart.com/#masks">
                   Learn more
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/masks.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
           </article>
-
+          
           <article class="polyfill">
             <header>
               <h2 class="name" id="matchMedia">matchMedia </h2>
@@ -1161,17 +1217,17 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/matchmedia">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/matchmedia.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill</footer>
           </article>
-
+          
           <article class="gtie8">
             <header>
               <h2 class="name" id="media queries">media queries </h2>
@@ -1187,17 +1243,17 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/mediaqueries">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/mediaqueries.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie8</footer>
           </article>
-
+          
           <article class="polyfill noie nomobile">
             <header>
               <h2 class="name" id="&lt;menu&gt;">&lt;menu> </h2>
@@ -1211,17 +1267,17 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/medialize/jQuery-contextMenu">contextMenu</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/menu">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/menu.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill noie nomobile</footer>
           </article>
-
+          
           <article class="polyfill noie nomobile">
             <header>
               <h2 class="name" id="&lt;meter&gt;">&lt;meter> </h2>
@@ -1230,22 +1286,22 @@ change radically before stabilizing. Avoid using this. </p>
             </header>
             <div class="more">
               <div class="recco">
-
+                
               </div>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://gist.github.com/667320">meter-polyfill</a>, <a href="https://github.com/xjamundx/HTML5-Meter-Shim">jQuery shim</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/meter">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/meter.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill noie nomobile</footer>
           </article>
-
+          
           <article class="polyfill ie6 gtie6">
             <header>
               <h2 class="name" id="Microdata DOM API">Microdata DOM API </h2>
@@ -1265,17 +1321,13 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/termi/Microdata-JS">microdata shim</a></p></div>
 
               <p class="links">
-
-                <a href="http://caniuse.com/microdata-domapi">
-                  View browser share %
-                </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/microdata-domapi.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill ie6 gtie6</footer>
           </article>
-
+          
           <article class="gtie6">
             <header>
               <h2 class="name" id="min/max-width/height">min/max-width/height </h2>
@@ -1291,17 +1343,17 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/minmaxwh">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/minmaxwh.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie6</footer>
           </article>
-
+          
           <article class="prefixes gtie9 columns">
             <header>
               <h2 class="name" id="multicolumn">multicolumn </h2>
@@ -1317,17 +1369,17 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/multicolumn">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/multicolumn.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">prefixes gtie9 columns</footer>
           </article>
-
+          
           <article class="fallback gtie8">
             <header>
               <h2 class="name" id="multiple backgrounds">multiple backgrounds </h2>
@@ -1336,22 +1388,22 @@ change radically before stabilizing. Avoid using this. </p>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Multiple backgrounds will be <a href="http://snook.ca/archives/html_and_css/multiple-bg-css-gradients">completely ignored</a> when they aren't supported. If you can make do with a simple background color, make sure to declare <code>background-color: &lt;color&gt;</code> on the element before declaring your multiple backgrounds. Alternatively, you can also set an image as a background with <code>background-image</code> and override it with a second background declaration. We strongly recommend you don't polyfill this.</p>
+                <p>Multiple backgrounds will be <a href="http://snook.ca/archives/html_and_css/multiple-bg-css-gradients">completely ignored</a> when they aren't supported. If you can use a simple background color, make sure to declare <code>background-color: &lt;color&gt;</code> on the element before declaring your multiple backgrounds. Alternatively, you can also set an image as a background with <code>background-image</code> and override it with a second background declaration. We strongly recommend you don't polyfill this.</p>
               </div>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/multibackgrounds">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/multibackgrounds.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback gtie8</footer>
           </article>
-
+          
           <article class="fallback gtie9">
             <header>
               <h2 class="name" id="offline">offline </h2>
@@ -1365,17 +1417,17 @@ change radically before stabilizing. Avoid using this. </p>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/offline">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/offline.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback gtie9</footer>
           </article>
-
+          
           <article class="polyfill">
             <header>
               <h2 class="name" id="ol[reversed]">ol[reversed] </h2>
@@ -1390,17 +1442,13 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://gist.github.com/1671548">ol reversed polyfill</a>, <a href="https://github.com/impressivewebs/HTML5-Reverse-Ordered-Lists">HTML5 reverse ordered lists</a></p></div>
 
               <p class="links">
-
-                <a href="http://caniuse.com/ol-reversed">
-                  View browser share %
-                </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/ol-reversed.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill</footer>
           </article>
-
+          
           <article class="gtie8">
             <header>
               <h2 class="name" id="opacity">opacity </h2>
@@ -1414,17 +1462,17 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/opacity">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/opacity.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie8</footer>
           </article>
-
+          
           <article class="none">
             <header>
               <h2 class="name" id="paged media">paged media </h2>
@@ -1438,17 +1486,17 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://css3clickchart.com/#paged-media">
                   Learn more
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/paged-media.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
           </article>
-
+          
           <article class="fallback noie">
             <header>
               <h2 class="name" id="pointer events">pointer events </h2>
@@ -1462,17 +1510,17 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/pointer-events">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/pointer-events.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback noie</footer>
           </article>
-
+          
           <article class="none">
             <header>
               <h2 class="name" id="position:fixed">position:fixed </h2>
@@ -1488,17 +1536,17 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/css-fixed">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/css-fixed.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
           </article>
-
+          
           <article class="api">
             <header>
               <h2 class="name" id="postMessage">postMessage </h2>
@@ -1512,17 +1560,17 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://easyxdm.net/wp/">EasyXDM</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/postmessage">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/postmessage.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">api</footer>
           </article>
-
+          
           <article class="polyfill gtie9">
             <header>
               <h2 class="name" id="&lt;progress&gt;">&lt;progress> </h2>
@@ -1537,17 +1585,17 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/progress">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/progress.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill gtie9</footer>
           </article>
-
+          
           <article class="none">
             <header>
               <h2 class="name" id="pseudo elements">pseudo elements </h2>
@@ -1563,17 +1611,17 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/pseudo-elements">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/pseudo-elements.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
           </article>
-
+          
           <article class="none">
             <header>
               <h2 class="name" id="regions">regions </h2>
@@ -1587,17 +1635,17 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/regions">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/regions.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
           </article>
-
+          
           <article class="polyfill gtie9">
             <header>
               <h2 class="name" id="requestAnimationFrame">requestAnimationFrame </h2>
@@ -1615,17 +1663,17 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://gist.github.com/1579671">requestAnimationFrame polyfill</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/requestanimationframe">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/requestanimationframe.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill gtie9</footer>
           </article>
-
+          
           <article class="fallback">
             <header>
               <h2 class="name" id="&lt;ruby&gt;">&lt;ruby> </h2>
@@ -1639,17 +1687,17 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://www.useragentman.com/blog/2010/10/29/cross-browser-html5-ruby-annotations-using-css/">Cross-browser Ruby</a>, <a href="http://sideshowbarker.net/2009/11/13/html5-ruby/#comment-3388">basic fallback</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/ruby">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/ruby.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback</footer>
           </article>
-
+          
           <article class="fallback gtie6">
             <header>
               <h2 class="name" id="selectors">selectors </h2>
@@ -1710,17 +1758,17 @@ Resources:
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/selectors">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/selectors.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback gtie6</footer>
           </article>
-
+          
           <article class="">
             <header>
               <h2 class="name" id="style[scoped]">style[scoped] </h2>
@@ -1734,17 +1782,13 @@ Resources:
               <div class="polyfills"></div>
 
               <p class="links">
-
-                <a href="http://caniuse.com/scoped-css">
-                  View browser share %
-                </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/scoped-css.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags"></footer>
           </article>
-
+          
           <article class="gtie8 polyfill">
             <header>
               <h2 class="name" id="&lt;svg&gt;">&lt;svg> </h2>
@@ -1760,17 +1804,17 @@ Resources:
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://code.google.com/p/svgweb/">SVGWeb</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/svg">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/svg.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie8 polyfill</footer>
           </article>
-
+          
           <article class="none">
             <header>
               <h2 class="name" id="text-overflow">text-overflow </h2>
@@ -1784,17 +1828,17 @@ Resources:
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/text-overflow">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/text-overflow.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
           </article>
-
+          
           <article class="gtie9">
             <header>
               <h2 class="name" id="text-shadow">text-shadow </h2>
@@ -1810,17 +1854,17 @@ Resources:
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/text-shadow">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/text-shadow.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie9</footer>
           </article>
-
+          
           <article class="none">
             <header>
               <h2 class="name" id="text-stroke">text-stroke </h2>
@@ -1834,17 +1878,17 @@ Resources:
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/text-stroke">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/text-stroke.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
           </article>
-
+          
           <article class="polyfill gtie9 webvtt">
             <header>
               <h2 class="name" id="&lt;track&gt;">&lt;track> </h2>
@@ -1858,17 +1902,17 @@ Resources:
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://captionatorjs.com/">captionator.js</a></p></div>
 
               <p class="links">
-
+              
                 <a href="https://developer.mozilla.org/en/HTML/Element/track#Compatibility">
                   Learn more
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/track.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill gtie9 webvtt</footer>
           </article>
-
+          
           <article class="fallback prefixes">
             <header>
               <h2 class="name" id="transforms">transforms </h2>
@@ -1882,17 +1926,17 @@ Resources:
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/transforms">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/transforms.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback prefixes</footer>
           </article>
-
+          
           <article class="fallback prefixes">
             <header>
               <h2 class="name" id="transitions">transitions </h2>
@@ -1901,23 +1945,23 @@ Resources:
             </header>
             <div class="more">
               <div class="recco">
-                <p>Most of the time, transitions just add to the experience and are not necessary for a usable experience. If there is any critical interaction that requires transitions to be present, we recommend you provide an alternative experience for users on browsers that do not support this feature by feature detecting its presence.
+                <p>Most of the time, transitions just add to the experience and are not necessary for a usable experience. If there is any critical interaction that requires transitions to be present, we recommend you provide an alternative experience for users on browsers that do not support this feature by feature detecting its presence. 
 Note that you need to use all the usual prefixes to make this work in all browsers (<code>-o-</code>, <code>-webkit-</code>, <code>-moz-</code>, <code>-ms-</code>).</p>
               </div>
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/transitions">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/transitions.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback prefixes</footer>
           </article>
-
+          
           <article class="polyfill gtie8">
             <header>
               <h2 class="name" id="&lt;video&gt;">&lt;video> </h2>
@@ -1933,17 +1977,17 @@ Note that you need to use all the usual prefixes to make this work in all browse
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://mediaelementjs.com/">mediaelementjs</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/video">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/video.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill gtie8</footer>
           </article>
-
+          
           <article class="fallback gtie9">
             <header>
               <h2 class="name" id="Web Workers">Web Workers </h2>
@@ -1957,17 +2001,17 @@ Note that you need to use all the usual prefixes to make this work in all browse
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/webworkers">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/webworkers.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback gtie9</footer>
           </article>
-
+          
           <article class="fallback">
             <header>
               <h2 class="name" id="WebGL">WebGL </h2>
@@ -1983,17 +2027,17 @@ Note that you need to use all the usual prefixes to make this work in all browse
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/webgl">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/webgl.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback</footer>
           </article>
-
+          
           <article class="polyfill prefixes">
             <header>
               <h2 class="name" id="WebSockets">WebSockets </h2>
@@ -2023,17 +2067,17 @@ Note that you need to use all the usual prefixes to make this work in all browse
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/gimite/web-socket-js">web-socket-js</a></p></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/websockets">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/websockets.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill prefixes</footer>
           </article>
-
+          
           <article class="none">
             <header>
               <h2 class="name" id="WebSQL DB">WebSQL DB </h2>
@@ -2047,17 +2091,17 @@ Note that you need to use all the usual prefixes to make this work in all browse
               <div class="polyfills"></div>
 
               <p class="links">
-
+              
                 <a href="http://caniuse.com/websql">
                   View browser share %
                 </a>
-
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/websql.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
           </article>
-
+          
         </section>
       <h2 id="noitems" class="visuallyhidden">No items met your search =(</h2>
     </div>
@@ -2067,17 +2111,16 @@ Note that you need to use all the usual prefixes to make this work in all browse
       </p>
     </footer>
 
-    <!-- all of these
+    <!-- all of these ... -->
     <script src="js/libs/augment.js"></script>
     <script src="js/libs/list.js"></script>
     <script src="js/libs/classList.js"></script>
     <script src="js/script.js"></script>
-     are  compiled (with source map) into...
+     <!--    are NORMALLY compiled (with source map) into...
 
--->
     <script src="js/script.min.js"></script>
 
-    <!--   -->
+    .. but not today  -->
 
 
     <script>
