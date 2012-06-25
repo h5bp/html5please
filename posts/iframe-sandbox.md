@@ -11,4 +11,4 @@ Browser support is not nearly high enough to consider this measure alone
 sufficient for sanitizing output. Use this attribute as part of a
 defense-in-depth strategy.
 
-Also see [this post on Bocoup.com](http://weblog.bocoup.com/third-party-javascript-development-future/).
+Also see [more about implementing `iframe[sandbox]`](http://weblog.bocoup.com/third-party-javascript-development-future/#iframe-sandbox) responsibly on Bocoup's blog.
