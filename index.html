@@ -939,6 +939,36 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
             <footer class="tags">none prefixes</footer>
           </article>
           
+          <article class="none">
+            <header>
+              <h2 class="name" id="iframe[seamless]">iframe[seamless] </h2>
+              <h3 class="status caution">caution <i></i> </h3>
+              <h4 class="kind html">html</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>This attribute instructs browsers to treat the iFrame's content more like inline markup than it would otherwise. Specifically, this means:</p>
+
+<ul>
+<li>Hyperlinks navigate the parent context</li>
+<li>The parent's stylesheets cascade in (importantly, the inverse is not true)</li>
+<li>More "neutral" rendering, roughly equivalent to declaring: <code>scrolling="no" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0"</code></li>
+</ul>
+
+<p>Because the user experience of following hyperlinks is so drastically altered in supporting browsers, use this attribute with caution.</p>
+
+<p>Also see <a href="http://weblog.bocoup.com/third-party-javascript-development-future/">this post on Bocoup.com</a>.</p>
+              </div>
+              <div class="polyfills"></div>
+
+              <p class="links">
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/iframe-seamless.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">none</footer>
+          </article>
+          
           <article class="polyfill">
             <header>
               <h2 class="name" id="iframe[srcdoc]">iframe[srcdoc] </h2>
@@ -951,7 +981,7 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
 
 <p>For non-supporting browsers, you can use <a href="https://github.com/jugglinmike/srcdoc-polyfill">this srcdoc polyfill</a> which utilizes script-targeted URLs to provide this functionality in non-supporing browsers.</p>
 
-<p>Also see <a href="http://weblog.bocoup.com/third-party-javascript-development-future/">this post on Bocoup.com</a>.</p>
+<p>Also see <a href="http://weblog.bocoup.com/third-party-javascript-development-future/#iframe-srcdoc">more about implementing <code>iframe[srcdoc]</code></a> responsibly on Bocoup's blog.</p>
               </div>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/jugglinmike/srcdoc-polyfill">srcdoc polyfill</a></p></div>
 
