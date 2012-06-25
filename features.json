@@ -89,6 +89,12 @@
     "recco": ""
   },
   {
+    "feature": "iframe[srcdoc]",
+	"status": "use",
+	"tags": "polyfill",
+	"recco": ""
+  },
+  {
     "feature": "postMessage",
     "status": "caution",
     "tags": "gtie8",
