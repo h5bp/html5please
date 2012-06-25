@@ -90,9 +90,9 @@ for(var i = 0; i < count; i++) {
 
   expandfeatures[i].onclick = function(e) {
       e = e || window.event;
-      var node     = e.target || e.srcElement;
-      var parent   = node.parentNode;
-      var h2       = node.querySelectorAll('h2')[0];
+      var node = e.target || e.srcElement,
+      var parent = node.parentNode;
+      var h2 = node.querySelectorAll('h2')[0];
       classList(parent).toggle('expanded');
       h2.setAttribute("aria-expanded", h2.getAttribute("aria-expanded") == "false" ? "true" : "false");
   };
