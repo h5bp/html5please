@@ -1,8 +1,6 @@
-/* Author: Divya Manian, Paul Irish, et al
+/* Author: Divya Manian, Paul Irish, et al  */
 
-*/
-
-/* predef: classList */
+/*global window, navigator, document, importScripts, jQuery, setTimeout, opera, classList, List */
 
 // el.innerText / el.textContent helper
 var text;
