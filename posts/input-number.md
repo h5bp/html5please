@@ -1,6 +1,6 @@
 feature: <input type=number>
-status: caution
-tags: polyfill gtie9
+status: use
+tags: polyfill fallback
 kind: html
 polyfillurls: [Number polyfill](https://github.com/jonstipe/number-polyfill)
 
