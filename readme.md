@@ -29,6 +29,10 @@
 
 ## Changelog
 
+### Aug 5 2012
+
+- `features.json` removed
+
 ### Dec 12 2011
 
 - No more JSON!
