@@ -1,8 +1,8 @@
 feature: <input type=search>
-status: caution
-tags: polyfill
+status: use
+tags: 
 kind: html
 
-A search input will fall back to a plain text input if it's not supported. The standard doesn't specify any behavior for this type; so far, Safari and Chrome support a clear button when there's content in the text box, in addition to a different style.
+A [search input](http://wufoo.com/html5/types/5-search.html) will fall back to a plain text input if it's not supported. The standard doesn't specify any behavior for this type, but recommends styling to match the platform's search fields (e.g. with rounded corners on OS X).  The style cancels out many CSS styles from being applied, and can be removed with `-webkit-appearance: none;`.  The recommendation here is to use `input[type=search]` to enhance your forms, so long as you're okay with the styling difference.
 
-Technically every browser supports this, since there is no defined behavior.  If you need the clearing behavior, there are many [simple ÎÐscripts](http://www.queness.com/post/8434/re-create-googles-search-input-field-and-submit-button) available.
+While the standard does not specify any behavior, Webkit browsers supply a button to clear the input when it has a value.
