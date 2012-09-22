@@ -262,6 +262,15 @@
             <div class="more">
               <div class="recco">
                 <p>Internet Explorer, Chrome and Firefox are the only supporting browsers, which makes using calc() in production tedious given the impact it can have on layout and the consequent breaking of your design on unsupported browsers. We encourage you to use it for experimentation and always use a fallback declaration, so it doesn't break browsers which don't support it.</p>
+
+<p>For now, <code>calc()</code> must always be used after a fallback declaration, so it doesn't break browsers which don't support it.</p>
+
+<pre><code>width: 500px; /** older browsers **/
+width: -webkit-calc(50% - 20px); /** Chrome / Safari **/
+width: -moz-calc(50% - 20px); /** Mozilla Firefox **/
+width: -o-calc(50% - 20px); /** could be calc(), no idea about Opera's plans **/
+width: calc(50% - 20px); /** IE and future other browsers **/
+</code></pre>
               </div>
               <div class="polyfills"></div>
 
@@ -545,6 +554,10 @@ Also note that some shims are known to have <a href="https://gist.github.com/112
 
               <p class="links">
               
+                <a href="http://caniuse.com/es6">
+                  View browser share %
+                </a>
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/es6.md">Edit this info</a>
               </p>
             </div>
@@ -693,7 +706,7 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
 
 <p>We recommend you avoid using this until the TR version of the spec finds wide-spread implementation.</p>
               </div>
-              <div class="polyfills"></div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p>http://flexiejs.com/</p></div>
 
               <p class="links">
               
@@ -781,6 +794,30 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
               </p>
             </div>
             <footer class="tags">polyfill gtie9</footer>
+          </article>
+          
+          <article class="fallback">
+            <header>
+              <h2 class="name" id="fullscreen">fullscreen </h2>
+              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>
+              <h4 class="kind api">api</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>The Full Screen API is currently only available in the latest versions of Chrome and Firefox. A jQuery plugin is available which contains an optional fallback to a minimal-chrome browser window when the Full Screen API is unavailable. Use as a progressive enhancement for those select browsers only.</p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/darcyclarke/jQuery-Fullscreen-Plugin">jQuery Fullscreen Plugin</a></p></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/fullscreen">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/fullscreen.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">fallback</footer>
           </article>
           
           <article class="fallback gtie8">
@@ -921,9 +958,10 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
             </header>
             <div class="more">
               <div class="recco">
-                <p><a href="http://dev.w3.org/csswg/css3-text/#hyphenation">CSS Text Level 3</a> allows you to tell the browser to break words using hyphens. Read about how to effectively use <code>hyphens:auto</code> and <code>word-break</code> in <a href="http://blog.kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/">Word wrapping/hyphenation using CSS</a>. </p>
+                <p><a href="http://dev.w3.org/csswg/css3-text/#hyphenation">CSS Text Level 3</a> allows you to tell the browser to break words using hyphens. Read about how to effectively use <code>hyphens:auto</code> and <code>word-break</code> in <a href="http://blog.kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/">Word wrapping/hyphenation using CSS</a>.</p>
 
-<p>As there won't by any noticable effects on browsers which don't support the feature, we recommend that you use it without any polyfills or fallbacks. <a href="http://code.google.com/p/hyphenator/">CSS Hyphenator</a> is a polyfill that works on browsers that support the soft hyphen. <a href="https://github.com/Modernizr/Modernizr/issues/312">Modernizr has good support</a> for hyphentation detection. </p>
+<p>As there won't by any noticable effects on browsers which don't support the feature, we recommend that you use it without any polyfills or fallbacks. <a href="http://code.google.com/p/hyphenator/">CSS Hyphenator</a> is a polyfill that works on browsers that support the soft hyphen. <a href="https://github.com/Modernizr/Modernizr/issues/312">Modernizr has good support</a> for hyphentation detection. It'd also be wise to read <a href="http://davidnewton.ca/the-current-state-of-hyphenation-on-the-web">The Current State of Hyphenation on the Web
+</a>.</p>
               </div>
               <div class="polyfills"></div>
 
@@ -954,7 +992,7 @@ document housed within an iFrame.</p>
 sufficient for sanitizing output. Use this attribute as part of a
 defense-in-depth strategy.</p>
 
-<p>Also see <a href="http://weblog.bocoup.com/third-party-javascript-development-future/">this post on Bocoup.com</a>.</p>
+<p>Also see <a href="http://weblog.bocoup.com/third-party-javascript-development-future/#iframe-sandbox">more about implementing <code>iframe[sandbox]</code></a> responsibly on Bocoup's blog.</p>
               </div>
               <div class="polyfills"></div>
 
@@ -994,6 +1032,10 @@ defense-in-depth strategy.</p>
 
               <p class="links">
               
+                <a href="http://caniuse.com/iframe-seamless">
+                  View browser share %
+                </a>
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/iframe-seamless.md">Edit this info</a>
               </p>
             </div>
@@ -1017,6 +1059,10 @@ defense-in-depth strategy.</p>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/jugglinmike/srcdoc-polyfill">srcdoc polyfill</a></p></div>
 
               <p class="links">
+              
+                <a href="http://caniuse.com/iframe-srcdoc">
+                  View browser share %
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/iframe-srcdoc.md">Edit this info</a>
               </p>
@@ -1159,6 +1205,32 @@ defense-in-depth strategy.</p>
               </p>
             </div>
             <footer class="tags">polyfill gtie9</footer>
+          </article>
+          
+          <article class="">
+            <header>
+              <h2 class="name" id="&lt;input type=search&gt;">&lt;input type=search> </h2>
+              <h3 class="status use">use <i></i> </h3>
+              <h4 class="kind html">html</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>A <a href="http://wufoo.com/html5/types/5-search.html">search input</a> will fall back to a plain text input if it's not supported. The standard doesn't specify any behavior for this type, but recommends styling to match the platform's search fields (e.g. with rounded corners on OS X).  The style cancels out many CSS styles from being applied, and can be removed with <code>-webkit-appearance: none;</code>.  The recommendation here is to use <code>input[type=search]</code> to enhance your forms, so long as you're okay with the styling difference.</p>
+
+<p>While the standard does not specify any behavior, Webkit browsers supply a button to clear the input when it has a value.</p>
+              </div>
+              <div class="polyfills"></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/input-search">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/input-search.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags"></footer>
           </article>
           
           <article class="gtie9">
@@ -1383,6 +1455,10 @@ defense-in-depth strategy.</p>
 
               <p class="links">
               
+                <a href="http://caniuse.com/microdata-domapi">
+                  View browser share %
+                </a>
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/microdata-domapi.md">Edit this info</a>
               </p>
             </div>
@@ -1503,6 +1579,10 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://gist.github.com/1671548">ol reversed polyfill</a>, <a href="https://github.com/impressivewebs/HTML5-Reverse-Ordered-Lists">HTML5 reverse ordered lists</a></p></div>
 
               <p class="links">
+              
+                <a href="http://caniuse.com/ol-reversed">
+                  View browser share %
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/ol-reversed.md">Edit this info</a>
               </p>
@@ -1844,6 +1924,10 @@ Resources:
 
               <p class="links">
               
+                <a href="http://caniuse.com/scoped-css">
+                  View browser share %
+                </a>
+              
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/scoped-css.md">Edit this info</a>
               </p>
             </div>
@@ -2097,6 +2181,34 @@ Note that you need to use all the usual prefixes to make this work in all browse
               </p>
             </div>
             <footer class="tags">fallback</footer>
+          </article>
+          
+          <article class="">
+            <header>
+              <h2 class="name" id="WebP">WebP </h2>
+              <h3 class="status caution">caution <i></i> </h3>
+              <h4 class="kind html">html</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>WebP is an image format that's designed to be provide high quality photographic imagery through smaller filesizes than JPEG. It's supported natively in Chrome, Android, and Opera. Through the <a href="https://github.com/antimatter15/weppy">weppy</a> polyfill you can pick up Firefox support.</p>
+
+<p>WebP alpha support is available in Chrome 22 (along with lossless). You can detect alpha support with a <code>onload</code>/<code>onerror</code> handlers, though there is <a href="https://github.com/antimatter15/weppy/issues/2">discussion</a> about giving weppy a firstclass support for alpha+fallback.</p>
+
+<p>For now, Modernizr detects WebP support and you can manage your own fallback to jpeg.</p>
+              </div>
+              <div class="polyfills"></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/webp">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/webp.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags"></footer>
           </article>
           
           <article class="polyfill prefixes">
