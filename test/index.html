@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+ <link rel="stylesheet" href="http://code.jquery.com/qunit/qunit-1.5.0.css" type="text/css"/>
+ <style>
+ h1 label  {display: none!important}
+ </style>
+ <script type="text/javascript" src="http://code.jquery.com/qunit/qunit-1.5.0.js"></script>
+ <script src="qunit-yeti-adaptor.js"></script>
+ <script type="text/javascript">
+	module("module1", {
+	  setup: function() {
+		this.foobar = true;
+	  }
+	});
+
+	test("first test with setup", function() {
+	  ok(this.foobar, "this.foobar is defined");
+	});
+
+	module("module2", {
+	  setup: function() {
+		this.foobar = "setup";
+	  },
+	  teardown: function() {
+		this.foobar = "teardown";
+	  }
+	});
+
+	test("test with setup and teardown", function() {
+	  expect(2);
+	  ok(this.foobar);
+	  equal(this.foobar, "setup");
+	});
+
+	asyncTest("asynchronous test", function() {
+		var that = this;
+		setTimeout(function() {
+			start();
+			// Start have to be called in async function
+			// No matter where
+			equal(that.foobar, "setup");
+		}, 3000);
+	});
+
+	module("module3");
+
+	test("test with neither setup nor teardown", function() {
+		equal(typeof this.foobar, "undefined");
+		// this object is cleaned up each test
+	});
+ </script>
+</head>
+<body>
+ <h1 id="qunit-header">HTML5 Please test suite</h1>
+ <h2 id="qunit-banner"></h2>
+ <h2 id="qunit-userAgent"></h2>
+ <ol id="qunit-tests"></ol>
+</body>
+</html>

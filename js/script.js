@@ -1,6 +1,6 @@
-/* Author: Divya Manian, Paul Irish, et al 
+/* Author: Divya Manian, Paul Irish, et al  */
 
-*/
+/*global window, navigator, document, importScripts, jQuery, setTimeout, opera, classList, List */
 
 // el.innerText / el.textContent helper
 var text;
@@ -18,14 +18,16 @@ if (window.attachEvent) {
   addEvent = function (el, ev, cb, capture) { el.addEventListener(ev, cb, capture); };
 }
 
-// gtieX augments. so a search is matching .gtie8, 
+// gtieX augments. so a search is matching .gtie8,
 // need to match .gtie7 and .gtie6 too
 var ies = ['gtie6', 'gtie7', 'gtie8', 'gtie9', 'gtie10'];
 
 
 var	search = document.getElementById('livesearch'),
     searchresults = document.querySelectorAll('.features article'),
-    searchurl = document.getElementById('searchurl');	
+    searchurl = document.getElementById('searchurl'),
+    currentActiveHash,
+    lastActiveHash;
 
 [].map.call(searchresults, function(result) {
   var tags = result.querySelector('.tags'),
@@ -40,49 +42,91 @@ var	search = document.getElementById('livesearch'),
   if(ieindex != -1){
     tagslist = tagslist.concat(ies.slice(ieindex + 1));
   }
-  tags.textContent = tagslist.join(' ');  
+  tags.textContent = tagslist.join(' ');
 });
 
 var listOptions = {
 		listClass: 'features',
 		valueNames: ['kind', 'status', 'name', 'tags']
 	},
-  featureList = new List('gfs', listOptions);
+  featureList = new List('gfs', listOptions),
+  noitemsNotification = document.querySelector('#noitems');
   search.onkeyup = updatesearch;
 
 function updatesearch() {
+
+
+  classList(document.body)[ search.value !== '' ? 'add' : 'remove']('searchvalue');
+
   if (search.value != '') {
     searchurl.href='./#' + search.value;
     searchurl.className = 'active';
     for (var i = 0, len = searchresults.length; i < len; i++) {
         classList(searchresults[i]).add('expanded');
+        searchresults[i].querySelectorAll('h2')[0].setAttribute("aria-expanded", "true");
     }
+
+    if (!document.querySelectorAll('.expanded').length) {
+      classList(noitemsNotification).remove('visuallyhidden');
+    } else {
+      classList(noitemsNotification).add('visuallyhidden');
+    }
+
   } else {
     searchurl.className = '';
     for (var i = 0, len = searchresults.length; i < len; i++) {
         classList(searchresults[i]).remove('expanded');
+        searchresults[i].querySelectorAll('h2')[0].setAttribute("aria-expanded", "false");
     }
   }
 }
 
 var expandfeatures = document.querySelectorAll('.features article header'),
     count = expandfeatures.length;
-    
+
 for(var i = 0; i < count; i++) {
+
   expandfeatures[i].onclick = function(e) {
       e = e || window.event;
       var node = e.target || e.srcElement;
       var parent = node.parentNode;
+      var h2 = node.querySelectorAll('h2')[0];
       classList(parent).toggle('expanded');
+      h2.setAttribute("aria-expanded", h2.getAttribute("aria-expanded") == "false" ? "true" : "false");
   };
-}    
+
+  var h2elem = expandfeatures[i].querySelectorAll('h2')[0];
+  h2elem.setAttribute("tabIndex","0");
+  h2elem.setAttribute("role","button");
+  h2elem.setAttribute("aria-expanded","false");
+
+  h2elem.onkeydown = function(e) {
+    if(e.keyCode === 13 || e.keyCode === 32 ){
+      e.preventDefault();
+      e = e || window.event;
+      var node = e.target || e.srcElement;
+      var grandParent = node.parentNode.parentNode;
+      node.setAttribute("aria-expanded", node.getAttribute("aria-expanded") == "false" ? "true" : "false");
+      classList(grandParent).toggle('expanded');
+    }
+  };
+
+  h2elem.onclick = function(e) {
+    e = e || window.event;
+    var node = e.target || e.srcElement;
+    var grandParent = node.parentNode.parentNode;
+    node.setAttribute("aria-expanded", node.getAttribute("aria-expanded") == "false" ? "true" : "false");
+    classList(grandParent).toggle('expanded');
+  };
+
+}
 
 var clicktags = document.querySelectorAll('.explore-features a');
 
 [].map.call(clicktags, function(tag) {
   tag.onclick = function(e) {
     showsearch(/#(.*)/.exec(tag.href)[1]);
-  };  
+  };
 });
 
 if(window.location.hash) {
@@ -91,7 +135,13 @@ if(window.location.hash) {
 
 function showsearch(hash) {
   search.value = hash;
+
   featureList.search(hash);
+  currentActiveHash = document.querySelector('a[href="#' + hash +'"]');
+  lastActiveHash    && classList(lastActiveHash).remove('active');
+  currentActiveHash && classList(currentActiveHash).add('active');
+  lastActiveHash = currentActiveHash;
+
   updatesearch();
 };
 

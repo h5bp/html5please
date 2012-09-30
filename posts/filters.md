@@ -1,9 +1,8 @@
 feature: filters
 status: avoid
-tags: none
+tags: prefixes
 kind: css
 polyfillurls:
 moreurl: http://css3clickchart.com/#filters
 
-This spec is under active development and as such syntaxes are likely to
-change radically before stabilizing. Avoid using this. 
+Filters are now supported by Safari 6 and Chrome 18+. But, given the lack of support in other browsers, consider waiting for other implementations before use. 

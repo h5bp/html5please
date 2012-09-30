@@ -18,7 +18,10 @@
     "handlebars": "*",
     "node-markdown": "*",
     "request": "*",
-    "async": "*"
+    "async": "*",
+
+    "grunt": "*",
+    "grunt-closure-compiler" : "0.0.2"
   },
   "devDependencies": {}
 }

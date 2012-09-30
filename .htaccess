@@ -10,3 +10,8 @@
 <IfModule mod_headers.c>
   Header set Access-Control-Allow-Origin "*"
 </IfModule>
+
+
+<FilesMatch "script\.min\.js$">
+  Header set X-SourceMap "../script.min.js.map"
+</FilesMatch>

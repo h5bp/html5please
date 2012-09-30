@@ -1,6 +1,6 @@
 feature: ECMAScript 5
 status: use
-tags: fallback gtie8 nooldmobile
+tags: fallback gtie8 nooldmobile es5
 kind: js
 polyfillurls: [es5-shim](https://github.com/kriskowal/es5-shim/), [augment.js](http://augmentjs.com/)
 

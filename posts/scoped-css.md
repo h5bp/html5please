@@ -2,6 +2,5 @@ feature: style[scoped]
 status: avoid
 tags: 
 kind: css
-polyfillurls: [jQuery-Scoped-CSS-plugin](https://github.com/thingsinjars/jQuery-Scoped-CSS-plugin)
 
-Scoped stylesheets are still in active development, the first implementation of which should be available in WebKit soon.
+[Scoped stylesheets](http://css-tricks.com/saving-the-day-with-scoped-css/) are still in active development. While you can experiment with them in Chrome Canary (type `about:flags` in Chrome's address bar), there is no stable version of any browser supporting this now. 

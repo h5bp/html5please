@@ -5,4 +5,4 @@ kind: css
 polyfillurls:
 moreurl: http://www.webkit.org/blog/182/css-reflections/
 
-Box reflection has never been part of a CSS specification. Certain presentations that are possible with `box-reflection` will be possible using CSS Filters. Until then, you should avoid using WebKit-only box reflections.
+The `box-reflect` property has never been part of any CSS specification. Certain presentations that are possible with `-webkit-box-reflect` will be possible using CSS Filters. You should avoid using WebKit-only box reflections.

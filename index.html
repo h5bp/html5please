@@ -53,396 +53,415 @@
         
           <article class="fallback">
             <header>
-              <h2 class="name">animations </h2>
-              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="animations">animations </h2>
+              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>CSS Animations are still in flux. The Working Group has <a href="http://www.w3.org/2012/01/13-svg-minutes.html#action02">decided to provide</a> a universal animation spec that would work across CSS, SVG and HTML. For now, either use animations only to provide non-essential aesthetic enhancements or use feature detection to provide an alternative experience for browsers that do not support this feature.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/animations">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/animations.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill">
             <header>
-              <h2 class="name">&lt;audio> </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="&lt;audio&gt;">&lt;audio> </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>As is the case with video, you need to provide your audio file in multiple formats for these to work, namely in <a href="http://www.scirra.com/blog/44/on-html5-audio-formats-aac-and-ogg">Ogg Vorbis and AAC</a>. jPlayer has a jQuery dependency. Sound Manager has an extensive API for further customization. <a href="http://mediaelementjs.com/">mediaelement.js</a> offers the HTML5 media element API through Flash in the fallback case and offers uniform styling across browsers and to the Flash widget.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://mediaelementjs.com/">mediaelement.js</a>, <a href="https://github.com/happyworm/jPlayer">jPlayer</a>, <a href="http://www.schillmania.com/projects/soundmanager2/">Sound Manager 2</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://mediaelementjs.com/">mediaelement.js</a>, <a href="https://github.com/happyworm/jPlayer">jPlayer</a>, <a href="http://www.schillmania.com/projects/soundmanager2/">Sound Manager 2</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/audio">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/audio.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill</footer>
-          </article>          
-        
+          </article>
+          
           <article class="gtie8 fallback">
             <header>
-              <h2 class="name">background-image options </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="background-image options">background-image options </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>CSS3 <code>background-image</code> options include <code>background-clip</code>, <code>background-origin</code> and <code>background-size</code>. Just ensure that your background image does not make it unreadable on IE8- where these properties are not supported. Also, when using <code>background-image</code> make sure you have a fallback color in case the image fails to load. </p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/background-image">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/background-image.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie8 fallback</footer>
-          </article>          
-        
+          </article>
+          
           <article class="fallback prefixes">
             <header>
-              <h2 class="name">border-image </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="border-image">border-image </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>Make sure to use all the right prefixes (<code>-o-</code>, <code>-webkit-</code>, <code>-ms-</code>, <code>-moz-</code>). Additionally, <a href="http://border-image.com/">border-image.com</a> may help. You should let this fall back to either a normal solid border or no border at all, depending on whether a border is essential for readability. We recommend that you avoid polyfills.</p>
+
+<p>There were some syntax changes (requiring the <code>fill</code> keywords) that may catch you off-guard; <a href="http://dbaron.org/log/20120612-border-image">David Baron's border-image post</a> describes the best course of action.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/border-image">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/border-image.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback prefixes</footer>
-          </article>          
-        
+          </article>
+          
           <article class="">
             <header>
-              <h2 class="name">border-radius </h2>
-              <h3 class="status use">use <i></i> </h3>                                                        
+              <h2 class="name" id="border-radius">border-radius </h2>
+              <h3 class="status use">use <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p><code>border-radius</code> can be safely used without a prefix for all modern browsers, and gracefully renders rectangles when not supported. However, note that applying this to a large area and on many elements <a href="http://perfectionkills.com/profiling-css-for-fun-and-profit-optimization-notes/">might cause significant performance</a> impact when scrolling or when the window is redrawn. </p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/border-radius">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/border-radius.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags"></footer>
-          </article>          
-        
+          </article>
+          
           <article class="none">
             <header>
-              <h2 class="name">box-reflection </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>                                                        
+              <h2 class="name" id="box-reflection">box-reflection </h2>
+              <h3 class="status avoid">avoid <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Box reflection has never been part of a CSS specification. Certain presentations that are possible with <code>box-reflection</code> will be possible using CSS Filters. Until then, you should avoid using WebKit-only box reflections.</p>
+                <p>The <code>box-reflect</code> property has never been part of any CSS specification. Certain presentations that are possible with <code>-webkit-box-reflect</code> will be possible using CSS Filters. You should avoid using WebKit-only box reflections.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://www.webkit.org/blog/182/css-reflections/">
                   Learn more
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/box-reflection.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
-          </article>          
-        
-          <article class="none">
+          </article>
+          
+          <article class="prefixes">
             <header>
-              <h2 class="name">box-shadow </h2>
-              <h3 class="status caution">caution <i></i> </h3>                                                        
+              <h2 class="name" id="box-shadow">box-shadow </h2>
+              <h3 class="status caution">caution <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p><code>box-shadow</code> is safe to use most of the time, except when you are applying it on a large area as that may cause significant performance impact when interacting with the page (on scroll and hovers, but also transitions and animations). </p>
 
-<p>Polyfills are unnecessary for box-shadow. They are too costly and slow down pageload. Users without a modern browser will not see a shadow, but aren't checking your site in multiple browsers anyhow.</p>
+<p>Polyfills are unnecessary for box-shadow. They are too costly and slow down page load. Users without a modern browser will not see a shadow, but aren't checking your site in multiple browsers anyhow.</p>
+
+<p>Box shadows can also be applied safely without prefixes. </p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/box-shadow">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/box-shadow.md">Edit this info</a>
               </p>
             </div>
-            <footer class="tags">none</footer>
-          </article>          
-        
+            <footer class="tags">prefixes</footer>
+          </article>
+          
           <article class="fallback prefixes gtie7 border-box">
             <header>
-              <h2 class="name">box-sizing </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="box-sizing">box-sizing </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p><a href="http://paulirish.com/2012/box-sizing-border-box-ftw/"><code>box-sizing : border-box</code></a> may be a much more sensible default for you. You can apply it to all (<code>*</code>) elements if you like. Firefox is the only browser that requires a prefix for box-sizing. You can use it without a prefix for everything else. IE8 has this feature natively, and you can optionally use the <a href="https://github.com/Schepp/box-sizing-polyfill">box-sizing polyfill</a> to provide this feature in IE 6/7 (you could scope the adjustments using <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">IE conditionals</a> or Modernizr's <a href="http://www.modernizr.com/download/#-cssclasses-addtest-css_boxsizing"><code>no-box-sizing</code></a>).</p>
+                <p>Supported in Chrome, IE8+, Opera, Safari 5.1+. The <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/">recommended pattern</a> is <code>box-sizing : border-box;</code>, preceded by the fallbacks <code>-webkit-box-sizing: border-box;</code> for old IOS&lt;=4 and Android&lt;=2.3, and <code>-moz-box-sizing: border-box;</code> for firefox. You can apply it to all (<code>*</code>) elements if you like.</p>
 
-<p>There are still issues regarding max-height/min-height and box sizing in Gecko/Firefox, see <a href="https://developer.mozilla.org/En/CSS/Box-sizing#Notes">notes at MDN</a>.</p>
+<p>For IE6/7 you can optionally use the <a href="https://github.com/Schepp/box-sizing-polyfill">box-sizing polyfill</a> to provide this feature in IE 6/7 (you could scope the adjustments using <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">IE conditionals</a> or Modernizr's <a href="http://www.modernizr.com/download/#-cssclasses-addtest-css_boxsizing"><code>no-box-sizing</code></a>).</p>
+
+<p>Besides the prefix, there are box sizing issues in Gecko/Firefox, see <a href="https://developer.mozilla.org/En/CSS/Box-sizing#Notes">notes at MDN</a>. Most notable, min-height/max-height does not work.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/box-sizing">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/box-sizing.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback prefixes gtie7 border-box</footer>
-          </article>          
-        
+          </article>
+          
           <article class="none">
             <header>
-              <h2 class="name">calc() </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>                                                        
+              <h2 class="name" id="calc()">calc() </h2>
+              <h3 class="status caution">caution <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Internet Explorer and Firefox are the only supporting browsers, which makes using calc() in production tedious given the impact it can have on layout and the consequent breaking of your design on unsupported browsers. We encourage you to use it for experimentation, but not yet for any production use.</p>
+                <p>Internet Explorer, Chrome and Firefox are the only supporting browsers, which makes using calc() in production tedious given the impact it can have on layout and the consequent breaking of your design on unsupported browsers. We encourage you to use it for experimentation and always use a fallback declaration, so it doesn't break browsers which don't support it.</p>
+
+<p>For now, <code>calc()</code> must always be used after a fallback declaration, so it doesn't break browsers which don't support it.</p>
+
+<pre><code>width: 500px; /** older browsers **/
+width: -webkit-calc(50% - 20px); /** Chrome / Safari **/
+width: -moz-calc(50% - 20px); /** Mozilla Firefox **/
+width: -o-calc(50% - 20px); /** could be calc(), no idea about Opera's plans **/
+width: calc(50% - 20px); /** IE and future other browsers **/
+</code></pre>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/calc">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/calc.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
-          </article>          
-        
+          </article>
+          
           <article class="gtie8 polyfill">
             <header>
-              <h2 class="name">&lt;canvas> </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="&lt;canvas&gt;">&lt;canvas> </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Canvas is definitely good to go for modern browsers. If you want to support Internet Explorer 8 and below, FlashCanvas provides a good polyfill.</p>
+                <p><code>canvas</code> is definitely good to go for modern browsers. If you want to support Internet Explorer 8 and below, ExplorerCanvas and FlashCanvas can be helpful in providing support for most <code>canvas</code> features. However, due to the complex nature of native <code>canvas</code> implementations, developers should be aware that the polyfills for <code>canvas</code> are not simple drop-in solutions in some cases.</p>
+
+<p>For example, both <a href="https://groups.google.com/forum/?fromgroups#!searchin/google-excanvas/drawImage">ExplorerCanvas</a> and <a href="https://groups.google.com/forum/?fromgroups#!searchin/flashcanvas/drawImage">FlashCanvas</a> may have difficulties handling the commonly used <code>drawImage</code> method. FlashCanvas cannot be passed the bitmap data from a DOM-based <code>Image</code> object, and therefore has to re-request the asset in the Flash Player causing undesired latency and flickering. Developers should be careful when handling image data and ensure thorough testing due to the unreliability and technical limitations of these features in the polyfills.</p>
+
+<p>That isn't to say <code>canvas</code> shouldn't be used if cross-browser compatibility is a concern. Existing polyfills are more than capable of rendering simpler bitmaps such as <a href="http://www.jqplot.com/deploy/dist/examples/kcp_pyramid2.html">charts/graphs</a>, <a href="http://thejit.org/static/v20/Jit/Examples/Sunburst/example2.html">visualizations</a>, and even <a href="http://flashcanvas.net/examples/www.chiptune.com/starfield/starfield.html">starfields</a>! For these uses and many more, <code>canvas</code> is highly encouraged.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://flashcanvas.net/">FlashCanvas</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://flashcanvas.net/">FlashCanvas</a>, <a href="http://code.google.com/p/explorercanvas/">ExplorerCanvas</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/canvas">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/canvas.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie8 polyfill</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill noie nooldmobile">
             <header>
-              <h2 class="name">classList </h2>
-              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="classList">classList </h2>
+              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>classList is a relatively new feature which may not be available in older browsers and Internet Explorer. While this is not a concern if you are using a library like jQuery to modify class names, make sure you use the polyfill when using classList directly.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/eligrey/classList.js">classlist.js</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/eligrey/classList.js">classlist.js</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/classlist">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/classlist.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill noie nooldmobile</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill">
             <header>
-              <h2 class="name">CORS </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="CORS">CORS </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>CORS, or cross-origin resource sharing, enables a few things, but most notably cross-domain AJAX. All non-IE browsers have support for CORS. IE8 introduced <a href="http://msdn.microsoft.com/en-us/library/ie/cc288060(v=vs.85).aspx">XDomainRequest</a>, so really only IE7 needs help with cross-domain files. Consider the polyfills below or you can fall back to using a <a href="http://benalman.com/projects/php-simple-proxy/">simple proxy</a>.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/toolness/postmessage-proxied-xhr/#readme">postmessage-proxied-xhr</a>, <a href="http://flxhr.flensed.com/">flXHR</a> (requires crossdomain.xml), <a href="https://github.com/eligrey/pmxdr">pmxdr</a> (requires host installed)</p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/toolness/postmessage-proxied-xhr/#readme">postmessage-proxied-xhr</a>, <a href="http://flxhr.flensed.com/">flXHR</a> (requires crossdomain.xml), <a href="https://github.com/eligrey/pmxdr">pmxdr</a> (requires host installed)</p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/cors">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/cors.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill</footer>
-          </article>          
-        
+          </article>
+          
           <article class="fallback gtie8">
             <header>
-              <h2 class="name">css3 colors </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="css3 colors">css3 colors </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>If you found yourself wanting to use <code>papayawhip</code> or <code>goldenrod</code> or <code>indianred</code> as your colors of choice, do feel free. You have to specify a fallback color for IE 8- users. Use the HSL(), HSLA() and RGBA() functions with more caution, as they may not be supported on older browsers.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/css3-colors">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/css3-colors.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback gtie8</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill gtie9 nomobile">
             <header>
-              <h2 class="name">&lt;datalist> </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="&lt;datalist&gt;">&lt;datalist> </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p><a href="http://developers.whatwg.org/the-button-element.html#the-datalist-element"><code>&lt;datalist&gt;</code></a> enables autocomplete combo boxes. It can be polyfilled well with any of the scripts below, though they have <a href="https://github.com/h5bp/html5please/issues/18">varying levels</a> of support for the full feature. You can also use a <a href="http://adactio.com/journal/4272/">graceful fallback</a> if you choose not to polyfill.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://css-tricks.com/relevant-dropdowns-polyfill-for-datalist/">Relevant Dropdowns</a>, <a href="http://afarkas.github.com/webshim/demos/">Webshims</a>, <a href="http://miketaylr.com/code/datalist.html">jQuery Datalist Plugin</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://css-tricks.com/relevant-dropdowns-polyfill-for-datalist/">Relevant Dropdowns</a>, <a href="http://afarkas.github.com/webshim/demos/">Webshims</a>, <a href="http://miketaylr.com/code/datalist.html">jQuery Datalist Plugin</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/datalist">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/datalist.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill gtie9 nomobile</footer>
-          </article>          
-        
+          </article>
+          
           <article class="fallback noie nooldmobile">
             <header>
-              <h2 class="name">dataset </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="dataset">dataset </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p><code>elem.dataset</code> is unsupported in Internet Explorer and older mobile browsers. Using data-* attributes will be totally fine in all browsers, but instead of using <code>elem.dataset.foo</code> just use <code>elem.getAttribute('data-foo')</code>. A polyfill is availble if you want terser syntax.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://eligrey.com/blog/post/html-5-dataset-support">HTML5 dataset support</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://eligrey.com/blog/post/html-5-dataset-support">HTML5 dataset support</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/dataset">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/dataset.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback noie nooldmobile</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill">
             <header>
-              <h2 class="name">&lt;details> </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="&lt;details&gt;">&lt;details> </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>Use the details element if you intend to show a summary which, when clicked, reveals detailed information. Without any fallback, non-supporting browsers will fall back to displaying the element in the opened state.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://mathiasbynens.be/notes/html5-details-jquery">Details</a>, <a href="http://akral.bitbucket.org/details-tag">jquery-details</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://mathiasbynens.be/notes/html5-details-jquery">Details</a>, <a href="http://akral.bitbucket.org/details-tag">jquery-details</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/details">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/details.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill">
             <header>
-              <h2 class="name">DOM </h2>
-              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="DOM">DOM </h2>
+              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
@@ -451,48 +470,48 @@
 
 <p>Experimentally use with caution until the shim implementations have matured.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/termi1uc1/ES5-DOM-SHIM">ES5-DOM-shim</a>, <a href="https://github.com/Raynos/DOM-shim">DOM-shim</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/termi/ES5-DOM-SHIM">ES5-DOM-shim</a>, <a href="https://github.com/Raynos/DOM-shim">DOM-shim</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/dom">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/dom.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill nomobile">
             <header>
-              <h2 class="name">drag n drop </h2>
-              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="drag n drop">drag n drop </h2>
+              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Drag and Drop has been standardized in HTML5 based on Internet Explorer's original implementation. Therefore, it already has wide support (except Opera), but many feel frustrated when using the API. You may want to use jQuery UI Draggable (or another JavaScript library) to handle this for you. Meanwhile the proposed <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html#the-dropzone-attribute">[dropzone]</a> attribute will improve the situation as it gains browser support.</p>
+                <p>Drag and Drop has been standardized in HTML5 based on Internet Explorer's original implementation. Therefore, it already has wide support, but many feel frustrated when using the API. You may want to use jQuery UI Draggable (or another JavaScript library) to handle this for you. Meanwhile the proposed <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html#the-dropzone-attribute">[dropzone]</a> attribute will improve the situation as it gains browser support.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/MrSwitch/dropfile">dropfile</a>, <a href="https://github.com/eligrey/FileSaver.js">fileSaver</a>, <a href="https://github.com/vjeux/jDataView">jDataView</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/MrSwitch/dropfile">dropfile</a>, <a href="https://github.com/eligrey/FileSaver.js">fileSaver</a>, <a href="https://github.com/vjeux/jDataView">jDataView</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/dragndrop">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/dragndrop.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill nomobile</footer>
-          </article>          
-        
-          <article class="fallback gtie8 nooldmobile">
+          </article>
+          
+          <article class="fallback gtie8 nooldmobile es5">
             <header>
-              <h2 class="name">ECMAScript 5 </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="ECMAScript 5">ECMAScript 5 </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind js">js</h4>
             </header>
             <div class="more">
@@ -503,24 +522,24 @@ As it introduces no new syntax, it's possible to polyfill fairly well.
 The below polyfills tackle most uses of these features, but <a href="https://gist.github.com/1664895">there is an unshimmable subset of ES5</a>. 
 Also note that some shims are known to have <a href="https://gist.github.com/1120592">edgecase compliance bugs</a>.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/kriskowal/es5-shim/">es5-shim</a>, <a href="http://augmentjs.com/">augment.js</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/kriskowal/es5-shim/">es5-shim</a>, <a href="http://augmentjs.com/">augment.js</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/ec">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/ec.md">Edit this info</a>
               </p>
             </div>
-            <footer class="tags">fallback gtie8 nooldmobile</footer>
-          </article>          
-        
-          <article class="">
+            <footer class="tags">fallback gtie8 nooldmobile es5</footer>
+          </article>
+          
+          <article class="es6">
             <header>
-              <h2 class="name">ECMAScript 6 </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>                                                        
+              <h2 class="name" id="ECMAScript 6">ECMAScript 6 </h2>
+              <h3 class="status avoid">avoid <i></i> </h3>
               <h4 class="kind js">js</h4>
             </header>
             <div class="more">
@@ -531,219 +550,304 @@ Also note that some shims are known to have <a href="https://gist.github.com/112
 
 <p>Since ES6 brings new syntax to the language the best way to handle cross browser compliance is using a ES6 to ES3 compiler. However although there are a few projects in progress, none are ready to use.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/es6">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/es6.md">Edit this info</a>
               </p>
             </div>
-            <footer class="tags"></footer>
-          </article>          
-        
+            <footer class="tags">es6</footer>
+          </article>
+          
           <article class="fallback">
             <header>
-              <h2 class="name">EventSource </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="EventSource">EventSource </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p><a href="http://html5doctor.com/server-sent-events/">Server-Sent Events</a> are real-time events emitted by the server and received by the browser. EventSource.js provides a base fallback and is not dependent on jQuery.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/remy/polyfills/blob/master/EventSource.js">EventSource.js</a>, <a href="https://github.com/rwldrn/jquery.eventsource">jQuery.eventsource</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/remy/polyfills/blob/master/EventSource.js">EventSource.js</a>, <a href="https://github.com/rwldrn/jquery.eventsource">jQuery.eventsource</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/Eventsource">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/Eventsource.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback</footer>
-          </article>          
-        
+          </article>
+          
           <article class="none">
             <header>
-              <h2 class="name">exclusions </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>                                                        
+              <h2 class="name" id="exclusions">exclusions </h2>
+              <h3 class="status avoid">avoid <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>Exclusions are new and exciting, but very much in flux. Active development to get an implementation out is on-going, but again, please avoid using this until there are stable implementations in the wild.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://css3clickchart.com/#exclusions">
                   Learn more
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/exclusions.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
-          </article>          
-        
-          <article class="none">
+          </article>
+          
+          <article class="prefixes polyfill">
             <header>
-              <h2 class="name">filters </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>                                                        
+              <h2 class="name" id="File API">File API </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
+              <h4 class="kind api">api</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>Using the File API added to the DOM in HTML5, it's now possible for web content to ask the user to select local files.</p>
+
+<p>FileReader pairs very well with Drag n Drop to allow for drag 'n drop file uploads, and if neither of those features are present, the fallback of providing an <code>&lt;input type=file&gt;</code> is rather easy.
+Supported in Chrome, Firefox, Opera. Safari is currently missing FileReader support.</p>
+
+<p><a href="https://github.com/Jahdrien/FileReader">FileReader</a> provides useful fallback, based on Flash, jQuery and jQuery UI.</p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/Jahdrien/FileReader">FileReader</a></p></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/fileapi">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/fileapi.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">prefixes polyfill</footer>
+          </article>
+          
+          <article class="prefixes polyfill">
+            <header>
+              <h2 class="name" id="FileSystem &amp; FileWriter API">FileSystem & FileWriter API </h2>
+              <h3 class="status avoid">avoid <i>with <b class=polyfill>polyfill</b></i> </h3>
+              <h4 class="kind api">api</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>Filesystem API provides a method of reading and writing files to a sandboxed file system on the user's local file system.
+Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniuse.com/filesystem">http://caniuse.com/filesystem</a> for a better understanding of the support.</p>
+
+<p><a href="https://github.com/ebidel/idb.filesystem.js">idb.filesystem.js</a> Implements a polyfill using IndexedDB as its underlying storage layer. Required support for IndexDB means that it works only in Firefox and Chrome.</p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/ebidel/idb.filesystem.js">idb.filesystem.js</a></p></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/filesystem">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/filesystem.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">prefixes polyfill</footer>
+          </article>
+          
+          <article class="prefixes">
+            <header>
+              <h2 class="name" id="filters">filters </h2>
+              <h3 class="status avoid">avoid <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>This spec is under active development and as such syntaxes are likely to
-change radically before stabilizing. Avoid using this. </p>
+                <p>Filters are now supported by Safari 6 and Chrome 18+. But, given the lack of support in other browsers, consider waiting for other implementations before use. </p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://css3clickchart.com/#filters">
                   Learn more
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/filters.md">Edit this info</a>
               </p>
             </div>
-            <footer class="tags">none</footer>
-          </article>          
-        
+            <footer class="tags">prefixes</footer>
+          </article>
+          
           <article class="none flexible">
             <header>
-              <h2 class="name">flexbox </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>                                                        
+              <h2 class="name" id="flexbox">flexbox </h2>
+              <h3 class="status avoid">avoid <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Unfortunately, older versions of this spec have been implemented in Gecko, WebKit and Trident. But <a href="http://dev.w3.org/csswg/css3-flexbox/">the spec</a> has changed significantly (starting from the syntax), hence we recommend you avoid using this until the stable version of the spec finds wide-spread implementation.</p>
+                <p>Unfortunately, <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">older versions of this spec</a> have been implemented in Gecko, WebKit and Trident. A tutorial covering that spec is <a href="http://www.html5rocks.com/en/tutorials/flexbox/quick/">on HTML5 Rocks</a>.</p>
+
+<p>But <a href="http://dev.w3.org/csswg/css3-flexbox/">the spec</a> has changed significantly. Stephan Hay has <a href="http://www.the-haystack.com/2012/01/04/learn-you-a-flexbox/">written a guide on the new flexbox implementation</a>. However, since this revised spec, the spec underwent more naming changes, which have started to debut in Chrome 22. The spec is now at last call and is considered stable so we expect no more breaking changes.</p>
+
+<p>We recommend you avoid using this until the TR version of the spec finds wide-spread implementation.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p>http://flexiejs.com/</p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/flexbox">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/flexbox.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none flexible</footer>
-          </article>          
-        
+          </article>
+          
           <article class="fallback">
             <header>
-              <h2 class="name">@font-face </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="@font-face">@font-face </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>Use the <a href="http://www.fontsquirrel.com/fontface/generator">Font Squirrel Generator</a> for fonts you have license for using as web fonts. <a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax">Fontspring @font-face syntax</a> is also the most bullet-proof way of serving web fonts. You do not need polyfills - just fonts in several formats; WOFF is preferred, followed by TTF and then EOT. </p>
 
-<p>Also, don't use sIFR or Cufon anymore.</p>
+<p>Also, don't use solutions like sIFR or Cufon anymore, as they can cause accessibility and performance problems.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/fontface">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/fontface.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback</footer>
-          </article>          
-        
+          </article>
+          
           <article class="none">
             <header>
-              <h2 class="name">font-feature-settings </h2>
-              <h3 class="status use">use <i></i> </h3>                                                        
+              <h2 class="name" id="font-feature-settings">font-feature-settings </h2>
+              <h3 class="status use">use <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>Internet Explorer 10, Firefox 4+ and Chrome 16 (Windows and Linux only) support low level control over font feature settings. What this means is other browsers merely will not render the flourishes you seek. Many features available through the property may be extracted to separate properties in the future, such as font-variant-ligatures. </p>
+
+<p>More at <a href="http://www.typotheque.com/articles/opentype_features_in_web_browsers">OpenType features in web browsers</a></p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://blog.fontdeck.com/post/15777165734/opentype-1?503cde40">
                   Learn more
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/font-feature-settings.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill gtie9">
             <header>
-              <h2 class="name">form validation </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="form validation">form validation </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>HTML5 has baked in clientside form validation, and polyfills can enable this for legacy browsers as well. Using the defined HTML5 API for constraint validation may be a more maintainable direction than using a jQuery Validation plugin, depending on your team. When detecting this feature, be aware of Safari's half backed support. It does support the form validation, but don't highlight invalid fields or present error messages.</p>
+                <p>HTML5 has baked in clientside form validation, and polyfills can enable this for legacy browsers as well. Using the defined HTML5 API for constraint validation may be a more maintainable direction than using a jQuery Validation plugin, depending on your team. When detecting this feature, be aware of Safari's half baked support. It does support form validation, but won't highlight invalid fields or present error messages.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://afarkas.github.com/webshim/demos/">webshims</a>, <a href="https://github.com/dperini/nwxforms">nwxforms</a>, <a href="https://github.com/ryanseddon/H5F">H5F</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://afarkas.github.com/webshim/demos/">webshims</a>, <a href="https://github.com/dperini/nwxforms">nwxforms</a>, <a href="https://github.com/ryanseddon/H5F">H5F</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/form-validation">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/form-validation.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill gtie9</footer>
-          </article>          
-        
-          <article class="fallback gtie8">
+          </article>
+          
+          <article class="fallback">
             <header>
-              <h2 class="name">geolocation </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="fullscreen">fullscreen </h2>
+              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p><a href="https://gist.github.com/366184">geolocation shim</a> uses Google's IP-GeoCoding service as a fallback. <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a> doesn't but has hooks into BlackBerry, WebOS, and Google Gears specific APIs. In most cases, you should just not expose Geo features in your app if the feature is not natively present.</p>
+                <p>The Full Screen API is currently only available in the latest versions of Chrome and Firefox. A jQuery plugin is available which contains an optional fallback to a minimal-chrome browser window when the Full Screen API is unavailable. Use as a progressive enhancement for those select browsers only.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://gist.github.com/366184">geolocation shim</a>, <a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/darcyclarke/jQuery-Fullscreen-Plugin">jQuery Fullscreen Plugin</a></p></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/fullscreen">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/fullscreen.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">fallback</footer>
+          </article>
+          
+          <article class="fallback gtie8">
+            <header>
+              <h2 class="name" id="geolocation">geolocation </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
+              <h4 class="kind api">api</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p><a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a> has hooks into BlackBerry, WebOS, and Google Gears specific APIs. In most cases, you should just not expose Geo features in your app if the feature is not natively present.</p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://code.google.com/p/geo-location-javascript/">geo-location-javascript</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/geolocation">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/geolocation.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback gtie8</footer>
-          </article>          
-        
+          </article>
+          
           <article class="fallback prefixes gtie8">
             <header>
-              <h2 class="name">gradients </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="gradients">gradients </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
@@ -752,72 +856,72 @@ change radically before stabilizing. Avoid using this. </p>
 
 <p>We also suggest you drop old WebKit syntax and only use the <a href="https://developer.mozilla.org/en/CSS/-moz-linear-gradient">newer syntax</a> for gradient values and <a href="http://www.broken-links.com/2012/01/11/the-new-and-hopefully-final-linear-gradient-syntax/">not the latest one</a> (yet) until <a href="http://www.w3.org/TR/css3-images/">the specification</a> hits Candidate Recommendation. </p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/gradients">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/gradients.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback prefixes gtie8</footer>
-          </article>          
-        
+          </article>
+          
           <article class="none">
             <header>
-              <h2 class="name">grids </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>                                                        
+              <h2 class="name" id="grids">grids </h2>
+              <h3 class="status avoid">avoid <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>The <a href="http://dev.w3.org/csswg/css3-grid-align/">CSS Grid Layout</a> specification supersedes several older ones, and only features an experimental implementation in Internet Explorer 10. Until the specification matures and more implementations exist, we suggest that you avoid using this.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/grids">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/grids.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
-          </article>          
-        
+          </article>
+          
           <article class="fallback">
             <header>
-              <h2 class="name">history </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="history">history </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>The <code>History</code> API provides a way for JavaScript to change the URL displayed in the browser without reloading the page. There are several approaches to providing a fallback. The simplest is to fall back to page refreshes. Alternatively, the <a href="https://github.com/balupton/history.js">History.js</a> plugin smooths out some browser implementation differences and provides an optional hashchange fallback for HTML 4 browsers. GitHub uses <a href="http://pjax.heroku.com/">pjax</a> (pushState + ajax).</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/history">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/history.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback</footer>
-          </article>          
-        
+          </article>
+          
           <article class="gtie8 polyfill">
             <header>
-              <h2 class="name">HTML5 elements </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="HTML5 elements">HTML5 elements </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
@@ -832,128 +936,253 @@ change radically before stabilizing. Avoid using this. </p>
 
 <p>Lastly, if you need these elements to print correctly, use <a href="https://github.com/aFarkas/html5shiv/blob/master/src/html5shiv-printshiv.js">html5shiv-printshiv.js</a>.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://code.google.com/p/html5shiv/">html5shiv</a>, <a href="https://github.com/aFarkas/html5shiv/">html5shiv (github)</a>, <a href="https://github.com/yatil/accessifyhtml5.js">accessifyhtml5.js</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://code.google.com/p/html5shiv/">html5shiv</a>, <a href="https://github.com/aFarkas/html5shiv/">html5shiv (github)</a>, <a href="https://github.com/yatil/accessifyhtml5.js">accessifyhtml5.js</a></p></div>
 
               <p class="links">
               
-                <a href="http://caniuse.com/html5-sectioningelements">
+                <a href="http://caniuse.com/html5semantic">
                   View browser share %
-                </a>  
+                </a>
               
-                <a href="https://github.com/h5bp/html5please/blob/master/posts/html5-sectioningelements.md">Edit this info</a>
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/html5semantic.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie8 polyfill</footer>
-          </article>          
-        
+          </article>
+          
           <article class="none prefixes">
             <header>
-              <h2 class="name">hyphens </h2>
-              <h3 class="status use">use <i></i> </h3>                                                        
+              <h2 class="name" id="hyphens">hyphens </h2>
+              <h3 class="status use">use <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p><a href="http://dev.w3.org/csswg/css3-text/#hyphenation">CSS Text Level 3</a> allows you to tell the browser to break words using hyphens. As there won't by any noticable effects on browsers which don't support the feature, we recommend that you use it without any polyfills or fallbacks. <a href="http://code.google.com/p/hyphenator/">CSS Hyphenator</a> is a polyfill that works on browsers that support the soft hyphen. </p>
+                <p><a href="http://dev.w3.org/csswg/css3-text/#hyphenation">CSS Text Level 3</a> allows you to tell the browser to break words using hyphens. Read about how to effectively use <code>hyphens:auto</code> and <code>word-break</code> in <a href="http://blog.kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/">Word wrapping/hyphenation using CSS</a>.</p>
+
+<p>As there won't by any noticable effects on browsers which don't support the feature, we recommend that you use it without any polyfills or fallbacks. <a href="http://code.google.com/p/hyphenator/">CSS Hyphenator</a> is a polyfill that works on browsers that support the soft hyphen. <a href="https://github.com/Modernizr/Modernizr/issues/312">Modernizr has good support</a> for hyphentation detection. It'd also be wise to read <a href="http://davidnewton.ca/the-current-state-of-hyphenation-on-the-web">The Current State of Hyphenation on the Web
+</a>.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/hyphens">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/hyphens.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none prefixes</footer>
-          </article>          
-        
+          </article>
+          
+          <article class="gtie9">
+            <header>
+              <h2 class="name" id="iframe[sandbox]">iframe[sandbox] </h2>
+              <h3 class="status use">use <i></i> </h3>
+              <h4 class="kind html">html</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>This attribute enables fine-grained control over the capabilities of a
+document housed within an iFrame.</p>
+
+<p>Browser support is not nearly high enough to consider this measure alone
+sufficient for sanitizing output. Use this attribute as part of a
+defense-in-depth strategy.</p>
+
+<p>Also see <a href="http://weblog.bocoup.com/third-party-javascript-development-future/#iframe-sandbox">more about implementing <code>iframe[sandbox]</code></a> responsibly on Bocoup's blog.</p>
+              </div>
+              <div class="polyfills"></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/iframe-sandbox">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/iframe-sandbox.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">gtie9</footer>
+          </article>
+          
+          <article class="none">
+            <header>
+              <h2 class="name" id="iframe[seamless]">iframe[seamless] </h2>
+              <h3 class="status caution">caution <i></i> </h3>
+              <h4 class="kind html">html</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>This attribute instructs browsers to treat the iFrame's content more like inline markup than it would otherwise. Specifically, this means:</p>
+
+<ul>
+<li>Hyperlinks navigate the parent context</li>
+<li>The parent's stylesheets cascade in (importantly, the inverse is not true)</li>
+<li>More "neutral" rendering, roughly equivalent to declaring: <code>scrolling="no" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0"</code></li>
+</ul>
+
+<p>Because the user experience of following hyperlinks is so drastically altered in supporting browsers, use this attribute with caution.</p>
+
+<p>Also see <a href="http://weblog.bocoup.com/third-party-javascript-development-future/#iframe-seamless">more about implementing <code>iframe[seamless]</code></a> responsibly on Bocoup's blog.</p>
+              </div>
+              <div class="polyfills"></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/iframe-seamless">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/iframe-seamless.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">none</footer>
+          </article>
+          
+          <article class="polyfill">
+            <header>
+              <h2 class="name" id="iframe[srcdoc]">iframe[srcdoc] </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
+              <h4 class="kind html">html</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>This attribute allows for in-line specification of iframe content.</p>
+
+<p>For non-supporting browsers, you can use <a href="https://github.com/jugglinmike/srcdoc-polyfill">this srcdoc polyfill</a> which utilizes script-targeted URLs to provide this functionality in non-supporing browsers.</p>
+
+<p>Also see <a href="http://weblog.bocoup.com/third-party-javascript-development-future/#iframe-srcdoc">more about implementing <code>iframe[srcdoc]</code></a> responsibly on Bocoup's blog.</p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/jugglinmike/srcdoc-polyfill">srcdoc polyfill</a></p></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/iframe-srcdoc">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/iframe-srcdoc.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">polyfill</footer>
+          </article>
+          
           <article class="fallback gtie8">
             <header>
-              <h2 class="name">IndexedDB </h2>
-              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="IndexedDB">IndexedDB </h2>
+              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>IndexedDB was a volatile spec for a year, but has settled down. In addition to Chrome and Firefox, IE10 will have it; Opera and Safari have not yet committed to it.</p>
+                <p>IndexedDB was a volatile spec for a year, but has settled down. In addition to Chrome and Firefox, IE10 will have it; Opera has not yet implemented it and Safari has not yet committed to it.</p>
 
-<p><a href="https://github.com/jensarps/IDBWrapper">IDBWrapper</a> helps smooth out the cross-browser differences. You may consider falling back to WebSQL when IndexedDB isn't available, but do keep in mind that WebSQL has been abandoned.</p>
+<p>The <a href="http://nparashuram.com/IndexedDBShim">IndexedDB Polyfill</a> is a polyfill for the IndexedDB APIs over WebSql. This enables IndexedDB to work on browsers that support WebSql. 
+<a href="https://github.com/jensarps/IDBWrapper">IDBWrapper</a> helps smooth out the cross-browser differences. You may consider falling back to WebSQL when IndexedDB isn't available, but do keep in mind that WebSQL has been abandoned.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/jensarps/IDBWrapper">IDBWrapper</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/jensarps/IDBWrapper">IDBWrapper</a>, <a href="http://nparashuram.com/IndexedDBShim">IndexedDB Polyfill</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/indexeddb">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/indexeddb.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback gtie8</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill gtie9">
             <header>
-              <h2 class="name">&lt;input type=color> </h2>
-              <h3 class="status avoid">avoid <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="&lt;input type=color&gt;">&lt;input type=color> </h2>
+              <h3 class="status avoid">avoid <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>A color input will fall back to a plain text input if it's not supported, but excluding Opera, no desktop browser has added support for color inputs.</p>
+                <p>A color input will fall back to a plain text input if it's not supported. So far, only Opera and Chrome Canary support this.</p>
 
 <p>You should probably avoid this until it has support in WebKit, Gecko or IE.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/jo/JSColor">jscolor</a>, <a href="http://www.useragentman.com/blog/2010/07/27/cross-browser-html5-forms-using-modernizr-webforms2-and-html5widgets/">html5widgets</a></p></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
-                <a href="http://caniuse.com/input-typecolor">
+                <a href="http://caniuse.com/input-color">
                   View browser share %
-                </a>  
+                </a>
               
-                <a href="https://github.com/h5bp/html5please/blob/master/posts/input-typecolor.md">Edit this info</a>
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/input-color.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill gtie9</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill gtie9">
             <header>
-              <h2 class="name">&lt;input type=date> </h2>
-              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="&lt;input type=date&gt;">&lt;input type=date> </h2>
+              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>There are many date inputs: <code>datetime-local, date, time, month, week</code> that should provide a datepicker to the user. For a long time, WebKit offered a spinner UI on these inputs, but this was an incomplete implementation (and has since been removed). </p>
+                <p>There are many date inputs: <code>datetime-local, date, time, month, week</code> that should provide a datepicker to the user. For a long time, WebKit offered a spinner UI on these inputs, but this was an incomplete implementation (and has since been removed).</p>
 
-<p>A few polyfills offer a proper datepicker UI, if the feature is not offered natively. </p>
+<p>A few polyfills offer a proper datepicker UI, if the feature is not offered natively.</p>
 
 <p>We suggest you use Modernizr to detect this feature, as it has correctly detected these features, regardless of WebKit's partial implementation or other browser bugs.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://afarkas.github.com/webshim/demos/demos/webforms.html">webshims</a>, <a href="http://www.useragentman.com/blog/2010/07/27/cross-browser-html5-forms-using-modernizr-webforms2-and-html5widgets/">html5widgets</a>,</p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://afarkas.github.com/webshim/demos/demos/webforms.html">webshims</a>, <a href="http://www.useragentman.com/blog/2010/07/27/cross-browser-html5-forms-using-modernizr-webforms2-and-html5widgets/">html5widgets</a></p></div>
 
               <p class="links">
               
-                <a href="http://caniuse.com/input-typedate">
+                <a href="http://caniuse.com/input-datetime">
                   View browser share %
-                </a>  
+                </a>
               
-                <a href="https://github.com/h5bp/html5please/blob/master/posts/input-typedate.md">Edit this info</a>
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/input-datetime.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill gtie9</footer>
-          </article>          
-        
+          </article>
+          
+          <article class="polyfill fallback">
+            <header>
+              <h2 class="name" id="&lt;input type=number&gt;">&lt;input type=number> </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
+              <h4 class="kind html">html</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>A number input will fallback to a plain text input if it's not supported.</p>
+
+<p>So far, Chrome, Safari and Opera support it. Jonathan Stipe's <a href="https://github.com/jonstipe/number-polyfill">Number polyfill</a> doesn't need any additional code changes but does require jQuery and CSS to style buttons.</p>
+
+<p>Safari on iOS and the Browser on Android 4.0 (Ice Cream Sandwich) do show number input, but do not use "step", "min" or "max" attributes and neither show increment/decrement buttons.</p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/jonstipe/number-polyfill">Number polyfill</a></p></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/input-number">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/input-number.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">polyfill fallback</footer>
+          </article>
+          
           <article class="polyfill gtie9">
             <header>
-              <h2 class="name">&lt;input type=range> </h2>
-              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="&lt;input type=range&gt;">&lt;input type=range> </h2>
+              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
@@ -964,74 +1193,100 @@ change radically before stabilizing. Avoid using this. </p>
 
 <p>These polyfills aren't drop-in polyfills, and you'll need to wire them up a little, but your markup can depend on <code>&lt;input type=range&gt;</code> creating a slider.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://www.frequency-decoder.com/2010/11/18/unobtrusive-slider-control-html5-input-range-polyfill/">Input Range Polyfill</a>, <a href="https://github.com/fryn/html5slider">html5slider</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://www.frequency-decoder.com/2010/11/18/unobtrusive-slider-control-html5-input-range-polyfill/">Input Range Polyfill</a>, <a href="https://github.com/fryn/html5slider">html5slider</a></p></div>
 
               <p class="links">
               
-                <a href="http://caniuse.com/input-typerange">
+                <a href="http://caniuse.com/input-range">
                   View browser share %
-                </a>  
+                </a>
               
-                <a href="https://github.com/h5bp/html5please/blob/master/posts/input-typerange.md">Edit this info</a>
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/input-range.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill gtie9</footer>
-          </article>          
-        
+          </article>
+          
+          <article class="">
+            <header>
+              <h2 class="name" id="&lt;input type=search&gt;">&lt;input type=search> </h2>
+              <h3 class="status use">use <i></i> </h3>
+              <h4 class="kind html">html</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>A <a href="http://wufoo.com/html5/types/5-search.html">search input</a> will fall back to a plain text input if it's not supported. The standard doesn't specify any behavior for this type, but recommends styling to match the platform's search fields (e.g. with rounded corners on OS X).  The style cancels out many CSS styles from being applied, and can be removed with <code>-webkit-appearance: none;</code>.  The recommendation here is to use <code>input[type=search]</code> to enhance your forms, so long as you're okay with the styling difference.</p>
+
+<p>While the standard does not specify any behavior, Webkit browsers supply a button to clear the input when it has a value.</p>
+              </div>
+              <div class="polyfills"></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/input-search">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/input-search.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags"></footer>
+          </article>
+          
           <article class="gtie9">
             <header>
-              <h2 class="name">input[placeholder] </h2>
-              <h3 class="status use">use <i></i> </h3>                                                        
+              <h2 class="name" id="input[placeholder]">input[placeholder] </h2>
+              <h3 class="status use">use <i></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>Input placeholders are simply ignored in IE 9 and below. Note that they are only applied when the <strong>type</strong> of the input is <em>text</em>, <em>password</em>, <em>search</em>, <em>tel</em>, <em>url</em>, or <em>email</em>. <em>Textareas</em> can have placeholders, too. Otherwise, it is ignored.</p>
 
-<p><code>input[placeholder]</code> is commonly the first polyfill anyone writes and, as such, there are <a href="http://bit.ly/polyfills">many of them</a>. Password inputs and submit event clearing are among many of the gotchas that catch native implemenations; Mathias's polyfill below handles these cases very well.</p>
+<p><code>input[placeholder]</code> is commonly the first polyfill anyone writes and, as such, there are <a href="http://bit.ly/polyfills">many of them</a>. Password inputs and submit event clearing are among many of the gotchas that catch naive implementations; Mathias's polyfill below handles these cases very well.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/mathiasbynens/jquery-placeholder">Placeholder jQuery Plugin</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/mathiasbynens/jquery-placeholder">Placeholder jQuery Plugin</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/input-placeholder">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/input-placeholder.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie9</footer>
-          </article>          
-        
+          </article>
+          
           <article class="gtie7 polyfill">
             <header>
-              <h2 class="name">JSON </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="JSON">JSON </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind js">js</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>Crockford's <a href="https://github.com/douglascrockford/JSON-js">JSON2.js</a> is a perfect polyfill that accounts for non-native implementations (basically only IE6 &amp; IE7 at this point). It's robust, well tested and can be used along with the native feature flawlessly.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/douglascrockford/JSON-js">json2.js</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/douglascrockford/JSON-js">json2.js</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/json">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/json.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie7 polyfill</footer>
-          </article>          
-        
+          </article>
+          
           <article class="gtie7 polyfill">
             <header>
-              <h2 class="name">localStorage </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="localStorage">localStorage </h2>
+              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
@@ -1039,145 +1294,151 @@ change radically before stabilizing. Avoid using this. </p>
                 <p>Local and session storage are a great way to store data without resorting to cookies. IE8 supported <code>localStorage</code> and <code>sessionStorage</code> so you may not need a polyfill. If you do, Remy's is a piece of cake to implement and use.</p>
 
 <p>This is a simple key/value store, so if you want to store complex data use <code>JSON.parse(str)</code> and <code>JSON.stringify(obj)</code> on your way in and out. There is also no way to know if you exceeded the storage cross-browser, so wrap your store commands in try/catch. Up to 2.5MB is safe to use.</p>
+
+<p>As part of keeping things simple, <code>localStorage</code> has a synchronous API that runs on the main UI thread in browsers; as a consequence of that, a <a href="http://html5doctor.com/storing-data-the-simple-html5-way-and-a-few-tricks-you-might-not-have-known/#comment-17296">race condition</a> can occur if a user has the same site open in multiple windows or tabs running as separate processes. For many applications, that’s never really a problem in practice. But it can cause data corruption—so applications where it’s important to try to ensure that absolutely no data corruption can occur should instead use a more robust storage mechanism such as <code>IndexedDB</code>.</p>
+
+<p>Due to the shortcomings of <code>localStorage</code>, there are calls <a href="http://paul.kinlan.me/we-need-to-kill-off-the-localstorage-api">to stop advocating for and building examples that use it</a>.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://gist.github.com/350433">Remy's storage polyfill</a>, <a href="http://code.google.com/p/sessionstorage/">sessionstorage</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://gist.github.com/350433">Remy’s storage polyfill</a>, <a href="http://code.google.com/p/sessionstorage/">sessionstorage</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/localstorage">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/localstorage.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie7 polyfill</footer>
-          </article>          
-        
+          </article>
+          
           <article class="none">
             <header>
-              <h2 class="name">masks </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>                                                        
+              <h2 class="name" id="masks">masks </h2>
+              <h3 class="status avoid">avoid <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p><a href="http://www.webkit.org/blog/181/css-masks/">CSS Masks</a> are not being standardized and are unlikely to ever be. CSS Filters might be your path to salvation.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://css3clickchart.com/#masks">
                   Learn more
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/masks.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill">
             <header>
-              <h2 class="name">matchMedia </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="matchMedia">matchMedia </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>matchMedia provides a JavaScript API to see if a media query will succeed. <a href="https://github.com/paulirish/matchMedia.js/">MatchMedia.js</a> provides a shim for unsupported browsers. If you want a shim that is responsive to window resizing, you can use <a href="http://www.paulrhayes.com/2011-11/use-css-transitions-to-link-media-queries-and-javascript/">this fork</a>, though it's limited to browsers that support CSS Transitions.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
-                <a href="http://caniuse.com/match-media">
+                <a href="http://caniuse.com/matchmedia">
                   View browser share %
-                </a>  
+                </a>
               
-                <a href="https://github.com/h5bp/html5please/blob/master/posts/match-media.md">Edit this info</a>
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/matchmedia.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill</footer>
-          </article>          
-        
+          </article>
+          
           <article class="gtie8">
             <header>
-              <h2 class="name">media queries </h2>
-              <h3 class="status use">use <i></i> </h3>                                                        
+              <h2 class="name" id="media queries">media queries </h2>
+              <h3 class="status use">use <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Media Queries (MQ) work on all modern browsers. OldIE (IE6,7,8) unfortunately do not understand media queries on features, which means none of your CSS within media queries will be parsed by them. We recommend you make peace with that (or use Chrome Frame), but if you absolutely cannot, then you can use <a href="https://github.com/scottjehl/Respond">Respond.js</a><!--, but be aware it has performance overhead that slows down page load-->.</p>
+                <p>Media Queries (MQ) work on all modern browsers. OldIE (IE6,7,8) unfortunately do not understand media queries on features, which means none of your CSS within media queries will be parsed by them. We recommend you make peace with that (or use Chrome Frame), but if you absolutely cannot, then you can use <a href="https://github.com/scottjehl/Respond">Respond.js</a> but be aware it has performance overhead that slows down page load.</p>
+
+<p>If you choose a <a href="http://bradfrostweb.com/blog/web/mobile-first-responsive-web-design/">mobile first approach</a>, you'll be targeting smallest screens first, then the different media queries will take effect as the window/device size increases. But if the browser doesn't support media queries and you don't use a polyfill, then the 'mobile first' styles will be applied to OldIE. You can serve a <a href="http://nicolasgallagher.com/mobile-first-css-sass-and-ie/">separate stylesheet for IE to help with this</a>.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/mediaqueries">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/mediaqueries.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie8</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill noie nomobile">
             <header>
-              <h2 class="name">&lt;menu> </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="&lt;menu&gt;">&lt;menu> </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>Firefox has native support for context menus, and using the below polyfill other browsers will be able to do the same.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/medialize/jQuery-contextMenu">contextMenu</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/medialize/jQuery-contextMenu">contextMenu</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/menu">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/menu.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill noie nomobile</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill noie nomobile">
             <header>
-              <h2 class="name">&lt;meter> </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="&lt;meter&gt;">&lt;meter> </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
               <div class="recco">
                 
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://gist.github.com/667320">meter-polyfill</a>, <a href="https://github.com/xjamundx/HTML5-Meter-Shim">jQuery shim</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://gist.github.com/667320">meter-polyfill</a>, <a href="https://github.com/xjamundx/HTML5-Meter-Shim">jQuery shim</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/meter">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/meter.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill noie nomobile</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill ie6 gtie6">
             <header>
-              <h2 class="name">Microdata DOM API </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="Microdata DOM API">Microdata DOM API </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind API">API</h4>
             </header>
             <div class="more">
@@ -1190,24 +1451,24 @@ change radically before stabilizing. Avoid using this. </p>
 
 <p>IE6+ support can be done using <a href="https://github.com/termi/ES5-DOM-SHIM">this ES5/DOM shim</a></p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/termi/Microdata-JS">microdata shim</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/termi/Microdata-JS">microdata shim</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/microdata-domapi">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/microdata-domapi.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill ie6 gtie6</footer>
-          </article>          
-        
+          </article>
+          
           <article class="gtie6">
             <header>
-              <h2 class="name">min/max-width/height </h2>
-              <h3 class="status use">use <i></i> </h3>                                                        
+              <h2 class="name" id="min/max-width/height">min/max-width/height </h2>
+              <h3 class="status use">use <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
@@ -1216,24 +1477,24 @@ change radically before stabilizing. Avoid using this. </p>
 
 <p>Use all you like without fallback; certainly do not use CSS expressions to mimic this behavior.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
-                <a href="http://caniuse.com/minmax-widthheight">
+                <a href="http://caniuse.com/minmaxwh">
                   View browser share %
-                </a>  
+                </a>
               
-                <a href="https://github.com/h5bp/html5please/blob/master/posts/minmax-widthheight.md">Edit this info</a>
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/minmaxwh.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie6</footer>
-          </article>          
-        
+          </article>
+          
           <article class="prefixes gtie9 columns">
             <header>
-              <h2 class="name">multicolumn </h2>
-              <h3 class="status use">use <i></i> </h3>                                                        
+              <h2 class="name" id="multicolumn">multicolumn </h2>
+              <h3 class="status use">use <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
@@ -1242,72 +1503,72 @@ change radically before stabilizing. Avoid using this. </p>
 
 <p>We recommend you do not polyfill this and let it fall back to single column text.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/multicolumn">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/multicolumn.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">prefixes gtie9 columns</footer>
-          </article>          
-        
+          </article>
+          
           <article class="fallback gtie8">
             <header>
-              <h2 class="name">multiple backgrounds </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="multiple backgrounds">multiple backgrounds </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Multiple backgrounds will be <a href="http://snook.ca/archives/html_and_css/multiple-bg-css-gradients">completely ignored</a> when they aren't supported. If you can make do with a simple background color, make sure to declare <code>background-color: &lt;color&gt;</code> before you start using multiple backgrounds. Alternatively, you can also set an image as a background with <code>background-image</code> and override it with a second background declaration. We strongly recommend you don't polyfill this.</p>
+                <p>Multiple backgrounds will be <a href="http://snook.ca/archives/html_and_css/multiple-bg-css-gradients">completely ignored</a> when they aren't supported. If you can use a simple background color, make sure to declare <code>background-color: &lt;color&gt;</code> on the element before declaring your multiple backgrounds. Alternatively, you can also set an image as a background with <code>background-image</code> and override it with a second background declaration. We strongly recommend you don't polyfill this.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/multibackgrounds">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/multibackgrounds.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback gtie8</footer>
-          </article>          
-        
+          </article>
+          
           <article class="fallback gtie9">
             <header>
-              <h2 class="name">offline </h2>
-              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="offline">offline </h2>
+              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>If Application Cache isn't available natively, there is no way to mimic it. Only supporting browser will be able to load a page while offline. Still, many apps can make use of local storage to enable offline interaction if the page is already open.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/offline">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/offline.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback gtie9</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill">
             <header>
-              <h2 class="name">ol[reversed] </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="ol[reversed]">ol[reversed] </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
@@ -1315,170 +1576,171 @@ change radically before stabilizing. Avoid using this. </p>
                 <p>Please use the below polyfill, as WebKit is the only engine that supports it right now.
 Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Louis's ol[reversed] post</a>.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://gist.github.com/1671548">ol reversed polyfill</a>, <a href="https://github.com/impressivewebs/HTML5-Reverse-Ordered-Lists">HTML5 reverse ordered lists</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://gist.github.com/1671548">ol reversed polyfill</a>, <a href="https://github.com/impressivewebs/HTML5-Reverse-Ordered-Lists">HTML5 reverse ordered lists</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/ol-reversed">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/ol-reversed.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill</footer>
-          </article>          
-        
+          </article>
+          
           <article class="gtie8">
             <header>
-              <h2 class="name">opacity </h2>
-              <h3 class="status use">use <i></i> </h3>                                                        
+              <h2 class="name" id="opacity">opacity </h2>
+              <h3 class="status use">use <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>CSS3 opacity allows you to modify the opacity of HTML elements. It is safe to use. For IE6-IE8, use the proprietary "filter" property to achieve the same effect.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/opacity">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/opacity.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie8</footer>
-          </article>          
-        
+          </article>
+          
           <article class="none">
             <header>
-              <h2 class="name">paged media </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>                                                        
+              <h2 class="name" id="paged media">paged media </h2>
+              <h3 class="status avoid">avoid <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>This specification is actively under development and thus still in flux. We recommend you wait until it has matured, and multiple implementations are available.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://css3clickchart.com/#paged-media">
                   Learn more
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/paged-media.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
-          </article>          
-        
+          </article>
+          
           <article class="fallback noie">
             <header>
-              <h2 class="name">pointer events </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="pointer events">pointer events </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>Pointer events are available in SVG and CSS. All modern browsers support them in SVG, but IE and Opera do not support them in CSS yet. There is a <a href="https://github.com/Modernizr/Modernizr/blob/master/feature-detects/css-pointerevents.js">modernizr plugin</a> to detect support, which can be used to implement a JavaScript interceptor for elements which require pointer events to be disabled.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/pointer-events">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/pointer-events.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback noie</footer>
-          </article>          
-        
+          </article>
+          
           <article class="none">
             <header>
-              <h2 class="name">position:fixed </h2>
-              <h3 class="status use">use <i></i> </h3>                                                        
+              <h2 class="name" id="position:fixed">position:fixed </h2>
+              <h3 class="status use">use <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Fixed positioning wasn't in IE6, but is fine in IE7 and everywhere else (<a href="http://bradfrostweb.com/blog/mobile/fixed-position/">except mobile, which is described at length here</a>). </p>
+                <p>Fixed positioning isn't supported in IE6, but is fine in IE7 and everywhere else (<a href="http://bradfrostweb.com/blog/mobile/fixed-position/">except mobile, which is described at length here</a>). </p>
 
 <p>Use fixed positioning all you like, but you may want to check its behavior in mobile browsers afterward. There is a <a href="https://github.com/Modernizr/Modernizr/issues/167#issuecomment-2155861">messy feature detect</a> if you'd like it.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
-                <a href="http://caniuse.com/positionfixed">
+                <a href="http://caniuse.com/css-fixed">
                   View browser share %
-                </a>  
+                </a>
               
-                <a href="https://github.com/h5bp/html5please/blob/master/posts/positionfixed.md">Edit this info</a>
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/css-fixed.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
-          </article>          
-        
+          </article>
+          
           <article class="api">
             <header>
-              <h2 class="name">postMessage </h2>
-              <h3 class="status use">use <i></i> </h3>                                                        
+              <h2 class="name" id="postMessage">postMessage </h2>
+              <h3 class="status use">use <i></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p><code>postMessage</code> is present in IE8 and up, but if you need robust support for cross-frame and cross-domain communication, use <a href="http://easyxdm.net/wp/">EasyXDM</a></p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://easyxdm.net/wp/">EasyXDM</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://easyxdm.net/wp/">EasyXDM</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/postmessage">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/postmessage.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">api</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill gtie9">
             <header>
-              <h2 class="name">&lt;progress> </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="&lt;progress&gt;">&lt;progress> </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
               <div class="recco">
-                
+                <p>Go read <a href="http://www.useragentman.com/blog/2012/01/03/cross-browser-html5-progress-bars-in-depth/">Cross Browser HTML5 Progress Bars In Depth
+</a>. :)</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/LeaVerou/HTML5-Progress-polyfill">HTML5 Progress Polyfill</a></p></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/progress">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/progress.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill gtie9</footer>
-          </article>          
-        
+          </article>
+          
           <article class="none">
             <header>
-              <h2 class="name">pseudo elements </h2>
-              <h3 class="status use">use <i></i> </h3>                                                        
+              <h2 class="name" id="pseudo elements">pseudo elements </h2>
+              <h3 class="status use">use <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
@@ -1487,48 +1749,48 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
 
 <p>When adding generated content to your page with <code>:before</code> and <code>:after</code>, make sure that it is only for presentation and not to add content that should be included in the HTML source, as it may not be accessible.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/pseudo-elements">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/pseudo-elements.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
-          </article>          
-        
+          </article>
+          
           <article class="none">
             <header>
-              <h2 class="name">regions </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>                                                        
+              <h2 class="name" id="regions">regions </h2>
+              <h3 class="status avoid">avoid <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>CSS Regions is in active development. As a result, the syntax is in flux. A polyfill based on an older syntax exists, but we recommend you hold your horses till this spec sees some stability and 3 or more implementations.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/regions">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/regions.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill gtie9">
             <header>
-              <h2 class="name">requestAnimationFrame </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="requestAnimationFrame">requestAnimationFrame </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
@@ -1539,48 +1801,48 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
 
 <p>An interesting usecase: If you have vertical parallax that changes on scroll, you can consider using rAF instead of binding to a <code>window</code>'s scroll event. In this way, you'd just ask for <code>window.scrollTop</code> on your rAF callback and take action. This will give you the smoothest animations possible.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://gist.github.com/1579671">requestAnimationFrame polyfill</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://gist.github.com/1579671">requestAnimationFrame polyfill</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/requestanimationframe">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/requestanimationframe.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill gtie9</footer>
-          </article>          
-        
+          </article>
+          
           <article class="fallback">
             <header>
-              <h2 class="name">&lt;ruby> </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="&lt;ruby&gt;">&lt;ruby> </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>If you are using the Ruby element you don't need a script-based fallback, but you can provide a CSS-based set of good defaults.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://www.useragentman.com/blog/2010/10/29/cross-browser-html5-ruby-annotations-using-css/">Cross-browser Ruby</a>, <a href="http://sideshowbarker.net/2009/11/13/html5-ruby/#comment-3388">basic fallback</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://www.useragentman.com/blog/2010/10/29/cross-browser-html5-ruby-annotations-using-css/">Cross-browser Ruby</a>, <a href="http://sideshowbarker.net/2009/11/13/html5-ruby/#comment-3388">basic fallback</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/ruby">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/ruby.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback</footer>
-          </article>          
-        
+          </article>
+          
           <article class="fallback gtie6">
             <header>
-              <h2 class="name">selectors </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="selectors">selectors </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
@@ -1591,19 +1853,22 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
 
 <ul>
 <li><code>tr &gt; td</code> : Immediate descendant (child) selector.</li>
-<li><code>dt + dd</code> : next sibling selector</li>
+<li><code>dt + dd</code> : next sibling selector*</li>
 <li><code>dt ~ dd</code> : any following sibling</li>
 <li><code>div[attr]</code> and <code>img[src$=png]</code> : Attribute selector (starts with, ends with, contains).</li>
-<li><code>p:first-child</code></li>
+<li><code>p:first-child</code>*</li>
 <li><code>div:hover</code> and <code>:hover</code> state on all non-<code>&lt;a&gt;</code>'s</li>
 <li><code>li.food.vegetable</code> : without worrying about the <a href="http://paulirish.com/2008/the-two-css-selector-bugs-in-ie6/">chained classes bug</a></li>
 </ul>
+
+<p>* IE7-8 don't update styles properly when elements are manipulated with JS. Usually you have to force the browser to redraw (e.g. hide and show parent element).</p>
 
 <h4>When you sunset IE7 support, you can use:</h4>
 
 <ul>
 <li><code>:before, :after</code> and generated content</li>
 <li><code>:focus</code> for elements with current focus</li>
+<li><a href="http://www.w3.org/TR/selectors/#lang-pseudo"><code>:lang(C)</code></a> which targets an element based on language</li>
 </ul>
 
 <h4>When you sunset IE8 support, you can use:</h4>
@@ -1621,6 +1886,8 @@ Resources:
 * http://www.bennadel.com/blog/2306-What-CSS-Properties-Are-Supported-When-You-Drop-IE6-Support.htm
 * http://analogysoft.com/learning/ui-hulk-out/#beyondie6
 * http://msdn.microsoft.com/en-us/library/cc351024(v=vs.85).aspx#selectors
+* http://www.quirksmode.org/css/contents.html
+* http://www.impressivewebs.com/browser-support-css3-selectors/
 
     [].forEach.call( document.querySelectorAll('td'), function(elem){
       if (elem.innerText.trim() == 'No') elem.style.backgroundColor = 'red';
@@ -1629,98 +1896,98 @@ Resources:
 
 -->
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/selectors">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/selectors.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback gtie6</footer>
-          </article>          
-        
+          </article>
+          
           <article class="">
             <header>
-              <h2 class="name">style[scoped] </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>                                                        
+              <h2 class="name" id="style[scoped]">style[scoped] </h2>
+              <h3 class="status avoid">avoid <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Scoped stylesheets are still in active development, the first implementation of which should be available in WebKit soon.</p>
+                <p><a href="http://css-tricks.com/saving-the-day-with-scoped-css/">Scoped stylesheets</a> are still in active development. While you can experiment with them in Chrome Canary (type <code>about:flags</code> in Chrome's address bar), there is no stable version of any browser supporting this now. </p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/thingsinjars/jQuery-Scoped-CSS-plugin">jQuery-Scoped-CSS-plugin</a></p></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/scoped-css">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/scoped-css.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags"></footer>
-          </article>          
-        
+          </article>
+          
           <article class="gtie8 polyfill">
             <header>
-              <h2 class="name">&lt;svg> </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="&lt;svg&gt;">&lt;svg> </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind svg">svg</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>SVG has had good support for several years in most browsers, except for Internet Explorer. IE9 brings support, which means for oldIE you can use <a href="http://code.google.com/p/svgweb/">SVGWeb</a> as a polyfill, or create SVG dynamically via <a href="http://raphaeljs.com/">Raphael</a> (which uses a VML fallback). </p>
 
-<p>For Android Browser support, you can use <a href="http://code.google.com/p/canvg/">CanVG</a>. Meanwhile <a href="http://mbostock.github.com/d3/">D3.js</a> is a pure SVG library for data visualization.</p>
+<p>For Android Browser support, you can use <a href="http://code.google.com/p/canvg/">CanVG</a>. Meanwhile <a href="http://mbostock.github.com/d3/">D3.js</a> is an SVG and DOM library for data visualization.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://code.google.com/p/svgweb/">SVGWeb</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://code.google.com/p/svgweb/">SVGWeb</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/svg">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/svg.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie8 polyfill</footer>
-          </article>          
-        
+          </article>
+          
           <article class="none">
             <header>
-              <h2 class="name">text-overflow </h2>
-              <h3 class="status use">use <i></i> </h3>                                                        
+              <h2 class="name" id="text-overflow">text-overflow </h2>
+              <h3 class="status use">use <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>Text overflow is most commonly used for <code>text-overflow: ellipsis</code>. Per Firefox 7, all modern browsers now support this property prefixless and you should use it. On unsupported browsers, it merely does not render the ellipsis, so we recommend that you do not use a polyfill. However, there is a <a href="http://www.bramstein.com/projects/text-overflow/">jQuery plugin</a> in the unlikely event of you needing one. </p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/text-overflow">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/text-overflow.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
-          </article>          
-        
+          </article>
+          
           <article class="gtie9">
             <header>
-              <h2 class="name">text-shadow </h2>
-              <h3 class="status use">use <i></i> </h3>                                                        
+              <h2 class="name" id="text-shadow">text-shadow </h2>
+              <h3 class="status use">use <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
@@ -1729,96 +1996,96 @@ Resources:
 
 <p>Sometimes you may do light/transparent text with an invert text-shadow. In these cases, we recomend to feature detect (with Modernizr) so you can provide solid color <code>.no-textshadow</code> fallback styling.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/text-shadow">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/text-shadow.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">gtie9</footer>
-          </article>          
-        
+          </article>
+          
           <article class="none">
             <header>
-              <h2 class="name">text-stroke </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>                                                        
+              <h2 class="name" id="text-stroke">text-stroke </h2>
+              <h3 class="status avoid">avoid <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>Text stroke, which adds an outline or stroke to text, is only supported by WebKit. Text stroke has never been part of a CSS specification and should be avoided.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/text-stroke">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/text-stroke.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
-          </article>          
-        
-          <article class="polyfill gtie9 webvvt">
+          </article>
+          
+          <article class="polyfill gtie9 webvtt">
             <header>
-              <h2 class="name">&lt;track> </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="&lt;track&gt;">&lt;track> </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p><a href="http://www.html5rocks.com/en/tutorials/track/basics/">The <code>&lt;track&gt;</code> element</a> provides a mechanism of showing captions/subtitles and/or associated metadata with <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code>. The file format the <code>&lt;track&gt;</code> element uses is called WebVVT. Browser support for both is in progress: complete in IE10pp4, ongoing in Webkit, unknown in Opera. A polyfill is a wise choice; Captionator is the most complete and well supported. More at <a href="http://blog.gingertech.net/2011/06/27/recent-developments-around-webvtt/">Sylvia Pfeiffer's blog</a>.</p>
+                <p><a href="http://www.html5rocks.com/en/tutorials/track/basics/">The <code>&lt;track&gt;</code> element</a> provides a mechanism of showing captions/subtitles and/or associated metadata with <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code>. The file format the <code>&lt;track&gt;</code> element uses is called WebVTT. Browser support for both is in progress: complete in IE10pp4, ongoing in Webkit, unknown in Opera. A polyfill is a wise choice; Captionator is the most complete and well supported. More at <a href="http://blog.gingertech.net/2011/06/27/recent-developments-around-webvtt/">Sylvia Pfeiffer's blog</a>.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://captionatorjs.com/">captionator.js</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://captionatorjs.com/">captionator.js</a></p></div>
 
               <p class="links">
               
-                <a href="http://caniuse.com/track">
-                  View browser share %
-                </a>  
+                <a href="https://developer.mozilla.org/en/HTML/Element/track#Compatibility">
+                  Learn more
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/track.md">Edit this info</a>
               </p>
             </div>
-            <footer class="tags">polyfill gtie9 webvvt</footer>
-          </article>          
-        
+            <footer class="tags">polyfill gtie9 webvtt</footer>
+          </article>
+          
           <article class="fallback prefixes">
             <header>
-              <h2 class="name">transforms </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="transforms">transforms </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>Make sure you use all the right prefixes (<code>-o-</code>, <code>-webkit-</code>, <code>-ms-</code>, <code>-moz-</code>). If your transforms destroy the readability of your site on browsers that do not support them, use Modernizr's <code>no-csstransforms</code> class to adjust the design so that the text remains readable. In the unlikely event of you needing a polyfill for unsupported browsers, use <a href="https://github.com/pbakaus/transformie">Transformie</a> or <a href="http://www.useragentman.com/blog/csssandpaper-a-css3-javascript-library/">CSSSandpaper</a>.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/transforms">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/transforms.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback prefixes</footer>
-          </article>          
-        
+          </article>
+          
           <article class="fallback prefixes">
             <header>
-              <h2 class="name">transitions </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="transitions">transitions </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
@@ -1826,74 +2093,74 @@ Resources:
                 <p>Most of the time, transitions just add to the experience and are not necessary for a usable experience. If there is any critical interaction that requires transitions to be present, we recommend you provide an alternative experience for users on browsers that do not support this feature by feature detecting its presence. 
 Note that you need to use all the usual prefixes to make this work in all browsers (<code>-o-</code>, <code>-webkit-</code>, <code>-moz-</code>, <code>-ms-</code>).</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/transitions">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/transitions.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback prefixes</footer>
-          </article>          
-        
+          </article>
+          
           <article class="polyfill gtie8">
             <header>
-              <h2 class="name">&lt;video> </h2>
-              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="&lt;video&gt;">&lt;video> </h2>
+              <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Do note you need to supply your video in various formats to cater to all browsers and fallbacks&mdash;<a href="http://www.mirovideoconverter.com/">Miro Video Converter</a> makes this trivial. H264 and WebM cover all browsers (except Firefox 3.6 which needs Ogg Theora). Use one of the polyfills below or gracefully handle all cases without any scripting, as explained by Kroc Camen in <a href="http://camendesign.com/code/video_for_everybody">Video for Everybody</a>.</p>
+                <p>Do note you need to supply your video in various formats to cater to all browsers and fallbacks&mdash;<a href="http://www.mirovideoconverter.com/">Miro Video Converter</a> makes this trivial. H264 and WebM cover all browsers (except Firefox 3.6 which needs Ogg Theora). Use the above polyfill or gracefully handle all cases without any scripting, as explained by Kroc Camen in <a href="http://camendesign.com/code/video_for_everybody">Video for Everybody</a>.</p>
 
 <p>There is also an incredibly useful service called <a href="http://vid.ly">vid.ly</a> which converts video online into all necessary formats and provides a short url that detects your browser/hardware and sends the correct format. <a href="http://archive.org">Archive.org</a> also converts MP4 videos uploaded to OGG automatically, and does the same with audio.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://videojs.com/">Video.js</a>, <a href="http://mediaelementjs.com/">mediaelementjs</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://mediaelementjs.com/">mediaelementjs</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/video">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/video.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill gtie8</footer>
-          </article>          
-        
+          </article>
+          
           <article class="fallback gtie9">
             <header>
-              <h2 class="name">Web Workers </h2>
-              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="Web Workers">Web Workers </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>Web Workers can parallelize computationally heavy operations very well, freeing up the UI thread to respond to user input. Depending on what <a href="http://stackoverflow.com/questions/2773682/what-are-the-use-cases-for-web-workers/2774022#2774022">use case</a> you have for workers, you may choose not to offer that feature if workers aren't present, or to <a href="http://www.nczonline.net/blog/2009/01/13/speed-up-your-javascript-part-1/">chunk it up</a> and put it on the UI thread.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
-                <a href="http://caniuse.com/web-workers">
+                <a href="http://caniuse.com/webworkers">
                   View browser share %
-                </a>  
+                </a>
               
-                <a href="https://github.com/h5bp/html5please/blob/master/posts/web-workers.md">Edit this info</a>
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/webworkers.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback gtie9</footer>
-          </article>          
-        
+          </article>
+          
           <article class="fallback">
             <header>
-              <h2 class="name">WebGL </h2>
-              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>                                                        
+              <h2 class="name" id="WebGL">WebGL </h2>
+              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
@@ -1902,24 +2169,52 @@ Note that you need to use all the usual prefixes to make this work in all browse
 
 <p>You can also offer to the user to install <a href="http://code.google.com/chrome/chromeframe/">Google Chrome Frame</a> if they just want a plugin. Nearly all WebGL demos use GCF if it's available.</p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/webgl">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/webgl.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">fallback</footer>
-          </article>          
-        
+          </article>
+          
+          <article class="">
+            <header>
+              <h2 class="name" id="WebP">WebP </h2>
+              <h3 class="status caution">caution <i></i> </h3>
+              <h4 class="kind html">html</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>WebP is an image format that's designed to be provide high quality photographic imagery through smaller filesizes than JPEG. It's supported natively in Chrome, Android, and Opera. Through the <a href="https://github.com/antimatter15/weppy">weppy</a> polyfill you can pick up Firefox support.</p>
+
+<p>WebP alpha support is available in Chrome 22 (along with lossless). You can detect alpha support with a <code>onload</code>/<code>onerror</code> handlers, though there is <a href="https://github.com/antimatter15/weppy/issues/2">discussion</a> about giving weppy a firstclass support for alpha+fallback.</p>
+
+<p>For now, Modernizr detects WebP support and you can manage your own fallback to jpeg.</p>
+              </div>
+              <div class="polyfills"></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/webp">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/webp.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags"></footer>
+          </article>
+          
           <article class="polyfill prefixes">
             <header>
-              <h2 class="name">WebSockets </h2>
-              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>                                                        
+              <h2 class="name" id="WebSockets">WebSockets </h2>
+              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
@@ -1938,62 +2233,69 @@ Note that you need to use all the usual prefixes to make this work in all browse
 
 <p><a href="http://socket.io/">Socket.io</a> is a Node.js framework that helps with downlevel transports for browsers lacking native WebSocket support (and supports IE6+).</p>
 
-<p>XSockets and is a .NET+JavaScript framework that handles fallback via Flash and Silverlight.</p>
+<p>XSockets is a .NET+JavaScript framework that handles fallback via Flash and Silverlight.</p>
 
 <p>For more information see the <a href="http://www.leggetter.co.uk/real-time-web-technologies-guide#self-hosted">Full list of possible server-side websocket solutions</a></p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/gimite/web-socket-js">web-socket-js</a></p></div> 
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/gimite/web-socket-js">web-socket-js</a></p></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/websockets">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/websockets.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">polyfill prefixes</footer>
-          </article>          
-        
+          </article>
+          
           <article class="none">
             <header>
-              <h2 class="name">WebSQL DB </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>                                                        
+              <h2 class="name" id="WebSQL DB">WebSQL DB </h2>
+              <h3 class="status avoid">avoid <i></i> </h3>
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>Although it initially found favor as a clientside database API, it has now <a href="http://www.w3.org/TR/webdatabase/#status-of-this-document">been abandoned</a> in favor of IndexedDB. We therefore recommend that you do not use WebSQL. </p>
               </div>
-              <div class="polyfills"></div> 
+              <div class="polyfills"></div>
 
               <p class="links">
               
                 <a href="http://caniuse.com/websql">
                   View browser share %
-                </a>  
+                </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/websql.md">Edit this info</a>
               </p>
             </div>
             <footer class="tags">none</footer>
-          </article>          
-            
-      </section>
+          </article>
+          
+        </section>
+      <h2 id="noitems" class="visuallyhidden">No items met your search =(</h2>
     </div>
     <footer>
       <p>HTML5 Please is a community project (<a href="https://github.com/h5bp/html5please/">contribute on github!</a>) from the people behind <a href="http://html5boilerplate.com">HTML5 Boilerplate</a>, <a href="http://modernizr.com">Modernizr</a> &amp; <a href="http://css3please.com">CSS3 Please</a>.</p>
       <p class="builders"> <a href="http://twitter.com/divya"><img src="http://api.twitter.com/1/users/profile_image/divya?size=normal" alt="Divya Manian"><b>Divya</b> Manian</a> <a href="http://twitter.com/paul_irish"><img src="http://api.twitter.com/1/users/profile_image/paul_irish?size=normal" alt="Paul Irish"><b>Paul</b> Irish</a> <a href="http://twitter.com/tbranyen"><img src="http://api.twitter.com/1/users/profile_image/tbranyen?size=normal" alt="Tim Branyen"><b>Tim</b> Branyen</a> <a href="http://twitter.com/connor"><img src="http://api.twitter.com/1/users/profile_image/connor?size=normal" alt="Connor Montgomery"><b>Connor</b> Montgomery</a> <a href="http://raynos.org/blog/"><img src="http://gravatar.com/avatar/d840cb1fb7e828284011cc08f40a1015?s=48"><b>Jake</b> Verbaten</a> <a href="https://github.com/h5bp/html5please/contributors">&amp; more</a>
       </p>
     </footer>
-    
-    <!-- scripts concatenated and minified via ant build script -->
+
+    <!-- all of these ... -->
     <script src="js/libs/augment.js"></script>
     <script src="js/libs/list.js"></script>
     <script src="js/libs/classList.js"></script>
     <script src="js/script.js"></script>
-    <!-- end scripts -->
+     <!--    are NORMALLY compiled (with source map) into...
+
+    <script src="js/script.min.js"></script>
+
+    .. but not today  -->
+
+
     <script>
         var _gaq=[['_setAccount','UA-17904194-3'],['_trackPageview'],['_trackPageLoadTime']];
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
