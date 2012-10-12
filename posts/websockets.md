@@ -10,7 +10,9 @@ Making your app real-time is a huge boost and [WebSockets](http://dev.w3.org/htm
 
 To use native WebSockets in Firefox, the prefixed MozWebSocket should be used. However, Firefox 11 will support the [IETF standard](http://tools.ietf.org/html/rfc6455) without the prefix.
 
-As a word of caution, the protocol backing the Web Socket API has become an [IETF standard](http://tools.ietf.org/html/rfc6455), but Safari has not yet implemented the (secure) new version. It is recommended forcing an alternative on Safari or disabling WebSockets on Safari for now.
+The protocol backing the Web Socket API has become an IETF standard, but Safari has not yet implemented the new version. To support Safari, the WebSocket server needs to support both -76 and the RFC6455 versions, or you can use Flash or Java sockets (if available).
+
+The -76 version has a possible security problem for users behind buggy transparent proxies. The same security problem exists with Flash sockets and Java sockets. None of these options are recommended.
 
 To make websockets easier to use there are multiple server-side framework solutions. These frameworks generally provide fallback transports (HTTP long polling, HTTP streaming, ajax polling) to support non-websocket browsers. However be prepared to tune the fallback solutions in order to meet the needs of your app. 
 
