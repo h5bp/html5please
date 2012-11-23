@@ -712,6 +712,7 @@ body > footer {
   margin: 0 1em 1em 0;
   text-align: left;
   width: 11em;
+  white-space: nowrap;
 }
 .builders a:last-child {
   width: auto;
