@@ -2,7 +2,6 @@ feature: flexbox
 status: avoid
 tags: none flexible
 kind: css
-polyfillurls: http://flexiejs.com/
 
 Unfortunately, [older versions of this spec](http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) have been implemented in Gecko, WebKit and Trident. A tutorial covering that spec is [on HTML5 Rocks](http://www.html5rocks.com/en/tutorials/flexbox/quick/).
 
