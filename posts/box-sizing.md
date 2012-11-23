@@ -8,5 +8,5 @@ Supported in Chrome, IE8+, Opera, Safari 5.1+. The <a href="http://paulirish.com
 
 For IE6/7 you can optionally use the [box-sizing polyfill](https://github.com/Schepp/box-sizing-polyfill) to provide this feature in IE 6/7 (you could scope the adjustments using [IE conditionals](http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/) or Modernizr's <a href="http://www.modernizr.com/download/#-cssclasses-addtest-css_boxsizing">`no-box-sizing`</a>).
 
-Besides the prefix, there are box sizing issues in Gecko/Firefox, see <a href="https://developer.mozilla.org/En/CSS/Box-sizing#Notes">notes at MDN</a>. Most notable, min-height/max-height does not work.
+Besides the prefix, there were box sizing issues in Gecko/Firefox, see <a href="https://developer.mozilla.org/En/CSS/Box-sizing#Notes">notes at MDN</a>. For versions of Firefox before 17 min-height/max-height does not work.
 
