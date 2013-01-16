@@ -10,6 +10,6 @@ For now, `calc()` must always be used after a fallback declaration, so it doesn'
 
     width: 500px; /** older browsers **/
     width: -webkit-calc(50% - 20px); /** Chrome / Safari **/
-    width: -moz-calc(50% - 20px); /** Gecko 2 (FF 4, support will be dropped)  **/
+    width: -moz-calc(50% - 20px); /** FF 4-15  **/
     width: -o-calc(50% - 20px); /** could be calc(), no idea about Opera's plans **/
     width: calc(50% - 20px); /** FF 16+, IE 9+, and future other browsers **/
