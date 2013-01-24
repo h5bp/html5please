@@ -1,4 +1,4 @@
-ture: gradients
+feature: gradients
 status: use
 tags: fallback prefixes gtie8
 kind: css

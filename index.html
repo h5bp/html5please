@@ -235,9 +235,9 @@
               <div class="recco">
                 <p>Supported in Chrome, IE8+, Opera, Safari 5.1+. The <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/">recommended pattern</a> is <code>box-sizing : border-box;</code>, preceded by the fallbacks <code>-webkit-box-sizing: border-box;</code> for old IOS&lt;=4 and Android&lt;=2.3, and <code>-moz-box-sizing: border-box;</code> for firefox. You can apply it to all (<code>*</code>) elements if you like.</p>
 
-<p>For IE6/7 you can optionally use the <a href="https://github.com/Schepp/box-sizing-polyfill">box-sizing polyfill</a> to provide this feature in IE 6/7 (you could scope the adjustments using <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">IE conditionals</a> or Modernizr's <a href="http://www.modernizr.com/download/#-cssclasses-addtest-css_boxsizing"><code>no-box-sizing</code></a>).</p>
+<p>IE8 does not support <code>box-sizing: border-box;</code> with <code>min-width</code>/<code>max-width</code> and <code>min-height</code>/<code>max-height</code>. For IE6/7 you can optionally use the <a href="https://github.com/Schepp/box-sizing-polyfill">box-sizing polyfill</a> to provide this feature in IE 6/7 (you could scope the adjustments using <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">IE conditionals</a> or Modernizr's <a href="http://www.modernizr.com/download/#-cssclasses-addtest-css_boxsizing"><code>no-box-sizing</code></a>).</p>
 
-<p>Besides the prefix, there are box sizing issues in Gecko/Firefox, see <a href="https://developer.mozilla.org/En/CSS/Box-sizing#Notes">notes at MDN</a>. Most notable, min-height/max-height does not work.</p>
+<p>Besides the prefix, there were box sizing issues in Gecko/Firefox, see <a href="https://developer.mozilla.org/En/CSS/Box-sizing#Notes">notes at MDN</a>. For versions of Firefox before 17 min-height/max-height does not work.</p>
               </div>
               <div class="polyfills"></div>
 
@@ -346,9 +346,9 @@ width: calc(50% - 20px); /** IE and future other browsers **/
             </header>
             <div class="more">
               <div class="recco">
-                <p>CORS, or cross-origin resource sharing, enables a few things, but most notably cross-domain AJAX. All non-IE browsers have support for CORS. IE8 introduced <a href="http://msdn.microsoft.com/en-us/library/ie/cc288060(v=vs.85).aspx">XDomainRequest</a>, so really only IE7 needs help with cross-domain files. Consider the polyfills below or you can fall back to using a <a href="http://benalman.com/projects/php-simple-proxy/">simple proxy</a>.</p>
+                <p>CORS, or cross-origin resource sharing, enables a few things, but most notably cross-domain AJAX. All non-IE browsers have support for CORS. IE8 introduced <a href="http://msdn.microsoft.com/en-us/library/ie/cc288060(v=vs.85).aspx">XDomainRequest</a>, so really only IE7 needs help with cross-domain files. Consider the flXHR polyfill or you can fall back to using a <a href="http://benalman.com/projects/php-simple-proxy/">simple proxy</a>.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/toolness/postmessage-proxied-xhr/#readme">postmessage-proxied-xhr</a>, <a href="http://flxhr.flensed.com/">flXHR</a> (requires crossdomain.xml), <a href="https://github.com/eligrey/pmxdr">pmxdr</a> (requires host installed)</p></div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://flxhr.flensed.com/">flXHR</a> (requires crossdomain.xml)</p></div>
 
               <p class="links">
               
@@ -700,13 +700,11 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
             </header>
             <div class="more">
               <div class="recco">
-                <p>Unfortunately, <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">older versions of this spec</a> have been implemented in Gecko, WebKit and Trident. A tutorial covering that spec is <a href="http://www.html5rocks.com/en/tutorials/flexbox/quick/">on HTML5 Rocks</a>.</p>
+                <p>The flexbox spec has changed significantly through three major revisions (Chris Coyier has a <a href="http://css-tricks.com/old-flexbox-and-new-flexbox/">post on how to tell which flexbox you're looking at</a>. <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">Older versions of this spec</a> have been implemented in Gecko, WebKit and Trident (a tutorial covering that spec is <a href="http://www.html5rocks.com/en/tutorials/flexbox/quick/">on HTML5 Rocks</a>). The current version is now a W3C Candidate Recommendation and is considered stable. There are presently no robust polyfills for the current spec.</p>
 
-<p>But <a href="http://dev.w3.org/csswg/css3-flexbox/">the spec</a> has changed significantly. Stephan Hay has <a href="http://www.the-haystack.com/2012/01/04/learn-you-a-flexbox/">written a guide on the new flexbox implementation</a>. However, since this revised spec, the spec underwent more naming changes, which have started to debut in Chrome 22. The spec is now at last call and is considered stable so we expect no more breaking changes.</p>
-
-<p>We recommend you avoid using this until the TR version of the spec finds wide-spread implementation.</p>
+<p>The spec is now implemented in Opera, Chrome and Firefox. <a href="http://weblog.bocoup.com/dive-into-flexbox/">Dive into Flexbox</a> is a good overview of the spec from Bocoup, Opera has a great tutorial to learn from: <a href="http://dev.opera.com/articles/view/flexbox-basics/">Flexbox — fast track to layout nirvana?</a>. Additionally, the <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_flexible_boxes">flexbox docs at MDN</a> and the <a href="http://demo.agektmr.com/flexbox/">Flexbox Please!</a> tool are good references.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p>http://flexiejs.com/</p></div>
+              <div class="polyfills"></div>
 
               <p class="links">
               
@@ -852,9 +850,9 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
             </header>
             <div class="more">
               <div class="recco">
-                <p>We strongly recommend you use all the prefixes (<code>-o-</code>, <code>-webkit-</code>, <code>-ms-</code>, <code>-moz-</code>) when you provide gradients as image values (<code>background</code> or <code>border-image</code>). Do provide a fallback color if you are using this as a value for <code>background</code> so browsers that do not support the gradients can render a solid background color. </p>
+                <p>We strongly recommend you use the prefixes (<code>-o-</code>, <code>-webkit-</code>, <code>-moz-</code>) when you provide gradients as image values (<code>background</code> or <code>border-image</code>). Do provide a fallback color if you are using this as a value for <code>background</code> so browsers that do not support the gradients can render a solid background color.</p>
 
-<p>We also suggest you drop old WebKit syntax and only use the <a href="https://developer.mozilla.org/en/CSS/-moz-linear-gradient">newer syntax</a> for gradient values and <a href="http://www.broken-links.com/2012/01/11/the-new-and-hopefully-final-linear-gradient-syntax/">not the latest one</a> (yet) until <a href="http://www.w3.org/TR/css3-images/">the specification</a> hits Candidate Recommendation. </p>
+<p>We also suggest you drop old WebKit syntax and only use the <a href="https://developer.mozilla.org/en/CSS/-moz-linear-gradient">newer syntax</a> for gradient values and <a href="http://www.broken-links.com/2012/01/11/the-new-and-hopefully-final-linear-gradient-syntax/">not the latest one</a> (yet) until Chrome &amp; Safari start supporting the newer syntax.</p>
               </div>
               <div class="polyfills"></div>
 
@@ -1105,7 +1103,7 @@ defense-in-depth strategy.</p>
             </header>
             <div class="more">
               <div class="recco">
-                <p>A color input will fall back to a plain text input if it's not supported. So far, only Opera and Chrome Canary support this.</p>
+                <p>A color input will fall back to a plain text input if it's not supported. So far, only Opera and Chrome support this.</p>
 
 <p>You should probably avoid this until it has support in WebKit, Gecko or IE.</p>
               </div>
@@ -1243,7 +1241,13 @@ defense-in-depth strategy.</p>
               <div class="recco">
                 <p>Input placeholders are simply ignored in IE 9 and below. Note that they are only applied when the <strong>type</strong> of the input is <em>text</em>, <em>password</em>, <em>search</em>, <em>tel</em>, <em>url</em>, or <em>email</em>. <em>Textareas</em> can have placeholders, too. Otherwise, it is ignored.</p>
 
-<p><code>input[placeholder]</code> is commonly the first polyfill anyone writes and, as such, there are <a href="http://bit.ly/polyfills">many of them</a>. Password inputs and submit event clearing are among many of the gotchas that catch naive implementations; Mathias's polyfill below handles these cases very well.</p>
+<p>Per the <a href="http://dev.w3.org/html5/spec/Overview.html#the-placeholder-attribute">HTML specification</a>:</p>
+
+<blockquote>
+  <p>The placeholder attribute represents a short hint (a word or short phrase) intended to aid the user with data entry. A hint could be a sample value or a brief description of the expected format. The placeholder attribute should not be used as an alternative to a label.</p>
+</blockquote>
+
+<p>A properly implemented form should have labels and any placeholders should be supplementary.  As such, they are not required for successful completion of a form and use of a polyfill is often unwarranted.</p>
               </div>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/mathiasbynens/jquery-placeholder">Placeholder jQuery Plugin</a></p></div>
 
@@ -1267,9 +1271,13 @@ defense-in-depth strategy.</p>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Crockford's <a href="https://github.com/douglascrockford/JSON-js">JSON2.js</a> is a perfect polyfill that accounts for non-native implementations (basically only IE6 &amp; IE7 at this point). It's robust, well tested and can be used along with the native feature flawlessly.</p>
+                <p><a href="http://json.org/">JSON</a> is a language-independent data interchange format based on a loose subset of the JavaScript grammar. Originally popularized by <a href="http://www.crockford.com/">Douglas Crockford</a>, the format was standardized in the <a href="http://es5.github.com/">fifth edition</a> of the ECMAScript specification.</p>
+
+<p><a href="http://bestiejs.github.com/json3/">JSON 3</a> is a polyfill compatible with nearly all JavaScript platforms. It is a drop-in replacement for <a href="https://github.com/douglascrockford/JSON-js">JSON 2</a> that uses feature tests to detect broken and incomplete native JSON implementations, supports <a href="https://github.com/amdjs/amdjs-api/wiki">asynchronous module loaders</a> and <a href="https://github.com/phiggins42/has.js/"><code>has</code></a>-aware optimizers, and is built to specification standards.</p>
+
+<p><a href="https://github.com/douglascrockford/JSON-js">JSON 2</a> is an older, alternative polyfill by Douglas Crockford.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/douglascrockford/JSON-js">json2.js</a></p></div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/douglascrockford/JSON-js">json2.js</a>, <a href="http://bestiejs.github.com/json3/">JSON 3</a></p></div>
 
               <p class="links">
               
@@ -1447,7 +1455,7 @@ defense-in-depth strategy.</p>
 
 <p>The Microdata DOM API is helpful because you can manipulate items and properties on a page programmatically, perhaps to present the information in a searchable/filterable manner, or deliver it to another application somewhere else.</p>
 
-<p>It's supported by Opera and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=591467">also being implemented by Mozilla</a></p>
+<p>It's supported by Opera and Firefox 16+.</p>
 
 <p>IE6+ support can be done using <a href="https://github.com/termi/ES5-DOM-SHIM">this ES5/DOM shim</a></p>
               </div>
@@ -1918,7 +1926,7 @@ Resources:
             </header>
             <div class="more">
               <div class="recco">
-                <p><a href="http://css-tricks.com/saving-the-day-with-scoped-css/">Scoped stylesheets</a> are still in active development. While you can experiment with them in Chrome Canary (type <code>about:flags</code> in Chrome's address bar), there is no stable version of any browser supporting this now. </p>
+                <p><a href="http://css-tricks.com/saving-the-day-with-scoped-css/">Scoped stylesheets</a> are still in active development. While you can experiment with them in Firefox 21 Nightly and Chrome Canary (type <code>about:flags</code> in Chrome's address bar), there is no stable version of any browser supporting this now. </p>
               </div>
               <div class="polyfills"></div>
 
@@ -2225,7 +2233,9 @@ Note that you need to use all the usual prefixes to make this work in all browse
 
 <p>To use native WebSockets in Firefox, the prefixed MozWebSocket should be used. However, Firefox 11 will support the <a href="http://tools.ietf.org/html/rfc6455">IETF standard</a> without the prefix.</p>
 
-<p>As a word of caution, the protocol backing the Web Socket API has become an <a href="http://tools.ietf.org/html/rfc6455">IETF standard</a>, but Safari has not yet implemented the (secure) new version. It is recommended forcing an alternative on Safari or disabling WebSockets on Safari for now.</p>
+<p>The protocol backing the Web Socket API has become an IETF standard, but Safari has not yet implemented the new version. To support Safari, the WebSocket server needs to support both -76 and the RFC6455 versions, or you can use Flash or Java sockets (if available).</p>
+
+<p>The -76 version has a possible security problem for users behind buggy transparent proxies. The same security problem exists with Flash sockets and Java sockets. None of these options are recommended.</p>
 
 <p>To make websockets easier to use there are multiple server-side framework solutions. These frameworks generally provide fallback transports (HTTP long polling, HTTP streaming, ajax polling) to support non-websocket browsers. However be prepared to tune the fallback solutions in order to meet the needs of your app. </p>
 
