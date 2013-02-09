@@ -15,21 +15,44 @@
   li {
     margin: 0; padding: 0;
   }
-}  
+}
+
+// Return the modulo of two numbers
+@function mod($dividend,$divisor) {
+  @return $dividend - (floor($dividend/$divisor)*$divisor);
+}
+
+// Return the corrected angle or position for a css gradient
+@function angle($deg) {
+  @if type-of($deg) == 'number' {
+    @return mod(abs($deg - 450), 360deg);
+  } @else {
+    $position: to + " ";
+    @each $pos in $deg {
+      $position: $position + opposite-position($pos) + " ";
+    }
+    @return $position;
+  }
+}
+
+@mixin linear-gradient-fix ($angle, $details) {
+  @include background(linear-gradient($angle, $details));
+  background: #{"linear-gradient(" + angle($angle) + ", " + $details + ")"};
+}
 
 @mixin apply-status-style($color) {
-    background: $color; 
+    background: $color;
     box-shadow: -4px 0px 4px darken($color, 5%) inset;
     border-right-color: darken($color, 12%);
 
-    &:before{
-      @include background(linear-gradient(34deg, transparentize($color, 1),  transparentize($color, 1) 50%, darken($color, 5%) 53%,  $color 56%));                    
+    &:before {
+      @include linear-gradient-fix(34deg, (transparentize($color, 1), transparentize($color, 1) 50%, darken($color, 5%) 53%,  $color 56%));
     }
-    
+
     &:after {
-      @include background(linear-gradient(-34deg, transparentize($color, 1),  transparentize($color, 1) 50%, darken($color, 5%) 53%,  $color 56%));                  
+      @include linear-gradient-fix(-34deg, (transparentize($color, 1), transparentize($color, 1) 50%, darken($color, 5%) 53%,  $color 56%));
     }
-}  
+}
 
 @mixin secondary-title {
   font-size: 2em;
