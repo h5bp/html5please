@@ -51,15 +51,39 @@
     <div id="main" role="main">
       <section class="features list">
         
-          <article class="fallback">
+          <article class="fallback gtie8">
             <header>
-              <h2 class="name" id="animations">animations </h2>
-              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>
+              <h2 class="name" id="&#x60;rem&#x60; unit">`rem` unit </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>CSS Animations are still in flux. The Working Group has <a href="http://www.w3.org/2012/01/13-svg-minutes.html#action02">decided to provide</a> a universal animation spec that would work across CSS, SVG and HTML. For now, either use animations only to provide non-essential aesthetic enhancements or use feature detection to provide an alternative experience for browsers that do not support this feature.</p>
+                <p><code>rem</code> is a unit used in CSS for calculating values relative to the font size (similar to <code>em</code>), but relative to that of the root (in most cases <code>&lt;html&gt;</code>) element (<a href="http://snook.ca/archives/html_and_css/font-size-with-rem">Read more about using the rem unit</a>). Wide browser support &amp; easily-calculated pixel fallback make this unit good to use with a fallback.</p>
+              </div>
+              <div class="polyfills"></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/rem">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/rem.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">fallback gtie8</footer>
+          </article>
+          
+          <article class="fallback">
+            <header>
+              <h2 class="name" id="animations">animations </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
+              <h4 class="kind css">css</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>Animations are now supported in the latest versions of almost all browsers. In order to provide support for slightly older browsers, either use animations only to provide non-essential aesthetic enhancements or use feature detection to provide an alternative experience for browsers that do not support this feature.</p>
               </div>
               <div class="polyfills"></div>
 
@@ -267,9 +291,9 @@
 
 <pre><code>width: 500px; /** older browsers **/
 width: -webkit-calc(50% - 20px); /** Chrome / Safari **/
-width: -moz-calc(50% - 20px); /** Mozilla Firefox **/
+width: -moz-calc(50% - 20px); /** FF 4-15  **/
 width: -o-calc(50% - 20px); /** could be calc(), no idea about Opera's plans **/
-width: calc(50% - 20px); /** IE and future other browsers **/
+width: calc(50% - 20px); /** FF 16+, IE 9+, and future other browsers **/
 </code></pre>
               </div>
               <div class="polyfills"></div>
@@ -671,14 +695,16 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
           <article class="prefixes">
             <header>
               <h2 class="name" id="filters">filters </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>
+              <h3 class="status caution">caution <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Filters are now supported by Safari 6 and Chrome 18+. But, given the lack of support in other browsers, consider waiting for other implementations before use. </p>
+                <p>Filters are now supported by Safari 6 and Chrome 18+. But, given the lack of support in other browsers, consider waiting for other implementations before use.</p>
+
+<p>If you can't wait, give <a href="https://github.com/Schepp/CSS-Filters-Polyfill">Polyfilter - a CSS Filters Polyfill</a> a spin which supports/translates to/emulates filters on Chrome 20+, Safari 6+, Firefox 4+, IE 6-9 (but not IE 10) on desktop and iOS 6+ Safari and Chrome, and Firefox 4+ on mobile.</p>
               </div>
-              <div class="polyfills"></div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/Schepp/CSS-Filters-Polyfill">Polyfilter - a CSS Filters Polyfill</a></p></div>
 
               <p class="links">
               
@@ -702,7 +728,7 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
               <div class="recco">
                 <p>The flexbox spec has changed significantly through three major revisions (Chris Coyier has a <a href="http://css-tricks.com/old-flexbox-and-new-flexbox/">post on how to tell which flexbox you're looking at</a>. <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">Older versions of this spec</a> have been implemented in Gecko, WebKit and Trident (a tutorial covering that spec is <a href="http://www.html5rocks.com/en/tutorials/flexbox/quick/">on HTML5 Rocks</a>). The current version is now a W3C Candidate Recommendation and is considered stable. There are presently no robust polyfills for the current spec.</p>
 
-<p>The spec is now implemented in Opera, Chrome and Firefox. <a href="http://weblog.bocoup.com/dive-into-flexbox/">Dive into Flexbox</a> is a good overview of the spec from Bocoup, Opera has a great tutorial to learn from: <a href="http://dev.opera.com/articles/view/flexbox-basics/">Flexbox — fast track to layout nirvana?</a>. Additionally, the <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_flexible_boxes">flexbox docs at MDN</a> and the <a href="http://demo.agektmr.com/flexbox/">Flexbox Please!</a> tool are good references.</p>
+<p>The spec is now implemented in Opera, Chrome and Firefox. <a href="http://weblog.bocoup.com/dive-into-flexbox/">Dive into Flexbox</a> is a good overview of the spec from Bocoup, Opera has a great tutorial to learn from: <a href="http://dev.opera.com/articles/view/flexbox-basics/">Flexbox — fast track to layout nirvana?</a>. Additionally, the <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_flexible_boxes">flexbox docs at MDN</a> are a good reference alongside playgrounds like <a href="http://demo.agektmr.com/flexbox/">Flexbox Please!</a> and <a href="http://the-echoplex.net/flexyboxes/">Flexy Boxes</a>.</p>
               </div>
               <div class="polyfills"></div>
 
@@ -924,7 +950,7 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
             </header>
             <div class="more">
               <div class="recco">
-                <p>All current browsers, except Internet Explorer 8 and below, support the use of the new HTML5 elements (e.g., <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, etc.). However, they aren't always mapped to accessibility APIs as the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#wai-aria">HTML5 spec</a> requires. Currently <a href="http://html5accessibility.com/">only Firefox does this</a>, but other browsers are implementing the accessibility APIs quickly. In the meantime, <a href="https://github.com/yatil/accessifyhtml5.js">Accessifyhtml5.js</a> maps them correctly.</p>
+                <p>All current browsers, except Internet Explorer 8 and below, support the use of the new HTML5 elements (e.g., <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, etc.). However, they aren't always mapped to accessibility APIs as the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#wai-aria">HTML5 spec</a> requires. Currently <a href="http://html5accessibility.com/">only Firefox does this</a>, but other browsers are implementing the accessibility APIs quickly. In the meantime, <a href="https://github.com/yatil/accessifyhtml5.js">Accessifyhtml5.js</a> maps them correctly.</p>
 
 <p>The notes below only apply to Internet Explorer 8 and below:</p>
 
@@ -958,7 +984,7 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
               <div class="recco">
                 <p><a href="http://dev.w3.org/csswg/css3-text/#hyphenation">CSS Text Level 3</a> allows you to tell the browser to break words using hyphens. Read about how to effectively use <code>hyphens:auto</code> and <code>word-break</code> in <a href="http://blog.kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/">Word wrapping/hyphenation using CSS</a>.</p>
 
-<p>As there won't by any noticable effects on browsers which don't support the feature, we recommend that you use it without any polyfills or fallbacks. <a href="http://code.google.com/p/hyphenator/">CSS Hyphenator</a> is a polyfill that works on browsers that support the soft hyphen. <a href="https://github.com/Modernizr/Modernizr/issues/312">Modernizr has good support</a> for hyphentation detection. It'd also be wise to read <a href="http://davidnewton.ca/the-current-state-of-hyphenation-on-the-web">The Current State of Hyphenation on the Web
+<p>As there won't be any noticable effects on browsers which don't support the feature, we recommend that you use it without any polyfills or fallbacks. <a href="http://code.google.com/p/hyphenator/">CSS Hyphenator</a> is a polyfill that works on browsers that support the soft hyphen. <a href="https://github.com/Modernizr/Modernizr/issues/312">Modernizr has good support</a> for hyphentation detection. It'd also be wise to read <a href="http://davidnewton.ca/the-current-state-of-hyphenation-on-the-web">The Current State of Hyphenation on the Web
 </a>.</p>
               </div>
               <div class="polyfills"></div>
@@ -1722,7 +1748,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
           
           <article class="polyfill gtie9">
             <header>
-              <h2 class="name" id="&lt;progress&gt;">&lt;progress> </h2>
+              <h2 class="name" id="&amp;lt;progress&gt;">&lt;progress> </h2>
               <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
@@ -2098,8 +2124,8 @@ Resources:
             </header>
             <div class="more">
               <div class="recco">
-                <p>Most of the time, transitions just add to the experience and are not necessary for a usable experience. If there is any critical interaction that requires transitions to be present, we recommend you provide an alternative experience for users on browsers that do not support this feature by feature detecting its presence. 
-Note that you need to use all the usual prefixes to make this work in all browsers (<code>-o-</code>, <code>-webkit-</code>, <code>-moz-</code>, <code>-ms-</code>).</p>
+                <p>Most of the time, transitions just add to the experience and are not necessary for a usable experience. If there is any critical interaction that requires transitions to be present, we recommend you provide an alternative experience for users on browsers that do not support this feature by feature detecting its presence.
+Note that you need to use all the usual prefixes to make this work in all browsers (<code>-o-</code>, <code>-webkit-</code>, <code>-moz-</code>).</p>
               </div>
               <div class="polyfills"></div>
 
