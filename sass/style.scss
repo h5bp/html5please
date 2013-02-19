@@ -290,7 +290,7 @@ article h3 b i {
 
 #searchurl {
   @include our-transition('width 500ms linear, opacity 600ms linear');
-  @include background(linear-gradient(90deg, darken(#f16529, 20%), #f16529));
+  @include linear-gradient-fix(90deg, (darken(#f16529, 20%), #f16529));
   background-color: darken(#f16529, 20%);
   display: inline-block;
   font-size: 0.8em;
