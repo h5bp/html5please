@@ -1,7 +1,7 @@
-feature: Rem (root em) units
+feature: `rem` unit
 status: use
 tags: fallback gtie8
 kind: css
-polyfillurls: [Rem unit polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill)
+polyfillurls: 
 
-`rem` is a relative css unit, similar to `em`, but calculated from the font size of the root (`<html>`) element. `rem`s are a good choice for sizing multiple elements on the page relative to each other while avoiding complex math from nested `em`s and maintaining the user's ability to resize text. Wide browser support including IE9+ and easaly calculated pixel fallbacks make this unit good to go.
+`rem` is a unit used in CSS for calculating values relative to the font size (similar to `em`), but relative to that of the root (in most cases `<html>`) element ([Read more about using the rem unit](http://snook.ca/archives/html_and_css/font-size-with-rem)). Wide browser support & easily-calculated pixel fallback make this unit good to use with a fallback.
