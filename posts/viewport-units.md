@@ -8,4 +8,4 @@ Viewport units allow elements to be sized proportionally to the browser's viewpo
 
 IE9 supports `vh`, `vw`, and `vm` instead of `vmin` for box and border measurements, but won't size text with viewport units.
 
-Depending on the design, it can be possible to gracefully degrade viewport units with supported fallbacks. There currently are no standalone polyfills, although [-prefix-free](https://github.com/LeaVerou/prefixfree) and [jquery.columns](https://github.com/elclanrs/jquery.columns) provide static viewport unit polyfills as part of larger projects.
+Depending on the design, it's sometimes possible to gracefully degrade viewport units with approximate fallbacks. Javascript polyfills like [vminpoly](https://github.com/saabi/vminpoly) exist, but aren't recommended on production sites.
