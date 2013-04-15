@@ -54,12 +54,12 @@
           <article class="fallback">
             <header>
               <h2 class="name" id="animations">animations </h2>
-              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>CSS Animations are still in flux. The Working Group has <a href="http://www.w3.org/2012/01/13-svg-minutes.html#action02">decided to provide</a> a universal animation spec that would work across CSS, SVG and HTML. For now, either use animations only to provide non-essential aesthetic enhancements or use feature detection to provide an alternative experience for browsers that do not support this feature.</p>
+                <p>Animations are now supported in the latest versions of almost all browsers. In order to provide support for slightly older browsers, either use animations only to provide non-essential aesthetic enhancements or use feature detection to provide an alternative experience for browsers that do not support this feature.</p>
               </div>
               <div class="polyfills"></div>
 
@@ -253,23 +253,22 @@
             <footer class="tags">fallback prefixes gtie7 border-box</footer>
           </article>
           
-          <article class="none">
+          <article class="fallback">
             <header>
               <h2 class="name" id="calc()">calc() </h2>
-              <h3 class="status caution">caution <i></i> </h3>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Internet Explorer, Chrome and Firefox are the only supporting browsers, which makes using calc() in production tedious given the impact it can have on layout and the consequent breaking of your design on unsupported browsers. We encourage you to use it for experimentation and always use a fallback declaration, so it doesn't break browsers which don't support it.</p>
+                <p>All the modern browsers except Opera support <code>calc()</code> which makes it easier to adopt. But do note that it can have a big impact on the layout and the consequent breaking of your design on unsupported browsers. </p>
 
-<p>For now, <code>calc()</code> must always be used after a fallback declaration, so it doesn't break browsers which don't support it.</p>
+<p>You should use it with a fallback declaration, so it doesn't break browsers which don't support it.</p>
 
 <pre><code>width: 500px; /** older browsers **/
 width: -webkit-calc(50% - 20px); /** Chrome / Safari **/
-width: -moz-calc(50% - 20px); /** Mozilla Firefox **/
-width: -o-calc(50% - 20px); /** could be calc(), no idea about Opera's plans **/
-width: calc(50% - 20px); /** IE and future other browsers **/
+width: -moz-calc(50% - 20px); /** FF 4-15  **/
+width: calc(50% - 20px); /** FF 16+, IE 9+, and future other browsers **/
 </code></pre>
               </div>
               <div class="polyfills"></div>
@@ -283,7 +282,7 @@ width: calc(50% - 20px); /** IE and future other browsers **/
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/calc.md">Edit this info</a>
               </p>
             </div>
-            <footer class="tags">none</footer>
+            <footer class="tags">fallback</footer>
           </article>
           
           <article class="gtie8 polyfill">
@@ -671,14 +670,16 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
           <article class="prefixes">
             <header>
               <h2 class="name" id="filters">filters </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>
+              <h3 class="status caution">caution <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>Filters are now supported by Safari 6 and Chrome 18+. But, given the lack of support in other browsers, consider waiting for other implementations before use. </p>
+                <p>Filters are now supported by Safari 6 and Chrome 18+. But, given the lack of support in other browsers, consider waiting for other implementations before use.</p>
+
+<p>If you can't wait, give <a href="https://github.com/Schepp/CSS-Filters-Polyfill">Polyfilter - a CSS Filters Polyfill</a> a spin which supports/translates to/emulates filters on Chrome 20+, Safari 6+, Firefox 4+, IE 6-9 (but not IE 10) on desktop and iOS 6+ Safari and Chrome, and Firefox 4+ on mobile.</p>
               </div>
-              <div class="polyfills"></div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/Schepp/CSS-Filters-Polyfill">Polyfilter - a CSS Filters Polyfill</a></p></div>
 
               <p class="links">
               
@@ -695,14 +696,14 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
           <article class="none flexible">
             <header>
               <h2 class="name" id="flexbox">flexbox </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>
+              <h3 class="status use">use <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p>The flexbox spec has changed significantly through three major revisions (Chris Coyier has a <a href="http://css-tricks.com/old-flexbox-and-new-flexbox/">post on how to tell which flexbox you're looking at</a>. <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">Older versions of this spec</a> have been implemented in Gecko, WebKit and Trident (a tutorial covering that spec is <a href="http://www.html5rocks.com/en/tutorials/flexbox/quick/">on HTML5 Rocks</a>). The current version is now a W3C Candidate Recommendation and is considered stable. There are presently no robust polyfills for the current spec.</p>
+                <p>The flexbox spec has changed significantly through three major revisions (Chris Coyier has a <a href="http://css-tricks.com/old-flexbox-and-new-flexbox/">post on how to tell which flexbox you're looking at</a>. <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">Older versions of this spec</a> were implemented in Gecko and WebKit. (a tutorial covering that spec is <a href="http://www.html5rocks.com/en/tutorials/flexbox/quick/">on HTML5 Rocks</a>). The current version is now a W3C Candidate Recommendation and is considered stable. There are presently no robust polyfills for the current spec, however it's possible to <a href="http://css-tricks.com/using-flexbox/">mix old and new flexbox for maximum browser support</a>.</p>
 
-<p>The spec is now implemented in Opera, Chrome and Firefox. <a href="http://weblog.bocoup.com/dive-into-flexbox/">Dive into Flexbox</a> is a good overview of the spec from Bocoup, Opera has a great tutorial to learn from: <a href="http://dev.opera.com/articles/view/flexbox-basics/">Flexbox — fast track to layout nirvana?</a>. Additionally, the <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_flexible_boxes">flexbox docs at MDN</a> and the <a href="http://demo.agektmr.com/flexbox/">Flexbox Please!</a> tool are good references.</p>
+<p>The spec is now implemented in Opera, Chrome, IE and Firefox. <a href="http://weblog.bocoup.com/dive-into-flexbox/">Dive into Flexbox</a> is a good overview of the spec from Bocoup, Opera has a great tutorial to learn from: <a href="http://dev.opera.com/articles/view/flexbox-basics/">Flexbox — fast track to layout nirvana?</a>. Additionally, the <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_flexible_boxes">flexbox docs at MDN</a> are a good reference alongside playgrounds like <a href="http://demo.agektmr.com/flexbox/">Flexbox Please!</a>, <a href="http://the-echoplex.net/flexyboxes/">Flexy Boxes</a>, and <a href="http://bennettfeely.com/flexplorer/">Flexplorer</a>.</p>
               </div>
               <div class="polyfills"></div>
 
@@ -794,6 +795,56 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
             <footer class="tags">polyfill gtie9</footer>
           </article>
           
+          <article class="">
+            <header>
+              <h2 class="name" id="FormData API">FormData API </h2>
+              <h3 class="status caution">caution <i></i> </h3>
+              <h4 class="kind api">api</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>XMLHttpRequest Level 2 adds support for the new <a href="http://www.w3.org/TR/XMLHttpRequest2/#interface-formdata">FormData</a> interface,
+which provides a way to easily construct a set of key/value pairs representing
+form fields and their values, and can be sent using the XMLHttpRequest
+<code>send()</code> method. A FormData object can be constructed from an
+already existing form or created programmatically.</p>
+
+<p>Sending input values can easily be done already. For instance, the MooTools
+framework has a <a href="http://mootools.net/docs/core/Element/Element#Element:toQueryString">toQueryString()</a>
+method that can create a query string from any element. What's new with
+FormData is that it can send files!</p>
+
+<pre>
+var xhr = new XMLHttpRequest()
+, file = document.getElementById('myfile')
+, fd = new FormData()
+
+fd.append(file.name, file)
+
+xhr.open("POST", '/api/file-upload')
+xhr.send(fd)
+</pre>
+
+<p><a href="http://www.w3.org/TR/FileAPI/">FileAPI</a> can also be used to send files but you
+need to construct the body of the XHR by hand and send it using the <a href="https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary%28%29">sendAsBinary()</a>
+method, which is only implemented in Firefox. This might also use a lot of
+memory since the whole content of the file must be read in memory in order
+to build the body, whereas FormData sends packets.</p>
+              </div>
+              <div class="polyfills"></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/formdata">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/formdata.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags"></footer>
+          </article>
+          
           <article class="fallback">
             <header>
               <h2 class="name" id="fullscreen">fullscreen </h2>
@@ -802,7 +853,7 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
             </header>
             <div class="more">
               <div class="recco">
-                <p>The Full Screen API is currently only available in the latest versions of Chrome and Firefox. A jQuery plugin is available which contains an optional fallback to a minimal-chrome browser window when the Full Screen API is unavailable. Use as a progressive enhancement for those select browsers only.</p>
+                <p>The Full Screen API is currently only available in the latest versions of Chrome, Firefox and Opera. A jQuery plugin is available which contains an optional fallback to a minimal-chrome browser window when the Full Screen API is unavailable. Use as a progressive enhancement for those select browsers only.</p>
               </div>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/darcyclarke/jQuery-Fullscreen-Plugin">jQuery Fullscreen Plugin</a></p></div>
 
@@ -924,7 +975,7 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
             </header>
             <div class="more">
               <div class="recco">
-                <p>All current browsers, except Internet Explorer 8 and below, support the use of the new HTML5 elements (e.g., <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, etc.). However, they aren't always mapped to accessibility APIs as the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#wai-aria">HTML5 spec</a> requires. Currently <a href="http://html5accessibility.com/">only Firefox does this</a>, but other browsers are implementing the accessibility APIs quickly. In the meantime, <a href="https://github.com/yatil/accessifyhtml5.js">Accessifyhtml5.js</a> maps them correctly.</p>
+                <p>All current browsers, except Internet Explorer 8 and below, support the use of the new HTML5 elements (e.g., <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, etc.). However, they aren't always mapped to accessibility APIs as the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#wai-aria">HTML5 spec</a> requires. Currently <a href="http://html5accessibility.com/">only Firefox does this</a>, but other browsers are implementing the accessibility APIs quickly. In the meantime, <a href="https://github.com/yatil/accessifyhtml5.js">Accessifyhtml5.js</a> maps them correctly.</p>
 
 <p>The notes below only apply to Internet Explorer 8 and below:</p>
 
@@ -958,7 +1009,7 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
               <div class="recco">
                 <p><a href="http://dev.w3.org/csswg/css3-text/#hyphenation">CSS Text Level 3</a> allows you to tell the browser to break words using hyphens. Read about how to effectively use <code>hyphens:auto</code> and <code>word-break</code> in <a href="http://blog.kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/">Word wrapping/hyphenation using CSS</a>.</p>
 
-<p>As there won't by any noticable effects on browsers which don't support the feature, we recommend that you use it without any polyfills or fallbacks. <a href="http://code.google.com/p/hyphenator/">CSS Hyphenator</a> is a polyfill that works on browsers that support the soft hyphen. <a href="https://github.com/Modernizr/Modernizr/issues/312">Modernizr has good support</a> for hyphentation detection. It'd also be wise to read <a href="http://davidnewton.ca/the-current-state-of-hyphenation-on-the-web">The Current State of Hyphenation on the Web
+<p>As there won't be any noticable effects on browsers which don't support the feature, we recommend that you use it without any polyfills or fallbacks. <a href="http://code.google.com/p/hyphenator/">CSS Hyphenator</a> is a polyfill that works on browsers that support the soft hyphen. <a href="https://github.com/Modernizr/Modernizr/issues/312">Modernizr has good support</a> for hyphentation detection. It'd also be wise to read <a href="http://davidnewton.ca/the-current-state-of-hyphenation-on-the-web">The Current State of Hyphenation on the Web
 </a>.</p>
               </div>
               <div class="polyfills"></div>
@@ -1076,7 +1127,7 @@ defense-in-depth strategy.</p>
             </header>
             <div class="more">
               <div class="recco">
-                <p>IndexedDB was a volatile spec for a year, but has settled down. In addition to Chrome and Firefox, IE10 will have it; Opera has not yet implemented it and Safari has not yet committed to it.</p>
+                <p>IndexedDB was a volatile spec for a year, but has settled down. Chrome, Firefox and IE10 have shipped it. Opera has not yet implemented it and Safari has not yet committed to it.</p>
 
 <p>The <a href="http://nparashuram.com/IndexedDBShim">IndexedDB Polyfill</a> is a polyfill for the IndexedDB APIs over WebSql. This enables IndexedDB to work on browsers that support WebSql. 
 <a href="https://github.com/jensarps/IDBWrapper">IDBWrapper</a> helps smooth out the cross-browser differences. You may consider falling back to WebSQL when IndexedDB isn't available, but do keep in mind that WebSQL has been abandoned.</p>
@@ -1324,19 +1375,19 @@ defense-in-depth strategy.</p>
           <article class="none">
             <header>
               <h2 class="name" id="masks">masks </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>
+              <h3 class="status caution">caution <i></i> </h3>
               <h4 class="kind css">css</h4>
             </header>
             <div class="more">
               <div class="recco">
-                <p><a href="http://www.webkit.org/blog/181/css-masks/">CSS Masks</a> are not being standardized and are unlikely to ever be. CSS Filters might be your path to salvation.</p>
+                <p>For several years, CSS Masks were a WebKit exclusive. However, they have recently been resuscitated, with the W3C recently publishing a new <a href="http://www.w3.org/TR/css-masking/">Masks Working Draft</a>. Support currently remains limited to WebKit browsers, and <a href="http://thenittygritty.co/css-masking">SVG-based fallbacks</a> do not work in IE 10, so it is premature to use this feature in production.</p>
               </div>
               <div class="polyfills"></div>
 
               <p class="links">
               
-                <a href="http://css3clickchart.com/#masks">
-                  Learn more
+                <a href="http://caniuse.com/masks">
+                  View browser share %
                 </a>
               
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/masks.md">Edit this info</a>
@@ -1795,6 +1846,33 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
             <footer class="tags">none</footer>
           </article>
           
+          <article class="fallback gtie8">
+            <header>
+              <h2 class="name" id="rem unit">rem unit </h2>
+              <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
+              <h4 class="kind css">css</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>The css <code>rem</code> unit is calculated relative to font size, but based on the root element (usually <code>&lt;html&gt;</code>) instead of the element's parent. For a detailed comparison of <code>em</code>, <code>px</code>, and <code>rem</code>, see <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">this post
+by Johnathan Snook</a>.</p>
+
+<p><code>rem</code> has wide browser support &amp; is recommended for use with an easily-calculated pixel fallback.</p>
+              </div>
+              <div class="polyfills"></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/rem">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/rem.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">fallback gtie8</footer>
+          </article>
+          
           <article class="polyfill gtie9">
             <header>
               <h2 class="name" id="requestAnimationFrame">requestAnimationFrame </h2>
@@ -2098,8 +2176,8 @@ Resources:
             </header>
             <div class="more">
               <div class="recco">
-                <p>Most of the time, transitions just add to the experience and are not necessary for a usable experience. If there is any critical interaction that requires transitions to be present, we recommend you provide an alternative experience for users on browsers that do not support this feature by feature detecting its presence. 
-Note that you need to use all the usual prefixes to make this work in all browsers (<code>-o-</code>, <code>-webkit-</code>, <code>-moz-</code>, <code>-ms-</code>).</p>
+                <p>Most of the time, transitions just add to the experience and are not necessary for a usable experience. If there is any critical interaction that requires transitions to be present, we recommend you provide an alternative experience for users on browsers that do not support this feature by feature detecting its presence.
+Note that you need to use all the usual prefixes to make this work in all browsers (<code>-o-</code>, <code>-webkit-</code>, <code>-moz-</code>).</p>
               </div>
               <div class="polyfills"></div>
 
@@ -2139,6 +2217,34 @@ Note that you need to use all the usual prefixes to make this work in all browse
               </p>
             </div>
             <footer class="tags">polyfill gtie8</footer>
+          </article>
+          
+          <article class="fallback gtie9">
+            <header>
+              <h2 class="name" id="Viewport units (vh, vw, vmin, vmax)">Viewport units (vh, vw, vmin, vmax) </h2>
+              <h3 class="status caution">caution <i>with <b class=fallback>fallback</b></i> </h3>
+              <h4 class="kind css">css</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>Viewport units allow elements to be sized proportionally to the browser's viewport, providing a css replacement for sizing commonly implemented with javascript. A <code>vh</code> is 1/100th of the viewport's height, a <code>vw</code> is 1/100th of the viewport's width, and <code>vmin</code> and <code>vmax</code> are 1/100th of whichever dimension is smaller or larger, respectively.</p>
+
+<p>IE9 supports <code>vh</code>, <code>vw</code>, and <code>vm</code> instead of <code>vmin</code> for box and border measurements, but won't size text with viewport units.</p>
+
+<p>Depending on the design, it's sometimes possible to gracefully degrade viewport units with approximate fallbacks. Javascript polyfills like <a href="https://github.com/saabi/vminpoly">vminpoly</a> exist, but aren't recommended on production sites.</p>
+              </div>
+              <div class="polyfills"></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/viewport-units">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/viewport-units.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">fallback gtie9</footer>
           </article>
           
           <article class="fallback gtie9">
