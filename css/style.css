@@ -19,7 +19,7 @@ html {
 
 body, button, input, select, textarea {
   font-family: sans-serif;
-  color: red; }
+  color: #e3d7bf; }
 
 ::-moz-selection {
   background: #fe57a1;
@@ -233,7 +233,7 @@ article h3 b i, article.expanded div.more, .kind, .status i b {
 
 html {
   background-image: url('../img/denim.png?1324333869');
-  color: red;
+  color: #e3d7bf;
   background: -webkit-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -webkit-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -webkit-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -webkit-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -webkit-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
   background: -moz-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -moz-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -moz-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -moz-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -moz-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
   background: -o-radial-gradient(20em 20em, circle cover, rgba(32, 124, 202, 0.1) 10em, rgba(32, 124, 202, 0) 10em), -o-radial-gradient(30em 30em, circle cover, rgba(205, 92, 92, 0.2) 5em, rgba(205, 92, 92, 0) 5em), -o-radial-gradient(60em 40em, circle cover, rgba(255, 255, 255, 0.1) 15em, rgba(255, 255, 255, 0) 15em), -o-radial-gradient(40em 60em, circle cover, rgba(32, 124, 202, 0.2) 5em, rgba(32, 124, 202, 0) 5em), -o-radial-gradient(35em 45em, circle cover, rgba(0, 0, 0, 0.2) 7em, rgba(0, 0, 0, 0) 7em), url('../img/denim.png?1324333869');
@@ -389,7 +389,7 @@ article h3 b i {
     color: #61c5f0; }
   .explore-features a + a::before {
     content: " • ";
-    color: red; }
+    color: #e3d7bf; }
   .explore-features a.active {
     color: #e88860; }
 
@@ -416,7 +416,7 @@ article > header {
   }
   */ }
   article > header:hover {
-    background: red; }
+    background: #e3d7bf; }
   article > header:before {
     -webkit-transition: all 100ms ease-in;
     -moz-transition: all 100ms ease-in;
@@ -495,7 +495,7 @@ article.expanded div.more {
 .kind {
   font-size: 0.8em;
   line-height: 3rem;
-  color: red;
+  color: #e3d7bf;
   position: absolute;
   left: -5em;
   text-align: right;
