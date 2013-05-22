@@ -261,12 +261,12 @@
             </header>
             <div class="more">
               <div class="recco">
-                <p>All the modern browsers except Opera support <code>calc()</code> which makes it easier to adopt. But do note that it can have a big impact on the layout and the consequent breaking of your design on unsupported browsers. </p>
+                <p>All the modern browsers except Opera and earlier versions of Safari support <code>calc()</code> which makes it easier to adopt. But do note that it can have a big impact on the layout and the consequent breaking of your design on unsupported browsers. </p>
 
 <p>You should use it with a fallback declaration, so it doesn't break browsers which don't support it.</p>
 
 <pre><code>width: 500px; /** older browsers **/
-width: -webkit-calc(50% - 20px); /** Chrome / Safari **/
+width: -webkit-calc(50% - 20px); /** Chrome / Safari 6 **/
 width: -moz-calc(50% - 20px); /** FF 4-15  **/
 width: calc(50% - 20px); /** FF 16+, IE 9+, and future other browsers **/
 </code></pre>
@@ -951,7 +951,7 @@ to build the body, whereas FormData sends packets.</p>
             </header>
             <div class="more">
               <div class="recco">
-                <p>The <code>History</code> API provides a way for JavaScript to change the URL displayed in the browser without reloading the page. There are several approaches to providing a fallback. The simplest is to fall back to page refreshes. Alternatively, the <a href="https://github.com/balupton/history.js">History.js</a> plugin smooths out some browser implementation differences and provides an optional hashchange fallback for HTML 4 browsers. GitHub uses <a href="http://pjax.heroku.com/">pjax</a> (pushState + ajax).</p>
+                <p>The <code>History</code> API provides a way for JavaScript to change the URL displayed in the browser without reloading the page. There are several approaches to providing a fallback. The simplest is to fall back to page refreshes. Alternatively, the <a href="https://github.com/browserstate/history.js">History.js</a> plugin smooths out some browser implementation differences and provides an optional hashchange fallback for HTML 4 browsers. GitHub uses <a href="http://pjax.heroku.com/">pjax</a> (pushState + ajax).</p>
               </div>
               <div class="polyfills"></div>
 
@@ -1705,7 +1705,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
             </header>
             <div class="more">
               <div class="recco">
-                <p>Pointer events are available in SVG and CSS. All modern browsers support them in SVG, but IE and Opera do not support them in CSS yet. There is a <a href="https://github.com/Modernizr/Modernizr/blob/master/feature-detects/css-pointerevents.js">modernizr plugin</a> to detect support, which can be used to implement a JavaScript interceptor for elements which require pointer events to be disabled.</p>
+                <p>Pointer events are available in SVG and CSS. All modern browsers support them in SVG, but IE and Opera do not support them in CSS yet. There is a <a href="https://github.com/Modernizr/Modernizr/blob/master/feature-detects/css/pointerevents.js">modernizr plugin</a> to detect support, which can be used to implement a JavaScript interceptor for elements which require pointer events to be disabled.</p>
               </div>
               <div class="polyfills"></div>
 
@@ -1773,7 +1773,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
           
           <article class="polyfill gtie9">
             <header>
-              <h2 class="name" id="&lt;progress&gt;">&lt;progress> </h2>
+              <h2 class="name" id="&amp;lt;progress&gt;">&lt;progress> </h2>
               <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
               <h4 class="kind html">html</h4>
             </header>
@@ -2004,7 +2004,7 @@ Resources:
             </header>
             <div class="more">
               <div class="recco">
-                <p><a href="http://css-tricks.com/saving-the-day-with-scoped-css/">Scoped stylesheets</a> are still in active development. While you can experiment with them in Firefox 21 Nightly and Chrome Canary (type <code>about:flags</code> in Chrome's address bar), there is no stable version of any browser supporting this now. </p>
+                <p><a href="http://css-tricks.com/saving-the-day-with-scoped-css/">Scoped stylesheets</a> are still in active development. Firefox 21 now includes this feature, but no other major browser currently supports it out-the-box.</p>
               </div>
               <div class="polyfills"></div>
 
@@ -2191,6 +2191,36 @@ Note that you need to use all the usual prefixes to make this work in all browse
               </p>
             </div>
             <footer class="tags">fallback prefixes</footer>
+          </article>
+          
+          <article class="none">
+            <header>
+              <h2 class="name" id="Vibration">Vibration </h2>
+              <h3 class="status avoid">avoid <i></i> </h3>
+              <h4 class="kind api">api</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>Vibration enables web apps access to a supporting device's force feedback motor.</p>
+
+<p>The Vibration API is specifically targetted towards the gaming use case, and not intended for activities such as notifications or alerts on a user's mobile phone for example.</p>
+
+<p>The API currently exists as a <a href="http://www.w3.org/TR/vibration/">W3C Candidate Recommendation</a> with it's characteristics still up for debate from the wider community.</p>
+
+<p>While there is a basic implementation in Webkit, no major Webkit vendors has yet implemented support for the feature. Currently <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Vibration">Firefox and Firefox Mobile</a> support the API through <code>window.navigator.vibrate()</code> as opposed to <code>window.vibrate()</code>.</p>
+              </div>
+              <div class="polyfills"></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/vibration">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/vibration.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">none</footer>
           </article>
           
           <article class="polyfill gtie8">
