@@ -7,3 +7,5 @@ The css `rem` unit is calculated relative to font size, but based on the root el
 by Johnathan Snook](http://snook.ca/archives/html_and_css/font-size-with-rem).
 
 `rem` has wide browser support & is recommended for use with an easily-calculated pixel fallback.
+
+A polyfill exists, converting automatically `rem` units to `px`, mainly for IE6, IE7 and IE8. Check out [REM-unit-polyfill] (https://github.com/chuckcarpenter/REM-unit-polyfill)
