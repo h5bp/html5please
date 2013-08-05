@@ -18,7 +18,7 @@ Taken together, these proposed specs have the potential to bring huge enhancemen
 
 [Polymer](http://www.polymer-project.org/) is working on a set of polyfills designed to fill any gaps in browser support as Web Components are rolled out. It's still in pre-alpha, and should only be used in testing environments, but if it matures at a healthy rate the project could give us the opportunity to roll Web Components into the wild while the specs are still in draft.
 
-[Another view of the status of Web Components is available here](http://jonrimmer.github.io/Are-We-Componentized-Yet/awcy.html):
-<a href="http://jonrimmer.github.io/Are-We-Componentized-Yet/awcy.html">
+[Another view of the status of Web Components is available here](http://jonrimmer.github.io/are-we-componentized-yet/):
+<a href="http://jonrimmer.github.io/are-we-componentized-yet/">
 ![](http://i.imgur.com/EeOUtPu.png)
 </a>
