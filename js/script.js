@@ -27,7 +27,8 @@ var	search = document.getElementById('livesearch'),
     searchresults = document.querySelectorAll('.features article'),
     searchurl = document.getElementById('searchurl'),
     currentActiveHash,
-    lastActiveHash;
+    lastActiveHash
+    articlecontainer = document.querySelector('.features');
 
 [].map.call(searchresults, function(result) {
   var tags = result.querySelector('.tags'),
@@ -134,16 +135,56 @@ if(window.location.hash) {
 }
 
 function showsearch(hash) {
+  var foundItems;
+  
   search.value = hash;
 
-  featureList.search(hash);
+  foundItems = featureList.search(hash);
+  
   currentActiveHash = document.querySelector('a[href="#' + hash +'"]');
   lastActiveHash    && classList(lastActiveHash).remove('active');
   currentActiveHash && classList(currentActiveHash).add('active');
   lastActiveHash = currentActiveHash;
 
+  foundItems.length && scrollToElement(articlecontainer);
+
   updatesearch();
 };
+
+
+
+function scrollToElement(element) {
+  var offset = getYOffset(), dest = offset+element.getBoundingClientRect().top, count = offset, repeatscrolling;
+
+  repeatscrolling = window.setInterval(function() {
+    var lastOffset = getYOffset(), currentOffset;
+    
+    count = count + 10 || 0;
+    
+    if (count > dest) {
+      count = dest;
+    }
+    
+    window.scrollTo(0, count);
+    
+    currentOffset = getYOffset();
+    if(currentOffset >= dest || currentOffset <= lastOffset) {
+      // cancel if we reached dest, or if getYOffset did not changed anymore (page end)
+      clearInterval(repeatscrolling);
+    }
+  }, 10);
+}
+
+function getYOffset() {
+  if(window.pageYOffset) {
+    return window.pageYOffset;
+  } else {
+    return (((t = document.documentElement) || (t = document.body.parentNode)) && typeof t.scrollTop == 'number' ? t : document.body).scrollTop; 
+  }
+};
+
+
+
 
 // keyboard shortcut for / to go to search box.
 addEvent(window, 'keyup', function(e){
@@ -156,7 +197,6 @@ var moredetails = document.getElementById("clickmore");
 moredetails.onclick = function(e) {
   e || (e = window.event);
   var target = e.target || e.srcElement;
-
   classList(target).toggle('active');
   classList(document.getElementById(/#(.*)/.exec(target.href)[1])).toggle('active');
   e.preventDefault && e.preventDefault();
