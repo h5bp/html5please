@@ -3,6 +3,7 @@ status: caution
 tags: none
 kind: html
 polyfillurls:
+moreurl: http://weblog.bocoup.com/third-party-javascript-development-future/#iframe-seamless
 
 This attribute instructs browsers to treat the iFrame's content more like inline markup than it would otherwise. Specifically, this means:
 

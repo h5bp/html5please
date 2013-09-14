@@ -3,6 +3,7 @@ status: use
 tags: polyfill
 kind: html
 polyfillurls:[srcdoc polyfill](https://github.com/jugglinmike/srcdoc-polyfill)
+moreurl: http://weblog.bocoup.com/third-party-javascript-development-future/#iframe-srcdoc
 
 This attribute allows for in-line specification of iframe content.
 

@@ -2,6 +2,7 @@ feature: ECMAScript 6
 status: avoid
 tags: es6
 kind: js
+moreurl: http://www.2ality.com/2013/07/es6-modules.html
 
 ECMAScript version 6 is the upcoming version of JavaScript that brings new features and heavy syntax changes. Currently only Chrome(17+) and Firefox support a highly experimental subset of ES6 features. 
 

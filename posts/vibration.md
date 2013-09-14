@@ -3,6 +3,7 @@ status: avoid
 tags: none
 kind: api
 polyfillurls:
+moreurl: https://developer.mozilla.org/en-US/docs/WebAPI/Vibration
 
 Vibration enables web apps access to a supporting device's force feedback motor.
 
