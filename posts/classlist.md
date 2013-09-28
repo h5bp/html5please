@@ -1,5 +1,5 @@
 feature: classList
-status: caution
+status: use
 tags: polyfill noie nooldmobile
 kind: api
 polyfillurls:[classlist.js](https://github.com/eligrey/classList.js)
