@@ -1,4 +1,4 @@
-feature: filters
+feature: css filters
 status: caution
 tags: prefixes
 kind: css
