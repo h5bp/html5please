@@ -8,4 +8,6 @@ Viewport units allow elements to be sized proportionally to the browser's viewpo
 
 IE9 supports `vh`, `vw`, and `vm` instead of `vmin` for box and border measurements, but won't size text with viewport units.
 
+Safari on recent iOS versions (6 and 7) has [a serious issue](https://github.com/scottjehl/Device-Bugs/) with viewport units, rendering them unusable in many cases.
+
 Depending on the design, it's sometimes possible to gracefully degrade viewport units with approximate fallbacks. Javascript polyfills like [vminpoly](https://github.com/saabi/vminpoly) exist, but aren't recommended on production sites.
