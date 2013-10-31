@@ -489,8 +489,10 @@ article.expanded {
   padding: 0 1rem 0 0.5rem;
   color: white;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-  position: relative;
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
 
 
   //Arrow like figures on the right
