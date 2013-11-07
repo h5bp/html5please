@@ -11,3 +11,4 @@ Supported in Chrome, Firefox, Opera. Safari is currently missing FileReader supp
 
 * [FileReader](https://github.com/Jahdrien/FileReader) provides useful fallback, based on Flash, jQuery and jQuery UI.  Doesn't support readAsBinaryFile.
 * [moxie](https://github.com/moxiecode/moxie) extracted from Plupload, actively maintained as of 6/3/13.
+* [Mail.Ru](https://github.com/mailru/FileAPI) FileAPI — a set of javascript tools for working with files. Multiupload, drag'n'drop and chunked file upload. Images: crop, resize and auto orientation by EXIF.
