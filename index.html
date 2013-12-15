@@ -704,9 +704,12 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
             </header>
             <div class="more">
               <div class="recco">
-                <p>The flexbox spec has changed significantly through three major revisions (Chris Coyier has a <a href="http://css-tricks.com/old-flexbox-and-new-flexbox/">post on how to tell which flexbox you're looking at</a>). <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">Older versions of this spec</a> were implemented in Gecko and WebKit. (a tutorial covering that spec is <a href="http://www.html5rocks.com/en/tutorials/flexbox/quick/">on HTML5 Rocks</a>). The current version is now a W3C Candidate Recommendation and is considered stable. There are presently no robust polyfills for the current spec, however it's possible to <a href="http://css-tricks.com/using-flexbox/">mix old and new flexbox for maximum browser support</a>.</p>
+                <p>The flexbox spec has changed significantly through three major revisions (Chris Coyier shares <a href="http://css-tricks.com/old-flexbox-and-new-flexbox/">how to tell which flexbox you're looking at</a>). The current version is now a W3C Candidate Recommendation and is considered stable. There are presently no robust polyfills for the current spec, however it's possible to <a href="http://css-tricks.com/using-flexbox/">mix old and new flexbox for maximum browser support</a>.</p>
 
-<p>The spec is now implemented in Opera, Chrome, IE and Firefox. <a href="http://weblog.bocoup.com/dive-into-flexbox/">Dive into Flexbox</a> is a good overview of the spec from Bocoup, Opera has a great tutorial to learn from: <a href="http://dev.opera.com/articles/view/flexbox-basics/">Flexbox — fast track to layout nirvana?</a>. Additionally, the <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_flexible_boxes">flexbox docs at MDN</a>, <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a>, and <a href="http://philipwalton.github.io/solved-by-flexbox/">Solved by Flexbox</a> are good references alongside playgrounds like <a href="http://demo.agektmr.com/flexbox/">Flexbox Please!</a>, <a href="http://the-echoplex.net/flexyboxes/">Flexy Boxes</a>, and <a href="http://bennettfeely.com/flexplorer/">Flexplorer</a>.</p>
+<p>The new spec is now implemented in all 5 major desktop browsers. On mobile, the old spec is in Android browser 2.1 and Firefox Mobile, and the new spec is in iOS Mobile Safari 7, Chrome, Opera Mobile and Blackberry. <a href="http://weblog.bocoup.com/dive-into-flexbox/">Dive into Flexbox</a> is a good overview of the spec, Opera has a great tutorial to learn from: <a href="http://dev.opera.com/articles/view/flexbox-basics/">Flexbox — fast track to layout nirvana?</a>. Additionally, the <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_flexible_boxes">flexbox docs at MDN</a> and <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS Tricks' A Complete Guide to Flexbox</a> provide strong reference documentation for all properties and values. The <a href="http://zomigi.com/blog/flexbox-presentation/">Putting Flexbox into Practice slide deck</a>  shares a practical path of using flexbox today.</p>
+
+<p>You should look at the <a href="http://philipwalton.github.io/solved-by-flexbox/">Solved by Flexbox</a> solution playground and work with the following tools to iterate and find your layout and syntax: 
+<a href="http://demo.agektmr.com/flexbox/">Flexbox Please!</a>, <a href="http://the-echoplex.net/flexyboxes/">Flexy Boxes</a>, and <a href="http://bennettfeely.com/flexplorer/">Flexplorer</a>.</p>
               </div>
               <div class="polyfills"></div>
 
@@ -1778,6 +1781,32 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
             <footer class="tags">api</footer>
           </article>
           
+          <article class="polyfill">
+            <header>
+              <h2 class="name" id="postpone">postpone </h2>
+              <h3 class="status avoid">avoid <i>with <b class=polyfill>polyfill</b></i> </h3>
+              <h4 class="kind html">html</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p>The <code>postpone</code> attribute is applied to an element in order to delay the downloading of the element's resource until the element is visible in the viewport. The <code>postpone</code> attribute is part of the <a href="https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/ResourcePriorities/Overview.html#attr-postpone">resource priorities draft specification</a> formulated by the W3C.</p>
+
+<p>Although <code>postpone</code> is not yet natively supported by browsers, its functionality can be polyfilled. </p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/lsvx/postpone">postpone</a></p></div>
+
+              <p class="links">
+              
+                <a href="http://caniuse.com/postpone">
+                  View browser share %
+                </a>
+              
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/postpone.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">polyfill</footer>
+          </article>
+          
           <article class="polyfill gtie9">
             <header>
               <h2 class="name" id="&amp;lt;progress&gt;">&lt;progress> </h2>
@@ -2295,6 +2324,9 @@ Note that you need to use all the usual prefixes to make this work in all browse
                 <p>Viewport units allow elements to be sized proportionally to the browser's viewport, providing a css replacement for sizing commonly implemented with javascript. A <code>vh</code> is 1/100th of the viewport's height, a <code>vw</code> is 1/100th of the viewport's width, and <code>vmin</code> and <code>vmax</code> are 1/100th of whichever dimension is smaller or larger, respectively.</p>
 
 <p>IE9 supports <code>vh</code>, <code>vw</code>, and <code>vm</code> instead of <code>vmin</code> for box and border measurements, but won't size text with viewport units.</p>
+
+<p>Safari on recent iOS versions (6 and 7) has issues with viewport units where entire page width/height is used for relative unit calculation instead of just viewport width/height as described above (and in the <a href="http://www.w3.org/TR/css3-values/#viewport-relative-lengths">specification</a>). This causes 
+<a href="https://github.com/scottjehl/Device-Bugs/issues/36">serious issues under certain circumstances</a> and severely limits the use of viewport units, particularly <code>vh</code>.</p>
 
 <p>Depending on the design, it's sometimes possible to gracefully degrade viewport units with approximate fallbacks. Javascript polyfills like <a href="https://github.com/saabi/vminpoly">vminpoly</a> exist, but aren't recommended on production sites.</p>
               </div>
