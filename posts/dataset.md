@@ -1,6 +1,6 @@
 feature: dataset
 status: use
-tags: fallback noie nooldmobile
+tags: fallback gtie10 nooldmobile
 kind: api
 polyfillurls:[HTML5 dataset support](http://eligrey.com/blog/post/html-5-dataset-support)
 
