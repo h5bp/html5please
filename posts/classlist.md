@@ -1,6 +1,6 @@
 feature: classList
 status: use
-tags: polyfill noie nooldmobile
+tags: polyfill gtie9 nooldmobile
 kind: api
 polyfillurls:[classlist.js](https://github.com/eligrey/classList.js)
 
