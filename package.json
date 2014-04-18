@@ -1,33 +1,13 @@
 {
-  "author": [{
-    "name": "Divya Manian",
-    "url": "http://nimbupani.com/"
-  }, {
-    "name": "Paul Irish",
-    "url": "http://paulirish.com/"
-  }],
-  "name": "html5please",
-  "description": "Generator for html5please website",
-  "version": "0.0.0",
-  "homepage": "html5please.com",
-  "main": "lib/index",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/h5bp/html5please.git"
-  },
-  "engines": {
-    "node": "~v0.6"
-  },
+  "private": true,
   "dependencies": {
+    "async": "*",
     "backbone": "0.5.3",
-    "underscore": "1.2.2",
+    "grunt": "*",
+    "grunt-closure-compiler" : "0.0.2",
     "handlebars": "*",
     "node-markdown": "*",
     "request": "*",
-    "async": "*",
-
-    "grunt": "*",
-    "grunt-closure-compiler" : "0.0.2"
-  },
-  "devDependencies": {}
+    "underscore": "1.2.2"
+  }
 }
