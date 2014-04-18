@@ -1,5 +1,11 @@
 {
-  "author": "Divya Manian, Paul Irish (nimbupani.com, paulirish.com)",
+  "author": [{
+    "name": "Divya Manian",
+    "url": "http://nimbupani.com/"
+  }, {
+    "name": "Paul Irish",
+    "url": "http://paulirish.com/"
+  }],
   "name": "html5please",
   "description": "Generator for html5please website",
   "version": "0.0.0",
@@ -7,7 +13,7 @@
   "main": "lib/index",
   "repository": {
     "type": "git",
-    "url": "git://github.com/nimbupani/GFS.git"
+    "url": "git://github.com/h5bp/html5please.git"
   },
   "engines": {
     "node": "~v0.6"
