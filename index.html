@@ -38,7 +38,7 @@
         <div class="explore-features">
           <h2><b>Explore</b> features</h2>
           <ul>
-            <li>supported by <a href="#gtie9">IE10+</a> <a href="#gtie8">IE9+</a> <a href="#gtie7">IE8+</a> <a href="#gtie6">IE7+</a> <a href="#noie">no IE</a> </li>
+            <li>supported by <a href="#gtie10">IE11+</a> <a href="#gtie9">IE10+</a> <a href="#gtie8">IE9+</a> <a href="#gtie7">IE8+</a> <a href="#gtie6">IE7+</a> <a href="#noie">no IE</a> </li>
             <li>not supported by <a href="#nomobile">mobile devices</a> <a href="#nooldmobile">older mobile devices</a></li>
             <li>requiring <a href="#prefixes">prefixes</a><a href="#polyfill">polyfill</a><a href="#fallback">fallback</a></li>
             <li>that you should <a href="#use">use</a> <a href="#caution">use with caution</a> <a href="#avoid">avoid</a></li>
@@ -313,7 +313,7 @@ width: calc(50% - 20px); /** FF 16+, IE 9+, Opera 15, Chrome 26+, Safari 7 and f
             <footer class="tags">gtie8 polyfill</footer>
           </article>
 
-          <article class="polyfill noie nooldmobile">
+          <article class="polyfill gtie9 nooldmobile">
             <header>
               <h2 class="name" id="classList">classList </h2>
               <h3 class="status use">use <i>with <b class=polyfill>polyfill</b></i> </h3>
@@ -334,7 +334,7 @@ width: calc(50% - 20px); /** FF 16+, IE 9+, Opera 15, Chrome 26+, Safari 7 and f
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/classlist.md">Edit this info</a>
               </p>
             </div>
-            <footer class="tags">polyfill noie nooldmobile</footer>
+            <footer class="tags">polyfill gtie9 nooldmobile</footer>
           </article>
 
           <article class="polyfill">
@@ -435,7 +435,7 @@ width: calc(50% - 20px); /** FF 16+, IE 9+, Opera 15, Chrome 26+, Safari 7 and f
             <footer class="tags">polyfill gtie9 nomobile</footer>
           </article>
 
-          <article class="fallback noie nooldmobile">
+          <article class="fallback gtie10 nooldmobile">
             <header>
               <h2 class="name" id="dataset">dataset </h2>
               <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
@@ -443,7 +443,7 @@ width: calc(50% - 20px); /** FF 16+, IE 9+, Opera 15, Chrome 26+, Safari 7 and f
             </header>
             <div class="more">
               <div class="recco">
-                <p><code>elem.dataset</code> is unsupported in Internet Explorer &lt;= 10 and older mobile browsers. Using data-* attributes will be totally fine in all browsers, but instead of using <code>elem.dataset.foo</code> just use <code>elem.getAttribute('data-foo')</code>. A polyfill is availble if you want terser syntax.</p>
+                <p><code>elem.dataset</code> is unsupported in Internet Explorer &lt;= 10 and older mobile browsers. Using data-* attributes will be totally fine in all browsers, but instead of using <code>elem.dataset.foo</code> just use <code>elem.getAttribute('data-foo')</code>. A polyfill is available if you want terser syntax.</p>
               </div>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="http://eligrey.com/blog/post/html-5-dataset-support">HTML5 dataset support</a></p></div>
 
@@ -456,7 +456,7 @@ width: calc(50% - 20px); /** FF 16+, IE 9+, Opera 15, Chrome 26+, Safari 7 and f
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/dataset.md">Edit this info</a>
               </p>
             </div>
-            <footer class="tags">fallback noie nooldmobile</footer>
+            <footer class="tags">fallback gtie10 nooldmobile</footer>
           </article>
 
           <article class="polyfill">
@@ -517,7 +517,9 @@ width: calc(50% - 20px); /** FF 16+, IE 9+, Opera 15, Chrome 26+, Safari 7 and f
             </header>
             <div class="more">
               <div class="recco">
-                <p>Drag and Drop has been standardized in HTML5 based on Internet Explorer's original implementation. Therefore, it already has wide support, but many feel frustrated when using the API. You may want to use jQuery UI Draggable (or another JavaScript library) to handle this for you. Meanwhile the proposed <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html#the-dropzone-attribute">[dropzone]</a> attribute will improve the situation as it gains browser support.</p>
+                <p>Drag and Drop has been standardized in HTML5 based on Internet Explorer's original implementation. Therefore, it already has wide desktop support, but many feel frustrated when using the API. You may want to use jQuery UI Draggable (or another JavaScript library) to handle this for you. Meanwhile the proposed <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html#the-dropzone-attribute">[dropzone]</a> attribute will improve the situation as it gains browser support.</p>
+
+<p>There is not much mobile support currently.</p>
               </div>
               <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/MrSwitch/dropfile">dropfile</a>, <a href="https://github.com/eligrey/FileSaver.js">fileSaver</a>, <a href="https://github.com/vjeux/jDataView">jDataView</a></p></div>
 
@@ -704,9 +706,14 @@ Supported only by Chrome 18+ with webkit prefix. Check out <a href="http://caniu
             </header>
             <div class="more">
               <div class="recco">
-                <p>The flexbox spec has changed significantly through three major revisions (Chris Coyier has a <a href="http://css-tricks.com/old-flexbox-and-new-flexbox/">post on how to tell which flexbox you're looking at</a>). <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">Older versions of this spec</a> were implemented in Gecko and WebKit. (a tutorial covering that spec is <a href="http://www.html5rocks.com/en/tutorials/flexbox/quick/">on HTML5 Rocks</a>). The current version is now a W3C Candidate Recommendation and is considered stable. There are presently no robust polyfills for the current spec, however it's possible to <a href="http://css-tricks.com/using-flexbox/">mix old and new flexbox for maximum browser support</a>.</p>
+                <p>Go for it! <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS Tricks' A Complete Guide to Flexbox</a> provides strong reference documentation for all properties and values, and <a href="http://weblog.bocoup.com/dive-into-flexbox/">Dive into Flexbox</a> is a good overview of the spec. Additionally, the <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_flexible_boxes">flexbox docs at MDN</a> are excellent and the <a href="http://zomigi.com/blog/flexbox-presentation/">Putting Flexbox into Practice slide deck</a>  shares a practical path of using flexbox today.</p>
 
-<p>The spec is now implemented in Opera, Chrome, IE and Firefox. <a href="http://weblog.bocoup.com/dive-into-flexbox/">Dive into Flexbox</a> is a good overview of the spec from Bocoup, Opera has a great tutorial to learn from: <a href="http://dev.opera.com/articles/view/flexbox-basics/">Flexbox — fast track to layout nirvana?</a>. Additionally, the <a href="https://developer.mozilla.org/en-US/docs/CSS/Using_CSS_flexible_boxes">flexbox docs at MDN</a>, <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a>, and <a href="http://philipwalton.github.io/solved-by-flexbox/">Solved by Flexbox</a> are good references alongside playgrounds like <a href="http://demo.agektmr.com/flexbox/">Flexbox Please!</a>, <a href="http://the-echoplex.net/flexyboxes/">Flexy Boxes</a>, and <a href="http://bennettfeely.com/flexplorer/">Flexplorer</a>.</p>
+<p>Flexbox has a funny history: the flexbox spec changed significantly through three major revisions (Chris Coyier shares <a href="http://css-tricks.com/old-flexbox-and-new-flexbox/">how to tell which flexbox you're looking at</a>). The current version is now a W3C Candidate Recommendation and is stable.</p>
+
+<p>Browser support: The new spec is now implemented in all 5 major desktop browsers. On mobile, the old spec is in Android browser 2.1 and Firefox Mobile, and the new spec is in iOS Mobile Safari 7, Chrome, Opera Mobile and Blackberry. There are presently no robust polyfills for the current spec, however you can <a href="http://css-tricks.com/using-flexbox/">mix old and new flexbox for maximum browser support</a>.</p>
+
+<p>We recommend looking at the <a href="http://philipwalton.github.io/solved-by-flexbox/">Solved by Flexbox</a> solution playground and work with the following tools to iterate and find your layout and syntax:
+<a href="http://demo.agektmr.com/flexbox/">Flexbox Please!</a>, <a href="http://the-echoplex.net/flexyboxes/">Flexy Boxes</a>, and <a href="http://bennettfeely.com/flexplorer/">Flexplorer</a>.</p>
               </div>
               <div class="polyfills"></div>
 
@@ -858,7 +865,7 @@ to build the body, whereas FormData sends packets.</p>
               <div class="recco">
                 <p>The Full Screen API is currently only available in the latest versions of Chrome, Firefox and Opera. A jQuery plugin is available which contains an optional fallback to a minimal-chrome browser window when the Full Screen API is unavailable. Use as a progressive enhancement for those select browsers only.</p>
               </div>
-              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/darcyclarke/jQuery-Fullscreen-Plugin">jQuery Fullscreen Plugin</a></p></div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/kayahr/jquery-fullscreen-plugin">jQuery Fullscreen Plugin</a></p></div>
 
               <p class="links">
 
@@ -930,9 +937,9 @@ to build the body, whereas FormData sends packets.</p>
             </header>
             <div class="more">
               <div class="recco">
-                <p>The <a href="http://dev.w3.org/csswg/css3-grid-align/">CSS Grid Layout</a> specification supersedes several older ones, and only features an experimental implementation in Internet Explorer 10. Until the specification matures and more implementations exist, we suggest that you avoid using this.</p>
+                <p>The <a href="http://dev.w3.org/csswg/css3-grid-align/">CSS Grid Layout</a> specification supersedes several older ones, and features an experimental implementation in Internet Explorer 10+ as well as Chrome and Opera. An overview can be found at <a href="http://updates.html5rocks.com/2014/03/Get-on-the-CSS-Grid">updates.html5rocks.com</a>. Until the specification matures and more implementations exist, we suggest that you avoid using this.</p>
               </div>
-              <div class="polyfills"></div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p>https://github.com/codler/Grid-Layout-Polyfill</p></div>
 
               <p class="links">
 
@@ -1702,7 +1709,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
             <footer class="tags">none</footer>
           </article>
 
-          <article class="fallback noie">
+          <article class="fallback gtie10">
             <header>
               <h2 class="name" id="pointer events">pointer events </h2>
               <h3 class="status use">use <i>with <b class=fallback>fallback</b></i> </h3>
@@ -1725,7 +1732,7 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
                 <a href="https://github.com/h5bp/html5please/blob/master/posts/pointer-events.md">Edit this info</a>
               </p>
             </div>
-            <footer class="tags">fallback noie</footer>
+            <footer class="tags">fallback gtie10</footer>
           </article>
 
           <article class="none">
@@ -1752,6 +1759,34 @@ Also see <a href="http://www.impressivewebs.com/reverse-ordered-lists-html5/">Lo
               </p>
             </div>
             <footer class="tags">none</footer>
+          </article>
+
+          <article class="prefixes polyfill">
+            <header>
+              <h2 class="name" id="position:sticky">position:sticky </h2>
+              <h3 class="status caution">caution <i>with <b class=polyfill>polyfill</b></i> </h3>
+              <h4 class="kind css">css</h4>
+            </header>
+            <div class="more">
+              <div class="recco">
+                <p><code>position: sticky</code> combines aspects of relative and fixed positioning. Elements to which it is applied initially act as though they are <code>position: relative</code>, but switch to acting like <code>position: fixed</code> when they reach a specified position relative to the viewport. This behavior is often useful for section headings or navigational sidebars. <a href="https://air.mozilla.org/intern-presentation-ford/">This Mozilla presentation video</a> and <a href="http://filamentgroup.github.io/fixed-sticky/demos/demo.html">this live demo of the Fixed-sticky polyfill</a> show how <code>position: sticky</code> behaves in common use-cases.</p>
+
+<p>Supported unprefixed in Firefox 30.0+. Supported with a prefix (as <code>-webkit-sticky</code>) in OS X Safari 7.0+ and iOS Safari 6.0+. Currently part of the <a href="http://dev.w3.org/csswg/css-position-3/">CSS Positioned Layout Module Level 3 W3C Working Draft</a>.</p>
+
+<p>Caution is advised since the spec is currently only at the Working Draft stage. The usage of a polyfill is strongly recommended due to the current level of browser support. Signs currently seem positive for browser support increasing in the future.</p>
+              </div>
+              <div class="polyfills"><b>Recommended polyfills: </b><p><a href="https://github.com/filamentgroup/fixed-sticky">Fixed-sticky</a></p></div>
+
+              <p class="links">
+
+                <a href="http://caniuse.com/css-sticky">
+                  View browser share %
+                </a>
+
+                <a href="https://github.com/h5bp/html5please/blob/master/posts/css-sticky.md">Edit this info</a>
+              </p>
+            </div>
+            <footer class="tags">prefixes polyfill</footer>
           </article>
 
           <article class="api">
@@ -2231,18 +2266,16 @@ Note that you need to use all the usual prefixes to make this work in all browse
           <article class="none">
             <header>
               <h2 class="name" id="Vibration">Vibration </h2>
-              <h3 class="status avoid">avoid <i></i> </h3>
+              <h3 class="status caution">caution <i></i> </h3>
               <h4 class="kind api">api</h4>
             </header>
             <div class="more">
               <div class="recco">
                 <p>Vibration enables web apps access to a supporting device's force feedback motor.</p>
 
-<p>The Vibration API is specifically targetted towards the gaming use case, and not intended for activities such as notifications or alerts on a user's mobile phone for example.</p>
+<p>The Vibration API is specifically targetted towards the gaming use case, and not intended for <a href="http://shkspr.mobi/blog/2014/01/malicious-use-of-the-html5-vibrate-api/">activities such as notifications or alerts on a user's mobile phone for example</a>.</p>
 
-<p>The API currently exists as a <a href="http://www.w3.org/TR/vibration/">W3C Candidate Recommendation</a> with it's characteristics still up for debate from the wider community.</p>
-
-<p>While there is a basic implementation in Webkit, no major Webkit vendors has yet implemented support for the feature. Currently <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Vibration">Firefox and Firefox Mobile</a> support the API through <code>window.navigator.vibrate()</code> as opposed to <code>window.vibrate()</code>.</p>
+<p>Being a mobile-based feature, the unprefixed feature is supported in <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Vibration">Firefox for Android</a>, <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Vibration">Firefox OS</a>, <a href="https://groups.google.com/a/chromium.org/forum/#!searchin/blink-dev/vibration$20api/blink-dev/hH9bJGWKAbk/AFPov-g5VMMJ">Chromium 32</a>, and so in <a href="http://blog.chromium.org/2013/11/chrome-32-beta-animated-webp-images-and.html">Chrome 32+ on Android</a> and <a href="http://my.opera.com/community/forums/topic.dml?id=1821802&amp;t=1391687627&amp;page=1#comment15132062">Opera 20+ on Android</a>. Safari Mobile and IE mobile do not support it yet.</p>
               </div>
               <div class="polyfills"></div>
 
@@ -2295,6 +2328,9 @@ Note that you need to use all the usual prefixes to make this work in all browse
                 <p>Viewport units allow elements to be sized proportionally to the browser's viewport, providing a css replacement for sizing commonly implemented with javascript. A <code>vh</code> is 1/100th of the viewport's height, a <code>vw</code> is 1/100th of the viewport's width, and <code>vmin</code> and <code>vmax</code> are 1/100th of whichever dimension is smaller or larger, respectively.</p>
 
 <p>IE9 supports <code>vh</code>, <code>vw</code>, and <code>vm</code> instead of <code>vmin</code> for box and border measurements, but won't size text with viewport units.</p>
+
+<p>Safari on recent iOS versions (6 and 7) has issues with viewport units where entire page width/height is used for relative unit calculation instead of just viewport width/height as described above (and in the <a href="http://www.w3.org/TR/css3-values/#viewport-relative-lengths">specification</a>). This causes
+<a href="https://github.com/scottjehl/Device-Bugs/issues/36">serious issues under certain circumstances</a> and severely limits the use of viewport units, particularly <code>vh</code>.</p>
 
 <p>Depending on the design, it's sometimes possible to gracefully degrade viewport units with approximate fallbacks. Javascript polyfills like <a href="https://github.com/saabi/vminpoly">vminpoly</a> exist, but aren't recommended on production sites.</p>
               </div>
@@ -2360,7 +2396,9 @@ Note that you need to use all the usual prefixes to make this work in all browse
             </header>
             <div class="more">
               <div class="recco">
-                <p>Web Workers can parallelize computationally heavy operations very well, freeing up the UI thread to respond to user input. Depending on what <a href="http://stackoverflow.com/questions/2773682/what-are-the-use-cases-for-web-workers/2774022#2774022">use case</a> you have for workers, you may choose not to offer that feature if workers aren't present, or to <a href="http://www.nczonline.net/blog/2009/01/13/speed-up-your-javascript-part-1/">chunk it up</a> and put it on the UI thread.</p>
+                <p>Web Workers can parallelize computationally heavy operations, freeing up the UI thread to respond to user input. </p>
+
+<p>For browsers that do not support web workers, depending on your <a href="http://stackoverflow.com/questions/2773682/what-are-the-use-cases-for-web-workers/2774022#2774022">use case</a>, you may choose not to offer the feature that web workers provide or to <a href="http://www.nczonline.net/blog/2009/01/13/speed-up-your-javascript-part-1/">chunk it up</a> and put it on the UI thread.</p>
               </div>
               <div class="polyfills"></div>
 
@@ -2501,7 +2539,7 @@ Note that you need to use all the usual prefixes to make this work in all browse
     </div>
     <footer>
       <p>HTML5 Please is a community project (<a href="https://github.com/h5bp/html5please/">contribute on github!</a>) from the people behind <a href="http://html5boilerplate.com">HTML5 Boilerplate</a>, <a href="http://modernizr.com">Modernizr</a> &amp; <a href="http://css3please.com">CSS3 Please</a>.</p>
-      <p class="builders"> <a href="http://twitter.com/divya"><img src="https://twitter.com/api/users/profile_image/divya?size=normal" alt="Divya Manian"><b>Divya</b> Manian</a> <a href="http://twitter.com/paul_irish"><img src="https://twitter.com/api/users/profile_image/paul_irish?size=normal" alt="Paul Irish"><b>Paul</b> Irish</a> <a href="http://twitter.com/tbranyen"><img src="https://twitter.com/api/users/profile_image/tbranyen?size=normal" alt="Tim Branyen"><b>Tim</b> Branyen</a> <a href="http://twitter.com/connor"><img src="https://twitter.com/api/users/profile_image/connor?size=normal" alt="Connor Montgomery"><b>Connor</b> Montgomery</a> <a href="http://raynos.org/blog/"><img src="http://gravatar.com/avatar/d840cb1fb7e828284011cc08f40a1015?s=48" alt="Jake Verbaten"><b>Jake</b> Verbaten</a> <a href="https://github.com/h5bp/html5please/contributors">&amp; more</a>
+      <p class="builders"> <a href="http://twitter.com/divya"><img src="https://twitter.com/api/users/profile_image/divya?size=normal" alt="Divya Manian"><b>Divya</b> Manian</a> <a href="http://twitter.com/paul_irish"><img src="https://twitter.com/api/users/profile_image/paul_irish?size=normal" alt="Paul Irish"><b>Paul</b> Irish</a> <a href="http://twitter.com/tbranyen"><img src="https://twitter.com/api/users/profile_image/tbranyen?size=normal" alt="Tim Branyen"><b>Tim</b> Branyen</a> <a href="http://twitter.com/connor"><img src="https://twitter.com/api/users/profile_image/connor?size=normal" alt="Connor Montgomery"><b>Connor</b> Montgomery</a> <a href="http://raynos.org/blog/"><img src="http://gravatar.com/avatar/d840cb1fb7e828284011cc08f40a1015?s=48"><b>Jake</b> Verbaten</a> <a href="https://github.com/h5bp/html5please/contributors">&amp; more</a>
       </p>
     </footer>
 
