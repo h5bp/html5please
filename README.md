@@ -21,13 +21,13 @@ Make sure you have all dependencies installed.
 2. To generate the `index.html` page, type:
 
   ```sh
-  $ node .
+  $ node ./lib/
   ```
 
 3. To check if the urls are accurate (and for deploying to production), type:
 
   ```sh
-  $ node . checkurls
+  $ node ./lib/ checkurls
   ```
 
 4. All styles must be in the included Sass file rather than be updated in the generated CSS file. To compile them is to use [Compass](http://compass-style.org/):
