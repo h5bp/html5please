@@ -143,7 +143,7 @@ function showsearch(hash) {
   lastActiveHash = currentActiveHash;
 
   updatesearch();
-};
+}
 
 // keyboard shortcut for / to go to search box.
 addEvent(window, 'keyup', function(e){
@@ -174,7 +174,7 @@ function linkify( selector ) {
             var node = nodes[i];
 
             node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
-        };
+        }
     }
 }
 
