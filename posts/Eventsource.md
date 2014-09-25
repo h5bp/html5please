@@ -1,4 +1,4 @@
-feature: EventSource
+feature: EventSource (Server-Sent Events)
 status: use
 tags: fallback
 kind: api
