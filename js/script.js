@@ -151,16 +151,14 @@ addEvent(window, 'keyup', function(e){
     search.focus();
 });
 
-var moredetails = document.getElementById("clickmore");
+var clickmore = document.getElementById('clickmore');
+addEvent(clickmore, 'click', function (event) {
+  classList(document.getElementById('moredetails')).toggle('active');
+  classList(clickmore).toggle('active');
 
-moredetails.onclick = function(e) {
-  e || (e = window.event);
-  var target = e.target || e.srcElement;
+  event.preventDefault();
+});
 
-  classList(target).toggle('active');
-  classList(document.getElementById(/#(.*)/.exec(target.href)[1])).toggle('active');
-  e.preventDefault && e.preventDefault();
-};
 
 var supports3DTransforms =  document.body.style['webkitPerspective'] !== undefined ||
                             document.body.style['MozPerspective'] !== undefined;
