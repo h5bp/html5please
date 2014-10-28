@@ -4,9 +4,9 @@
     "async": "*",
     "backbone": "0.5.3",
     "grunt": "*",
-    "grunt-closure-compiler" : "0.0.2",
+    "grunt-closure-compiler": "0.0.2",
     "handlebars": "*",
-    "node-markdown": "*",
+    "marked": "^0.3.2",
     "request": "*",
     "underscore": "1.2.2"
   }
