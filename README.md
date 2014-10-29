@@ -36,10 +36,10 @@ Make sure you have all dependencies installed.
   $ compass watch .
   ```
 
-5. Each of the features requires its own markdown file under `posts` folder. It is easy to create using the shell script on the parent directory, type:
+5. Each of the features requires its own markdown file under `posts` folder. It is easy to create using the node script on the parent directory, type:
 
   ```sh
-  $ ./new_feature.sh
+  $ node new_feature.js
   ```
 
   And start entering details about the feature you want to add.
