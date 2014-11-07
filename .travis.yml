@@ -3,15 +3,11 @@
 # http://docs.travis-ci.com
 
 after_success:
-  - curl -sSL "https://raw.githubusercontent.com/h5bp-bot/scripts/0.2.0/update_site_branch.sh" |
-      bash /dev/stdin "build" "gh-pages" "Hey GitHub, this content is for you!"
+  - curl -sSL "https://raw.githubusercontent.com/h5bp-bot/scripts/0.3.0/update_site_branch.sh" |
+      bash /dev/stdin "build" "gh-pages" "Hey GitHub, this content is for you! [skip ci]"
 
 before_install:
   - gem install sass compass
-
-branches:
-  except:
-    - gh-pages
 
 env:
   global:
