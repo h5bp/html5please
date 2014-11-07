@@ -21,5 +21,5 @@ Taken together, these proposed specs have the potential to bring huge enhancemen
 
 [Another view of the status of Web Components is available here](http://jonrimmer.github.io/are-we-componentized-yet/):
 <a href="http://jonrimmer.github.io/are-we-componentized-yet/">
-![](http://i.imgur.com/EeOUtPu.png)
+![](//i.imgur.com/EeOUtPu.png)
 </a>
