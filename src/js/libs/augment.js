@@ -1,0 +1,2 @@
+if(!Array.prototype.filter)Array.prototype.filter=function(c,f){if(void 0===this||null===this)throw new TypeError;var b=Object(this),e=b.length>>>0;if("function"!==typeof c)throw new TypeError;for(var d=[],a=0;a<e;a++)if(a in b){var g=b[a];c.call(f,g,a,b)&&d.push(g)}return d};
+if(!Array.prototype.map)Array.prototype.map=function(c,f){if(void 0===this||null===this)throw new TypeError;var b=Object(this),e=b.length>>>0;if("function"!==typeof c)throw new TypeError;for(var d=Array(e),a=0;a<e;a++)a in b&&(d[a]=c.call(f,b[a],a,b));return d};

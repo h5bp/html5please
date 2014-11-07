@@ -6,13 +6,17 @@ Look up HTML5, CSS3, etc features, know if they are ready for use, and if so fin
 
 Make sure you have all dependencies installed.
 
-1. Install [NodeJS](http://nodejs.org/#download);
-2. Install [Sass](http://sass-lang.com/download.html);
-3. Install [Compass](http://compass-style.org/).
+1. Install [NodeJS](http://nodejs.org/#download)
+2. Install [Gulp](http://gulpjs.com)
+2. Install [Sass](http://sass-lang.com/download.html) & [Compass](http://compass-style.org/)
+
+  ```sh
+  $ gem install sass compass
+  ```
 
 ## Getting Started
 
-1. In your terminal, navigate to this project and type:
+1. In your terminal, navigate to the project and type:
 
   ```sh
   $ npm install
@@ -21,25 +25,19 @@ Make sure you have all dependencies installed.
 2. To generate the `index.html` page, type:
 
   ```sh
-  $ node ./lib/
+  $ gulp render
   ```
 
-3. To check if the urls are accurate (and for deploying to production), type:
+3. To start the watchers and open the project in your browser:
 
   ```sh
-  $ node ./lib/ checkurls
+  $ gulp
   ```
 
-4. All styles must be in the included Sass file rather than be updated in the generated CSS file. To compile them is to use [Compass](http://compass-style.org/):
+4. Each of the features requires its own markdown file under `posts` folder. It is easy to create using the node script on the parent directory, type:
 
   ```sh
-  $ compass watch .
-  ```
-
-5. Each of the features requires its own markdown file under `posts` folder. It is easy to create using the node script on the parent directory, type:
-
-  ```sh
-  $ node new_feature.js
+  $ gulp new
   ```
 
   And start entering details about the feature you want to add.

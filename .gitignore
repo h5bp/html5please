@@ -1,4 +1,7 @@
 node_modules
 .sass-cache
-js/script.min.js.report.txt
-index.html
+src/js/script.min.js.report.txt
+src/index.html
+src/css
+build/
+npm-debug.log

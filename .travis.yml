@@ -1,0 +1,26 @@
+# For more information about the configurations used
+# in this file, please see the Travis CI documentation:
+# http://docs.travis-ci.com
+
+after_success:
+  - curl -sSL "https://raw.githubusercontent.com/h5bp-bot/scripts/0.2.0/update_site_branch.sh" |
+      bash /dev/stdin "build" "gh-pages" "Hey GitHub, this content is for you!"
+
+before_install:
+  - gem install sass compass
+
+branches:
+  except:
+    - gh-pages
+
+env:
+  global:
+    - secure: "eN2BgbNThlSC08J7vexEkPj5vj0IhSBfgW3kn32drbiuvAAIF3eMvs5t1j5i+ECE3BZuhND7vOlUWk5uJET86YiU8PC6odWRXWjN43APGTnIcsb+Okx1NlSqtNHQHUB2z+cV6GEtpISHqj0l26WDo5BKgCRqszehHeE1NBWJE1I="
+
+git:
+  depth: 10
+
+language: node_js
+
+node_js:
+  - "0.10"

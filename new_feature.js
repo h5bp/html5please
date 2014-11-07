@@ -1,3 +1,5 @@
+'use strict';
+
 var question = require('readline-sync').question;
 var fs = require('fs');
 var path = require('path');

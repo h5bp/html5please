@@ -1,0 +1,26 @@
+// PREFIXES
+
+$support-for-original-webkit-gradients: false;
+
+
+
+$dark: #232927;
+$lightest: #e3d7bf;
+$light: #476871;
+$darkest: #1e2322;
+$contrast: #E16734;
+$code: hsla(193, 23%, 36%, 0.5);
+$hotpink: #fe57a1;
+$fallback: saturate(lighten($light, 20%), 10%);
+$polyfill: desaturate(lighten($contrast, 10%), 10%);
+$no: saturate(darken($contrast, 10%), 20%);
+$yes: saturate($light, 10%);
+$link-color: #149CD7;
+
+$default-font-family: 'Open Sans', sans-serif;
+
+$index-font-family: 'Francois One', sans-serif;
+
+$avoid: #D92626;
+$use: #60AC39;
+$caution: #fa0;

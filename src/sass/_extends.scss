@@ -1,0 +1,124 @@
+.text-center { text-align: center; }
+
+.text-uppercase { text-transform: uppercase; }
+
+.display-block { display: block; }
+
+.display-inline { display: inline; }
+
+.reset-margin { margin: 0; }
+
+.reset-list {
+  margin: 0; padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0; padding: 0;
+  }
+}
+
+// Return the modulo of two numbers
+@function mod($dividend,$divisor) {
+  @return $dividend - (floor($dividend/$divisor)*$divisor);
+}
+
+// Return the corrected angle or position for a css gradient
+@function angle($deg) {
+  @if type-of($deg) == 'number' {
+    @return mod(abs($deg - 450), 360deg);
+  } @else {
+    $position: to + " ";
+    @each $pos in $deg {
+      $position: $position + opposite-position($pos) + " ";
+    }
+    @return $position;
+  }
+}
+
+@mixin linear-gradient-fix ($angle, $details) {
+  @include background(linear-gradient($angle, $details));
+  background: #{"linear-gradient(" + angle($angle) + ", " + $details + ")"};
+}
+
+@mixin apply-status-style($color) {
+    background: $color;
+    box-shadow: -4px 0px 4px darken($color, 5%) inset;
+    border-right-color: darken($color, 12%);
+
+    &:before {
+      @include linear-gradient-fix(34deg, (transparentize($color, 1), transparentize($color, 1) 50%, darken($color, 5%) 53%,  $color 56%));
+    }
+
+    &:after {
+      @include linear-gradient-fix(-34deg, (transparentize($color, 1), transparentize($color, 1) 50%, darken($color, 5%) 53%,  $color 56%));
+    }
+}
+
+@mixin secondary-title {
+  font-size: 2em;
+  line-height: 1;
+  font-family: $index-font-family;
+  font-weight: normal;
+}
+
+@mixin roll {
+
+  display: inline-block;
+  overflow: hidden;
+
+  vertical-align: top;
+
+  -webkit-perspective: 400px;
+     -moz-perspective: 400px;
+     -moz-perspective: 400px;
+
+  -webkit-perspective-origin: 50% 50%;
+     -moz-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
+
+  & span {
+    display: block;
+    position: relative;
+    padding: 0 2px;
+
+    -webkit-transition: all 400ms ease;
+       -moz-transition: all 400ms ease;
+            transition: all 400ms ease;
+
+    -webkit-transform-origin: 50% 0%;
+       -moz-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+  }
+    &:hover span {
+      background: #111;
+
+      -webkit-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+         -moz-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+              transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+    }
+  & span:after {
+    content: attr(data-title);
+
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 2px;
+
+    color: #fff;
+    background: hsl(206, 80%, 30%);
+
+    -webkit-transform-origin: 50% 0%;
+       -moz-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+
+    -webkit-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+       -moz-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+            transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+  }
+}
+
