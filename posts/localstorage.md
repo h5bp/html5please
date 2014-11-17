@@ -1,6 +1,6 @@
 feature: localStorage
-status: caution
-tags: gtie7 polyfill
+status: use
+tags: gtie7
 kind: api
 polyfillurls:[Remy’s storage polyfill](https://gist.github.com/350433), [sessionstorage](http://code.google.com/p/sessionstorage/)
 
