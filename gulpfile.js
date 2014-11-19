@@ -43,7 +43,7 @@ gulp.task('build', ['render', 'styles'], function() {
 
 gulp.task('watch', function() {
   gulp.watch(['src/js/*.js', 'gulpfile.js', './lib/*.js', 'new_feature.js'], ['reload:js', 'lint:js']);
-  gulp.watch('src/template.html', ['render']);
+  gulp.watch(['src/template.html', 'posts/*.md'], ['render']);
   gulp.watch('src/sass/*', ['styles']);
 });
 
