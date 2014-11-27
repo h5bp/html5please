@@ -14,9 +14,9 @@ The protocol backing the Web Socket API has become an IETF standard, but Safari 
 
 The -76 version has a possible security problem for users behind buggy transparent proxies. The same security problem exists with Flash sockets and Java sockets. None of these options are recommended.
 
-To make websockets easier to use there are multiple server-side framework solutions. These frameworks generally provide fallback transports (HTTP long polling, HTTP streaming, ajax polling) to support non-websocket browsers. However be prepared to tune the fallback solutions in order to meet the needs of your app. 
+To make websockets easier to use there are multiple server-side framework solutions. These frameworks generally provide fallback transports (HTTP long polling, HTTP streaming, ajax polling) to support non-websocket browsers. However be prepared to tune the fallback solutions in order to meet the needs of your app.
 
-[Sockjs](https://github.com/sockjs) is one a framework which emulates the WebSocket API in browsers and has server implementations for node.js, Ruby, Erlang or tornado. 
+[Sockjs](https://github.com/sockjs) is one a framework which emulates the WebSocket API in browsers and has server implementations for node.js, Ruby, Erlang or tornado.
 
 [Socket.io](http://socket.io/) is a Node.js framework that helps with downlevel transports for browsers lacking native WebSocket support (and supports IE6+).
 

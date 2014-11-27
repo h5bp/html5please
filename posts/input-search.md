@@ -1,6 +1,6 @@
 feature: <input type=search>
 status: use
-tags: 
+tags:
 kind: html
 moreurl: http://www.wufoo.com/html5/types/5-search.html
 

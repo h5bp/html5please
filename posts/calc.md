@@ -4,7 +4,7 @@ tags: fallback
 kind: css
 polyfillurls:
 
-All the modern browsers except Android's native browser support `calc()` which makes it easier to adopt. But do note that it can have a big impact on the layout and the consequent breaking of your design on unsupported browsers. 
+All the modern browsers except Android's native browser support `calc()` which makes it easier to adopt. But do note that it can have a big impact on the layout and the consequent breaking of your design on unsupported browsers.
 
 You should use it with a fallback declaration, so it doesn't break browsers which don't support it.
 

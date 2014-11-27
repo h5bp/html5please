@@ -1,6 +1,6 @@
 feature: style[scoped]
 status: avoid
-tags: 
+tags:
 kind: css
 moreurl: http://css-tricks.com/saving-the-day-with-scoped-css/
 
