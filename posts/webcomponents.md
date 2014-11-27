@@ -3,7 +3,7 @@ status: caution
 tags: polyfill
 kind: api
 polyfillurls: [Polymer](http://www.polymer-project.org/)
-moreurl: http://www.webcomponentsshift.com/
+moreurl: http://webcomponents.org/
 
 The [Web Components](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html) API is a collection of four different specs from the W3C designed to work together: 
 
