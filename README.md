@@ -1,6 +1,10 @@
 # HTML5 Please
 
-Look up HTML5, CSS3, etc features, know if they are ready for use, and if so find out how you should use them – with polyfills, fallbacks or as they are.
+[![Build Status](https://travis-ci.org/h5bp/html5please.svg)](https://travis-ci.org/h5bp/html5please)
+[![devDependency Status](https://david-dm.org/h5bp/html5please/dev-status.svg)](https://david-dm.org/h5bp/html5please#info=devDependencies)
+
+Look up HTML5, CSS3, etc features, know if they are ready for use, and if so
+find out how you should use them – with polyfills, fallbacks or as they are.
 
 ## Before you begin
 
