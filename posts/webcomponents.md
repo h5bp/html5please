@@ -5,6 +5,8 @@ kind: api
 polyfillurls: [Polymer](http://www.polymer-project.org/)
 moreurl: http://www.webcomponentsshift.com/
 
+A suite of polyfills supporting the [Web Components](http://webcomponents.org) specs:
+
 The [Web Components](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html) API is a collection of four different specs from the W3C designed to work together: 
 
 - [HTML Templates](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html), a native templating system which allows reusable html code using the new &lt;template&gt; tag
