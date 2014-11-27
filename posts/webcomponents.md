@@ -5,15 +5,15 @@ kind: api
 polyfillurls: [Polymer](http://www.polymer-project.org/)
 moreurl: http://webcomponents.org/
 
-The [Web Components](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html) API is a collection of four different specs from the W3C designed to work together: 
+The Web Components API is a collection of four different specs from the W3C designed to work together:
 
-- [HTML Templates](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html), a native templating system which allows reusable html code using the new &lt;template&gt; tag
+- [HTML Templates](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element), a native templating system which allows reusable html code using the new &lt;template&gt; tag
 
-- [Custom Elements](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html), which allows authors to define and use custom html elements
+- [Custom Elements](http://w3c.github.io/webcomponents/spec/custom/), which allows authors to define and use custom html elements
 
-- [Shadow DOM](http://www.w3.org/TR/shadow-dom/) allows authors to create an independent new DOM tree nested inside another DOM tree
+- [Shadow DOM](http://w3c.github.io/webcomponents/spec/shadow/), allows authors to create an independent new DOM tree nested inside another DOM tree
 
-- [HTML Imports](https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/imports/index.html), which allows authors to embed HTML documents in other HTML files, using the `<link rel=import>` element
+- [HTML Imports](http://w3c.github.io/webcomponents/spec/imports/), which allows authors to embed HTML documents in other HTML files, using the `<link rel=import>` element
 
 Taken together, these proposed specs have the potential to bring huge enhancements to our web development toolkit, but the specs are very immature and currently undergoing rapid iteration. At present, experimental support is  available in Chrome Canary and Firefox Nightly. However, given the potential benefits Web Components bring to the table, it might be a good idea to start experimenting with the APIs now, and help get constructive feedback and tests back to the spec writers.
 
