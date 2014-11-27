@@ -23,6 +23,9 @@
   "private": true,
   "scripts": {
     "build": "gulp build",
-    "test": "gulp build"
+    "new": "gulp new",
+    "render": "gulp render",
+    "test": "gulp build",
+    "watch": "gulp"
   }
 }
