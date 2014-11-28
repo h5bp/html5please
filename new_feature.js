@@ -37,7 +37,7 @@ function writePost(feature, callback) {
   file += 'status: ' + feature.status + '\n';
   file += 'tags: ' + feature.tags + '\n';
   file += 'kind: ' + feature.kind + '\n';
-  file += 'polyfillurls: ' + '\n';
+  file += 'polyfillurls:' + '\n';
   file += '\n';
   file += '...\n';
 
