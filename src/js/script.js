@@ -46,9 +46,9 @@ var	search = document.getElementById('livesearch'),
 });
 
 var listOptions = {
-		listClass: 'features',
-		valueNames: ['kind', 'status', 'name', 'tags']
-	},
+    listClass: 'features',
+    valueNames: ['kind', 'status', 'name', 'tags']
+  },
   featureList = new List('gfs', listOptions),
   noitemsNotification = document.querySelector('#noitems');
   search.onkeyup = updatesearch;
