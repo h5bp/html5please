@@ -10,13 +10,13 @@ function promptValue(tag, possibilities, morePossible) {
   morePossible = morePossible || false;
 
   var possibilitiesStr = possibilities.length ? ' (' : '';
-  if(morePossible) {
+  if (morePossible) {
     possibilitiesStr += 'one or more of: ';
   }
 
   possibilities.forEach(function(possibility) {
     // avoid trailing commas
-    if( possibilities[ possibilities.length - 1] !== possibility ) {
+    if (possibilities[ possibilities.length - 1] !== possibility) {
       possibilitiesStr += possibility + ', ';
     }
     else {
@@ -29,9 +29,9 @@ function promptValue(tag, possibilities, morePossible) {
 }
 
 function writePost(feature, callback) {
-  var slug = feature.name.replace(' ', '-').toLowerCase(),
-      filename = slug + '.md',
-      file = '';
+  var slug = feature.name.replace(' ', '-').toLowerCase();
+  var filename = slug + '.md';
+  var file = '';
 
   file += 'feature: ' + feature.name + '\n';
   file += 'status: ' + feature.status + '\n';

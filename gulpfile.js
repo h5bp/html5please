@@ -29,7 +29,7 @@ gulp.task('build', ['render', 'styles'], function() {
       fs.writeFileSync('build/index.html', file, 'utf8');
     });
 
-  // copy all the necessary files 
+  // copy all the necessary files
   gulp.src([
     'src/404.html',
     'src/favicon.ico',
@@ -59,7 +59,7 @@ gulp.task('serve', ['render', 'styles'], function() {
 gulp.task('new', function() {
   require('./new_feature');
 
-  if($.connect.reload) {
+  if ($.connect.reload) {
     gulp.src('src/index.html')
       .pipe($.connect.reload());
   }
@@ -68,7 +68,7 @@ gulp.task('new', function() {
 gulp.task('render', function() {
   require('./lib')('render');
 
-  if($.connect.reload) {
+  if ($.connect.reload) {
     gulp.src('src/index.html')
       .pipe($.connect.reload());
   }
@@ -80,12 +80,13 @@ gulp.task('checkurls', function() {
 
 gulp.task('lint:js', function() {
   return gulp.src(['src/js/*.js', 'gulpfile.js', './lib/*.js', 'new_feature.js'])
+    .pipe($.jscs('./.jscsrc'))
     .pipe($.jshint('./.jshintrc'))
     .pipe($.jshint.reporter('jshint-stylish'));
 });
 
 gulp.task('reload:js', function() {
-  if($.connect.reload) {
+  if ($.connect.reload) {
     gulp.src('src/js/*.js')
       .pipe($.connect.reload());
   }

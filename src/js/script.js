@@ -23,45 +23,48 @@ if (window.attachEvent) {
 var ies = ['gtie6', 'gtie7', 'gtie8', 'gtie9', 'gtie10'];
 
 
-var	search = document.getElementById('livesearch'),
-    searchresults = document.querySelectorAll('.features article'),
-    searchurl = document.getElementById('searchurl'),
-    currentActiveHash,
-    lastActiveHash;
+var	search = document.getElementById('livesearch');
+var searchresults = document.querySelectorAll('.features article');
+var searchurl = document.getElementById('searchurl');
+var currentActiveHash;
+var lastActiveHash;
 
 [].map.call(searchresults, function(result) {
-  var tags = result.querySelector('.tags'),
-      tagslist = text(tags).split(' '),
-      ielist = tagslist.filter(function(tag) {
-        return tag.match(/gtie.*/);
-      });
+  var tags = result.querySelector('.tags');
+  var tagslist = text(tags).split(' ');
+  var ielist = tagslist.filter(function(tag) {
+    return tag.match(/gtie.*/);
+  });
 
   tagslist.push('showall');
 
   var ieindex = ies.indexOf(ielist[0]);
-  if(ieindex !== -1){
+  if (ieindex !== -1) {
     tagslist = tagslist.concat(ies.slice(ieindex + 1));
   }
   tags.textContent = tagslist.join(' ');
 });
 
 var listOptions = {
-    listClass: 'features',
-    valueNames: ['kind', 'status', 'name', 'tags']
-  },
-  featureList = new List('gfs', listOptions),
-  noitemsNotification = document.querySelector('#noitems');
-  search.onkeyup = updatesearch;
+  listClass: 'features',
+  valueNames: ['kind', 'status', 'name', 'tags']
+};
+var featureList = new List('gfs', listOptions);
+var noitemsNotification = document.querySelector('#noitems');
+
+search.onkeyup = updatesearch;
 
 function updatesearch() {
 
 
   classList(document.body)[ search.value !== '' ? 'add' : 'remove']('searchvalue');
 
+  var i;
+  var len;
   if (search.value !== '') {
-    searchurl.href='./#' + search.value;
+    searchurl.href = './#' + search.value;
     searchurl.className = 'active';
-    for (var i = 0, len = searchresults.length; i < len; i++) {
+    for (i = 0, len = searchresults.length; i < len; i++) {
       classList(searchresults[i]).add('expanded');
       searchresults[i].querySelectorAll('h2')[0].setAttribute('aria-expanded', 'true');
     }
@@ -74,25 +77,25 @@ function updatesearch() {
 
   } else {
     searchurl.className = '';
-    for (var i = 0, len = searchresults.length; i < len; i++) {
+    for (i = 0, len = searchresults.length; i < len; i++) {
       classList(searchresults[i]).remove('expanded');
       searchresults[i].querySelectorAll('h2')[0].setAttribute('aria-expanded', 'false');
     }
   }
 }
 
-var expandfeatures = document.querySelectorAll('.features article header'),
-    count = expandfeatures.length;
+var expandfeatures = document.querySelectorAll('.features article header');
+var count = expandfeatures.length;
 
-for(var i = 0; i < count; i++) {
+for (var i = 0; i < count; i++) {
 
   expandfeatures[i].onclick = function(e) {
-      e = e || window.event;
-      var node = e.target || e.srcElement;
-      var parent = node.parentNode;
-      var h2 = node.querySelectorAll('h2')[0];
-      classList(parent).toggle('expanded');
-      h2.setAttribute('aria-expanded', h2.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+    e = e || window.event;
+    var node = e.target || e.srcElement;
+    var parent = node.parentNode;
+    var h2 = node.querySelectorAll('h2')[0];
+    classList(parent).toggle('expanded');
+    h2.setAttribute('aria-expanded', h2.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
   };
 
   var h2elem = expandfeatures[i].querySelectorAll('h2')[0];
@@ -101,7 +104,7 @@ for(var i = 0; i < count; i++) {
   h2elem.setAttribute('aria-expanded', 'false');
 
   h2elem.onkeydown = function(e) {
-    if(e.keyCode === 13 || e.keyCode === 32 ){
+    if (e.keyCode === 13 || e.keyCode === 32) {
       e.preventDefault();
       e = e || window.event;
       var node = e.target || e.srcElement;
@@ -129,7 +132,7 @@ var clicktags = document.querySelectorAll('.explore-features a');
   };
 });
 
-if(window.location.hash) {
+if (window.location.hash) {
   showsearch(/^#(.*)/.exec(window.location.hash)[1]);
 }
 
@@ -137,12 +140,12 @@ function showsearch(hash) {
   search.value = hash;
 
   featureList.search(hash);
-  currentActiveHash = document.querySelector('a[href="#' + hash +'"]');
-  
-  if(lastActiveHash) {
+  currentActiveHash = document.querySelector('a[href="#' + hash + '"]');
+
+  if (lastActiveHash) {
     classList(lastActiveHash).remove('active');
   }
-  if(currentActiveHash) {
+  if (currentActiveHash) {
     classList(currentActiveHash).add('active');
   }
 
@@ -152,7 +155,7 @@ function showsearch(hash) {
 }
 
 // keyboard shortcut for / to go to search box.
-addEvent(window, 'keyup', function(e){
+addEvent(window, 'keyup', function (e) {
   if (e.which === 191 && document.activeElement !== search) {
     search.focus();
   }
@@ -170,14 +173,14 @@ addEvent(clickmore, 'click', function (event) {
 var supports3DTransforms =  document.body.style.webkitPerspective !== undefined ||
                             document.body.style.MozPerspective !== undefined;
 
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-    var nodes = document.querySelectorAll( selector );
-    for( var i = 0, len = nodes.length; i < len; i++ ) {
+function linkify (selector) {
+  if (supports3DTransforms) {
+    var nodes = document.querySelectorAll(selector);
+    for (var i = 0, len = nodes.length; i < len; i++) {
       var node = nodes[i];
-      node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
+      node.innerHTML = '<span data-title="' + node.text + '">' + node.innerHTML + '</span>';
     }
   }
 }
 
-linkify( 'a' );
+linkify('a');
