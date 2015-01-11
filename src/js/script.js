@@ -1,6 +1,6 @@
 /* Author: Divya Manian, Paul Irish, et al  */
 
-/*global window, document, classList, List */
+/*global window, document, List */
 
 // el.innerText / el.textContent helper
 var text;
@@ -57,7 +57,7 @@ search.onkeyup = updatesearch;
 function updatesearch() {
 
 
-  classList(document.body)[ search.value !== '' ? 'add' : 'remove']('searchvalue');
+  document.body.classList[ search.value !== '' ? 'add' : 'remove']('searchvalue');
 
   var i;
   var len;
@@ -65,20 +65,20 @@ function updatesearch() {
     searchurl.href = './#' + search.value;
     searchurl.className = 'active';
     for (i = 0, len = searchresults.length; i < len; i++) {
-      classList(searchresults[i]).add('expanded');
+      searchresults[i].classList.add('expanded');
       searchresults[i].querySelectorAll('h2')[0].setAttribute('aria-expanded', 'true');
     }
 
     if (!document.querySelectorAll('.expanded').length) {
-      classList(noitemsNotification).remove('visuallyhidden');
+      noitemsNotification.classList.remove('visuallyhidden');
     } else {
-      classList(noitemsNotification).add('visuallyhidden');
+      noitemsNotification.classList.add('visuallyhidden');
     }
 
   } else {
     searchurl.className = '';
     for (i = 0, len = searchresults.length; i < len; i++) {
-      classList(searchresults[i]).remove('expanded');
+      searchresults[i].classList.remove('expanded');
       searchresults[i].querySelectorAll('h2')[0].setAttribute('aria-expanded', 'false');
     }
   }
@@ -94,7 +94,7 @@ for (var i = 0; i < count; i++) {
     var node = e.target || e.srcElement;
     var parent = node.parentNode;
     var h2 = node.querySelectorAll('h2')[0];
-    classList(parent).toggle('expanded');
+    parent.classList.toggle('expanded');
     h2.setAttribute('aria-expanded', h2.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
   };
 
@@ -110,7 +110,7 @@ for (var i = 0; i < count; i++) {
       var node = e.target || e.srcElement;
       var grandParent = node.parentNode.parentNode;
       node.setAttribute('aria-expanded', node.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
-      classList(grandParent).toggle('expanded');
+      grandParent.classList.toggle('expanded');
     }
   };
 
@@ -119,7 +119,7 @@ for (var i = 0; i < count; i++) {
     var node = e.target || e.srcElement;
     var grandParent = node.parentNode.parentNode;
     node.setAttribute('aria-expanded', node.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
-    classList(grandParent).toggle('expanded');
+    grandParent.classList.toggle('expanded');
   };
 
 }
@@ -143,10 +143,10 @@ function showsearch(hash) {
   currentActiveHash = document.querySelector('a[href="#' + hash + '"]');
 
   if (lastActiveHash) {
-    classList(lastActiveHash).remove('active');
+    lastActiveHash.classList.remove('active');
   }
   if (currentActiveHash) {
-    classList(currentActiveHash).add('active');
+    currentActiveHash.classList.add('active');
   }
 
   lastActiveHash = currentActiveHash;
@@ -163,8 +163,8 @@ addEvent(window, 'keyup', function (e) {
 
 var clickmore = document.getElementById('clickmore');
 addEvent(clickmore, 'click', function (event) {
-  classList(document.getElementById('moredetails')).toggle('active');
-  classList(clickmore).toggle('active');
+  document.getElementById('moredetails').classList.toggle('active');
+  clickmore.classList.toggle('active');
 
   event.preventDefault();
 });
