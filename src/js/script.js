@@ -23,7 +23,7 @@ if (window.attachEvent) {
 var ies = ['gtie6', 'gtie7', 'gtie8', 'gtie9', 'gtie10'];
 
 
-var	search = document.getElementById('livesearch');
+var search = document.getElementById('livesearch');
 var searchresults = document.querySelectorAll('.features article');
 var searchurl = document.getElementById('searchurl');
 var currentActiveHash;
