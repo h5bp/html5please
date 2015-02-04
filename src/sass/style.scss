@@ -3,15 +3,8 @@
 @import "compass/css3/images";
 @import "compass/css3/box-sizing";
 @import "compass/css3/transform";
+@import "compass/css3/transition";
 @import "vars";
-
-@mixin our-transition($arg) {
-  -webkit-transition: unquote($arg);
-     -moz-transition: unquote($arg);
-      -ms-transition: unquote($arg);
-       -o-transition: unquote($arg);
-          transition: unquote($arg);
-}
 
 @mixin text-shadows($arg) {
   $count: 0;
@@ -266,7 +259,7 @@ article h3 b i {
 #moredetails {
   max-height: 0;
   overflow: hidden;
-  @include our-transition("height 100ms ease-in");
+  @include single-transition(height, 100ms, ease-in);
   font-size: 0.9em;
 }
 
@@ -290,7 +283,7 @@ article h3 b i {
 }
 
 #searchurl {
-  @include our-transition('width 500ms linear, opacity 600ms linear');
+  @include transition(width 500ms linear, opacity 600ms linear);
   @include linear-gradient-fix(90deg, (darken(#f16529, 20%), #f16529));
   background-color: darken(#f16529, 20%);
   display: inline-block;
@@ -320,7 +313,7 @@ article h3 b i {
 .explore-features {
 
   margin: 2rem 0;
-  @include our-transition(all .5s);
+  @include single-transition(all, .5s);
   max-height: 15em;
   overflow: hidden;
 
@@ -365,7 +358,7 @@ article {
 }
 
 article > header {
-  @include our-transition("background-color 100ms ease-in");
+  @include single-transition(background-color, 100ms, ease-in);
   background: lighten($light, 50%);
   border-radius: 0.3rem;
   position: relative;
@@ -377,7 +370,7 @@ article > header {
   }
 
   &:before {
-    @include our-transition("all 100ms ease-in");
+    @include single-transition(all, 100ms, ease-in);
     display: inline-block;
     vertical-align: middle;
     content: "+";
@@ -412,7 +405,7 @@ article > header {
 
 
 article div.more {
-  @include our-transition("opacity 1s ease-in");
+  @include single-transition(opacity, 1s, ease-in);
   display: none;
   opacity: 0;
   background: white;
@@ -567,7 +560,7 @@ body > footer {
 
 code {
   background: hsl(0, 0%, 94%); border-radius: 3px; padding: 0 2px;
-  @include our-transition("all .3s ease-in");
+  @include single-transition(all, .3s, ease-in);
 
   &:hover {
     background: hsl(0, 0%, 88%);
