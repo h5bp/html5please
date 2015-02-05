@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "async": "*",
-    "backbone": "0.5.3",
+    "backbone": "^1.1.2",
     "del": "^1.1.1",
     "execSync": "^1.0.2",
     "gulp": "^3.8.9",
@@ -19,7 +19,7 @@
     "open": "0.0.5",
     "readline-sync": "^0.5.2",
     "request": "*",
-    "underscore": "1.2.2"
+    "underscore": "^1.7.0"
   },
   "private": true,
   "scripts": {
