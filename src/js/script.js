@@ -10,14 +10,6 @@ if (document.body.innerText) {
   text = function (el, v) { return v ? el.textContent = v : el.textContent; };
 }
 
-// el.addEventListener / el.attachEvent helper
-var addEvent;
-if (window.attachEvent) {
-  addEvent = function (el, ev, cb) { el.attachEvent('on' + ev, cb); };
-} else if (window.addEventListener) {
-  addEvent = function (el, ev, cb, capture) { el.addEventListener(ev, cb, capture); };
-}
-
 // gtieX augments. so a search is matching .gtie8,
 // need to match .gtie7 and .gtie6 too
 var ies = ['gtie6', 'gtie7', 'gtie8', 'gtie9', 'gtie10'];
@@ -155,14 +147,14 @@ function showsearch(hash) {
 }
 
 // keyboard shortcut for / to go to search box.
-addEvent(window, 'keyup', function (e) {
+window.addEventListener('keyup', function (e) {
   if (e.which === 191 && document.activeElement !== search) {
     search.focus();
   }
 });
 
 var clickmore = document.getElementById('clickmore');
-addEvent(clickmore, 'click', function (event) {
+clickmore.addEventListener('click', function (event) {
   document.getElementById('moredetails').classList.toggle('active');
   clickmore.classList.toggle('active');
 
