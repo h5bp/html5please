@@ -1,5 +1,5 @@
 feature: Vibration
-status: caution
+status: use
 tags: none
 kind: api
 polyfillurls:
