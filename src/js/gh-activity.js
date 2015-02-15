@@ -23,7 +23,7 @@
     req.send();
   };
 
-  request('//api.github.com/repos/h5bp/html5please/commits', function(error, data) {
+  request('https://api.github.com/repos/h5bp/html5please/commits', function(error, data) {
     if (error) {
       throw error;
     }
