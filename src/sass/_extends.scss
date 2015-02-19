@@ -1,19 +1,30 @@
-.text-center { text-align: center; }
+.text-center {
+  text-align: center;
+}
 
-.text-uppercase { text-transform: uppercase; }
+.text-uppercase {
+  text-transform: uppercase;
+}
 
-.display-block { display: block; }
+.display-block {
+  display: block;
+}
 
-.display-inline { display: inline; }
+.display-inline {
+  display: inline;
+}
 
-.reset-margin { margin: 0; }
+.reset-margin {
+  margin: 0;
+}
 
 .reset-list {
   margin: 0; padding: 0;
   list-style: none;
 
   li {
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
   }
 }
 
