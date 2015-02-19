@@ -49,8 +49,6 @@ audio[controls],
 canvas,
 video {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
 }
 
 
@@ -155,7 +153,6 @@ code,
 kbd,
 samp {
   font-family: monospace, monospace;
-  _font-family: 'courier new', monospace;
   font-size: 1em;
 }
 
@@ -253,7 +250,6 @@ fieldset {
 
 legend {
   border: 0;
-  *margin-left: -7px;
   padding: 0;
 }
 
@@ -268,13 +264,11 @@ textarea {
   @extend .reset-margin;
   font-size: 100%;
   vertical-align: baseline;
-  *vertical-align: middle;
 }
 
 button,
 input {
   line-height: normal;
-  *overflow: visible;
 }
 
 button,
