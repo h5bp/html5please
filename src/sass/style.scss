@@ -329,6 +329,7 @@ table {
 
 html {
   background-image: url('img/denim.png');
+  background-color:  $dark;
   color: $lightest;
   min-height: 100%;
   max-width: 100%;
@@ -339,9 +340,9 @@ html {
     radial-gradient(60em 40em, circle cover, transparentize(white, 0.9) 15em, transparentize(white, 1) 15em),
     radial-gradient(40em 60em, circle cover, transparentize(#207cca, 0.8) 5em, transparentize(#207cca, 1) 5em),
     radial-gradient(35em 45em, circle cover, transparentize(black, 0.8) 7em, transparentize(black, 1) 7em),
-    image-url('denim.png')
+    image-url('denim.png'),
+    $dark
   );
-  background-color:  $dark;
 }
 
 body {
