@@ -133,3 +133,25 @@
   }
 }
 
+@mixin text-shadows($arg) {
+  $count: 0;
+  $textshadow: '';
+  @each $value in $arg {
+    $textshadow: $textshadow + $count + 'px ' + $count + 'px ';
+  }
+}
+
+@function solid-text-shadows($color,$width) {
+  $i: 1;
+  $text-shadow: "";
+  @while $i < ($width + 1) {
+    $text-shadow: $text-shadow + $i + "px " + $i + "px " + "1px " + $color;
+
+    @if($i != $width ) {
+      $text-shadow: $text-shadow + ", ";
+    }
+    $i: $i + 1;
+  }
+
+  @return unquote($text-shadow);
+}
