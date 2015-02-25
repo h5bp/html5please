@@ -2,7 +2,7 @@ feature: ECMAScript 5
 status: use
 tags: fallback gtie8 nooldmobile es5
 kind: js
-polyfillurls: [es5-shim](https://github.com/kriskowal/es5-shim/), [augment.js](http://augmentjs.com/)
+polyfillurls: [es5-shim](https://github.com/kriskowal/es5-shim/), [augment.js](https://olivernn.github.io/augment.js/)
 
 ECMAScript version 5 covers a large number of feature additions to what we normally call JavaScript.
 Excluding IE8, [most of ES5 is supported in browsers](http://kangax.github.com/es5-compat-table/).
