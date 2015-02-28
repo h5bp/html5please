@@ -10,7 +10,7 @@ $.open = require('open');
 $.execSync = require('execSync');
 
 gulp.task('build', ['render', 'styles'], function() {
-  $.del('build');
+  $.del.sync('build');
 
   var assets = $.useref.assets();
   gulp.src('src/index.html')
