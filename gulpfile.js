@@ -7,7 +7,7 @@ var $ = require('gulp-load-plugins')();
 
 $.del = require('del');
 $.open = require('open');
-$.execSync = require('execSync');
+$.execSync = require('sync-exec');
 
 gulp.task('build', ['render', 'styles'], function() {
   $.del.sync('build');
@@ -48,7 +48,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('styles', function() {
-  $.execSync.run('compass compile .');
+  $.execSync('compass compile .');
 });
 
 gulp.task('serve', ['render', 'styles'], function() {
