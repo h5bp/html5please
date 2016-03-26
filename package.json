@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@alrra/travis-scripts": "^2.0.0",
     "async": "^1.5.2",
     "backbone": "^1.1.2",
     "del": "^2.2.0",
@@ -19,6 +20,7 @@
     "readline-sync": "^1.4.1",
     "request": "^2.69.0",
     "sync-exec": "^0.6.2",
+    "travis-after-all": "^1.4.4",
     "underscore": "^1.8.2"
   },
   "private": true,
