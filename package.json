@@ -3,7 +3,6 @@
     "async": "^1.5.2",
     "backbone": "^1.1.2",
     "del": "^2.2.0",
-    "execSync": "^1.0.2",
     "gulp": "^3.8.11",
     "gulp-connect": "^3.2.1",
     "gulp-if": "^2.0.0",
@@ -19,6 +18,7 @@
     "open": "^0.0.5",
     "readline-sync": "^1.4.1",
     "request": "^2.69.0",
+    "sync-exec": "^0.6.2",
     "underscore": "^1.8.2"
   },
   "private": true,
