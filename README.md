@@ -1,6 +1,6 @@
 # HTML5 Please
 
-[![Build Status](https://travis-ci.org/h5bp/html5please.svg)](https://travis-ci.org/h5bp/html5please)
+[![Build Status](https://travis-ci.org/h5bp/html5please.svg?branch=master)](https://travis-ci.org/h5bp/html5please)
 [![devDependency Status](https://david-dm.org/h5bp/html5please/dev-status.svg)](https://david-dm.org/h5bp/html5please#info=devDependencies)
 
 Look up HTML5, CSS3, etc features, know if they are ready for use, and if so
