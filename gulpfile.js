@@ -12,12 +12,9 @@ $.exec = require('sync-exec');
 gulp.task('build', ['render', 'styles'], function() {
   $.del.sync('build');
 
-  var assets = $.useref.assets();
   gulp.src('src/index.html')
-    .pipe(assets)
     .pipe($.if('*.css', $.minifyCss()))
     .pipe($.if('*.js', $.uglify()))
-    .pipe(assets.restore())
     .pipe($.useref())
     .pipe(gulp.dest('build/'))
     .on('end', function() {
