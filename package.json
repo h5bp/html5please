@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@alrra/travis-scripts": "^2.0.0",
+    "@alrra/travis-scripts": "^2.1.0",
     "async": "^1.5.2",
     "backbone": "^1.1.2",
     "del": "^2.2.0",

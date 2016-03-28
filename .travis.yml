@@ -1,9 +1,21 @@
 # For more information about the configurations used
 # in this file, please see the Travis CI documentation:
-# http://docs.travis-ci.com
+# https://docs.travis-ci.com
 
 after_success:
-  - .travis/auto-deploy.sh
+  - |
+
+      # Update the content from the `gh-pages` branch
+
+      $(npm bin)/travis-after-all \
+        && $(npm bin)/set-up-ssh -k "$encrypted_ca2180397773_key" \
+                                 -iv "$encrypted_ca2180397773_iv" \
+                                 --path-encrypted-key ".travis/github_deploy_key.enc" \
+        && $(npm bin)/update-branch --commands "npm run build" \
+                                    --commit-message "Hey GitHub, this content is for you! [skip ci]" \
+                                    --directory "build" \
+                                    --distribution-branch "gh-pages" \
+                                    --source-branch "master"
 
 before_install:
   - gem install sass compass
