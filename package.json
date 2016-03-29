@@ -15,7 +15,7 @@
     "gulp-useref": "^3.0.8",
     "handlebars": "^4.0.5",
     "jshint-stylish": "^2.1.0",
-    "marked": "^0.3.3",
+    "marked": "^0.3.5",
     "open": "^0.0.5",
     "readline-sync": "^1.4.1",
     "request": "^2.69.0",
