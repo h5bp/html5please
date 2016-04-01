@@ -9,4 +9,4 @@ The `srcset` attribute for images allows you to specify different resolutions or
 
 If you know what size the image will display at, the optional `sizes` attribute helps the browser to decide the most appropriate image before waiting to reflow the entire DOM first. For example, `sizes="100vw"` means a full-width image. (Percentage values will not work here, since the browser will have to answer the question "percent of what?", which requires a full DOM reflow.)
 
-All major evergreen browsers now support `srcset`. Because `srcset` is an attribute on the standard `<img>` tag, browsers that do not understand it fallback to the image specified in `src`, making this safe to use immediately. Alhtough it is not required, a [polyfill](http://scottjehl.github.io/picturefill/) is available if you want to bring this functionality to older browsers and Internet Explorer.
+All major evergreen browsers now support `srcset`. Older browsers will fallback to the image specified in the `src` attribute. Alhtough it is not required, a [polyfill](http://scottjehl.github.io/picturefill/) is available if you want to bring this functionality to older browsers and Internet Explorer.
