@@ -2,7 +2,7 @@ feature: requestAnimationFrame
 status: use
 tags: polyfill gtie9
 kind: api
-polyfillurls: [requestAnimationFrame polyfill](https://gist.github.com/1579671)
+polyfillurls: [requestAnimationFrame polyfill](https://gist.github.com/paulirish/1579671)
 
 [requestAnimationFrame is recommended](http://paulirish.com/2011/requestanimationframe-for-smart-animating/) for animation as it's battery and power friendly and allows the browser to optimize the performance of your animations.
 
