@@ -2,7 +2,7 @@ feature: position:sticky
 status: caution
 tags: prefixes polyfill
 kind: css
-polyfillurls: [Fixed-sticky](https://github.com/filamentgroup/fixed-sticky), [Stickyfill](https://github.com/wilddeer/stickyfill)
+polyfillurls: [Fixed-sticky](https://github.com/filamentgroup/fixed-sticky), [Stickyfill](https://github.com/wilddeer/stickyfill), [Sticky](https://github.com/usablica/kissui.sticky)
 
 `position: sticky` combines aspects of relative and fixed positioning. Elements to which it is applied initially act as though they are `position: relative`, but switch to acting like `position: fixed` when they reach a specified position relative to the viewport. This behavior is often useful for section headings or navigational sidebars. [This Mozilla presentation video](https://air.mozilla.org/intern-presentation-ford/) and [this live demo of the Fixed-sticky polyfill](http://filamentgroup.github.io/fixed-sticky/demos/demo.html) show how `position: sticky` behaves in common use-cases.
 
