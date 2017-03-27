@@ -1,5 +1,5 @@
 feature: iframe[seamless]
-status: caution
+status: avoid
 tags: none
 kind: html
 polyfillurls:
@@ -11,6 +11,6 @@ This attribute instructs browsers to treat the iFrame's content more like inline
 * The parent's stylesheets cascade in (importantly, the inverse is not true)
 * More "neutral" rendering, roughly equivalent to declaring: `scrolling="no" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0"`
 
-Because the user experience of following hyperlinks is so drastically altered in supporting browsers, use this attribute with caution.
+The user experience of following hyperlinks is drastically altered in supporting browsers.
 
-Also see [more about implementing `iframe[seamless]`](http://weblog.bocoup.com/third-party-javascript-development-future/#iframe-seamless) responsibly on Bocoup's blog.
+Should be avoided because of the [lack of browser support](http://caniuse.com/#feat=iframe-seamless) (Chrome 20-26 had partial support behind a flag, though this was later removed).
