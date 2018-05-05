@@ -1,7 +1,7 @@
 feature: grids
-status: avoid
+status: use with caution
 tags: none
 kind: css
 polyfillurls: https://github.com/codler/Grid-Layout-Polyfill
 
-The [CSS Grid Layout](http://dev.w3.org/csswg/css3-grid-align/) specification supersedes several older ones, and features an experimental implementation in Internet Explorer 10+ as well as Chrome and Opera. An overview can be found at [updates.html5rocks.com](http://updates.html5rocks.com/2014/03/Get-on-the-CSS-Grid). Until the specification matures and more implementations exist, we suggest that you avoid using this.
+The [CSS Grid Layout](http://dev.w3.org/csswg/css3-grid-align/) specification supersedes several older ones. The feature is implemented in most moderne browsers, other than Opera Mini and partial support in Internet Explorer 10 & 11. An overview can be found at [css-tricks.com](https://css-tricks.com/snippets/css/complete-guide-grid/). Because a somewhat large userbase still is not supportet (about 15% according to [caniuse.com](https://caniuse.com/#search=css%20grid) we recommend you use this feature with caution.
