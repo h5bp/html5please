@@ -1,5 +1,5 @@
 feature: grids
-status: use with caution
+status: caution
 tags: none
 kind: css
 polyfillurls: https://github.com/codler/Grid-Layout-Polyfill
