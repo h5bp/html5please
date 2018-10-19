@@ -18,8 +18,6 @@ var ies = ['gtie6', 'gtie7', 'gtie8', 'gtie9', 'gtie10'];
 var search = document.getElementById('livesearch');
 var searchresults = document.querySelectorAll('.features article');
 var searchurl = document.getElementById('searchurl');
-var currentActiveHash;
-var lastActiveHash;
 
 [].map.call(searchresults, function(result) {
   var tags = result.querySelector('.tags');
@@ -132,16 +130,29 @@ function showsearch(hash) {
   search.value = hash;
 
   featureList.search(hash);
-  currentActiveHash = document.querySelector('a[href="#' + hash + '"]');
 
-  if (lastActiveHash) {
+  var currentActiveHash = document.querySelector('a[href="#' + hash + '"]');
+
+  if (currentActiveHash) {
+    var is_active = currentActiveHash.classList.contains('active');
+  }
+
+  var lastActiveHash = document.querySelector('.explore-features a.active');
+
+  if (lastActiveHash){
     lastActiveHash.classList.remove('active');
   }
-  if (currentActiveHash) {
-    currentActiveHash.classList.add('active');
-  }
 
-  lastActiveHash = currentActiveHash;
+  if (currentActiveHash) {
+
+    if (is_active){
+      search.value = "";
+      currentActiveHash.classList.remove('active');
+    } else {
+      currentActiveHash.classList.add('active');
+    }
+
+  }
 
   updatesearch();
 }
