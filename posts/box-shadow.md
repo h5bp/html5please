@@ -1,5 +1,5 @@
 feature: box-shadow
-status: caution
+status: use
 tags: prefixes
 kind: css
 polyfillurls:
