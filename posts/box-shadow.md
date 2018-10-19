@@ -4,6 +4,4 @@ tags: prefixes
 kind: css
 polyfillurls:
 
-Polyfills are unnecessary for box-shadow.
-
-Box shadows can also be applied safely without prefixes.
+Box shadows can be applied safely without prefixes.
