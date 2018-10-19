@@ -1,6 +1,6 @@
 feature: box-sizing
 status: use
-tags: fallback gtie7 border-box
+tags: gtie7 border-box
 kind: css
 polyfillurls:
 
