@@ -10,7 +10,7 @@ find out how you should use them – with polyfills, fallbacks or as they are.
 
 Make sure you have all dependencies installed.
 
-1. Install [Node.js](http://nodejs.org/#download)
+1. Install [Node.js](https://nodejs.org/#download)
 1. Install [Ruby](https://www.ruby-lang.org/en/downloads/)
 1. In your terminal, navigate to the project and type:
 
