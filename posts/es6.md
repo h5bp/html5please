@@ -17,5 +17,4 @@ If you have to support Internet Explorer or would like to use the latest ECMAScr
 - [@babel/polyfill](https://babeljs.io/docs/en/next/babel-polyfill.html) to polyfill new built-in methods
 
 Note:  
-*@babel/polyfill* is a simple solution which wraps *core-js* and includes each and every polyfill no matter if you actually need it.
-You should consider using *core-js* directly to import just the polyfills you need to receive a better performance due to smaller JavaScript bundle files.
+You should use *[@babel/polyfill](https://babeljs.io/docs/en/next/babel-polyfill.html)* with *[@babel/preset-env](https://babeljs.io/docs/en/babel-preset-env)* and the `useBuiltIns` option so that it doesn't include the whole polyfill. Otherwise you can use *[core-js](https://github.com/zloirock/core-js)* directly to import just the polyfills you need to receive a better performance due to smaller JavaScript bundle files.
