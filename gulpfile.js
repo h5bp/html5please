@@ -29,7 +29,7 @@ gulp.task('build', ['render', 'styles'], function() {
   // copy all the necessary files
   gulp.src([
     'src/404.html',
-    'src/favicon.ico',
+    'src/favicon.png',
     'src/apple-touch-icon.png',
     'src/CNAME'
   ], { dot:true }).pipe(gulp.dest('build/'));
