@@ -14,7 +14,7 @@ Most CSS Selectors are supported from IE7 onwards, so you should be safe to use 
 * `div[attr]` and `img[src$=png]` : Attribute selector (starts with, ends with, contains).
 * `p:first-child`*
 * `div:hover` and `:hover` state on all non-`<a>`'s
-* `li.food.vegetable` : without worrying about the [chained classes bug](http://paulirish.com/2008/the-two-css-selector-bugs-in-ie6/)
+* `li.food.vegetable` : without worrying about the [chained classes bug](https://paulirish.com/2008/the-two-css-selector-bugs-in-ie6/)
 
 \* IE7-8 don't update styles properly when elements are manipulated with JS. Usually you have to force the browser to redraw (e.g. hide and show parent element).
 
@@ -22,18 +22,18 @@ Most CSS Selectors are supported from IE7 onwards, so you should be safe to use 
 
 * ` :before, :after` and generated content
 * `:focus` for elements with current focus
-* <a href="http://www.w3.org/TR/selectors/#lang-pseudo">`:lang(C)`</a> which targets an element based on language
+* <a href="https://www.w3.org/TR/selectors/#lang-pseudo">`:lang(C)`</a> which targets an element based on language
 
 #### When you sunset IE8 support, you can use:
 
-* These very useful selectors: <a href="http://css-tricks.com/how-nth-child-works/">`:nth-child(n)`</a>, `:last-child`, `:target`, `:not(s)`, `:enabled`, `:disabled`, `:checked`, `::selection`
+* These very useful selectors: <a href="https://css-tricks.com/how-nth-child-works/">`:nth-child(n)`</a>, `:last-child`, `:target`, `:not(s)`, `:enabled`, `:disabled`, `:checked`, `::selection`
 * These ones, too: `:root`, `:nth-last-child(n)`, `:nth-of-type(n)`, `:nth-last-of-type(n)`, `:first-of-type`, `:last-of-type`, `:only-child`, `:only-of-type`, `:empty`
 
 <!--
 
 Resources:
 
-* http://coding.smashingmagazine.com/2009/10/14/css-differences-in-internet-explorer-6-7-and-8/
+* https://www.smashingmagazine.com/2009/10/css-differences-in-internet-explorer-6-7-and-8/
 * http://www.bennadel.com/blog/2306-What-CSS-Properties-Are-Supported-When-You-Drop-IE6-Support.htm
 * http://analogysoft.com/learning/ui-hulk-out/#beyondie6
 * http://msdn.microsoft.com/en-us/library/cc351024(v=vs.85).aspx#selectors
