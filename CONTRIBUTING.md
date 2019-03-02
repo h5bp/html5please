@@ -1,6 +1,6 @@
 # Contributing to HTML5 Please
 
-You like [HTML5 please](http://html5please.com) and want to get involved?
+You like [HTML5 please](https://html5please.com) and want to get involved?
 Thanks! There are plenty of ways you can help!
 
 Please take a moment to review this document in order to make the contribution

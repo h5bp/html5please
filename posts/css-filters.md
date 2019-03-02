@@ -3,7 +3,7 @@ status: caution
 tags: prefixes
 kind: css
 polyfillurls:[Polyfilter - a CSS Filters Polyfill](https://github.com/Schepp/CSS-Filters-Polyfill)
-moreurl: http://css3clickchart.com/#filters
+moreurl: https://css3clickchart.com/?prop=filters
 
 Filters are supported by Edge 13+ and Firefox 35+ unprefixed, and in Safari 6+, Opera 15+ and Chrome 18+ with the `-webkit-` prefix.
 

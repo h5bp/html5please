@@ -10,38 +10,33 @@ find out how you should use them – with polyfills, fallbacks or as they are.
 
 Make sure you have all dependencies installed.
 
-1. Install [NodeJS](http://nodejs.org/#download)
-2. Install [Sass](http://sass-lang.com/download.html) & [Compass](http://compass-style.org/)
+1. Install [Node.js](https://nodejs.org/#download)
+1. Install [Ruby](https://www.ruby-lang.org/en/downloads/)
+1. In your terminal, navigate to the project and type:
 
-  ```sh
-  $ gem install sass compass
-  ```
-3. In your terminal, navigate to the project and type:
-
-  ```sh
-  $ npm install
-  ```
+```sh
+npm install
+bundle install
+```
 
 ## Getting Started
 
 * To generate the `index.html` page, type:
 
   ```sh
-  $ npm run render
+  npm run render
   ```
 
 * To start the watchers and open the project in your browser:
 
   ```sh
-  $ npm run watch
+  npm run watch
   ```
 
-* Each of the features requires its own markdown file under `posts`
-folder. It is easy to create using the node script on the parent
-directory, type:
+* Each of the features requires its own markdown file under `posts` folder. It is easy to create using the node script on the parent directory, type:
 
   ```sh
-  $ npm run new
+  npm run new
   ```
 
   And start entering details about the feature you want to add.

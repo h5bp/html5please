@@ -3,7 +3,7 @@ status: use
 tags: polyfill ie6 gtie6
 kind: API
 polyfillurls: [microdata shim](https://github.com/termi/Microdata-JS)
-moreurl: http://dev.opera.com/articles/view/microdata-and-the-microdata-dom-api/
+moreurl: https://dev.opera.com/articles/microdata-and-the-microdata-dom-api/
 
 Microdata is a new lightweight semantic meta-syntax. Using attributes, we can define nestable groups of name-value pairs of data, called microdata, which are generally based on the page's content. It gives us a whole new way to add extra semantic information and extend HTML5. Microdata is already being used by google to extract semantic meta data from your webpage.
 

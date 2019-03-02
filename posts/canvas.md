@@ -2,7 +2,7 @@ feature: <canvas>
 status: use
 tags: gtie8 polyfill
 kind: html
-polyfillurls: [FlashCanvas](http://flashcanvas.net/), [ExplorerCanvas](http://code.google.com/p/explorercanvas/)
+polyfillurls: [FlashCanvas](http://flashcanvas.net/), [ExplorerCanvas](https://github.com/arv/explorercanvas)
 
 `canvas` is definitely good to go for modern browsers. If you want to support Internet Explorer 8 and below, ExplorerCanvas and FlashCanvas can be helpful in providing support for most `canvas` features. However, due to the complex nature of native `canvas` implementations, developers should be aware that the polyfills for `canvas` are not simple drop-in solutions in some cases.
 

@@ -5,3 +5,4 @@ src/index.html
 src/css
 build/
 npm-debug.log
+/package-lock.json
