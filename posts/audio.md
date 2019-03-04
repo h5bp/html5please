@@ -1,7 +1,10 @@
 feature: <audio>
 status: use
-tags: polyfill
+tags: gtie8 polyfill
 kind: html
-polyfillurls: [mediaelement.js](http://www.mediaelementjs.com/), [jPlayer](https://github.com/happyworm/jPlayer), [Sound Manager 2](http://www.schillmania.com/projects/soundmanager2/)
+polyfillurls: [mediaelement.js](http://www.mediaelementjs.com/), [Sound Manager 2](http://www.schillmania.com/projects/soundmanager2/)
 
-As is the case with video, you need to provide your audio file in multiple formats for these to work, namely in [Ogg Vorbis and AAC](http://www.scirra.com/blog/44/on-html5-audio-formats-aac-and-ogg). jPlayer has a jQuery dependency. Sound Manager has an extensive API for further customization. [mediaelement.js](http://www.mediaelementjs.com/) offers the HTML5 media element API through Flash in the fallback case and offers uniform styling across browsers and to the Flash widget.
+As is the case with video, you can provide your audio file in multiple formats. But it’s not necessary in case you only target modern browsers.
+See [browser media codec support in 2018](https://www.construct.net/en/blogs/ashleys-blog-2/edge-17-supports-open-media-codecs-953), or [mdn browser compatibilty tables](https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats#Browser_compatibility).
+
+A polyfill is only needed for IE8 and below. Sound Manager has an extensive API for further customization. [mediaelement.js](http://www.mediaelementjs.com/) offers the HTML5 media element API through Flash in the fallback case and offers uniform styling across browsers and to the Flash widget.
