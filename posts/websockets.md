@@ -18,7 +18,7 @@ To make websockets easier to use there are multiple server-side framework soluti
 
 [Sockjs](https://github.com/sockjs) is one a framework which emulates the WebSocket API in browsers and has server implementations for node.js, Ruby, Erlang or tornado.
 
-[Socket.io](http://socket.io/) is a Node.js framework that helps with downlevel transports for browsers lacking native WebSocket support (and supports IE6+).
+[Socket.io](https://socket.io/) is a Node.js framework that helps with downlevel transports for browsers lacking native WebSocket support (and supports IE9+).
 
 XSockets is a .NET+JavaScript framework that handles fallback via Flash and Silverlight.
 

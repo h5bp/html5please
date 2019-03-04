@@ -11,8 +11,8 @@ if (document.body.innerText) {
 }
 
 // gtieX augments. so a search is matching .gtie8,
-// need to match .gtie7 and .gtie6 too
-var ies = ['gtie6', 'gtie7', 'gtie8', 'gtie9', 'gtie10'];
+// need to match .gtie7 too
+var ies = ['gtie7', 'gtie8', 'gtie9', 'gtie10'];
 
 
 var search = document.getElementById('livesearch');
