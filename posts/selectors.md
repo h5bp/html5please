@@ -1,28 +1,11 @@
 feature: selectors
 status: use
-tags: fallback gtie6
+tags: fallback
 kind: css
 polyfillurls:
+moreurl: https://docs.microsoft.com/en-us/previous-versions//cc351024(v=vs.85)#selectors
 
-Most CSS Selectors are supported from IE7 onwards, so you should be safe to use them. But do note that, on browsers that do not support these selectors, a whole rule will be detected as invalid if these unsupported selectors are present. For example, in IE6 `#main, p:first-child {}` would be invalid because it is unable to understand `p:first-child`. We strongly recommend you do not try to polyfill this, but if you do need one, you can use [Selectivizr](http://selectivizr.com/).
-
-#### When you sunset IE6 support, you can use:
-
-* `tr > td` : Immediate descendant (child) selector.
-* `dt + dd` : next sibling selector*
-* `dt ~ dd` : any following sibling
-* `div[attr]` and `img[src$=png]` : Attribute selector (starts with, ends with, contains).
-* `p:first-child`*
-* `div:hover` and `:hover` state on all non-`<a>`'s
-* `li.food.vegetable` : without worrying about the [chained classes bug](https://paulirish.com/2008/the-two-css-selector-bugs-in-ie6/)
-
-\* IE7-8 don't update styles properly when elements are manipulated with JS. Usually you have to force the browser to redraw (e.g. hide and show parent element).
-
-#### When you sunset IE7 support, you can use:
-
-* ` :before, :after` and generated content
-* `:focus` for elements with current focus
-* <a href="https://www.w3.org/TR/selectors/#lang-pseudo">`:lang(C)`</a> which targets an element based on language
+Most CSS Selectors are supported from IE8 onwards, so you should be safe to use them. But do note that, on browsers that do not support these selectors, a whole rule will be detected as invalid if these unsupported selectors are present. For example, in IE6 `#main, p:first-child {}` would be invalid because it is unable to understand `p:first-child`. We strongly recommend you do not try to polyfill this, but if you do need one, you could use [Selectivizr](http://selectivizr.com/).
 
 #### When you sunset IE8 support, you can use:
 
@@ -30,19 +13,8 @@ Most CSS Selectors are supported from IE7 onwards, so you should be safe to use 
 * These ones, too: `:root`, `:nth-last-child(n)`, `:nth-of-type(n)`, `:nth-last-of-type(n)`, `:first-of-type`, `:last-of-type`, `:only-child`, `:only-of-type`, `:empty`
 
 <!--
-
-Resources:
-
-* https://www.smashingmagazine.com/2009/10/css-differences-in-internet-explorer-6-7-and-8/
-* http://www.bennadel.com/blog/2306-What-CSS-Properties-Are-Supported-When-You-Drop-IE6-Support.htm
-* http://analogysoft.com/learning/ui-hulk-out/#beyondie6
-* http://msdn.microsoft.com/en-us/library/cc351024(v=vs.85).aspx#selectors
-* http://www.quirksmode.org/css/contents.html
-* http://www.impressivewebs.com/browser-support-css3-selectors/
-
 	[].forEach.call( document.querySelectorAll('td'), function(elem){
 	  if (elem.innerText.trim() == 'No') elem.style.backgroundColor = 'red';
 	  if (elem.innerText.trim() == 'Yes') elem.style.backgroundColor = 'green';
 	});
-
 -->

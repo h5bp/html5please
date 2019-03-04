@@ -51,6 +51,7 @@ var feature = {
   name: promptValue('Feature Name'),
   status: promptValue('Status', ['use', 'avoid', 'caution']),
   tags: promptValue('Tags', ['gtie6', 'gtie7', 'gtie8', 'prefixes', 'polyfill', 'fallback', 'none'], true),
+  tags: promptValue('Tags', ['gtie7', 'gtie8', 'prefixes', 'polyfill', 'fallback', 'none'], true),
   kind: promptValue('Type', ['css', 'html', 'js', 'api', 'svg'])
 };
 
