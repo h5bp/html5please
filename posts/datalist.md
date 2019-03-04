@@ -2,7 +2,10 @@ feature: <datalist>
 status: use
 tags: polyfill gtie9 nomobile
 kind: html
-polyfillurls: [Relevant Dropdowns](http://css-tricks.com/relevant-dropdowns-polyfill-for-datalist/)
+polyfillurls: [datalist-polyfill](https://github.com/mfranzke/datalist-polyfill), [Relevant Dropdowns](https://css-tricks.com/relevant-dropdowns-polyfill-for-datalist/)
 
-[`<datalist>`](http://developers.whatwg.org/the-button-element.html#the-datalist-element) enables autocomplete combo boxes. It can be polyfilled well with the script below, though it [doesn’t support](https://github.com/h5bp/html5please/issues/18) the full feature. You may want to use a full fledged solution like [Selectize](http://selectize.github.io/selectize.js/) instead. You can also use a [graceful fallback](http://adactio.com/journal/4272/) if you choose not to polyfill.
+[`<datalist>`](https://www.jotform.com/blog/html5-datalists-what-you-need-to-know-78024/) enables autocomplete combo boxes.
 
+It can be polyfilled (for IE 9 and Safari) with the scripts below, though they have [varying levels](https://github.com/h5bp/html5please/issues/18) of support for the full feature. You can also use a [graceful fallback](https://adactio.com/journal/4272/) if you choose not to polyfill.
+
+Please make sure to check [caniuse](https://caniuse.com/#feat=datalist) regarding partial support even in modern browsers.
