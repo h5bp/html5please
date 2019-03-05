@@ -99,12 +99,12 @@
     <script src="js/script.js"></script>
     <script src="js/gh-activity.js"></script>
     <!-- endbuild -->
-
     <script>
-      var _gaq=[['_setAccount','UA-17904194-3'],['_trackPageview'],['_trackPageLoadTime']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
+      window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+      ga('create','UA-17904194-3','auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send','pageview')
+      </script>
+      <script src="https://www.google-analytics.com/analytics.js" defer async></script>
   </body>
 </html>
