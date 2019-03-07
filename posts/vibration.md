@@ -5,7 +5,7 @@ kind: api
 polyfillurls:
 moreurl: https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API
 
-Vibration enables web apps access to a supporting device's force feedback motor.
+The vibration API enables web apps access to a supporting device's force feedback motor.
 
 [illyism.com](https://illyism.com/journal/vibrate-mobile-phone-web-vibration-api) has more info and a number of demos.
 
