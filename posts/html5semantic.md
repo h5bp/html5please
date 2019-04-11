@@ -2,7 +2,7 @@ feature: HTML5 elements
 status: use
 tags: gtie8 polyfill
 kind: html
-polyfillurls: [html5shiv](https://code.google.com/p/html5shiv/), [html5shiv (github)](https://github.com/aFarkas/html5shiv/), [accessifyhtml5.js](https://github.com/yatil/accessifyhtml5.js)
+polyfillurls: [html5shiv](https://github.com/aFarkas/html5shiv/), [accessifyhtml5.js](https://github.com/yatil/accessifyhtml5.js)
 
 All current browsers, except Internet Explorer 8 and below, support the use of the new HTML5 elements (e.g., `<header>`, `<footer>`, `<nav>`, `<main>`, `<article>`, `<section>`, etc.). However, they aren't always mapped to accessibility APIs as the [HTML5 spec](https://html.spec.whatwg.org/multipage/dom.html#wai-aria) requires. Currently [only Firefox does this](https://www.html5accessibility.com), but other browsers are implementing the accessibility APIs quickly. In the meantime, [Accessifyhtml5.js](https://github.com/yatil/accessifyhtml5.js) maps them correctly.
 
