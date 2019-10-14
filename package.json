@@ -16,7 +16,7 @@
     "handlebars": "^4.1.0",
     "jshint-stylish": "^2.2.1",
     "marked": "^0.6.1",
-    "open": "^0.0.5",
+    "open": "^6.4.0",
     "readline-sync": "^1.4.9",
     "request": "^2.88.0",
     "sync-exec": "^0.6.2",
