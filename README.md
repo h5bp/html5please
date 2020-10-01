@@ -1,4 +1,4 @@
-# HTML5 Please
+# Let's HTML5 
 
 [![Build Status](https://travis-ci.org/h5bp/html5please.svg?branch=master)](https://travis-ci.org/h5bp/html5please)
 [![devDependency Status](https://david-dm.org/h5bp/html5please/dev-status.svg)](https://david-dm.org/h5bp/html5please#info=devDependencies)
@@ -8,7 +8,7 @@ find out how you should use them – with polyfills, fallbacks or as they are.
 
 ## Before you begin
 
-Make sure you have all dependencies installed.
+Make sure you have all dependencies installed before proceeding to next step.
 
 1. Install [Node.js](https://nodejs.org/#download)
 1. Install [Ruby](https://www.ruby-lang.org/en/downloads/)
