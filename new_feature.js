@@ -1,61 +1,55 @@
 'use strict';
 
-var question = require('readline-sync').question;
-var fs = require('fs');
-var path = require('path');
-var exec = require('child_process').exec;
+const readlineSync = require('readline-sync');
+const fs = require('fs');
+const path = require('path');
+const { exec } = require('child_process');
 
-function promptValue(tag, possibilities, morePossible) {
-  possibilities = possibilities || [];
-  morePossible = morePossible || false;
-
-  var possibilitiesStr = possibilities.length ? ' (' : '';
-  if (morePossible) {
+function promptValue(tag, possibilities = [], multiple = false) {
+  let possibilitiesStr = possibilities.length ? ' (' : '';
+  if (multiple) {
     possibilitiesStr += 'one or more of: ';
   }
 
-  possibilities.forEach(function(possibility) {
-    // avoid trailing commas
-    if (possibilities[ possibilities.length - 1] !== possibility) {
-      possibilitiesStr += possibility + ', ';
-    }
-    else {
-      possibilitiesStr += possibility;
+  possibilities.forEach((possibility, index) => {
+    possibilitiesStr += possibility;
+    if (index < possibilities.length - 1) {
+      possibilitiesStr += ', ';
     }
   });
   possibilitiesStr += possibilities.length ? ')' : '';
 
-  return question('Enter ' + tag + possibilitiesStr + ': ');
+  return readlineSync.question(`Enter ${tag}${possibilitiesStr}: `);
 }
 
 function writePost(feature, callback) {
-  var slug = feature.name.replace(' ', '-').toLowerCase();
-  var filename = slug + '.md';
-  var file = '';
+  const slug = feature.name.replace(/ /g, '-').toLowerCase();
+  const filename = `${slug}.md`;
+  const fileContent = `
+feature: ${feature.name}
+status: ${feature.status}
+tags: ${feature.tags}
+kind: ${feature.kind}
+polyfillurls:
 
-  file += 'feature: ' + feature.name + '\n';
-  file += 'status: ' + feature.status + '\n';
-  file += 'tags: ' + feature.tags + '\n';
-  file += 'kind: ' + feature.kind + '\n';
-  file += 'polyfillurls:' + '\n';
-  file += '\n';
-  file += '...\n';
+...
+`;
 
-  var filepath = path.join('posts', filename);
-  fs.writeFile(filepath, file, function() {
+  const filepath = path.join('posts', filename);
+  fs.writeFile(filepath, fileContent.trim(), (err) => {
+    if (err) throw err;
     callback(filepath);
   });
 }
 
-var feature = {
+const feature = {
   name: promptValue('Feature Name'),
   status: promptValue('Status', ['use', 'avoid', 'caution']),
   tags: promptValue('Tags', ['gtie6', 'gtie7', 'gtie8', 'prefixes', 'polyfill', 'fallback', 'none'], true),
-  tags: promptValue('Tags', ['gtie7', 'gtie8', 'prefixes', 'polyfill', 'fallback', 'none'], true),
   kind: promptValue('Type', ['css', 'html', 'js', 'api', 'svg'])
 };
 
-writePost(feature, function(file) {
-  console.log('Created file ' + file);
-  exec('open ' + file);
+writePost(feature, (file) => {
+  console.log(`Created file ${file}`);
+  exec(`open ${file}`);
 });
